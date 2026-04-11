@@ -3,6 +3,7 @@ import { useState } from "react";
 
 const AttendExpoSection = () => {
     const [activeTab, setActiveTab] = useState(0);
+    console.log(setActiveTab);
   const dayData = [
     {
       day: "Day 1",
