@@ -78,9 +78,9 @@ const AttendExpoSection = () => {
 
       
     </div>
-    <div className="max-w-7xl mx-auto  py-12">
+    <div className="max-w-7xl mx-auto h-[400px] mb-16">
       <div className="bg-blue-50 border border-blue-200 rounded-xl p-6  relative overflow-hidden">
-        <div className="grid md:grid-cols-3 gap-8 items-center">
+        <div className="flex flex-col md:flex-row  items-center md:items-start gap-8">
           
           {/* Profile Column */}
           <div className="flex flex-col items-center text-center space-y-4">
@@ -104,8 +104,8 @@ const AttendExpoSection = () => {
           </div>
 
           {/* Quote Column */}
-          <div className="md:col-span-2 text-center md:text-left">
-            <p className="text-gray-700 text-lg leading-relaxed italic">
+          <div className="md:col-span-2 text-center max-w-[850px] mx-auto mt-20">
+            <p className="text-black/78 text-xl font-normal text-center ">
               "{testimonials[activeTab].quote}"
             </p>
           </div>

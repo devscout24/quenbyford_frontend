@@ -1,30 +1,34 @@
 
+import { Button } from '@/components/ui/button';
 import { ArrowUpRight } from 'lucide-react';
 
 const SpeakersSponsors = () => {
   const speakers = [1, 2, 3, 4, 5]; // Placeholder for speaker data/images
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-16 space-y-20">
+    <div className="max-w-7xl mx-auto pt-15  ">
       
       {/* Speakers Section */}
-      <div className="bg-blue-50 rounded-[2.5rem] p-8 md:p-12 shadow-sm relative">
+      <div className="bg-[#E9F4FD] rounded-xl p-8 md:p-12 shadow-sm relative">
+         <div className="hidden md:flex justify-end">
+  <Button className="flex items-center gap-2 px-5 py-2 w-30 h-10 border border-[#1E88E5] rounded-full text-[#1E88E5]   transition-all text-sm font-medium">
+    View All <ArrowUpRight className="w-4 h-4" />
+  </Button>
+</div>
         <div className="flex justify-between items-center mb-10">
-          <h2 className="text-3xl font-bold text-[#1D83E4] mx-auto md:ml-auto md:translate-x-12">
+          <h2 className="text-[48px] font-normal text-[#1D83E4] mx-auto md:ml-auto md:translate-x-12">
             Meet Our Speakers
           </h2>
-          <button className="hidden md:flex items-center gap-2 px-5 py-2 border border-blue-300 rounded-full text-blue-600 hover:bg-blue-600 hover:text-white transition-all text-sm font-medium">
-            View All <ArrowUpRight className="w-4 h-4" />
-          </button>
+         
         </div>
 
         {/* Scrollable/Grid Speaker List */}
         <div className="grid grid-cols-2 md:grid-cols-5 gap-4 lg:gap-6">
           {speakers.map((_, index) => (
             <div key={index} className="group cursor-pointer">
-              <div className="aspect-square bg-white rounded-2xl overflow-hidden border-2 border-transparent group-hover:border-blue-400 transition-all shadow-md">
+              <div className="aspect-square  rounded-2xl overflow-hidden border-2 border-transparent group-hover:border-blue-400 transition-all shadow-md">
                 <img 
-                  src="/api/placeholder/300/300" 
+                  src="/images/Frame 2087328015.png" 
                   alt={`Speaker ${index + 1}`}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
@@ -43,19 +47,15 @@ const SpeakersSponsors = () => {
       </div>
 
       {/* Sponsors Section */}
-      <div className="text-center space-y-8">
-        <h3 className="text-xl font-medium text-gray-500">Supported by:</h3>
-        <div className="flex flex-wrap justify-center items-center gap-12 opacity-80 grayscale hover:grayscale-0 transition-all duration-500">
+      <div className="text-center my-16">
+        {/* <h3 className="text-xl font-medium text-gray-500">Supported by:</h3> */}
+        <div className="flex flex-wrap justify-center items-center gap-12 opacity-80 transition-all duration-500">
           <img 
-            src="/api/placeholder/200/60" 
+            src="/images/fchcc-bank-of-america 1.png" 
             alt="Bank of America" 
-            className="h-12 md:h-16 object-contain"
+            className="w-[444px] h-[228px] object-contain"
           />
-          <img 
-            src="/api/placeholder/120/120" 
-            alt="City Logo" 
-            className="h-20 md:h-24 object-contain"
-          />
+        
         </div>
       </div>
 

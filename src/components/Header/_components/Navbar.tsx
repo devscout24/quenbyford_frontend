@@ -5,13 +5,41 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Header = () => {
-  const [open, setOpen] = useState(false);
+  const [openMenu, setOpenMenu] = useState<string | null>(null);
 
   const navLinks = [
     { name: "Home", href: "/" },
-    { name: "Members", href: "/members" },
-    { name: "Community", href: "/community" },
-    { name: "Events", href: "/events" },
+
+    {
+      name: "Members",
+      href: "/members",
+      dropdown: [
+        { name: "Members Information", href: "/partners/newmembers" },
+        { name: "Strategic Partners", href: "#" },
+        { name: "FCHCC Member parking lot(Coming soon)", href: "#" },
+        
+      ],
+    },
+
+    {
+      name: "Community",
+      href: "/community",
+      dropdown: [
+        { name: "Forum", href: "/community/forum" },
+        { name: "Groups", href: "/community/groups" },
+      ],
+    },
+
+    {
+      name: "Events",
+      href: "/events",
+      dropdown: [
+        { name: "Hola Emprende Conference& Business Expo 2025", href: "#" },
+        { name: "2025 ATD ScholarshipLuncheon", href: "/events/scholarship" },
+        { name: "Past Events", href: "#" },
+      ],
+    },
+
     { name: "Job Board", href: "/jobs" },
     { name: "News", href: "/news" },
     { name: "Contact", href: "/contact" },
@@ -23,11 +51,11 @@ const Header = () => {
       <TopNavbar />
 
       <nav className="w-full sticky top-0 z-50 shadow-lg bg-[#B9DCF8]">
-        <div className="max-w-335 mx-auto px-6 flex items-center justify-between py-6">
-          
+        <div className="max-w-[1335px] mx-auto px-6 flex items-center justify-between py-6">
+
           {/* Logo */}
           <div className="shrink-0 flex items-center">
-            <img src="/images/1.png" alt="" className="w-40 h-12" />
+            <img src="/images/1.png" alt="logo" className="w-40 h-12" />
           </div>
 
           {/* Nav Links */}
@@ -36,8 +64,8 @@ const Header = () => {
               <li
                 key={link.name}
                 className="relative"
-                onMouseEnter={() => link.name === "Members" && setOpen(true)}
-                onMouseLeave={() => link.name === "Members" && setOpen(false)}
+                onMouseEnter={() => setOpenMenu(link.name)}
+                onMouseLeave={() => setOpenMenu(null)}
               >
                 <Link
                   to={link.href}
@@ -47,24 +75,17 @@ const Header = () => {
                 </Link>
 
                 {/* 🔽 Dropdown */}
-                {link.name === "Members" && open && (
-                  <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2">
-                    <Link to="/partners/newmembers" className="block px-4 py-2 hover:bg-gray-100">
-                      New and Renewing Members
-                    </Link>
-                    <Link to="/partners/redioprogram" className="block px-4 py-2 hover:bg-gray-100">
-                      Radio Program
-                    </Link>
-                    <Link to="/partners/podcastprogram" className="block px-4 py-2 hover:bg-gray-100">
-                      Podcast Program
-                    </Link>
-                    <Link to="/partners/discountprogram" className="block px-4 py-2 hover:bg-gray-100">
-                      Discount Program
-                    </Link>
-                    <Link to="/partners/workshope" className="block px-4 py-2 hover:bg-gray-100">
-                      Work Shope
-                    </Link>
-                   
+                {link.dropdown && openMenu === link.name && (
+                  <div className="absolute top-full left-0 mt-2 w-52 bg-white rounded-xl shadow-lg py-2 z-50">
+                    {link.dropdown.map((item) => (
+                      <Link
+                        key={item.name}
+                        to={item.href}
+                        className="block px-4 py-2 text-sm hover:bg-gray-100 transition"
+                      >
+                        {item.name}
+                      </Link>
+                    ))}
                   </div>
                 )}
               </li>
@@ -73,7 +94,7 @@ const Header = () => {
 
           {/* Right Side */}
           <div className="flex items-center gap-2 sm:gap-3">
-            
+
             <Button className="p-2 hover:bg-accent rounded-md">
               <Globe size={18} />
             </Button>
@@ -84,7 +105,7 @@ const Header = () => {
 
             {/* Member Portal */}
             <Button className="group ml-2 flex items-center gap-2 bg-[#F97316] text-white w-[190px] h-12 rounded-full text-sm font-bold hover:opacity-95 active:scale-95 transition-all shadow-md relative overflow-hidden">
-              
+
               <User size={16} className="relative z-10" />
 
               <span className="relative z-10 hidden sm:inline">
@@ -92,6 +113,7 @@ const Header = () => {
                 <span className="absolute left-0 bottom-0.5 h-0.5 w-0 bg-white transition-all duration-300 group-hover:w-full"></span>
               </span>
             </Button>
+
           </div>
         </div>
       </nav>

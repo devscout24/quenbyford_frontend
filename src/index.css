@@ -5,10 +5,14 @@
 @import "shadcn/tailwind.css";
 @import "@fontsource-variable/geist";
 
+@theme {
+  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+}
+
 :root,
 html,
 body {
-  font-family: 'Poppins', Arial, sans-serif;
+  font-family: var(--font-sans);
 }
 
 

@@ -1,12 +1,13 @@
 import FooterPage from "@/components/Footer"
 import Navbar from "@/components/Header/_components/Navbar"
-import { Outlet } from "react-router-dom"
+import { Outlet, ScrollRestoration } from "react-router-dom"
 
 
 
 const HomeLayout = () => {
   return (
     <div className="">
+      <ScrollRestoration />
       <Navbar/>
       <main>
         <Outlet/>

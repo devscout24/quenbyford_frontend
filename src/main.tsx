@@ -3,13 +3,14 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import { RouterProvider } from 'react-router-dom'
 import router from './routes/router'
-
-
-
+import { GlobalLoaderProvider } from './contexts/GlobalLoaderContext'
+import { CustomCursor } from './components/CustomCursor'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-   <RouterProvider  router={router}/>
+    <GlobalLoaderProvider>
+      <CustomCursor />
+      <RouterProvider router={router} />
+    </GlobalLoaderProvider>
   </StrictMode>,
 )
-
