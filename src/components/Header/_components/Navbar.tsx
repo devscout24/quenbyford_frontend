@@ -1,11 +1,18 @@
-import { Search, User, Globe } from "lucide-react";
+import { Search, User,  Menu, X } from "lucide-react";
 import { Button } from "../../ui/button";
 import TopNavbar from "./TopNavbar";
+import MobileMenu from "./MobileMenu";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Header = () => {
   const [openMenu, setOpenMenu] = useState<string | null>(null);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [language, setLanguage] = useState<"EN" | "ES">("EN");
+
+  const toggleLanguage = () => {
+    setLanguage(prev => prev === "EN" ? "ES" : "EN");
+  };
 
   const navLinks = [
     { name: "Home", href: "/" },
@@ -14,8 +21,8 @@ const Header = () => {
       name: "Members",
       href: "/members",
       dropdown: [
-        { name: "Members Information", href: "/partners/newmembers" },
-        { name: "Strategic Partners", href: "#" },
+        { name: "Members Information", href: "/members" },
+        { name: "Strategic Partners", href: "/partners" },
         { name: "FCHCC Member parking lot(Coming soon)", href: "#" },
         
       ],
@@ -40,7 +47,7 @@ const Header = () => {
       ],
     },
 
-    { name: "Job Board", href: "#" },
+    { name: "Job Board", href: "/jobs" },
       {
       name: "News",
       href: "/news",
@@ -49,8 +56,18 @@ const Header = () => {
        
       ],
     },
-    { name: "Contact", href: "#" },
-    { name: "About", href: "#" },
+    { name: "Contact", href: "/contact" },
+     {
+      name: "About",
+      href: "/about",
+      dropdown: [
+        { name: "What We Are", href: "/about" },
+        { name: "Our Committees", href: "/about/committee" },
+        { name: "Our Program", href: "/about/program" },
+        { name: "FCHCC Member parking lot(Coming soon)", href: "#" },
+        
+      ],
+    },
   ];
 
   return (
@@ -102,27 +119,45 @@ const Header = () => {
           {/* Right Side */}
           <div className="flex items-center gap-2 sm:gap-3">
 
-            <Button className="p-2 hover:bg-accent rounded-md">
-              <Globe size={18} />
+            {/* Language Toggle */}
+            <Button 
+              variant="outline"
+              className="px-3 border-orange-500 text-orange-500 hover:bg-orange-50 hover:text-orange-600 font-bold rounded-md bg-white transition-colors"
+              onClick={toggleLanguage}
+            >
+              {language}
             </Button>
 
-            <Button className="p-2 hover:bg-accent rounded-md">
-              <Search size={18} />
+            <Button variant="ghost" className="p-2 hover:bg-white/50 rounded-md">
+              <Search size={22} className="text-slate-800" />
             </Button>
 
             {/* Member Portal */}
-            <Button className="group ml-2 flex items-center gap-2 bg-[#F97316] text-white w-[190px] h-12 rounded-full text-sm font-bold hover:opacity-95 active:scale-95 transition-all shadow-md relative overflow-hidden">
-
-              <User size={16} className="relative z-10" />
-
-              <span className="relative z-10 hidden sm:inline">
+            <Button className="hidden sm:flex group items-center gap-2 bg-[#F97316] text-white w-[140px] md:w-[190px] h-10 md:h-12 rounded-full text-sm font-bold hover:opacity-95 active:scale-95 transition-all shadow-md relative overflow-hidden">
+              <User size={16} className="relative z-10 hidden md:inline" />
+              <span className="relative z-10">
                 Member Portal
                 <span className="absolute left-0 bottom-0.5 h-0.5 w-0 bg-white transition-all duration-300 group-hover:w-full"></span>
               </span>
             </Button>
 
+            {/* Mobile Menu Toggle */}
+            <Button 
+              variant="ghost" 
+              className="xl:hidden p-2 text-slate-800 hover:bg-white/50 rounded-md ml-1"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              {isMobileMenuOpen ? <X size={26} /> : <Menu size={26} />}
+            </Button>
+
           </div>
         </div>
+
+        <MobileMenu 
+          isOpen={isMobileMenuOpen} 
+          setIsOpen={setIsMobileMenuOpen} 
+          navLinks={navLinks} 
+        />
       </nav>
     </>
   );

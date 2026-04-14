@@ -9,8 +9,8 @@ const AnimatedNumber = ({ value }: { value: number }) => {
   useEffect(() => {
     let start = 0;
     const end = value;
-    const duration = 2000; // ২ সেকেন্ড ধরে অ্যানিমেশন চলবে
-    const increment = end / (duration / 16); // ১৬ মিলিসেকেন্ড প্রতি ফ্রেম ধরে
+    const duration = 2000; 
+    const increment = end / (duration / 16); 
 
     const timer = setInterval(() => {
       start += increment;

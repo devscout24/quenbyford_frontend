@@ -25,7 +25,7 @@ const ProudMember = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: false, amount: 0.5 }}
           whileHover={{ scale: 1.05 }}
-          className="w-full max-h-[70px] sm:max-h-[90px] md:max-h-[110px] object-contain mx-auto"
+          className="w-full max-h-17.5 sm:max-h-22.5 md:max-h-27.5 object-contain mx-auto"
         />
       </div>
     </section>

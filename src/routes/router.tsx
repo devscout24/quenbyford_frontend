@@ -16,6 +16,14 @@ import AllNewsPage from "@/pages/News";
 import NewsDetailsPage from "@/pages/NewsDetails";
 import Resources from "@/pages/Resources";
 import CommunityPage from "@/pages/Community";
+import JobPage from "@/pages/Job";
+import AllJobs from "@/pages/AvailableJobs";
+import JobDetails from "@/pages/JobDetails";
+import ContractPage from "@/pages/Contract";
+import Login from "@/pages/Auth/Login";
+import Register from "@/pages/Auth/Register";
+import AboutPage from "@/pages/About";
+import OurCommettePage from "@/pages/OurCommette";
 
 const router = createBrowserRouter([
   {
@@ -69,12 +77,12 @@ const router = createBrowserRouter([
       {
         path: "/scholarshipwinners",
         element: <ScholarshipWinners />,
-        
+
       },
       {
         path: "/events/calender",
         element: <CalnedearPage />,
-        
+
       },
       {
         path: "/news",
@@ -87,12 +95,45 @@ const router = createBrowserRouter([
       {
         path: "/news/resources",
         element: <Resources />,
-        
+
       },
       {
         path: "/community",
         element: <CommunityPage />,
-        
+
+      },
+      {
+        path: "/jobs",
+        element: <JobPage />,
+
+      },
+      {
+        path: "/availablejobs",
+        element: <AllJobs />,
+      },
+      {
+        path: "/availablejobs/:id",
+        element: <JobDetails />,
+      },
+      {
+        path: "/contact",
+        element: <ContractPage />,
+      },
+      {
+        path: "/about",
+        element: <AboutPage />,
+      },
+      {
+        path: "/login",
+        element: <Login />,
+      },
+      {
+        path: "/register",
+        element: <Register />,
+      },
+      {
+        path: "/about/committee",
+        element: <OurCommettePage />,
       },
     ],
   },
