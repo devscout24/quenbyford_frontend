@@ -11,6 +11,11 @@ import SocialCafecito from "@/pages/WorkShope/_components/WorkCafeShope";
 import EventPage from "@/pages/Events";
 import Scholarship from "@/pages/ADTScholarship";
 import ScholarshipWinners from "@/pages/ScholarshipWinners";
+import CalnedearPage from "@/pages/Calender";
+import AllNewsPage from "@/pages/News";
+import NewsDetailsPage from "@/pages/NewsDetails";
+import Resources from "@/pages/Resources";
+import CommunityPage from "@/pages/Community";
 
 const router = createBrowserRouter([
   {
@@ -64,6 +69,30 @@ const router = createBrowserRouter([
       {
         path: "/scholarshipwinners",
         element: <ScholarshipWinners />,
+        
+      },
+      {
+        path: "/events/calender",
+        element: <CalnedearPage />,
+        
+      },
+      {
+        path: "/news",
+        element: <AllNewsPage />,
+      },
+      {
+        path: "/news/:id",
+        element: <NewsDetailsPage />,
+      },
+      {
+        path: "/news/resources",
+        element: <Resources />,
+        
+      },
+      {
+        path: "/community",
+        element: <CommunityPage />,
+        
       },
     ],
   },

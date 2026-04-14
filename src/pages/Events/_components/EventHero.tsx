@@ -26,7 +26,7 @@ const EventHero = () => {
         
 
           {/* Title */}
-          <h1 className="max-w-[780px] mx-auto text-4xl md:text-[56px] font-medium text-white leading-tight">
+          <h1 className="max-w-195 mx-auto text-4xl md:text-[56px] font-medium text-white leading-tight">
             Hola Emprende Conference & Business Expo 2025 September 19–20, 2025
           </h1>
 

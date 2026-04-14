@@ -5,8 +5,9 @@ import { ChevronRight, ChevronLeft } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import SubscribePopup from "../../../components/SubscribePopup";
+import { Link } from "react-router-dom";
 
-const newsData = [
+export const newsData = [
   {
     id: 1,
     title: "Stories from Successful Projects",
@@ -18,6 +19,60 @@ const newsData = [
     title: "Navigating The World Of Business Strategy",
     date: "February 18, 2024",
     image: "/images/image (1).png",
+  },
+  {
+    id: 3,
+    title: "Trends Shaping Marketing Strategies",
+    date: "February 15, 2024",
+    image: "/images/image (2).png",
+  },
+  {
+    id: 3,
+    title: "Trends Shaping Marketing Strategies",
+    date: "February 15, 2024",
+    image: "/images/image (2).png",
+  },
+  {
+    id: 3,
+    title: "Trends Shaping Marketing Strategies",
+    date: "February 15, 2024",
+    image: "/images/image (2).png",
+  },
+  {
+    id: 3,
+    title: "Trends Shaping Marketing Strategies",
+    date: "February 15, 2024",
+    image: "/images/image (2).png",
+  },
+  {
+    id: 3,
+    title: "Trends Shaping Marketing Strategies",
+    date: "February 15, 2024",
+    image: "/images/image (2).png",
+  },
+  {
+    id: 3,
+    title: "Trends Shaping Marketing Strategies",
+    date: "February 15, 2024",
+    image: "/images/image (2).png",
+  },
+  {
+    id: 3,
+    title: "Trends Shaping Marketing Strategies",
+    date: "February 15, 2024",
+    image: "/images/image (2).png",
+  },
+  {
+    id: 3,
+    title: "Trends Shaping Marketing Strategies",
+    date: "February 15, 2024",
+    image: "/images/image (2).png",
+  },
+  {
+    id: 3,
+    title: "Trends Shaping Marketing Strategies",
+    date: "February 15, 2024",
+    image: "/images/image (2).png",
   },
   {
     id: 3,
@@ -68,15 +123,18 @@ const FchccNews = () => {
         <div className="flex justify-between items-center mb-8">
           <h2 className="text-[50px] font-bold text-black">FCHCC News</h2>
 
-          <button className="border border-orange-400 text-orange-400 px-4 py-1 rounded-full text-sm flex items-center gap-1 hover:bg-orange-50">
+          <Link
+            to="/news" /* Navigate to dynamic all-news page */
+            className="border border-orange-400 text-orange-400 px-4 py-1 rounded-full text-sm flex items-center gap-1 hover:bg-orange-50"
+          >
             View All
             <ChevronRight size={14} />
-          </button>
+          </Link>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-7">
-          {newsData.map((news) => (
-            <div key={news.id} className="w-full">
+          {newsData.slice(0, 3).map((news) => (
+            <Link to={`/news/${news.id}`} key={news.id} className="w-full block hover:opacity-80 transition-opacity cursor-pointer">
               <img
                 src={news.image}
                 alt={news.title}
@@ -90,7 +148,7 @@ const FchccNews = () => {
               <h3 className="font-bold text-[24px] capitalize text-black ">
                 {news.title}
               </h3>
-            </div>
+            </Link>
           ))}
         </div>
       </motion.section>
@@ -169,7 +227,7 @@ const FchccNews = () => {
 
        <div className="grid grid-cols-1 md:grid-cols-3 gap-7">
           {newsData.map((news) => (
-            <div key={news.id} className="w-full">
+            <Link to={`/news/${news.id}`} key={news.id} className="w-full block hover:opacity-80 transition-opacity cursor-pointer">
               <img
                 src={news.image}
                 alt={news.title}
@@ -183,7 +241,7 @@ const FchccNews = () => {
               <h3 className="font-bold text-[24px] capitalize text-black ">
                 {news.title}
               </h3>
-            </div>
+            </Link>
           ))}
         </div>
       <motion.section

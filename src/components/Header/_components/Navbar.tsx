@@ -25,8 +25,8 @@ const Header = () => {
       name: "Community",
       href: "/community",
       dropdown: [
-        { name: "Forum", href: "/community/forum" },
-        { name: "Groups", href: "/community/groups" },
+        { name: "Forum", href: "#" },
+        { name: "Groups", href: "#" },
       ],
     },
 
@@ -36,14 +36,21 @@ const Header = () => {
       dropdown: [
         { name: "Hola Emprende Conference& Business Expo 2025", href: "#" },
         { name: "2025 ATD ScholarshipLuncheon", href: "/events/scholarship" },
-        { name: "Past Events", href: "#" },
+        { name: "Monthly Calendar", href: "/events/calender" },
       ],
     },
 
-    { name: "Job Board", href: "/jobs" },
-    { name: "News", href: "/news" },
-    { name: "Contact", href: "/contact" },
-    { name: "About", href: "/about" },
+    { name: "Job Board", href: "#" },
+      {
+      name: "News",
+      href: "/news",
+      dropdown: [
+        { name: "Resources", href: "/news/resources" },
+       
+      ],
+    },
+    { name: "Contact", href: "#" },
+    { name: "About", href: "#" },
   ];
 
   return (
