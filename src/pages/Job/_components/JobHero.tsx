@@ -1,12 +1,14 @@
 import { useState } from "react";
 import SubscribePopup from "../../../components/SubscribePopup";
+import { useTranslation } from "react-i18next";
 
 const JobHero = () => {
+  const { t } = useTranslation();
   const [isSubscribeOpen, setIsSubscribeOpen] = useState(false);
   return (
     <div>
       {/* ================= HERO SECTION ================= */}
-      <section className="relative h-200 flex items-center  overflow-hidden">
+      <section className="relative min-h-[500px] md:h-200 flex items-center overflow-hidden">
         {/* Background Image + Gradient Overlay */}
         <div className="absolute inset-0">
           {/* Image */}
@@ -21,30 +23,30 @@ const JobHero = () => {
         </div>
 
         {/* Content */}
-        <div className="relative z-10 ml-77 space-y-6">
+        <div className="relative z-10 px-4 sm:px-12 md:px-20 lg:ml-77 space-y-4 sm:space-y-6 py-12 sm:py-20">
           {/* Badge */}
         
 
           {/* Title */}
-          <h1 className="max-w-195 mx-auto text-4xl md:text-[56px] font-medium text-white leading-tight">
-           FCHCC JOBS BOARD
+          <h1 className="max-w-3xl text-3xl sm:text-4xl md:text-[56px] font-medium text-white leading-tight">
+            {t("jobs.hero.title")}
           </h1>
 
           {/* Description */}
-          <p className="text-gray-300 text-base md:text-lg w-195 leading-relaxed">
-            Our Jobs Board is a great tool to connect with companies currently hiring or to find the right candidates for your business.
+          <p className="text-gray-300 text-sm sm:text-base md:text-lg max-w-2xl leading-relaxed">
+            {t("jobs.hero.desc")}
           </p>
 
           {/* Buttons */}
-          <div className="flex flex-wrap gap-4 pt-4">
-            <button className="bg-[#F57C00] text-white px-6 md:px-8 w-55 py-3 rounded-full font-bold hover:bg-orange-600 transition shadow-lg">
-             Start Hiring
+          <div className="flex flex-col sm:flex-row gap-4 pt-4">
+            <button className="bg-[#F57C00] text-white px-6 md:px-8 w-full sm:w-55 py-3 rounded-full font-bold hover:bg-orange-600 transition shadow-lg shrink-0">
+              {t("jobs.hero.hiring_btn")}
             </button>
 
             <button
               onClick={() => setIsSubscribeOpen(true)}
-              className=" border-white border-2 text-white w-55 px-6 md:px-8 py-3 rounded-full font-bold  hover:text-white transition"
-            >Available Jobs
+              className="border-white border-2 text-white w-full sm:w-55 px-6 md:px-8 py-3 rounded-full font-bold hover:text-white transition shrink-0"
+            >{t("jobs.hero.available_btn")}
             </button>
           </div>
         </div>

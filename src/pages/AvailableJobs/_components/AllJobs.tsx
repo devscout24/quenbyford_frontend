@@ -3,10 +3,18 @@ import { Search, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { jobs, JobCard } from "../../Job/_components/JobCard";
+import { useTranslation } from "react-i18next";
 
 const JobListing = () => {
+  const { t } = useTranslation();
   const [searchTerm, setSearchTerm] = useState("");
   const [filterType, setFilterType] = useState("All Jobs");
+
+  const filterOptions = [
+    { key: "All Jobs", label: t("jobs.list.filter_all") },
+    { key: "Full-time", label: t("jobs.list.filter_full") },
+    { key: "Part-time", label: t("jobs.list.filter_part") },
+  ];
 
   const filteredJobs = jobs.filter((job) => {
     const matchesSearch =
@@ -20,11 +28,11 @@ const JobListing = () => {
   });
 
   return (
-    <div className="w-full max-w-7xl mx-auto py-12 font-sans px-4">
+    <div className="w-full max-w-[1440px] mx-auto py-12 font-sans px-4">
       {/* Header */}
       <div className="text-center mb-10 space-y-6">
         <h1 className="text-[32px] font-bold text-black leading-10">
-          Available Job Listing
+          {t("jobs.list.title")}
         </h1>
 
         {/* Search */}
@@ -34,32 +42,31 @@ const JobListing = () => {
 
             <Input
               type="text"
-              placeholder="Job title or company"
+              placeholder={t("jobs.list.search_placeholder")}
               className="border-none focus-visible:ring-0 text-gray-600 placeholder:text-gray-400"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
             />
 
             <Button className="bg-[#FF7A1A] hover:bg-[#e66d17] text-white rounded-full px-8 h-10">
-              Search
+              {t("jobs.list.search_btn")}
             </Button>
           </div>
         </div>
 
         {/* Filters */}
         <div className="flex flex-wrap justify-center gap-3 pt-2">
-          {["All Jobs", "Full-time", "Part-time"].map((type) => (
+          {filterOptions.map((opt) => (
             <Button
-              key={type}
-              variant={filterType === type ? "default" : "outline"}
-              onClick={() => setFilterType(type)}
-              className={`rounded-full font-medium text-[14px] w-50 h-10 px-8 ${
-                filterType === type
+              key={opt.key}
+              variant={filterType === opt.key ? "default" : "outline"}
+              onClick={() => setFilterType(opt.key)}
+              className={`rounded-full font-medium text-[14px] w-50 h-10 px-8 ${filterType === opt.key
                   ? "bg-[#2D89E5] hover:bg-[#2574c4] text-white"
                   : "border-gray-200 text-gray-600"
-              }`}
+                }`}
             >
-              {type}
+              {opt.label}
             </Button>
           ))}
         </div>
@@ -75,7 +82,7 @@ const JobListing = () => {
             setFilterType("All Jobs");
           }}
         >
-          View All <ArrowUpRight size={16} />
+          {t("jobs.list.view_all")} <ArrowUpRight size={16} />
         </Button>
       </div>
 
@@ -88,7 +95,7 @@ const JobListing = () => {
         </div>
       ) : (
         <div className="text-center text-gray-500 py-20">
-          No jobs found 😢
+          {t("jobs.list.no_jobs")}
         </div>
       )}
     </div>

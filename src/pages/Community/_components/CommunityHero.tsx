@@ -29,7 +29,7 @@ const CommunityHero = () => {
     return (
         <div>
             {/* ================= HERO SECTION ================= */}
-            <section className="relative h-154 flex items-center overflow-hidden">
+            <section className="relative min-h-[400px] sm:min-h-[500px] lg:h-154 flex items-center overflow-hidden">
 
                 {/* Background Video + Gradient Overlay */}
                 <div className="absolute inset-0 z-0">
@@ -54,7 +54,7 @@ const CommunityHero = () => {
 
                 {/* Content (Animated Container) */}
                 <motion.div
-                    className="relative z-10 ml-75 space-y-6"
+                    className="relative z-10 ml-4 sm:ml-12 md:ml-20 lg:ml-75 space-y-4 sm:space-y-6 py-12 sm:py-16 pr-4"
                     variants={containerVariants}
                     initial="hidden"
                     whileInView="visible"
@@ -63,7 +63,7 @@ const CommunityHero = () => {
                     {/* Title */}
                     <motion.h1
                         variants={itemVariants}
-                        className="max-w-195 text-4xl md:text-[56px] w-195 font-medium text-white leading-tight"
+                        className="max-w-[780px] text-2xl sm:text-3xl md:text-4xl lg:text-[56px] font-medium text-white leading-tight"
                     >
                         Empowering Our HispanicCommunity Through Action
                     </motion.h1>
@@ -71,7 +71,7 @@ const CommunityHero = () => {
                     {/* Description */}
                     <motion.p
                         variants={itemVariants}
-                        className="text-white md:text-xl leading-relaxed w-153"
+                        className="text-white text-sm sm:text-base md:text-xl leading-relaxed max-w-[612px]"
                     >
                         Building bridges, creating opportunities, strengthening
                         our community together

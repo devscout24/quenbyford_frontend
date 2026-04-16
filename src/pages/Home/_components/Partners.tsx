@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const partners = [
   { name: "Latina", logo: "/images/image1.png" },
@@ -11,28 +12,30 @@ const partners = [
 ];
 
 const CorporateMarquee = () => {
+  const { t } = useTranslation();
+
   return (
-    <motion.div 
+    <motion.div
       initial={{ opacity: 0, scale: 0.98 }}
       whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: false, amount: 0.1 }}
       transition={{ duration: 0.6 }}
-      className="max-w-7xl py-8 mx-auto  bg-white overflow-hidden"
+      className="max-w-[1440px] py-8 mx-auto  bg-white overflow-hidden"
     >
-      
+
       {/* Title */}
-     <div className="mb-10 flex items-center gap-4">
- 
-  <div className="h-0.5 bg-[#F97316]/20 w-50 shrink-0"></div>
-  
- 
-  <h2 className="text-xl font-bold text-[#000000] whitespace-nowrap">
-    Corporate Partners
-  </h2>
-  
- 
-  <div className="h-0.5 bg-[#F97316]/20 grow"></div>
-</div>
+      <div className="mb-10 flex items-center gap-4">
+
+        <div className="h-0.5 bg-[#F97316]/20 w-50 shrink-0"></div>
+
+
+        <h2 className="text-xl font-bold text-[#000000] whitespace-nowrap">
+          {t("partners.corporate_partners")}
+        </h2>
+
+
+        <div className="h-0.5 bg-[#F97316]/20 grow"></div>
+      </div>
 
       {/* Marquee */}
       <div className="flex overflow-hidden">

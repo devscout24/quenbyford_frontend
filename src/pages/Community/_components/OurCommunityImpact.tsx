@@ -9,8 +9,8 @@ const AnimatedNumber = ({ value }: { value: number }) => {
   useEffect(() => {
     let start = 0;
     const end = value;
-    const duration = 2000; 
-    const increment = end / (duration / 16); 
+    const duration = 2000;
+    const increment = end / (duration / 16);
 
     const timer = setInterval(() => {
       start += increment;
@@ -108,19 +108,19 @@ const CommunityImpact = () => {
 
   return (
     <section className="my-15 bg-white">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false, amount: 0.5 }}
           transition={{ duration: 0.6 }}
-          className="text-3xl font-bold text-center text-slate-900 mb-12"
+          className="text-2xl sm:text-3xl font-bold text-center text-slate-900 mb-8 sm:mb-12"
         >
           Our Community Impact
         </motion.h2>
 
         <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4"
+          className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -129,7 +129,7 @@ const CommunityImpact = () => {
           {stats.map((stat) => (
             <motion.div key={stat.id} variants={itemVariants}>
               <Card
-                className={`ring-0 border-0 w-70 h-66 shadow-[0px_0px_20px_rgba(0,0,0,0.04)] transition-all duration-500 hover:shadow-[0px_0px_30px_rgba(0,0,0,0.08)] hover:-translate-y-2 ${stat.bgColor}`}
+                className={`ring-0 border-0 w-full shadow-[0px_0px_20px_rgba(0,0,0,0.04)] transition-all duration-500 hover:shadow-[0px_0px_30px_rgba(0,0,0,0.08)] hover:-translate-y-2 ${stat.bgColor}`}
               >
                 <CardContent className="flex flex-col items-center justify-center p-3 space-y-3 text-center">
                   <div className={`${stat.color} transition-transform duration-500 hover:scale-110`}>

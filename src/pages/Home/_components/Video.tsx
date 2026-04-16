@@ -6,12 +6,12 @@ const Video = () => {
 
   return (
     <section className="w-full bg-white px-4 sm:px-8 lg:px-12 my-12 lg:my-20">
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.7 }}
-        className="relative w-full max-w-[1335px] aspect-video mx-auto rounded-2xl md:rounded-3xl overflow-hidden bg-black shadow-2xl border-4 sm:border-[8px] border-white ring-1 ring-gray-100"
+        className="relative w-full max-w-[1440px] aspect-video mx-auto rounded-2xl md:rounded-3xl overflow-hidden bg-black shadow-2xl  "
       >
         {!play ? (
           <>

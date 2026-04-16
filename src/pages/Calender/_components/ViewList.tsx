@@ -35,18 +35,18 @@ const ViewList = () => {
                         <Card className="border border-[#1E88E5] rounded-xl shadow-sm overflow-hidden hover:shadow-md transition-shadow">
                             <CardContent className="p-2.5 space-y-6">
                                 {/* Top Row: Date and Time */}
-                                <div className="flex justify-between items-start">
+                                <div className="flex flex-col sm:flex-row justify-between items-start gap-4">
                                     <div className="space-y-1">
-                                        <h3 className="text-xl font-bold text-black leading-none">
+                                        <h3 className="text-lg sm:text-xl font-bold text-black leading-none">
                                             {event.monthYear}
                                         </h3>
-                                        <p className="text-xl font-extrabold text-black">
+                                        <p className="text-lg sm:text-xl font-extrabold text-black">
                                             {event.dayName}
                                         </p>
                                     </div>
-                                    <div className="text-right">
-                                        <p className="text-[16px] font-medium text-black">
-                                            {event.time} <span className="ml-1">{event.title}</span>
+                                    <div className="text-left sm:text-right">
+                                        <p className="text-sm sm:text-[16px] font-medium text-black">
+                                            {event.time} <span className="ml-1 sm:block md:inline">{event.title}</span>
                                         </p>
                                     </div>
                                 </div>

@@ -106,7 +106,7 @@ const WinnerCard = ({ name, university, degree, imageUrl, index }: WinnerCardPro
       viewport={{ once: false, amount: 0.2 }}
       transition={{ duration: 0.5, delay: index * 0.08, type: "spring", stiffness: 100, damping: 15 }}
       whileHover={{ y: -8, scale: 1.02, boxShadow: "0px 15px 30px rgba(29, 132, 228, 0.15)" }}
-      className="bg-white border-[1.5px] w-[300px] h-[290px] border-blue-200 rounded-2xl p-8 flex flex-col items-center text-center shadow-sm transition-colors"
+      className="bg-white border-[1.5px] w-full max-w-[300px] border-blue-200 rounded-2xl p-8 flex flex-col items-center text-center shadow-sm transition-colors"
     >
 
       {/* Image */}
@@ -138,7 +138,7 @@ export default function ScholarshipSectionWinners() {
   const winners = winnersData;
 
   return (
-    <section className="max-w-7xl mx-auto  py-15 bg-white font-sans">
+    <section className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-15 bg-white font-sans">
 
       {/* Top Text */}
       <motion.div

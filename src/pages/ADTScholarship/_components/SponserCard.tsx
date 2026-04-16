@@ -1,15 +1,10 @@
-
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { motion, type Variants } from "framer-motion";
+import { useTranslation } from "react-i18next";
+
 // ----------------------
 // DATA (future: API/CMS)
 // ----------------------
-const aboutData = {
-  title: "About the ATD Luncheon",
-  description:
-    "The FCHCC 'Achieving the Dream' is a scholarship program that supports high-achieving Hispanic students in Northeast Florida. This luncheon serves as our premier fundraising event to honor their accomplishments and secure future opportunities.",
-  buttonText: "Read More Stories",
-};
 
 const sponsors = [
   { id: 1, name: "/images/100.png", type: "placeholder" },
@@ -63,8 +58,16 @@ const itemVariants: Variants = {
 // COMPONENT
 // ----------------------
 const SponserSection = () => {
+  const { t } = useTranslation();
+
+  const aboutData = {
+    title: t("scholarship.about.title"),
+    description: t("scholarship.about.desc"),
+    buttonText: t("scholarship.about.button"),
+  };
+
   return (
-    <div className="max-w-7xl mx-auto space-y-6 pt-15  font-sans overflow-hidden ">
+    <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 space-y-6 pt-15 font-sans overflow-hidden">
       {/* TOP GRID */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-3 ">
 
@@ -74,7 +77,7 @@ const SponserSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="border border-blue-400 rounded-2xl p-10 flex flex-col justify-between min-h-62 hover:shadow-xl hover:-translate-y-1 transition-all duration-500"
+          className="border border-blue-400 rounded-2xl p-6 sm:p-10 flex flex-col justify-between min-h-[250px] hover:shadow-xl hover:-translate-y-1 transition-all duration-500"
         >
           <div>
             <h2 className="text-[#0077C8] text-2xl font-bold leading-8 mb-4">
@@ -97,12 +100,12 @@ const SponserSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
-          className="border border-orange-400 rounded-2xl p-8 hover:shadow-xl hover:-translate-y-1 transition-all duration-500"
+          className="border border-orange-400 rounded-2xl p-6 sm:p-8 hover:shadow-xl hover:-translate-y-1 transition-all duration-500"
         >
           <div className="flex justify-between items-center mb-8">
-            <h2 className="text-[#F15A24] text-2xl font-bold leading-8">Sponsors</h2>
+            <h2 className="text-[#F15A24] text-2xl font-bold leading-8">{t("scholarship.sponsors.title")}</h2>
             <button className="flex items-center border border-orange-400 text-[#F15A24] px-4 py-1 rounded-full text-[16px] hover:bg-orange-50 transition-colors font-normal leading-6.5">
-              View All <ArrowUpRight className="ml-1 w-4 h-4" />
+              {t("events.agenda.view_all")} <ArrowUpRight className="ml-1 w-4 h-4" />
             </button>
           </div>
 
@@ -117,9 +120,9 @@ const SponserSection = () => {
               <motion.div
                 variants={itemVariants}
                 key={item.id}
-                className="h-12 flex items-center justify-center transition-all duration-300 cursor-pointer hover:scale-110  "
+                className="h-12 flex items-center justify-center transition-all duration-300 cursor-pointer hover:scale-110"
               >
-                <img src={item.name} alt="Sponsor" className="h-30 w-70 object-contain" />
+                <img src={item.name} alt="Sponsor" className="h-full w-full max-w-[120px] object-contain" />
               </motion.div>
             ))}
           </motion.div>
@@ -132,14 +135,14 @@ const SponserSection = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-50px" }}
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
-        className="border border-orange-400 rounded-2xl p-10 hover:shadow-xl hover:-translate-y-1 mt-12 mb-8 transition-all duration-500"
+        className="border border-orange-400 rounded-2xl p-6 sm:p-10 hover:shadow-xl hover:-translate-y-1 mt-8 sm:mt-12 mb-8 transition-all duration-500"
       >
         <div className="flex justify-between items-center mb-8">
           <h2 className="text-[#F15A24] text-2xl font-bold">
-            FCHCC Partners
+            {t("scholarship.partners.title")}
           </h2>
           <button className="flex items-center border border-orange-400 text-[#F15A24] px-4 py-1 rounded-full text-[16px] hover:bg-orange-50 transition-colors font-normal leading-6.5">
-            View All <ArrowUpRight className="ml-1 w-4 h-4" />
+            {t("events.agenda.view_all")} <ArrowUpRight className="ml-1 w-4 h-4" />
           </button>
         </div>
 
@@ -154,16 +157,16 @@ const SponserSection = () => {
             <motion.div
               variants={itemVariants}
               key={item.id}
-              className="h-20 flex items-center justify-center text-center transition-all duration-300 hover:scale-110 drop-shadow-sm hover:drop-shadow-lg cursor-pointer"
+              className="h-16 sm:h-20 flex items-center justify-center text-center transition-all duration-300 hover:scale-110 drop-shadow-sm hover:drop-shadow-lg cursor-pointer"
             >
-               <img src={item.name} alt="Sponsor" className="h-30 w-70 object-contain" />
+              <img src={item.name} alt="Sponsor" className="h-full w-full max-w-[120px] object-contain" />
             </motion.div>
           ))}
         </motion.div>
-        
+
       </motion.div>
-   
-      
+
+
     </div>
   );
 };

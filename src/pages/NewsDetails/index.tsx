@@ -1,13 +1,16 @@
 import { useParams, Link } from "react-router-dom";
 import { NewsSingleDetailPage } from "./_components/SingleDetials";
 import { newsData } from "@/pages/Home/_components/FcgccNews";
+import { useTranslation } from "react-i18next";
+
 
 const NewsDetailsPage = () => {
   const { id } = useParams();
-  
-  
+  const { t } = useTranslation();
+
+
   const matchedNews = newsData.find(item => item.id.toString() === id) || newsData[0];
-  
+
   const eventDataMock = {
     title: matchedNews.title,
     date: matchedNews.date,
@@ -30,9 +33,9 @@ const NewsDetailsPage = () => {
   };
 
   return (
-    <div className="max-w-7xl mx-auto pt-6">
+    <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 pt-6">
       <Link to="/news" className="text-orange-500 font-bold hover:underline inline-block my-16">
-        &larr; Back to News
+        &larr; {t("news.details.back")}
       </Link>
       <NewsSingleDetailPage data={eventDataMock} />
     </div>

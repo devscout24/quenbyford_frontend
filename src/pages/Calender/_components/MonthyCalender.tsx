@@ -63,12 +63,12 @@ const EventCalendar = () => {
   ];
 
   return (
-    <div className="w-full max-w-7xl mx-auto h-204 p-6 ">
+    <div className="w-full max-w-[1440px] mx-auto min-h-screen p-4 sm:p-6 mb-10 md:mb-20">
       <Tabs defaultValue="monthly" className="w-full space-y-8">
 
         {/* View Switcher (inside Tabs) */}
-        <div className="flex justify-center border-b border-gray-100 py-1">
-          <TabsList className=" h-auto p-0 gap-8">
+        <div className="flex justify-center border-b border-gray-100 py-1 overflow-x-auto no-scrollbar">
+          <TabsList className="h-auto p-0 gap-4 sm:gap-8 flex-nowrap whitespace-nowrap">
             <TabsTrigger
               value="monthly"
               className="data-[state=active]:border-b  rounded-none px-2 pb-4 text-[#1E88E5] font-semibold flex gap-2"
@@ -107,19 +107,19 @@ const EventCalendar = () => {
             </TabsTrigger>
             <TabsTrigger
               value="list"
-              className="data-[state=active]:border-b-10  rounded-none px-2 pb-4 text-[#1E88E5] font-semibold flex gap-2"
+              className="data-[state=active]:border-b rounded-none px-2 pb-4 text-[#1E88E5] font-semibold flex gap-2"
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path d="M7 9V7H21V9H7ZM7 13V11H21V13H7ZM7 17V15H21V17H7ZM4 9C3.71667 9 3.47934 8.904 3.288 8.712C3.09667 8.52 3.00067 8.28267 3 8C2.99934 7.71733 3.09534 7.48 3.288 7.288C3.48067 7.096 3.718 7 4 7C4.282 7 4.51967 7.096 4.713 7.288C4.90634 7.48 5.002 7.71733 5 8C4.998 8.28267 4.902 8.52033 4.712 8.713C4.522 8.90567 4.28467 9.00133 4 9ZM4 13C3.71667 13 3.47934 12.904 3.288 12.712C3.09667 12.52 3.00067 12.2827 3 12C2.99934 11.7173 3.09534 11.48 3.288 11.288C3.48067 11.096 3.718 11 4 11C4.282 11 4.51967 11.096 4.713 11.288C4.90634 11.48 5.002 11.7173 5 12C4.998 12.2827 4.902 12.5203 4.712 12.713C4.522 12.9057 4.28467 13.0013 4 13ZM4 17C3.71667 17 3.47934 16.904 3.288 16.712C3.09667 16.52 3.00067 16.2827 3 16C2.99934 15.7173 3.09534 15.48 3.288 15.288C3.48067 15.096 3.718 15 4 15C4.282 15 4.51967 15.096 4.713 15.288C4.90634 15.48 5.002 15.7173 5 16C4.998 16.2827 4.902 16.5203 4.712 16.713C4.522 16.9057 4.28467 17.0013 4 17Z" fill="#6B7280" />
+                <path d="M7 9V7H21V9H7ZM7 13V11H21V13H7ZM7 17V15H21V17H7ZM4 9C3.71667 9 3.47934 8.904 3.288 8.712C3.09667 8.52 3.00067 8.28267 3 8C2.99934 7.71733 3.09534 7.48 3.288 7.288C3.48067 7.096 3.718 7 4 7C4.282 7 4.51967 7.096 4.713 7.288C4.90634 7.48 5.002 7.71733 5 8C4.998 8.28267 4.902 8.52033 4.712 8.713C4.522 8.90567 4.28467 9.00133 4 9ZM4 13C3.71667 13 3.47934 12.904 3.288 12.712C3.09667 12.52 3.00067 12.2827 3 12C2.99934 11.7173 3.09534 11.48 3.288 11.288C3.48067 11.096 3.718 11 4 11C4.282 11 4.51967 11.096 4.713 11.288C4.90634 11.48 5.002 11.7173 5 12C4.998 12.2827 4.902 12.5203 4.712 12.713C4.522 12.9057 4.28467 13.0013 4 13ZM4 17C3.71667 17 3.47934 16.904 3.288 16.712C3.09667 16.52 3.00067 16.2827 3 16C2.99934 15.7173 3.09534 15.48 3.288 15.288C3.48067 15.096 3.718 15 4 15C4.282 15 4.51967 15.096 4.713 15.288C4.90634 15.48 5.002 15.7173 5 16C4.998 16.2827 4.902 16.5203 4.712 16.713C4.522 16.9057 4.28467 17.0013 4 17" fill="#6B7280" />
               </svg> List View
             </TabsTrigger>
           </TabsList>
         </div>
 
         {/* Shared Header with Date and Dropdown */}
-        <div className=" flex justify-between items-center px-48">
+        <div className="flex flex-col sm:flex-row justify-between items-center gap-4 px-4 sm:px-12 md:px-48">
           <div className="flex items-center gap-4">
-            <h2 className="text-3xl font-bold text-black">{format(currentDate, 'MMMM yyyy')}</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold text-black">{format(currentDate, 'MMMM yyyy')}</h2>
             <div className="flex gap-2">
             </div>
           </div>
@@ -142,10 +142,10 @@ const EventCalendar = () => {
         {/* MONTHLY VIEW TAB */}
         {/* ======================================= */}
         <TabsContent value="monthly" className="mt-0 outline-none">
-          <div className="rounded-xl max-w-212 mx-auto overflow-hidden  shadow-xl mt-8">
+          <div className="rounded-xl w-full max-w-4xl mx-auto overflow-hidden shadow-xl mt-8">
             {/* Orange Header */}
             <div className="bg-[#F97316] p-4 text-center">
-              <h3 className="text-white text-3xl tracking-tighter-[-0.58px] font-bold">{format(currentDate, 'MMMM yyyy')}</h3>
+              <h3 className="text-white text-xl sm:text-3xl tracking-tighter sm:tracking-tighter-[-0.58px] font-bold">{format(currentDate, 'MMMM yyyy')}</h3>
             </div>
 
             {/* Calendar Grid */}
@@ -166,7 +166,7 @@ const EventCalendar = () => {
                 return (
                   <div
                     key={idx}
-                    className={`min-h-25 p-2 relative transition-colors border border-gray-300 
+                    className={`min-h-[80px] sm:min-h-25 p-1 sm:p-2 relative transition-colors border border-gray-300 
                       ${!isCurrentMonth ? 'bg-slate-50 opacity-50' : isToday ? 'bg-[#F97316] text-white' : 'bg-white hover:bg-slate-50'}`}
                   >
                     <div className={`w-6 h-6 flex items-center justify-center rounded-full text-xs font-medium 

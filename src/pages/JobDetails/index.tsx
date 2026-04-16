@@ -10,7 +10,7 @@ const JobDetails = () => {
 
   if (!job) {
     return (
-      <div className="w-full max-w-7xl mx-auto py-15 text-center">
+      <div className="w-full max-w-[1440px] mx-auto py-15 text-center">
         <h2 className="text-2xl font-bold mb-4">Job Not Found</h2>
         <Link to="/availablejobs">
           <Button variant="outline" className="border-[#FF7A1A] text-[#FF7A1A] hover:bg-[#FF7A1A] hover:text-white">

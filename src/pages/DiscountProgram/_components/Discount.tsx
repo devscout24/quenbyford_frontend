@@ -1,17 +1,19 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const DiscountPro = () => {
-
+  const { t } = useTranslation();
   const [openIndex, setOpenIndex] = useState(1);
 
   const faqs = [
     {
-      question: "Do I need to be an FCHCC member to offer a discount?",
-      answer: "You don't have to be a member to offer a discount."
+      question: t("discount.faq.q1"),
+      answer: t("discount.faq.a1")
     },
     {
-      question: "How long does approval take?",
-      answer: "Approval usually takes 3-5 business days after review."
+      question: t("discount.faq.q2"),
+      answer: t("discount.faq.a2")
     },
   ];
 
@@ -30,29 +32,28 @@ const DiscountPro = () => {
         {/* Overlay */}
         <div className="absolute inset-0 bg-[#1e3a8a]/30"></div>
 
-       <div className="w-full max-w-7xl mx-auto relative z-10 px-0 py-0 m-0 ">
-        
-        {/* Title */}
-        <h1 className="text-4xl md:text-[50px] font-bold mb-8 text-white">
-          <span className="text-[#60A5FA]">FCHCC</span> Discount Program
-        </h1>
+        <div className="w-full max-w-[1440px] mx-auto relative z-10 px-0 py-0 m-0 ">
 
-        {/* Description */}
-        <p className="w-[500px] text-xl mb-12.5 font-normal leading-relaxed text-[#000]">
-          <span className='text-[#1E88E5]'>FCHCC's Members Discounts Program</span> provides positive exposure for your
-          business and can add value through increased business with chamber members.
-        </p>
+          {/* Title */}
+          <h1 className="text-4xl md:text-[50px] font-bold mb-8 text-white">
+            <span className="text-[#60A5FA]">{t("discount.hero.title_highlight")}</span> {t("discount.hero.title")}
+          </h1>
 
-        {/* CTA Row */}
-        <div className="flex flex-col sm:flex-row sm:items-center gap-4">
+          {/* Description */}
+          <p className="w-[500px] text-xl mb-12.5 font-normal leading-relaxed text-[#000]">
+            <span className='text-[#1E88E5]'>{t("discount.hero.desc").split(' ')[0] + ' ' + t("discount.hero.desc").split(' ')[1] + ' ' + t("discount.hero.desc").split(' ')[2]}</span> {t("discount.hero.desc").split(' ').slice(3).join(' ')}
+          </p>
 
-          <span className="text-xl font-normal text-black">
-            Questions about this program?
-          </span>
+          {/* CTA Row */}
+          <div className="flex flex-col sm:flex-row sm:items-center gap-4">
+
+            <span className="text-xl font-normal text-black">
+              {t("discount.hero.questions")}
+            </span>
+
+          </div>
 
         </div>
-
-      </div>
 
         {/* Design Shapes */}
         <div className="absolute right-20 bottom-10 w-40 h-40 bg-white/20 rounded-full blur-md"></div>
@@ -62,11 +63,11 @@ const DiscountPro = () => {
       </section>
 
 
-      <div className="max-w-7xl mx-auto  py-16">
+      <div className="max-w-[1440px] mx-auto  py-16">
 
         {/* FAQ Section */}
         <h2 className="text-[32px] font-bold text-[#3B82F6] mb-8">
-          Frequently-Asked Questions
+          {t("discount.faq.title")}
         </h2>
 
         <div className="border border-[#1E88E5] rounded-lg overflow-hidden mb-15">
@@ -82,7 +83,7 @@ const DiscountPro = () => {
                 onClick={() =>
                   setOpenIndex(openIndex === index ? -1 : index)
                 }
-                className="w-full flex justify-between text-xl font-semibold items-center p-5 text-left font-semibold"
+                className="w-full flex justify-between text-xl  items-center p-5 text-left font-semibold"
               >
 
                 <span>
@@ -114,31 +115,25 @@ const DiscountPro = () => {
 
         {/* How to Offer */}
         <h2 className="text-[32px] font-bold text-[#F97316] mb-9">
-          How to Offer a Member Discount
+          {t("discount.how.title")}
         </h2>
 
         <div className="flex flex-col md:flex-row gap-6 mb-12">
 
           <div className="flex-1 rounded  text-black text-xl font-normal max-w-[1008px] text-left">
 
-            To offer a member discount and prevent delays, we ask that you
-            complete the member discount form in its entirety. You can upload
-            your logo and/or banner ad. After we receive your application,
-            the Board will review your discount. If approved, our staff will
-            notify you and publish your offer.
+            {t("discount.how.desc")}
 
           </div>
 
           <div className="w-full md:w-64 bg-[#1E88E5]/10 p-4 rounded-md text-center text-[16px] text-black font-medium">
 
             <p className="font-bold mb-2">
-              NOTE:
+              {t("discount.how.note_title")}
             </p>
 
             <p>
-              Businesses may request to offer a member discount. The chamber
-              reserves the right to refuse any request. Benefits expire after
-              one year.
+              {t("discount.how.note_text")}
             </p>
 
           </div>
@@ -150,31 +145,31 @@ const DiscountPro = () => {
         <div className="text-center space-y-8">
 
           <p className="text-2xl font-normal text-black mb-15">
-            Any more questions? feel free to{" "}
-            <a
-              href="#"
+            {t("discount.cta.questions")}{" "}
+            <Link
+              to="/contact"
               className="text-orange-400 font-medium"
             >
-              contact us!
-            </a>
+              {t("discount.cta.contact")}
+            </Link>
           </p>
 
-          <button className="bg-[#F2741F] hover:bg-[#d96316] text-white font-bold py-3 px-10 rounded-lg transition shadow-md ">
+          <Link to="https://www.emailmeform.com/builder/emf/fchcc/members-discount-program" className="bg-[#F2741F] hover:bg-[#d96316] text-white font-bold py-3 px-10 rounded-lg transition shadow-md ">
 
-            Submit a Discount
+            {t("discount.cta.button")}
 
-          </button>
+          </Link>
 
-          <p className="text-xl text-black font-normal mb-30">
+          <p className="text-xl text-black font-normal mb-30 mt-8">
 
-            To view current discounts, log in to the Members Only Portal →
+            {t("discount.cta.portal_text")}
 
-            <a
-              href="#"
+            <Link
+              to="#"
               className="text-orange-400 ml-1"
             >
-              click here!
-            </a>
+              {t("discount.cta.click_here")}
+            </Link>
 
           </p>
 

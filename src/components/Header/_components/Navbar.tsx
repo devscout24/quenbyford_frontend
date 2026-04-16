@@ -1,71 +1,58 @@
-import { Search, User,  Menu, X } from "lucide-react";
+import { Search, User, Menu, X } from "lucide-react";
 import { Button } from "../../ui/button";
 import TopNavbar from "./TopNavbar";
 import MobileMenu from "./MobileMenu";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import LanguageToggle from "./LanguageToggle";
+import { useTranslation } from "react-i18next";
 
 const Header = () => {
+  const { t } = useTranslation();
   const [openMenu, setOpenMenu] = useState<string | null>(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [language, setLanguage] = useState<"EN" | "ES">("EN");
-
-  const toggleLanguage = () => {
-    setLanguage(prev => prev === "EN" ? "ES" : "EN");
-  };
+  const location = useLocation();
 
   const navLinks = [
-    { name: "Home", href: "/" },
+    { name: t("navbar.home"), href: "/" },
 
     {
-      name: "Members",
+      name: t("navbar.members"),
       href: "/members",
       dropdown: [
-        { name: "Members Information", href: "/members" },
-        { name: "Strategic Partners", href: "/partners" },
-        { name: "FCHCC Member parking lot(Coming soon)", href: "#" },
-        
+        { name: t("navbar.members_info"), href: "/members" },
+        { name: t("navbar.strategic_partners"), href: "/partners" },
+        { name: t("navbar.member_parking"), href: "#" },
       ],
     },
 
-    {
-      name: "Community",
-      href: "/community",
-      dropdown: [
-        { name: "Forum", href: "#" },
-        { name: "Groups", href: "#" },
-      ],
-    },
+    { name: t("navbar.community"), href: "/community" },
 
     {
-      name: "Events",
+      name: t("navbar.events"),
       href: "/events",
       dropdown: [
-        { name: "Hola Emprende Conference& Business Expo 2025", href: "#" },
-        { name: "2025 ATD ScholarshipLuncheon", href: "/events/scholarship" },
-        { name: "Monthly Calendar", href: "/events/calender" },
+        { name: t("navbar.hola_emprende"), href: "#" },
+        { name: t("navbar.atd_scholarship"), href: "/events/scholarship" },
+        { name: t("navbar.monthly_calendar"), href: "/events/calender" },
       ],
     },
 
-    { name: "Job Board", href: "/jobs" },
-      {
-      name: "News",
+    { name: t("navbar.job_board"), href: "/jobs" },
+    {
+      name: t("navbar.news"),
       href: "/news",
       dropdown: [
-        { name: "Resources", href: "/news/resources" },
-       
+        { name: t("navbar.resources"), href: "/news/resources" },
       ],
     },
-    { name: "Contact", href: "/contact" },
-     {
-      name: "About",
+    { name: t("navbar.contact"), href: "/contact" },
+    {
+      name: t("navbar.about"),
       href: "/about",
       dropdown: [
-        { name: "What We Are", href: "/about" },
-        { name: "Our Committees", href: "/about/committee" },
-        { name: "Our Program", href: "/about/program" },
-        { name: "FCHCC Member parking lot(Coming soon)", href: "#" },
-        
+        { name: t("navbar.our_committees"), href: "/about/committee" },
+        { name: t("navbar.member_parking"), href: "#" },
       ],
     },
   ];
@@ -75,15 +62,15 @@ const Header = () => {
       <TopNavbar />
 
       <nav className="w-full sticky top-0 z-50 shadow-lg bg-[#B9DCF8]">
-        <div className="max-w-[1335px] mx-auto px-6 flex items-center justify-between py-6">
+        <div className="max-w-[1440px] mx-auto px-6 flex items-center justify-between py-6 gap-6">
 
           {/* Logo */}
-          <div className="shrink-0 flex items-center">
+          <div className="flex-1 flex items-center">
             <img src="/images/1.png" alt="logo" className="w-40 h-12" />
           </div>
 
           {/* Nav Links */}
-          <ul className="hidden xl:flex items-center px-4 bg-white py-4 rounded-full">
+          <ul className="hidden lg:flex w-[850px]  items-center justify-center bg-white py-3 rounded-full border border-gray-100/50 shadow-sm">
             {navLinks.map((link) => (
               <li
                 key={link.name}
@@ -93,19 +80,21 @@ const Header = () => {
               >
                 <Link
                   to={link.href}
-                  className="px-5 py-3 text-sm font-medium rounded-md transition-all duration-200 hover:text-orange-500"
+                  className={`px-4 py-3 text-sm font-medium rounded-md transition-all duration-200 hover:text-orange-500 whitespace-nowrap block ${
+                    location.pathname === link.href ? "border-b-2 border-orange-500 text-orange-500 pb-1" : ""
+                  }`}
                 >
                   {link.name}
                 </Link>
 
                 {/* 🔽 Dropdown */}
                 {link.dropdown && openMenu === link.name && (
-                  <div className="absolute top-full left-0 mt-2 w-52 bg-white rounded-xl shadow-lg py-2 z-50">
+                  <div className="absolute top-full -mt-2 w-52 bg-white rounded-xl shadow-lg py-2 z-50">
                     {link.dropdown.map((item) => (
                       <Link
                         key={item.name}
                         to={item.href}
-                        className="block px-4 py-2 text-sm hover:bg-gray-100 transition"
+                        className="block px-4 py-2 text-sm hover:bg-gray-100 transition text-left"
                       >
                         {item.name}
                       </Link>
@@ -117,33 +106,31 @@ const Header = () => {
           </ul>
 
           {/* Right Side */}
-          <div className="flex items-center gap-2 sm:gap-3">
+          <div className="flex-1 flex items-center justify-end shrink-0 gap-2 sm:gap-3">
 
             {/* Language Toggle */}
-            <Button 
-              variant="outline"
-              className="px-3 border-orange-500 text-orange-500 hover:bg-orange-50 hover:text-orange-600 font-bold rounded-md bg-white transition-colors"
-              onClick={toggleLanguage}
-            >
-              {language}
-            </Button>
+            <LanguageToggle />
 
             <Button variant="ghost" className="p-2 hover:bg-white/50 rounded-md">
               <Search size={22} className="text-slate-800" />
             </Button>
 
             {/* Member Portal */}
-            <Button className="hidden sm:flex group items-center gap-2 bg-[#F97316] text-white w-[140px] md:w-[190px] h-10 md:h-12 rounded-full text-sm font-bold hover:opacity-95 active:scale-95 transition-all shadow-md relative overflow-hidden">
-              <User size={16} className="relative z-10 hidden md:inline" />
-              <span className="relative z-10">
-                Member Portal
-                <span className="absolute left-0 bottom-0.5 h-0.5 w-0 bg-white transition-all duration-300 group-hover:w-full"></span>
-              </span>
-            </Button>
+            <Link
+  to="/login"
+  className="hidden sm:flex items-center justify-center gap-2 bg-[#F97316] text-white w-[140px] md:w-[190px] h-10 md:h-12 rounded-full text-sm font-bold hover:opacity-95 active:scale-95 transition-all shadow-md relative overflow-hidden"
+>
+  <User size={16} className="relative z-10 hidden md:inline" />
+  
+  <span className="relative z-10 flex items-center gap-2">
+    {t("navbar.member_portal")}
+    <span className="absolute left-0 bottom-0.5 h-0.5 w-0 bg-white transition-all duration-300 group-hover:w-full"></span>
+  </span>
+</Link>
 
             {/* Mobile Menu Toggle */}
-            <Button 
-              variant="ghost" 
+            <Button
+              variant="ghost"
               className="xl:hidden p-2 text-slate-800 hover:bg-white/50 rounded-md ml-1"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
@@ -153,10 +140,10 @@ const Header = () => {
           </div>
         </div>
 
-        <MobileMenu 
-          isOpen={isMobileMenuOpen} 
-          setIsOpen={setIsMobileMenuOpen} 
-          navLinks={navLinks} 
+        <MobileMenu
+          isOpen={isMobileMenuOpen}
+          setIsOpen={setIsMobileMenuOpen}
+          navLinks={navLinks}
         />
       </nav>
     </>

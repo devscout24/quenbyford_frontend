@@ -6,14 +6,14 @@ import { motion } from "framer-motion";
 
 const JoinMission = () => {
     return (
-        <section className="max-w-7xl mx-auto  my-16 bg-white overflow-hidden">
+        <section className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 my-8 sm:my-16 bg-white overflow-hidden">
             {/* Section Title */}
-            <motion.h2 
+            <motion.h2
                 initial={{ opacity: 0, x: -80 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: false, amount: 0.2 }}
                 transition={{ duration: 1.2, ease: "easeOut" }}
-                className="text-[32px] font-medium text-center text-black mb-15"
+                className="text-2xl sm:text-[32px] font-medium text-center text-black mb-8 sm:mb-15"
             >
                 Join Our Mission
             </motion.h2>
@@ -29,21 +29,21 @@ const JoinMission = () => {
                     transition={{ duration: 0.5, delay: 0.1 }}
                     whileHover={{ scale: 1.02, y: -10 }}
                 >
-                    <Card className="border border-gray-200 ring-0 shadow-xl rounded-2xl w-[604px] h-[360px] p-10 flex flex-col items-center text-center">
-                        <motion.div 
+                    <Card className="border border-gray-200 ring-0 shadow-xl rounded-2xl w-full p-5 sm:p-10 flex flex-col items-center text-center">
+                        <motion.div
                             initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.5, delay: 0.2 }}
                             className="text-blue-500 mb-3"
                         >
                             <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 48 48" fill="none">
-  <path d="M12.52 42.7761H12C10.114 42.7761 9.172 42.7761 8.586 42.1901C8 41.6081 8 40.6641 8 38.7781V36.5541C8 35.5181 8 35.0001 8.266 34.5361C8.532 34.0721 8.934 33.8401 9.738 33.3721C15.03 30.2941 22.544 28.5621 27.558 31.5521C27.8953 31.7534 28.1953 31.9987 28.458 32.2881C28.7271 32.5822 28.9345 32.9273 29.0678 33.303C29.2011 33.6787 29.2577 34.0774 29.2342 34.4753C29.2107 34.8733 29.1076 35.2625 28.931 35.6199C28.7544 35.9773 28.5079 36.2956 28.206 36.5561C27.9655 36.7844 27.6721 36.9493 27.352 37.0361C27.592 37.0081 27.822 36.9767 28.042 36.9421C29.864 36.6521 31.394 35.6761 32.794 34.6181L36.41 31.8881C37.0555 31.4197 37.8325 31.1675 38.63 31.1675C39.4275 31.1675 40.2045 31.4197 40.85 31.8881C41.996 32.7541 42.348 34.1801 41.622 35.3441C40.776 36.7001 39.584 38.4341 38.44 39.4941C37.296 40.5541 35.588 41.5021 34.196 42.1741C32.652 42.9201 30.948 43.3481 29.214 43.6301C25.698 44.1981 22.034 44.1101 18.554 43.3941C16.5686 42.9854 14.547 42.777 12.52 42.7761ZM13.172 5.17206C12.438 5.90606 12.164 6.91806 12.062 8.50006C13.2344 8.48401 14.3542 8.01101 15.1831 7.18174C16.012 6.35248 16.4845 5.23245 16.5 4.06006C14.92 4.16406 13.906 4.43806 13.172 5.17206ZM34.828 5.17206C34.094 4.43806 33.082 4.16406 31.5 4.06206C31.5161 5.23444 31.989 6.35426 32.8183 7.18315C33.6476 8.01204 34.7676 8.48454 35.94 8.50006C35.836 6.92006 35.562 5.90606 34.828 5.17206ZM34.828 18.8281C34.094 19.5621 33.082 19.8361 31.5 19.9381C31.5161 18.7657 31.989 17.6459 32.8183 16.817C33.6476 15.9881 34.7676 15.5156 35.94 15.5001C35.836 17.0801 35.562 18.0941 34.828 18.8281ZM13.172 18.8281C13.906 19.5621 14.918 19.8361 16.5 19.9381C16.4839 18.7657 16.0109 17.6459 15.1817 16.817C14.3524 15.9881 13.2324 15.5156 12.06 15.5001C12.164 17.0801 12.438 18.0941 13.172 18.8281Z" fill="#1E88E5"/>
-  <path fill-rule="evenodd" clip-rule="evenodd" d="M12 11.5C13.9891 11.5 15.8968 10.7098 17.3033 9.3033C18.7098 7.89678 19.5 5.98912 19.5 4H28.5C28.5 5.98912 29.2902 7.89678 30.6967 9.3033C32.1032 10.7098 34.0109 11.5 36 11.5V12.5C34.0109 12.5 32.1032 13.2902 30.6967 14.6967C29.2902 16.1032 28.5 18.0109 28.5 20H19.5C19.5 18.0109 18.7098 16.1032 17.3033 14.6967C15.8968 13.2902 13.9891 12.5 12 12.5V11.5ZM24 14C24.5304 14 25.0391 13.7893 25.4142 13.4142C25.7893 13.0391 26 12.5304 26 12C26 11.4696 25.7893 10.9609 25.4142 10.5858C25.0391 10.2107 24.5304 10 24 10C23.4696 10 22.9609 10.2107 22.5858 10.5858C22.2107 10.9609 22 11.4696 22 12C22 12.5304 22.2107 13.0391 22.5858 13.4142C22.9609 13.7893 23.4696 14 24 14Z" fill="#1E88E5"/>
-</svg>
+                                <path d="M12.52 42.7761H12C10.114 42.7761 9.172 42.7761 8.586 42.1901C8 41.6081 8 40.6641 8 38.7781V36.5541C8 35.5181 8 35.0001 8.266 34.5361C8.532 34.0721 8.934 33.8401 9.738 33.3721C15.03 30.2941 22.544 28.5621 27.558 31.5521C27.8953 31.7534 28.1953 31.9987 28.458 32.2881C28.7271 32.5822 28.9345 32.9273 29.0678 33.303C29.2011 33.6787 29.2577 34.0774 29.2342 34.4753C29.2107 34.8733 29.1076 35.2625 28.931 35.6199C28.7544 35.9773 28.5079 36.2956 28.206 36.5561C27.9655 36.7844 27.6721 36.9493 27.352 37.0361C27.592 37.0081 27.822 36.9767 28.042 36.9421C29.864 36.6521 31.394 35.6761 32.794 34.6181L36.41 31.8881C37.0555 31.4197 37.8325 31.1675 38.63 31.1675C39.4275 31.1675 40.2045 31.4197 40.85 31.8881C41.996 32.7541 42.348 34.1801 41.622 35.3441C40.776 36.7001 39.584 38.4341 38.44 39.4941C37.296 40.5541 35.588 41.5021 34.196 42.1741C32.652 42.9201 30.948 43.3481 29.214 43.6301C25.698 44.1981 22.034 44.1101 18.554 43.3941C16.5686 42.9854 14.547 42.777 12.52 42.7761ZM13.172 5.17206C12.438 5.90606 12.164 6.91806 12.062 8.50006C13.2344 8.48401 14.3542 8.01101 15.1831 7.18174C16.012 6.35248 16.4845 5.23245 16.5 4.06006C14.92 4.16406 13.906 4.43806 13.172 5.17206ZM34.828 5.17206C34.094 4.43806 33.082 4.16406 31.5 4.06206C31.5161 5.23444 31.989 6.35426 32.8183 7.18315C33.6476 8.01204 34.7676 8.48454 35.94 8.50006C35.836 6.92006 35.562 5.90606 34.828 5.17206ZM34.828 18.8281C34.094 19.5621 33.082 19.8361 31.5 19.9381C31.5161 18.7657 31.989 17.6459 32.8183 16.817C33.6476 15.9881 34.7676 15.5156 35.94 15.5001C35.836 17.0801 35.562 18.0941 34.828 18.8281ZM13.172 18.8281C13.906 19.5621 14.918 19.8361 16.5 19.9381C16.4839 18.7657 16.0109 17.6459 15.1817 16.817C14.3524 15.9881 13.2324 15.5156 12.06 15.5001C12.164 17.0801 12.438 18.0941 13.172 18.8281Z" fill="#1E88E5" />
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 11.5C13.9891 11.5 15.8968 10.7098 17.3033 9.3033C18.7098 7.89678 19.5 5.98912 19.5 4H28.5C28.5 5.98912 29.2902 7.89678 30.6967 9.3033C32.1032 10.7098 34.0109 11.5 36 11.5V12.5C34.0109 12.5 32.1032 13.2902 30.6967 14.6967C29.2902 16.1032 28.5 18.0109 28.5 20H19.5C19.5 18.0109 18.7098 16.1032 17.3033 14.6967C15.8968 13.2902 13.9891 12.5 12 12.5V11.5ZM24 14C24.5304 14 25.0391 13.7893 25.4142 13.4142C25.7893 13.0391 26 12.5304 26 12C26 11.4696 25.7893 10.9609 25.4142 10.5858C25.0391 10.2107 24.5304 10 24 10C23.4696 10 22.9609 10.2107 22.5858 10.5858C22.2107 10.9609 22 11.4696 22 12C22 12.5304 22.2107 13.0391 22.5858 13.4142C22.9609 13.7893 23.4696 14 24 14Z" fill="#1E88E5" />
+                            </svg>
                         </motion.div>
-                        <motion.h3 
+                        <motion.h3
                             initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.5, delay: 0.3 }}
                             className="text-xl font-medium text-[#1E88E5] mb-2"
                         >Support Our Programs</motion.h3>
-                        <motion.p 
+                        <motion.p
                             initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.5, delay: 0.4 }}
                             className="text-[#64748B] text-[16px] max-w-135 leading-relaxed mb-4"
                         >
@@ -65,8 +65,8 @@ const JoinMission = () => {
                     transition={{ duration: 0.5, delay: 0.2 }}
                     whileHover={{ scale: 1.02, y: -10 }}
                 >
-                    <Card className="border border-gray-200 ring-0 shadow-xl rounded-2xl w-[604px] h-[360px] p-10 flex flex-col items-center text-center">
-                        <motion.div 
+                    <Card className="border border-gray-200 ring-0 shadow-xl rounded-2xl w-full p-5 sm:p-10 flex flex-col items-center text-center">
+                        <motion.div
                             initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.5, delay: 0.3 }}
                             className="text-[#F97316] mb-3"
                         >
@@ -82,11 +82,11 @@ const JoinMission = () => {
                                 </defs>
                             </svg>
                         </motion.div>
-                        <motion.h3 
+                        <motion.h3
                             initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.5, delay: 0.4 }}
                             className="text-xl font-bold text-[#F97316] mb-2"
                         >Share Your Skills</motion.h3>
-                         <motion.p 
+                        <motion.p
                             initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.5, delay: 0.5 }}
                             className="text-[#64748B] text-[16px] max-w-135 leading-relaxed mb-6"
                         >
@@ -108,11 +108,11 @@ const JoinMission = () => {
                     transition={{ duration: 0.5, delay: 0.3 }}
                     whileHover={{ scale: 1.02, y: -10 }}
                 >
-                  <Card className="border border-gray-200 ring-0 shadow-xl rounded-2xl w-[604px] h-[360px] p-10 flex flex-col items-center text-center">
-                          <motion.div 
+                    <Card className="border border-gray-200 ring-0 shadow-xl rounded-2xl w-full p-5 sm:p-10 flex flex-col items-center text-center">
+                        <motion.div
                             initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.5, delay: 0.4 }}
                             className="text-[#8B5CF6] mb-3"
-                          >
+                        >
                             <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
                                 <g clip-path="url(#clip0_431_6339)">
                                     <path d="M42 26.6784C42 28.5719 40.4649 30.107 38.5714 30.107C36.678 30.107 35.1429 28.5719 35.1429 26.6784C35.1429 24.785 36.678 23.2499 38.5714 23.2499C40.4649 23.2499 42 24.785 42 26.6784ZM12.8571 26.6784C12.8571 28.5719 11.322 30.107 9.42857 30.107C7.53514 30.107 6 28.5719 6 26.6784C6 24.785 7.53514 23.2499 9.42857 23.2499C11.322 23.2499 12.8571 24.785 12.8571 26.6784ZM27.4286 23.2499C27.4286 25.1433 25.8934 26.6784 24 26.6784C22.1066 26.6784 20.5714 25.1433 20.5714 23.2499C20.5714 21.3564 22.1066 19.8213 24 19.8213C25.8934 19.8213 27.4286 21.3564 27.4286 23.2499ZM13.7382 46.3927C13.1686 45.6564 12.8588 44.7522 12.8571 43.8213V35.2499C12.861 34.3826 13.0111 33.5221 13.3012 32.7048C13.1539 32.6947 13.0078 32.6784 12.8571 32.6784H6C4.79644 32.675 3.62032 33.0379 2.62789 33.7188C1.81913 34.269 1.15698 35.0084 0.699002 35.8728C0.241022 36.7371 0.00106991 37.7002 0 38.6784L0 42.107C0.00151382 42.926 0.237251 43.7274 0.679397 44.4168C1.12154 45.1061 1.75165 45.6546 2.49536 45.9976C2.79269 46.1383 3.10608 46.2422 3.42857 46.307V36.9641H5.14286V46.3927H13.7382ZM14.5978 47.2499C14.5886 47.2431 14.5811 47.2343 14.5714 47.2277V47.2499H14.5978ZM32.7251 32.4323C32.2655 31.5743 31.6063 30.8394 30.8031 30.2895C30.7235 30.2304 30.6399 30.1768 30.5529 30.1292C29.6122 29.5542 28.5311 29.2499 27.4286 29.2499H20.5714C17.2575 29.2499 14.5714 31.9359 14.5714 35.2499V43.8213C14.5714 45.2414 15.7228 46.3927 17.1429 46.3927H18V34.3927H19.7143V46.3927H28.2857V34.3927H30V46.3927H30.8571C32.2772 46.3927 33.4286 45.2414 33.4286 43.8213V35.2499C33.4289 34.2672 33.1873 33.2995 32.7251 32.4323ZM45.3746 33.7206C44.3816 33.0387 43.2046 32.6752 42 32.6784H35.1429C34.9931 32.6784 34.8469 32.6947 34.6996 32.7048C34.9892 33.5222 35.139 34.3826 35.1429 35.2499V43.8213C35.1412 44.7522 34.8314 45.6564 34.2618 46.3927H42.8571V36.9641H44.5714V46.307C44.889 46.2434 45.1975 46.1409 45.4901 46.0019C46.2373 45.6609 46.8709 45.1126 47.3158 44.4223C47.7607 43.7319 47.9982 42.9283 48 42.107V38.6784C47.9989 37.7008 47.7592 36.7381 47.3017 35.8741C46.8442 35.0102 46.1827 34.2709 45.3746 33.7206Z" fill="#1E88E5" />
@@ -126,11 +126,11 @@ const JoinMission = () => {
                                 </defs>
                             </svg>
                         </motion.div>
-                        <motion.h3 
+                        <motion.h3
                             initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.5, delay: 0.5 }}
                             className="text-xl font-bold text-[#2B82D9] mb-3"
                         >Collaborate With Us</motion.h3>
-                         <motion.p 
+                        <motion.p
                             initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.5, delay: 0.6 }}
                             className="text-[#64748B] text-[16px] max-w-135 leading-relaxed mb-6"
                         >
@@ -152,8 +152,8 @@ const JoinMission = () => {
                     transition={{ duration: 0.5, delay: 0.4 }}
                     whileHover={{ scale: 1.02, y: -10 }}
                 >
-                   <Card className="border border-gray-200 ring-0 shadow-xl rounded-2xl w-[604px] h-[360px] p-10 flex flex-col items-center text-center">
-                        <motion.div 
+                    <Card className="border border-gray-200 ring-0 shadow-xl rounded-2xl w-full p-5 sm:p-10 flex flex-col items-center text-center">
+                        <motion.div
                             initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.5, delay: 0.5 }}
                             className="text-[#8B5CF6] mb-3"
                         >
@@ -162,11 +162,11 @@ const JoinMission = () => {
                                 <path d="M37.9996 8C40.1596 8 42.0536 9.14 43.1096 10.854L23.9996 23.594L4.88965 10.854C5.39123 10.0396 6.08023 9.357 6.89919 8.86298C7.71816 8.36896 8.64335 8.07787 9.59765 8.014L9.99965 8H37.9996Z" fill="#8B5CF6" />
                             </svg>
                         </motion.div>
-                        <motion.h3 
+                        <motion.h3
                             initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.5, delay: 0.6 }}
                             className="text-xl font-bold text-[#8B5CF6]  mb-2"
                         >Stay Informed</motion.h3>
-                        <motion.p 
+                        <motion.p
                             initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.5, delay: 0.7 }}
                             className="text-[#64748B] text-[16px] max-w-135 leading-relaxed mb-6"
                         >

@@ -1,0 +1,488 @@
+{
+  "navbar": {
+    "home": "Home",
+    "members": "Members",
+    "community": "Community",
+    "events": "Events",
+    "job_board": "Job Board",
+    "news": "News",
+    "contact": "Contact",
+    "about": "About",
+    "member_portal": "Member Portal",
+    "members_info": "Members Information",
+    "strategic_partners": "Strategic Partners",
+    "member_parking": "FCHCC Member parking lot(Coming soon)",
+    "forum": "Forum",
+    "groups": "Groups",
+    "hola_emprende": "Hola Emprende Conference & Business Expo 2025",
+    "atd_scholarship": "2025 ATD Scholarship Luncheon",
+    "monthly_calendar": "Monthly Calendar",
+    "resources": "Resources",
+    "our_committees": "Our Committees"
+  },
+  "footer": {
+    "about_text": "First Coast Hispanic Chamber of Commerce - Your Premier Hispanic Chamber. Strengthening the Hispanic business community since its founding.",
+    "membership": "Membership",
+    "become_member": "Become a Member",
+    "renew_membership": "Renew Membership",
+    "member_benefits": "Member Benefits",
+    "members_portal": "Members Portal",
+    "programs": "Programs",
+    "radio_show": "Radio Show",
+    "podcast": "Podcast",
+    "discounts": "Discounts Program",
+    "key_data": "Key Data for Hispanics",
+    "resources": "Resources",
+    "events_calendar": "Events Calendar",
+    "jobs_board": "Jobs Board",
+    "news": "News",
+    "privacy_policy": "Privacy Policy",
+    "terms_service": "Terms of Service",
+    "copyright": "© 2026 First Coast Hispanic Chamber of Commerce. All rights reserved."
+  },
+  "hero": {
+    "members": "5000+ Members",
+    "headline_part1": "Powering Ambition.",
+    "headline_part2": " Connecting Opportunity",
+    "description": "Connect. Grow. Lead. Join the region's most influential Hispanic business network.",
+    "learn_more": "Learn More",
+    "subscribe": "Subscribe Now"
+  },
+  "partners": {
+    "corporate_partners": "Corporate Partners"
+  },
+  "who_we_are": {
+    "title": "WHO WE ARE",
+    "mission": {
+      "title": "Our Mission",
+      "desc": "to positively impact the regional economy by creating value, promoting and facilitating the success of Hispanic-owned businesses and by engaging the community at large."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "desc": "to be recognized as the premier Hispanic Chamber of Northeast Florida for building successful partnerships that encourage business growth."
+    },
+    "join_today": "Join FCHCC today!",
+    "effortless": {
+      "title": "Simple Effortless",
+      "desc": "We provide Simple systems that are easy to operate and require very little upkeep, giving businesses simple tools to track performance and stay focused on growth."
+    },
+    "events": {
+      "title": "Upcoming Events",
+      "button": "Browse Events"
+    },
+    "members": {
+      "title": "Our Members",
+      "button": "Learn About Member"
+    }
+  },
+  "news": {
+    "title": "FCHCC News",
+    "view_all": "View All",
+    "scholarship": {
+      "desc": "Latest updates and announcements about ATD scholarship programs and recipients.",
+      "title": "ADT SCHOLARSHIP",
+      "winners_announcement": "FCHCC announces the Winners of the 2025 ATD Scholarship! Read the full ",
+      "press_release": "press release!",
+      "donate": "DONATE ",
+      "donate_desc": "to the Achieving the Dream Scholarship",
+      "view_past": "View our Past Winners",
+      "apply_now": "Apply Now"
+    },
+    "testimonials": {
+      "member_say": "What Our Members Say"
+    },
+    "newsletter": {
+      "subscribe_title": "Subscribe to Our Newsletter",
+      "subscribe_desc": "Get our Conexion newsletter with program updates, event invitations, and community success stories.",
+      "subscribe_button": "Subscribe Now",
+      "contact_us": "Contact Us"
+    },
+    "all": {
+      "title": "News & Updates",
+      "prev": "Previous",
+      "next": "Next"
+    },
+    "details": {
+      "back": "Back to News",
+      "gallery_click": "Click here",
+      "gallery_view": "to view the entire photo gallery!",
+      "get_pdf": "Get PDF"
+    }
+  },
+  "badges": {
+    "title": "Our Badges"
+  },
+  "strategic_partners": {
+    "title": "Our Strategic Partners",
+    "learn_more": "Learn More"
+  },
+  "proud_member": {
+    "text": "Proud member of"
+  },
+  "media": {
+    "title": "FCHCC Media",
+    "view_all": "View All"
+  },
+  "hero_members": {
+    "badge": "First Coast Hispanic Chamber of Commerce",
+    "title_part1": "Our Chamber is ",
+    "title_part2": "your Chamber!",
+    "description": "Strengthen your business network by joining FCHCC. Connect with the Hispanic business community on the First Coast.",
+    "become_member": "Become a Member",
+    "subscribe": "Subscribe Now",
+    "jump_to": "Jump to any of these sections for more information."
+  },
+  "members_dashboard": {
+    "media": {
+      "title": "Media & Content",
+      "radio": {
+        "title": "Radio Show",
+        "desc": "Tune in to weekly business insights and success stories.",
+        "link": "Listen Now"
+      },
+      "podcast": {
+        "title": "Podcast",
+        "desc": "Listen to expert interviews on the go.",
+        "link": "Subscribe Today"
+      }
+    },
+    "growth": {
+      "title": "Growth & Savings",
+      "discounts": {
+        "title": "Member Discounts",
+        "desc": "Exclusive B2B savings from local partners.",
+        "link": "View Deals"
+      },
+      "promote": {
+        "title": "Promote Business",
+        "desc": "Get featured in our newsletter and socials.",
+        "link": "Submit Ad"
+      },
+      "data": {
+        "title": "Key Data",
+        "desc": "Market reports and community insights.",
+        "link": "View Data"
+      },
+      "ribbon": {
+        "title": "Ribbon Cutting",
+        "desc": "Celebrate your grand opening with us.",
+        "link": "Book Event"
+      }
+    },
+    "membership": {
+      "title": "Membership",
+      "social_media": {
+        "title": "Social Media Channels",
+        "desc": "Advertise your event on our platforms.",
+        "link": "View Deals"
+      },
+      "update_info": {
+        "title": "Update Your Info",
+        "desc": "Update your contact information.",
+        "link": "Update"
+      }
+    },
+    "advertise": {
+      "title": "Advertise and Update"
+    },
+    "events": {
+      "title": "Members Only Event",
+      "workshop": {
+        "title": "Social Cafecito Workshop",
+        "desc": "Expand your network and learn from the best.",
+        "link": "View Details"
+      }
+    }
+  },
+  "radio": {
+    "title_highlight": "FCHCC On",
+    "title": "Air Radio Program",
+    "intro1": "Don’t miss this great opportunity to be part of something extraordinary! Get ready for insightful discussions, exclusive insights and the opportunity to connect with like-minded members, as well as the opportunity to PROMOTE YOUR BUSINESS to the LARGEST NETWORK of HISPANIC LISTENERS IN NORTHEAST FLORIDA! Do not miss it!",
+    "intro2": "Our radio show is the chamber’s initiative to assist our corporate members grow their businesses by helping to bring awareness to their services and products.",
+    "description": "The First Coast Hispanic Chamber of Commerce’s “FCHCC On Air” Radio Program is a great way to promote your business and for our audience to learn more about your company and how it serves the Hispanic community..",
+    "show_info": "The show airs on Action 930 Wednesdays at 1 PM & Sundays at 9:30 AM ET! To be considered for a guest spot, please note:",
+    "requirements_1": "You must be an active corporate member of the FCHCC chamber (Membership level Small Business #1 up to Strategic Partner).",
+    "requirements_2": "Your company/business positively impacts your community.!",
+    "button": "Request a guest spot"
+  },
+  "podcast": {
+    "title_highlight": "FCHCC",
+    "title": "Monthly Podcast Program",
+    "hosts": "With hosts: Monica Hernandez, FCHCC President Sheifalika Bhatnagar, CMG Cox Media Group Maria Isabel Montoya MiAddvantage",
+    "desc1": "FCHCC's Business & Culture Podcast is a space to celebrate multiculturalism and diversity as the first podcast of its kind from a Hispanic Chamber of Commerce in Florida!",
+    "desc2": "We share topics of interest including: business, events, hot topics, art, and culture. Follow us on Social Media to listen in on the next episode! The Podcast airs the first Saturday of each month on 104.5 WOKV Jacksonville News and Talk.",
+    "desc3": "Our podcast is the another initiative of our chamber to assist our corporate members and show the impact of Hispanic culture on the Northeast Florida community.",
+    "guest_note": "To be considered for a guest spot, please note:",
+    "req1": "You must be an FCHCC Platinum chamber (Membership level Large Corporation #2 up to Strategic Partner) in good standing.",
+    "req2": "Your company/business positively impacts your community.",
+    "button": "Request a guest spot"
+  },
+  "discount": {
+    "hero": {
+      "title_highlight": "FCHCC",
+      "title": "Discount Program",
+      "desc": "FCHCC's Members Discounts Program provides positive exposure for your business and can add value through increased business with chamber members.",
+      "questions": "Questions about this program?"
+    },
+    "faq": {
+      "title": "Frequently-Asked Questions",
+      "q1": "Do I need to be an FCHCC member to offer a discount?",
+      "a1": "You don't have to be a member to offer a discount.",
+      "q2": "How long does approval take?",
+      "a2": "Approval usually takes 3-5 business days after review."
+    },
+    "how": {
+      "title": "How to Offer a Member Discount",
+      "desc": "To offer a member discount and prevent delays, we ask that you complete the member discount form in its entirety. You can upload your logo and/or banner ad. After we receive your application, the Board will review your discount. If approved, our staff will notify you and publish your offer.",
+      "note_title": "NOTE:",
+      "note_text": "Businesses may request to offer a member discount. The chamber reserves the right to refuse any request. Benefits expire after one year."
+    },
+    "cta": {
+      "questions": "Any more questions? feel free to",
+      "contact": "contact us!",
+      "button": "Submit a Discount",
+      "portal_text": "To view current discounts, log in to the Members Only Portal →",
+      "click_here": "click here!"
+    }
+  },
+  "cafecito": {
+    "badge": "Members Only Exclusive",
+    "hero": {
+      "title": "Social Cafecito: Where Business Leaders Connect",
+      "desc": "Exclusive monthly networking for FCHCC Members and Strategic Partners. Elevate your professional circle in a sophisticated atmosphere.",
+      "button": "Register for the next Cafecito",
+      "not_member": "Not an FCHCC member?",
+      "join": "Join here",
+      "attend": "to attend."
+    },
+    "verified": {
+      "title": "Verified",
+      "desc": "FCHCC Member Access"
+    },
+    "when": {
+      "title": "When & Where",
+      "desc": "3rd Friday of every month | 8:30 AM – 10:00 AM at the FCHCC Social Cafecito Meeting."
+    },
+    "experience": {
+      "title": "The Experience",
+      "desc": "An ideal space for members to exchange ideas and establish professional relationships with the most prominent business leaders in our community."
+    },
+    "topics": {
+      "title": "TOPICS COVERED",
+      "desc": "Expert speakers covering Marketing, Capital, Finance, Legal, Communities, and more!"
+    },
+    "newsletter": {
+      "title": "STAY INFORMED",
+      "subtitle": "Be sure to look out for meeting invites!",
+      "desc": "Subscribe to our mailing list at fchcc.com to stay updated on all upcoming workshops and networking opportunities.",
+      "label": "Email Address",
+      "button": "Subscribe Now"
+    }
+  },
+  "partners_details": {
+    "hero": {
+      "title": "FCHCC Strategic Partners",
+      "desc": "Learn More About Our Strategic Partners!"
+    },
+    "visit": "Visit Florida Blue",
+    "here": "here",
+    "job_portal": "Check out Florida Blue's job portal",
+    "about_title": "About Florida Blue:",
+    "desc1": "Florida Blue has been a member of FCHCC since January of 2005. Their organization is a loyal, long-standing partner of the Chamber’s initiatives, programs and sponsored many events. Florida Blue won Corporate Business of the Year at the 2023 Excellence in Business Awards.",
+    "bio_title": "Sandra \"Sandy\" Martin",
+    "bio_text": "has been with Florida Blue since 2003. She is an Advanced IT Systems Analyst with strong analytical and problem-solving skills that allows her to resolve business application issues within the IT environment experienced by Florida Blue’s providers.",
+    "bio_role": "Sandy currently serves as the Vice Chair for FCHCC.",
+    "bio_click": "Click here",
+    "bio_read": "to read her bio.",
+    "about_desc1": "Advancing health has always been at the center of our story. From the critical coverage that delivers peace of mind to the full breadth of health solutions that care for every aspect of your well-being, you can rest assured that Florida Blue is always looking out for you, your family and your community as we have done for more than 75 years.",
+    "about_desc2": "We are so much more than an insurer. We’re your health partner, working to lower your costs, make your benefits easy to access and providing you with a broad range of health services that include traditional medical care, mental well-being, preventive care and so much more. As a policyholder-owned not-for-profit, we invest resources to keep health care costs lower and work hard to ensure as many people as possible have access to high-quality, affordable and equitable care.",
+    "about_desc3": "We’re always working, always investing and always advancing toward a better state of health."
+  },
+  "new_members": {
+    "title": "New and Renewing Members",
+    "desc": "We thank our new and renewing members for their support and partnership. And, we look forward to our continued growth!"
+  },
+  "events": {
+    "hero": {
+      "title": "Hola Emprende Conference & Business Expo 2025 September 19–20, 2025",
+      "location": "Schultz Center 4019 Boulevard Center Drive Jacksonville, FL 32207",
+      "grow_btn": "Grow Business",
+      "get_involved_btn": "Get Involved"
+    },
+    "grow": {
+      "title": "Grow Business",
+      "subtitle": "Ready to grow your business? Register today and be part of two days of learning, networking, and opportunity!",
+      "vendor_top": "Register",
+      "vendor_bottom": "as a vendor",
+      "participant_top": "Register",
+      "participant_bottom": "as a participant",
+      "register_btn": "Register",
+      "experts_title": "Learn from Experts",
+      "experts_desc": "Apply What You Learn. Showcase Your Brand. The Hola Emprende Conference & Business Expo is your two-day destination for growth, connection, and opportunity. Whether you're launching your first venture or looking to scale your business, this is where real learning and real action come together."
+    },
+    "attend": {
+      "title": "Attend Business Expo",
+      "expect_title": "What To Expect",
+      "day1_title": "Day 1",
+      "day1_desc": "Conference & Workshops Gain hands-on insights from professionals and successful business owners. Dive into topics that matter most to small and growing businesses, including marketing, legal protections, digital tools, and more.",
+      "day2_title": "Day 2",
+      "day2_desc": "Networking & Expo. Connect with local industry leaders, explore vendor booths, and participate in live Q&A sessions designed to scale your operations.",
+      "who_title": "Who Should Attend:",
+      "who_list": [
+        "Entrepreneurs and small business owners",
+        "Startups looking to launch or grow",
+        "Professionals and students interested in business",
+        "Anyone looking to connect with the local community"
+      ]
+    },
+    "agenda": {
+      "speakers_title": "Meet Our Speakers",
+      "view_all": "View All"
+    }
+  },
+  "scholarship": {
+    "hero": {
+      "title": "Atd Scholarship Luncheon",
+      "subtitle": "Dream It Achieve It",
+      "ticket_btn": "Get Ticket",
+      "info_btn": "Get Info"
+    },
+    "prev": {
+      "title": "Previous Events",
+      "date": "MAY 16, 2025",
+      "desc": "Join us for a special luncheon celebrating dedication, growth and the pursuit of knowledge at Achieving the Dream 2025 luncheon! It's a day to recognize outstanding individuals and their journey toward success.",
+      "keynote": "Dr. Moez Limayem, UNF President",
+      "status": "EVENT SOLD OUT!\n Achieving the Dream Scholarship Luncheon",
+      "date_label": "Date",
+      "location_label": "Location",
+      "time_label": "Time",
+      "tickets_label": "Tickets",
+      "member": "Member",
+      "non_member": "Non Member",
+      "sold_out": "Event Sold Out",
+      "register": "Register Now",
+      "mc_title": "Master of Ceremony",
+      "sponsor_avail": "Sponsorship opportunities are available!",
+      "download_packet": "Download our packet here:",
+      "press_release": "Press Release",
+      "announcing": "announcing the Winners of the 2025 ATD Scholarship!"
+    },
+    "presenting": {
+      "title": "Presenting Sponsor",
+      "congrats": "Congratulations to the 2025 ATD Winners!"
+    },
+    "pricing": {
+      "view_2024": "View 2024 ATD Luncheon",
+      "dimensions": "Dimensions",
+      "formats": "Formats"
+    },
+    "about": {
+      "title": "About the ATD Luncheon",
+      "desc": "The FCHCC 'Achieving the Dream' is a scholarship program that supports high-achieving Hispanic students in Northeast Florida. This luncheon serves as our premier fundraising event to honor their accomplishments and secure future opportunities.",
+      "button": "Read More Stories"
+    },
+    "sponsors": {
+      "title": "Sponsors"
+    },
+    "partners": {
+      "title": "FCHCC Partners"
+    }
+  },
+
+  "jobs": {
+    "hero": {
+      "title": "FCHCC JOBS BOARD",
+      "desc": "Our Jobs Board is a great tool to connect with companies currently hiring or to find the right candidates for your business.",
+      "hiring_btn": "Start Hiring",
+      "available_btn": "Available Jobs"
+    },
+    "card": {
+      "new": "New",
+      "view": "View"
+    },
+    "list": {
+      "title": "Available Job Listing",
+      "search_placeholder": "Job title or company",
+      "search_btn": "Search",
+      "filter_all": "All Jobs",
+      "filter_full": "Full-time",
+      "filter_part": "Part-time",
+      "view_all": "View All",
+      "no_jobs": "No jobs found 😢"
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "About FCHCC",
+      "desc": "Learn about our history, mission, and the dedicated team driving our vision forward."
+    },
+    "story": {
+      "title": "Our Story",
+      "para1": "Founded With The Belief That A United Hispanic Business Community Is A Powerful Force For Economic Growth, The First Coast Hispanic Chamber Of Commerce (FCHCC) Has Been The Cornerstone Of Hispanic Enterprise In Our Region.",
+      "para2": "Over The Past 15+ Years, We Have Grown From A Small Group Of Passionate Entrepreneurs To A Robust Network Of Over 500 Members, Corporate Partners, And Community Leaders.",
+      "read_more": "Read More"
+    },
+    "recognition": {
+      "title": "FCHCC Recognized as Chamber of the Year"
+    },
+    "team": {
+      "title": "Leadership Team",
+      "desc": "Meet the board of directors committed to your success.",
+      "full_bio": "Full Bio",
+      "bio_desc": "{{name}} is the {{role}} at FCHCC, deeply committed to fostering growth and building strategic partnerships. With over 15 years of industry experience, they play an integral part in community development and corporate strategy."
+    }
+  },
+  "committee": {
+    "header": {
+      "title": "Our Committee",
+      "desc": "Committees are led by the Executive Committee and we are always looking for volunteers. Learn more about each committee below! If any of the following committees sparks your interest, let us know and we will contact you after we receive your information."
+    },
+    "list": {
+      "membership": {
+        "title": "New Membership",
+        "desc": "The Membership Retention committee encourages active membership of all Members, not included in the payment of dues but participation in the activities and affairs of the FCHCC. The committee shall monitor the payment of members’ dues and make recommendations to the Board regarding action to be taken for nonpayment."
+      },
+      "non_profit": {
+        "title": "Non-Profit",
+        "desc": "The Non-Profit committee encourages active membership of Non-Profit corporations, not only in the payment of dues but participation in the activities and affairs of the FCHCC. The Non-Profit committee shall establish relationships with Non-Profits that will further the vision and mission of the FCHCC."
+      },
+      "events": {
+        "title": "Professional Events",
+        "desc": "Plans and organizes networking events, workshops, and professional development programs."
+      },
+      "gala": {
+        "title": "Hispanic Heritage Gala Event",
+        "desc": "Responsible for planning and executing the annual gala celebration."
+      }
+    },
+    "volunteer": {
+      "title": "Become a Volunteer",
+      "btn": "Register"
+    }
+  },
+  "contact": {
+    "hero": {
+      "title": "Contact Us",
+      "desc": "We are here to help. Reach out to the FCHCC team for inquiries, support or partnership opportunities."
+    },
+    "form": {
+      "get_in_touch": "Get in Touch",
+      "desc": "Whether you have a question about membership, upcoming events, or sponsorship opportunities, our team is ready to answer all your questions.",
+      "location": "Office Location",
+      "phone": "Phone",
+      "email": "Email",
+      "send_msg": "Send a Message",
+      "first_name": "First Name",
+      "last_name": "Last Name",
+      "email_addr": "Email Address",
+      "subject": "Subject",
+      "message": "Message",
+      "placeholder_first": "Enter first name",
+      "placeholder_last": "Enter last name",
+      "placeholder_email": "Enter email",
+      "placeholder_subject": "Enter subject",
+      "placeholder_msg": "Write your message...",
+      "submit": "Send Message"
+    }
+  }
+}

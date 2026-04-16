@@ -90,13 +90,13 @@ export default function ContactInfoCards() {
   };
 
   return (
-    <section className="bg-[#D9EAF7] py-20 px-6 md:px-20 overflow-hidden">
+    <section className="bg-[#D9EAF7] py-12 sm:py-20 px-4 sm:px-6 md:px-20 overflow-hidden">
       <motion.div
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false, margin: "-100px" }}
-        className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
       >
         {cards.map((card) => {
           /* Image Card */
@@ -113,8 +113,8 @@ export default function ContactInfoCards() {
                   className="absolute w-full h-full object-cover group-hover:scale-110 transition duration-700"
                 />
 
-                <div className="absolute inset-0 bg-[#0A1D2E]/70 flex flex-col justify-end p-10 space-y-4">
-                  <h2 className="text-3xl font-bold text-white">
+                <div className="absolute inset-0 bg-[#0A1D2E]/70 flex flex-col justify-end p-6 sm:p-10 space-y-4">
+                  <h2 className="text-2xl sm:text-3xl font-bold text-white">
                     {card.title}
                   </h2>
 
@@ -139,7 +139,7 @@ export default function ContactInfoCards() {
               <motion.div
                 key={card.id}
                 variants={cardVariants}
-                className="bg-white p-10 rounded-[40px] shadow-sm flex flex-col space-y-6"
+                className="bg-white p-6 sm:p-10 rounded-[24px] sm:rounded-[40px] shadow-sm flex flex-col space-y-4 sm:space-y-6"
               >
                 {Icon && (
                   <div
@@ -150,7 +150,7 @@ export default function ContactInfoCards() {
                   </div>
                 )}
 
-                <h2 className="text-3xl font-bold">{card.title}</h2>
+                <h2 className="text-2xl sm:text-3xl font-bold">{card.title}</h2>
 
                 <div className="space-y-4">
                   {card.details?.map((item, index) => {
@@ -177,7 +177,7 @@ export default function ContactInfoCards() {
             <motion.div
               key={card.id}
               variants={cardVariants}
-              className="bg-white p-10 rounded-[40px] shadow-sm flex flex-col space-y-6"
+              className="bg-white p-6 sm:p-10 rounded-[24px] sm:rounded-[40px] shadow-sm flex flex-col space-y-4 sm:space-y-6"
             >
               {Icon && (
                 <div
@@ -188,7 +188,7 @@ export default function ContactInfoCards() {
                 </div>
               )}
 
-              <h2 className="text-3xl font-bold">{card.title}</h2>
+              <h2 className="text-2xl sm:text-3xl font-bold">{card.title}</h2>
 
               <p className="text-gray-600">{card.description}</p>
 

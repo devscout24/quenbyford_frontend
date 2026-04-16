@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 // ---------------- Feature Card ----------------
 interface FeatureCardProps {
@@ -32,8 +33,8 @@ const FeatureCard = ({
     </div>
 
     <div className="flex-1">
-      <h3 className="font-bold text-[#0F172A] text-xl  mb-1">{title}</h3>
-      <p className="text-xs text-[#64748B] text-[16px] font-normal mb-3 leading-relaxed">{desc}</p>
+      <h3 className="font-bold text-[#0F172A] text-base sm:text-xl mb-1">{title}</h3>
+      <p className="text-xs sm:text-sm text-[#64748B] font-normal mb-3 leading-relaxed">{desc}</p>
 
       <Link
         to={link}
@@ -66,16 +67,16 @@ const GridCard = ({
   iconColor,
   icon,
 }: GridCardProps) => (
-  <div className="bg-white  rounded-xl shadow-sm border border-gray-100 flex flex-col h-full hover:shadow-md transition p-8">
+  <div className="bg-white rounded-xl shadow-sm border border-gray-100 flex flex-col h-full hover:shadow-md transition p-4 sm:p-6 md:p-8">
     <div
       className={`w-10 h-10 rounded-lg ${iconColor} flex items-center justify-center mb-4`}
     >
       {icon}
     </div>
 
-    <h3 className="font-bold text-xl  text-[#0F172A] mb-2">{title}</h3>
+    <h3 className="font-bold text-base sm:text-xl text-[#0F172A] mb-2">{title}</h3>
 
-    <p className="text-[16px] text-[#64748B] font-normal mb-4 grow leading-normal">
+    <p className="text-sm sm:text-[16px] text-[#64748B] font-normal mb-4 grow leading-normal">
       {desc}
     </p>
 
@@ -87,12 +88,14 @@ const GridCard = ({
 
 // ---------------- Dashboard ----------------
 const Dashboard = () => {
+  const { t } = useTranslation();
+
   // 🔥 Dynamic Data
   const mediaData = [
     {
-      title: "Radio Show",
-      desc: "Tune in to weekly business insights and success stories.",
-      linkText: "Listen Now",
+      title: t("members_dashboard.media.radio.title"),
+      desc: t("members_dashboard.media.radio.desc"),
+      linkText: t("members_dashboard.media.radio.link"),
       link: "/partners/redioprogram",
       borderColor: "border-orange-400",
       iconColor: "bg-orange-100 text-orange-500",
@@ -101,9 +104,9 @@ const Dashboard = () => {
       </svg>,
     },
     {
-      title: "Podcast",
-      desc: "Listen to expert interviews on the go.",
-      linkText: "Subscribe Today",
+      title: t("members_dashboard.media.podcast.title"),
+      desc: t("members_dashboard.media.podcast.desc"),
+      linkText: t("members_dashboard.media.podcast.link"),
       link: "/partners/podcastprogram",
       borderColor: "border-blue-400",
       iconColor: "bg-blue-100 text-blue-500",
@@ -115,9 +118,9 @@ const Dashboard = () => {
 
   const gridData = [
     {
-      title: "Member Discounts",
-      desc: "Exclusive B2B savings from local partners.",
-      linkText: "View Deals",
+      title: t("members_dashboard.growth.discounts.title"),
+      desc: t("members_dashboard.growth.discounts.desc"),
+      linkText: t("members_dashboard.growth.discounts.link"),
       link: "/partners/discountprogram",
       iconColor: "bg-orange-100",
       icon: <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
@@ -125,9 +128,9 @@ const Dashboard = () => {
       </svg>,
     },
     {
-      title: "Promote Business",
-      desc: "Get featured in our newsletter and socials.",
-      linkText: "Submit Ad",
+      title: t("members_dashboard.growth.promote.title"),
+      desc: t("members_dashboard.growth.promote.desc"),
+      linkText: t("members_dashboard.growth.promote.link"),
       link: "#",
       iconColor: "bg-blue-50",
       icon: <svg xmlns="http://www.w3.org/2000/svg" width="25" height="20" viewBox="0 0 25 20" fill="none">
@@ -135,9 +138,9 @@ const Dashboard = () => {
       </svg>,
     },
     {
-      title: "Key Data",
-      desc: "Market reports and community insights.",
-      linkText: "View Data",
+      title: t("members_dashboard.growth.data.title"),
+      desc: t("members_dashboard.growth.data.desc"),
+      linkText: t("members_dashboard.growth.data.link"),
       link: "#",
       iconColor: "bg-green-50",
       icon: <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23" fill="none">
@@ -145,9 +148,9 @@ const Dashboard = () => {
       </svg>,
     },
     {
-      title: "Ribbon Cutting",
-      desc: "Celebrate your grand opening with us.",
-      linkText: "Book Event",
+      title: t("members_dashboard.growth.ribbon.title"),
+      desc: t("members_dashboard.growth.ribbon.desc"),
+      linkText: t("members_dashboard.growth.ribbon.link"),
       link: "#",
       iconColor: "bg-purple-50",
       icon: <svg xmlns="http://www.w3.org/2000/svg" width="27" height="26" viewBox="0 0 27 26" fill="none">
@@ -158,9 +161,9 @@ const Dashboard = () => {
 
   const advertiseData = [
     {
-      title: "Social Media Channels",
-      desc: "Advertise your event on our platforms.",
-      linkText: "View Deals",
+      title: t("members_dashboard.membership.social_media.title"),
+      desc: t("members_dashboard.membership.social_media.desc"),
+      linkText: t("members_dashboard.membership.social_media.link"),
       link: "#",
       borderColor: "border-orange-400",
       iconColor: "bg-orange-100 text-orange-500",
@@ -169,9 +172,9 @@ const Dashboard = () => {
       </svg>,
     },
     {
-      title: "Update Your Info",
-      desc: "Update your contact information.",
-      linkText: "Update",
+      title: t("members_dashboard.membership.update_info.title"),
+      desc: t("members_dashboard.membership.update_info.desc"),
+      linkText: t("members_dashboard.membership.update_info.link"),
       link: "#",
       borderColor: "border-blue-400",
       iconColor: "bg-blue-50 text-blue-500",
@@ -182,9 +185,9 @@ const Dashboard = () => {
   ];
   const membersData = [
     {
-      title: "Social Media Channels",
-      desc: "Advertise your event on our platforms.",
-      linkText: "View Deals",
+      title: t("members_dashboard.membership.social_media.title"),
+      desc: t("members_dashboard.membership.social_media.desc"),
+      linkText: t("members_dashboard.membership.social_media.link"),
       link: "#",
       borderColor: "border-orange-400",
       iconColor: "bg-orange-100 text-orange-500",
@@ -193,9 +196,9 @@ const Dashboard = () => {
       </svg>,
     },
     {
-      title: "Update Your Info",
-      desc: "Update your contact information.",
-      linkText: "Update",
+      title: t("members_dashboard.membership.update_info.title"),
+      desc: t("members_dashboard.membership.update_info.desc"),
+      linkText: t("members_dashboard.membership.update_info.link"),
       link: "#",
       borderColor: "border-blue-400",
       iconColor: "bg-blue-50 text-blue-500",
@@ -206,12 +209,12 @@ const Dashboard = () => {
   ];
 
   return (
-    <div className="max-w-335 mx-auto p-6 md:p-8  space-y-12">
+    <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 space-y-8 sm:space-y-12 py-6 sm:py-8">
 
       {/* Media */}
       <section>
-        <h2 className="text-[30px]  font-bold text-[#0F172A] mb-6">
-          Media & Content
+        <h2 className="text-xl sm:text-2xl md:text-[30px] font-bold text-[#0F172A] mb-4 sm:mb-6">
+          {t("members_dashboard.media.title")}
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -224,20 +227,20 @@ const Dashboard = () => {
 
       {/* Growth */}
       <section>
-        <h2 className="text-[30px]  font-bold text-[#0F172A] mb-6">
-          Growth & Savings
+        <h2 className="text-xl sm:text-2xl md:text-[30px] font-bold text-[#0F172A] mb-4 sm:mb-6">
+          {t("members_dashboard.growth.title")}
         </h2>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-[#0F172A] text-xl font-normal">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-[#0F172A] text-base sm:text-xl font-normal">
           {gridData.map((item, i) => (
             <GridCard key={i} {...item} />
           ))}
         </div>
       </section>
 
-           <section>
-        <h2 className="text-[30px]  font-bold text-[#0F172A] mb-6">
-         Membership
+      <section>
+        <h2 className="text-xl sm:text-2xl md:text-[30px] font-bold text-[#0F172A] mb-4 sm:mb-6">
+          {t("members_dashboard.membership.title")}
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -250,8 +253,8 @@ const Dashboard = () => {
 
       {/* Advertise */}
       <section>
-        <h2 className="text-[30px]  font-bold text-[#0F172A] mb-6">
-          Advertise and Update
+        <h2 className="text-xl sm:text-2xl md:text-[30px] font-bold text-[#0F172A] mb-4 sm:mb-6">
+          {t("members_dashboard.advertise.title")}
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -260,18 +263,18 @@ const Dashboard = () => {
           ))}
         </div>
       </section>
-      
+
 
       {/* Members Event */}
       <section>
-        <h2 className="text-[30px]  font-bold text-[#0F172A] mb-6">
-          Members Only Event
+        <h2 className="text-xl sm:text-2xl md:text-[30px] font-bold text-[#0F172A] mb-4 sm:mb-6">
+          {t("members_dashboard.events.title")}
         </h2>
 
         <FeatureCard
-          title="Social Cafecito Workshop"
-          desc="Expand your network and learn from the best."
-          linkText="View Details"
+          title={t("members_dashboard.events.workshop.title")}
+          desc={t("members_dashboard.events.workshop.desc")}
+          linkText={t("members_dashboard.events.workshop.link")}
           link="/partners/workshope"
           borderColor="border-orange-400"
           iconColor="bg-orange-100 text-orange-500"

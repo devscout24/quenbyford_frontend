@@ -1,10 +1,11 @@
-
 import { newsData } from '@/pages/Home/_components/FcgccNews';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from '@/components/ui/pagination';
+import { useTranslation } from "react-i18next";
 
 const AllNews = () => {
+  const { t } = useTranslation();
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 6;
 
@@ -17,8 +18,8 @@ const AllNews = () => {
   };
 
   return (
-    <section className="max-w-7xl mx-auto px-6 py-12 bg-white">
-      <h2 className="text-3xl font-bold text-[#0F172A] mb-8">News & Updates</h2>
+    <section className="max-w-[1440px] mx-auto px-6 py-12 bg-white">
+      <h2 className="text-3xl font-bold text-[#0F172A] mb-8">{t("news.all.title")}</h2>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-7">
         {paginatedNews.map((news) => (

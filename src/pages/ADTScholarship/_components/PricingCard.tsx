@@ -1,6 +1,6 @@
-
-import { Ruler, Palette, Maximize, Layers,  Crown } from 'lucide-react';
+import { Ruler, Palette, Maximize, Layers, Crown } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from "react-i18next";
 
 interface PricingCardProps {
   badge: string;
@@ -28,9 +28,11 @@ const PricingCard = ({
   icon,
   text = "PNG, JPG (300DPI)"
 }: PricingCardProps) => {
+  const { t } = useTranslation();
+
   return (
-    <div className={`bg-white rounded-xl shadow-sm border border-gray-100 p-6 flex ${isWide ? 'flex-row gap-8 col-span-2' : 'flex-col'} justify-between h-full`}>
-      <div className={isWide ? 'w-1/2' : 'w-full'}>
+    <div className={`bg-white rounded-xl shadow-sm border border-gray-100 p-4 sm:p-6 flex flex-col ${isWide ? 'md:flex-row gap-6 md:gap-8 md:col-span-2' : ''} justify-between h-full`}>
+      <div className={isWide ? 'w-full md:w-1/2' : 'w-full'}>
         <span className='flex justify-between items-center mb-4'>
           <span className={`inline-block px-2 py-1 rounded text-[12px] font-black uppercase tracking-widest ${badgeColor}`}>
             {badge}
@@ -70,13 +72,13 @@ const PricingCard = ({
 
       {/* Right Side Detail Box (For Wide/Standard Slots) */}
       {isWide && (
-        <div className="w-1/2 bg-slate-50 rounded-xl p-6 flex flex-col justify-center gap-6 border border-slate-100">
+        <div className="w-full md:w-1/2 bg-slate-50 rounded-xl p-4 sm:p-6 flex flex-col justify-center gap-4 sm:gap-6 border border-slate-100 mt-4 md:mt-0">
           <div className="flex items-start gap-4">
             <div className="bg-blue-100 p-2 rounded-lg">
               <Maximize size={20} className="text-blue-600" />
             </div>
             <div>
-              <p className="text-[10px] font-bold text-slate-400 uppercase tracking-tight">Dimensions</p>
+              <p className="text-[10px] font-bold text-slate-400 uppercase tracking-tight">{t("scholarship.pricing.dimensions")}</p>
               <p className="text-sm font-bold text-slate-800">{dimensions}</p>
             </div>
           </div>
@@ -86,7 +88,7 @@ const PricingCard = ({
               <Layers size={20} className="text-blue-600" />
             </div>
             <div>
-              <p className="text-[10px] font-bold text-slate-400 uppercase tracking-tight">Formats</p>
+              <p className="text-[10px] font-bold text-slate-400 uppercase tracking-tight">{t("scholarship.pricing.formats")}</p>
               <p className="text-sm font-bold text-slate-800 uppercase">{text}</p>
             </div>
           </div>
@@ -97,19 +99,21 @@ const PricingCard = ({
 };
 
 export default function PricingSection() {
+  const { t } = useTranslation();
+
   return (
     <div className="bg-slate-50 p-10 min-h-screen">
       {/* Header Button */}
       <div className="flex justify-center mb-12">
-        <Link to="/scholarshipwinners" 
-        className="bg-[#1E88E5] px-8 py-5 text-[32px] font-normal leading-6.5 text-white flex justify-center items-center mx-auto rounded-xl">
-          View 2024 ATD Luncheon
+        <Link to="/scholarshipwinners"
+          className="bg-[#1E88E5] px-6 sm:px-8 py-3 sm:py-5 text-xl sm:text-2xl md:text-[32px] font-normal leading-relaxed text-white flex justify-center items-center mx-auto rounded-xl text-center">
+          {t("scholarship.pricing.view_2024")}
         </Link>
 
       </div>
 
       {/* Grid Layout */}
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
 
         {/* Micro Slot */}
         <PricingCard
@@ -135,7 +139,7 @@ export default function PricingSection() {
         />
 
         {/* Bottom Premium Row */}
-        <div className="md:col-span-3">
+        <div className="grid grid-cols-1 md:col-span-3">
           <PricingCard
             badge="Premium Placement"
             badgeColor="bg-purple-100 text-purple-600"

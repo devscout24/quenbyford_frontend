@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import SubscribePopup from "../../../components/SubscribePopup";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 export const newsData = [
   {
@@ -100,6 +101,7 @@ const testimonialData = [
 ];
 
 const FchccNews = () => {
+  const { t } = useTranslation();
   const [index, setIndex] = useState(0);
   const [isSubscribeOpen, setIsSubscribeOpen] = useState(false);
 
@@ -112,7 +114,7 @@ const FchccNews = () => {
   };
 
   return (
-    <div className="w-full max-w-[1335px] mx-auto py-12 px-4 sm:px-6 lg:px-12 space-y-16 lg:space-y-24 bg-white overflow-hidden">
+    <div className="w-full max-w-[1440px] mx-auto py-12 px-4 sm:px-6 lg:px-12 space-y-16 lg:space-y-24 bg-white overflow-hidden">
       {/* News Section */}
       <motion.section
         initial={{ opacity: 0, y: 30 }}
@@ -121,13 +123,13 @@ const FchccNews = () => {
         transition={{ duration: 0.6 }}
       >
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8">
-          <h2 className="text-3xl sm:text-[40px] lg:text-[50px] font-bold text-black leading-tight">FCHCC News</h2>
+          <h2 className="text-3xl sm:text-[40px] lg:text-[50px] font-bold text-black leading-tight">{t("news.title")}</h2>
 
           <Link
             to="/news" /* Navigate to dynamic all-news page */
             className="border-2 border-orange-400 text-orange-500 font-bold px-5 py-2 rounded-full text-sm sm:text-base flex items-center gap-1 hover:bg-orange-50 transition-colors w-full sm:w-auto justify-center"
           >
-            View All
+            {t("news.view_all")}
             <ChevronRight size={18} />
           </Link>
         </div>
@@ -170,16 +172,15 @@ const FchccNews = () => {
         />
 
         <p className="mt-6 text-base sm:text-lg text-black font-normal leading-relaxed px-2">
-          Latest updates and announcements about ATD scholarship programs and
-          recipients.
+          {t("news.scholarship.desc")}
         </p>
       </div>
 
       {/* RIGHT SIDE */}
       <div className="space-y-6 lg:space-y-8 w-full">
         <h2 className="text-3xl sm:text-[40px] lg:text-[50px] font-bold uppercase leading-tight sm:leading-none">
-          ADT{" "}
-          <span className="text-[#F97316]">SCHOLARSHIP</span>
+          {t("news.scholarship.title").split(' ')[0]}{" "}
+          <span className="text-[#F97316]">{t("news.scholarship.title").split(' ')[1]}</span>
         </h2>
 
         {/* CARD */}
@@ -187,10 +188,9 @@ const FchccNews = () => {
           <img src="/icons/Frame.svg" alt="" className="w-10 h-10 sm:w-12 sm:h-12 shrink-0" />
 
           <p className="text-lg sm:text-[20px] lg:text-[22px] font-medium leading-relaxed text-gray-800">
-            FCHCC announces the Winners of the 2025 ATD Scholarship! Read the
-            full 
+            {t("news.scholarship.winners_announcement")}
             <span className="block mt-1 sm:inline sm:mt-0 italic text-[#1E88E5] hover:underline cursor-pointer">
-              {" "}press release!
+              {" "}{t("news.scholarship.press_release")}
             </span>
           </p>
         </div>
@@ -200,8 +200,8 @@ const FchccNews = () => {
           <img src="/icons/Frame (1).svg" alt="" className="w-8 h-8 sm:w-10 sm:h-10 shrink-0 mt-1 sm:mt-0 transition-transform group-hover:scale-110" />
 
           <p className="text-lg sm:text-xl lg:text-[22px] text-black font-semibold">
-            <span className="text-[#1E88E5] font-bold">DONATE </span>
-            to the Achieving the Dream Scholarship
+            <span className="text-[#1E88E5] font-bold">{t("news.scholarship.donate")}</span>
+            {t("news.scholarship.donate_desc")}
           </p>
         </div>
 
@@ -210,7 +210,7 @@ const FchccNews = () => {
           <img src="/icons/Frame (2).svg" alt="" className="w-8 h-8 sm:w-10 sm:h-10 shrink-0 transition-transform group-hover:scale-110" />
 
           <p className="text-lg sm:text-xl lg:text-[22px] text-black font-semibold group-hover:text-[#1E88E5] transition-colors">
-            View our Past Winners
+            {t("news.scholarship.view_past")}
           </p>
         </div>
       </div>
@@ -218,20 +218,24 @@ const FchccNews = () => {
       {/* BUTTON CENTER */}
       <div className="col-span-1 md:col-span-2 flex justify-center mt-8">
         <Button className="bg-[#F97316] w-full sm:w-[250px] h-12 sm:h-14 text-white rounded-full font-bold text-base sm:text-lg shadow-[0_6px_20px_rgba(249,115,22,0.3)] hover:scale-105 active:scale-95 transition-all cursor-pointer">
-          Apply Now
+          {t("news.scholarship.apply_now")}
         </Button>
       </div>
     </motion.section>
 
       {/* Testimonial */}
 
-       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-2">
-          {newsData.map((news, idx) => (
+       <div>
+          <h2 className="text-3xl sm:text-[40px] lg:text-[50px] font-bold text-[#F97316] mb-10 leading-tight">Atd Scholarship News</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-2">
+
+       
+          {newsData.slice(0, 3).map((news, idx) => (
             <Link to={`/news/${news.id}`} key={`${news.id}-${idx}`} className="w-full block hover:opacity-80 transition-opacity cursor-pointer group">
               <img
                 src={news.image}
                 alt={news.title}
-                className="rounded-2xl w-full h-[200px] object-cover shadow-sm group-hover:shadow-md transition-shadow"
+                className="rounded-2xl w-full h-[300px] object-cover shadow-sm group-hover:shadow-md transition-shadow"
               />
 
               <p className="text-xs sm:text-sm text-gray-500 mt-3 font-medium uppercase tracking-wide">
@@ -244,6 +248,7 @@ const FchccNews = () => {
             </Link>
           ))}
         </div>
+       </div>
         
       <motion.section
         initial={{ opacity: 0, y: 30 }}
@@ -252,7 +257,7 @@ const FchccNews = () => {
         transition={{ duration: 0.6, delay: 0.3 }}
         className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 items-center my-12"
       >
-        <div className="w-full h-[300px] sm:h-[450px] lg:h-[500px]">
+        <div className="w-full h-75 sm:h-112 lg:h-125">
           <img
             src={testimonialData[index].image}
             alt="member"
@@ -263,7 +268,7 @@ const FchccNews = () => {
         <div className="space-y-6 lg:space-y-8 w-full">
           <div className="flex items-center gap-3 text-[#1E88E5] text-base sm:text-lg leading-7 font-bold uppercase tracking-wide">
             <span className="w-2.5 h-2.5 bg-[#1E88E5] rounded-full" />
-            What Our Members Say
+            {t("news.testimonials.member_say")}
           </div>
 
           <p className="text-xl sm:text-[24px] lg:text-[28px] font-medium text-black leading-relaxed italic">
@@ -316,10 +321,10 @@ const FchccNews = () => {
 
         <div className="relative z-20 space-y-6 px-6 sm:px-12 w-full max-w-[800px] mx-auto py-12">
           <h2 className="text-3xl sm:text-[40px] font-bold leading-tight drop-shadow-md">
-            Subscribe to Our Newsletter
+            {t("news.newsletter.subscribe_title")}
           </h2>
           <p className="text-base sm:text-xl font-normal leading-relaxed text-gray-200">
-            Get our Conexion newsletter with program updates, event invitations, and community success stories.
+            {t("news.newsletter.subscribe_desc")}
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
@@ -327,11 +332,11 @@ const FchccNews = () => {
               onClick={() => setIsSubscribeOpen(true)}
               className="bg-[#F97316] text-white px-8 py-3.5 sm:py-4 w-full sm:w-auto min-w-[200px] rounded-full font-bold text-base shadow-lg hover:bg-[#e66a12] transition-colors cursor-pointer active:scale-95"
             >
-              Subscribe Now
+              {t("news.newsletter.subscribe_button")}
             </button>
 
             <button className="bg-white text-black px-8 py-3.5 sm:py-4 w-full sm:w-auto min-w-[200px] rounded-full font-bold text-base hover:bg-gray-100 transition-colors cursor-pointer active:scale-95">
-              Contact Us
+              {t("news.newsletter.contact_us")}
             </button>
           </div>
         </div>

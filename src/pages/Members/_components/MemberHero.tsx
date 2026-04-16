@@ -1,70 +1,72 @@
 import { useState } from "react";
 import SubscribePopup from "../../../components/SubscribePopup";
+import { useTranslation } from "react-i18next";
 
 const HeroWithStats = () => {
+  const { t } = useTranslation();
   const [isSubscribeOpen, setIsSubscribeOpen] = useState(false);
   return (
     <div className="w-full font-sans">
-      
+
       {/* ================= HERO SECTION ================= */}
-      <section className="relative h-200 flex items-center px-6 md:px-20 overflow-hidden">
-        
+      <section className="relative min-h-[400px] sm:min-h-[500px] md:min-h-[600px] lg:h-200 flex items-center px-4 sm:px-6 md:px-20 overflow-hidden">
+
         {/* Background Image + Gradient Overlay */}
-      <div className="absolute inset-0">
-  
-  {/* Image */}
-  <img
-    src="/images/img.png"
-    alt="Handshake"
-    className="w-full h-full object-cover"
-  />
+        <div className="absolute inset-0">
 
-  {/* Gradient Overlay */}
-  <div className="absolute inset-0 bg-linear-to-t bg-[#0A2540]/80 to-transparent"></div>
+          {/* Image */}
+          <img
+            src="/images/img.png"
+            alt="Handshake"
+            className="w-full h-full object-cover"
+          />
 
-</div>
+          {/* Gradient Overlay */}
+          <div className="absolute inset-0 bg-linear-to-t bg-[#0A2540]/80 to-transparent"></div>
+
+        </div>
 
         {/* Content */}
-        <div className="relative z-10 ml-53 space-y-6">
-          
+        <div className="relative z-10 ml-0 sm:ml-8 md:ml-16 lg:ml-53 space-y-4 sm:space-y-6 py-12 sm:py-16">
+
           {/* Badge */}
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-3 py-1 rounded-full border border-white/20">
             <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
             <span className="text-white text-xs font-medium uppercase tracking-wider">
-              First Coast Hispanic Chamber of Commerce
+              {t("hero_members.badge")}
             </span>
           </div>
 
           {/* Title */}
-          <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight">
-            Our Chamber is <br />
-            <span className="text-[#1E88E5]">your Chamber!</span>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
+            {t("hero_members.title_part1")} <br />
+            <span className="text-[#1E88E5]">{t("hero_members.title_part2")}</span>
           </h1>
 
           {/* Description */}
           <p className="text-gray-300 text-base md:text-lg max-w-lg leading-relaxed">
-            Strengthen your business network by joining FCHCC. Connect with the Hispanic business community on the First Coast.
+            {t("hero_members.description")}
           </p>
 
           {/* Buttons */}
           <div className="flex flex-wrap gap-4 pt-4">
             <button className="bg-[#F57C00] text-white px-6 md:px-8 py-3 rounded-full font-bold hover:bg-orange-600 transition shadow-lg">
-              Become a Member
+              {t("hero_members.become_member")}
             </button>
 
-            <button 
+            <button
               onClick={() => setIsSubscribeOpen(true)}
               className="border border-orange-500 text-orange-500 px-6 md:px-8 py-3 rounded-full font-bold hover:bg-orange-500 hover:text-white transition"
             >
-              Subscribe Now
+              {t("hero_members.subscribe")}
             </button>
           </div>
         </div>
         <SubscribePopup isOpen={isSubscribeOpen} onClose={() => setIsSubscribeOpen(false)} />
 
         {/* Bottom Wave */}
-       <div className="absolute bottom-[-1px] left-0 w-full leading-0 z-20 overflow-hidden">
-  {/* <svg
+        <div className="absolute bottom-[-1px] left-0 w-full leading-0 z-20 overflow-hidden">
+          {/* <svg
     viewBox="0 0 1440 120"
     xmlns="http://www.w3.org/2000/svg"
     className="w-full h-auto block"
@@ -74,7 +76,7 @@ const HeroWithStats = () => {
       fill="white"
     />
   </svg> */}
-</div>
+        </div>
       </section>
 
       {/* ================= STATS SECTION ================= */}
@@ -119,7 +121,7 @@ const HeroWithStats = () => {
 
         </div>
       </section> */}
-      <h1 className="text-[24px] font-bold text-black text-center mt-15">Jump to any of these sections for more information.</h1>
+      <h1 className="text-lg sm:text-xl md:text-[24px] font-bold text-black text-center mt-8 sm:mt-15 px-4">{t("hero_members.jump_to")}</h1>
 
     </div>
   );

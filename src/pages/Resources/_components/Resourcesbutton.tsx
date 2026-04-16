@@ -43,13 +43,13 @@ const ResourceGrid = () => {
   const selectedResource = resources.find(r => r.id === activeTab);
 
   return (
-    <div className="max-w-7xl mx-auto  space-y-10 my-15">
+    <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 space-y-10 my-15">
       {/* Header Text */}
-      <div className="space-y-6">
-        <h2 className="text-xl font-medium text-black  mb-8">
+      <div className="space-y-4 sm:space-y-6">
+        <h2 className="text-lg sm:text-xl font-medium text-black mb-4 sm:mb-8">
           FCHCC is dedicated to helping you have the tools you need to help your business grow and operate.
         </h2>
-        <p className="text-black text-xl font-normal">
+        <p className="text-black text-lg sm:text-xl font-normal">
           This page is designed to provide you resources and tools from FCHCC's members and partners.
         </p>
       </div>
@@ -61,7 +61,7 @@ const ResourceGrid = () => {
             key={item.id}
             onClick={() => handleButtonClick(item.id)}
             className={`
-              flex items-center justify-center text-center p-6 min-h-24 text-xl font-medium transition-all duration-200 rounded-md border cursor-pointer
+              flex items-center justify-center text-center p-4 sm:p-6 min-h-[80px] sm:min-h-24 text-base sm:text-lg md:text-xl font-medium transition-all duration-200 rounded-md border cursor-pointer
               ${activeTab === item.id
                 ? 'border-[#1E88E5] text-[#1E88E5] bg-blue-50 shadow-sm ring-1 ring-[#1E88E5]'
                 : 'border-slate-200 text-black bg-white hover:border-[#1E88E5] hover:text-[#1E88E5] hover:shadow-md'
@@ -76,17 +76,17 @@ const ResourceGrid = () => {
       {/* Conditionally Rendered Content Below Grid */}
       {activeTab !== 0 && (
         <div className="pt-8 mt-8 border-t border-slate-200 space-y-6">
-          <h2 className="text-3xl font-bold text-slate-800 pb-2">
+          <h2 className="text-2xl md:text-3xl font-bold text-slate-800 pb-2">
             {selectedResource?.label}
           </h2>
 
           {/* Render the same design for every button, just changing the image & title */}
-          <PartnerProfile 
-            data={{ 
-              ...mockPartnerData, 
+          <PartnerProfile
+            data={{
+              ...mockPartnerData,
               name: selectedResource?.label || mockPartnerData.name,
-              logo: `/images/${activeTab}.png` 
-            }} 
+              logo: `/images/${activeTab}.png`
+            }}
           />
         </div>
       )}

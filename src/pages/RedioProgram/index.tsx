@@ -1,11 +1,9 @@
-import RedioProg, { radioData } from "./_components/RedioPro"
-
-
+import RedioProg from "./_components/RedioPro"
 
 const RedioProgram = () => {
   return (
     <div>
-     <RedioProg data={radioData} />
+     <RedioProg />
     </div>
   )
 }

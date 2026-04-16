@@ -1,0 +1,487 @@
+{
+  "navbar": {
+    "home": "Inicio",
+    "members": "Miembros",
+    "community": "Comunidad",
+    "events": "Eventos",
+    "job_board": "Bolsa de Trabajo",
+    "news": "Noticias",
+    "contact": "Contacto",
+    "about": "Acerca de",
+    "member_portal": "Portal de Miembros",
+    "members_info": "Información para Miembros",
+    "strategic_partners": "Socios Estratégicos",
+    "member_parking": "Estacionamiento para miembros de FCHCC (Próximamente)",
+    "forum": "Foro",
+    "groups": "Grupos",
+    "hola_emprende": "Conferencia y Exposición de Negocios Hola Emprende 2025",
+    "atd_scholarship": "Almuerzo de Becas ATD 2025",
+    "monthly_calendar": "Calendario Mensual",
+    "resources": "Recursos",
+    "our_committees": "Nuestros Comités"
+  },
+  "footer": {
+    "about_text": "Cámara de Comercio Hispana de First Coast - Su Cámara Hispana Principal. Fortaleciendo la comunidad empresarial hispana desde su fundación.",
+    "membership": "Membresía",
+    "become_member": "Conviértase en Miembro",
+    "renew_membership": "Renovar Membresía",
+    "member_benefits": "Beneficios para Miembros",
+    "members_portal": "Portal de Miembros",
+    "programs": "Programas",
+    "radio_show": "Programa de Radio",
+    "podcast": "Podcast",
+    "discounts": "Programa de Descuentos",
+    "key_data": "Datos Clave para Hispanos",
+    "resources": "Recursos",
+    "events_calendar": "Calendario de Eventos",
+    "jobs_board": "Bolsa de Trabajo",
+    "news": "Noticias",
+    "privacy_policy": "Política de Privacidad",
+    "terms_service": "Términos de Servicio",
+    "copyright": "© 2026 Cámara de Comercio Hispana de First Coast. Todos los derechos reservados."
+  },
+  "hero": {
+    "members": "5000+ Miembros",
+    "headline_part1": "Impulsando la Ambición.",
+    "headline_part2": " Conectando Oportunidades",
+    "description": "Conecta. Crece. Lidera. Únete a la red regional de negocios hispanos más influyente.",
+    "learn_more": "Saber Más",
+    "subscribe": "Suscríbete Ahora"
+  },
+  "partners": {
+    "corporate_partners": "Socios Corporativos"
+  },
+  "who_we_are": {
+    "title": "QUIÉNES SOMOS",
+    "mission": {
+      "title": "Nuestra Misión",
+      "desc": "impactar positivamente la economía regional creando valor, promoviendo y facilitando el éxito de las empresas de propiedad hispana e involucrando a la comunidad en general."
+    },
+    "vision": {
+      "title": "Nuestra Visión",
+      "desc": "ser reconocida como la cámara hispana líder del noreste de Florida para construir asociaciones exitosas que fomenten el crecimiento empresarial."
+    },
+    "join_today": "¡Únete a FCHCC hoy!",
+    "effortless": {
+      "title": "Simple y Sin Esfuerzo",
+      "desc": "Proporcionamos sistemas simples que son fáciles de operar y requieren muy poco mantenimiento, brindando a las empresas herramientas sencillas para realizar un seguimiento del desempeño y mantenerse enfocadas en el crecimiento."
+    },
+    "events": {
+      "title": "Próximos Eventos",
+      "button": "Explorar Eventos"
+    },
+    "members": {
+      "title": "Nuestros Miembros",
+      "button": "Aprende Sobre el Miembro"
+    }
+  },
+  "news": {
+    "title": "Noticias de la FCHCC",
+    "view_all": "Ver Todo",
+    "scholarship": {
+      "desc": "Últimas actualizaciones y anuncios sobre los programas y destinatarios de becas ATD.",
+      "title": "BECA ATD",
+      "winners_announcement": "¡La FCHCC anuncia los ganadores de la beca ATD 2025! ¡Lee el comunicado de prensa completo!",
+      "press_release": "comunicado de prensa!",
+      "donate": "DONAR ",
+      "donate_desc": "a la Beca Logrando el Sueño",
+      "view_past": "Ver a nuestros ganadores anteriores",
+      "apply_now": "Aplica Ya"
+    },
+    "testimonials": {
+      "member_say": "Lo que dicen nuestros miembros"
+    },
+    "newsletter": {
+      "subscribe_title": "Suscríbete a nuestro boletín",
+      "subscribe_desc": "Reciba nuestro boletín Conexión con actualizaciones de programas, invitaciones a eventos e historias de éxito de la comunidad.",
+      "subscribe_button": "Suscríbete Ahora",
+      "contact_us": "Contáctenos"
+    },
+    "all": {
+      "title": "Noticias y Actualizaciones",
+      "prev": "Anterior",
+      "next": "Siguiente"
+    },
+    "details": {
+      "back": "Volver a Noticias",
+      "gallery_click": "Haga clic aquí",
+      "gallery_view": "para ver toda la galería de fotos!",
+      "get_pdf": "Obtener PDF"
+    }
+  },
+  "badges": {
+    "title": "Nuestras Insignias"
+  },
+  "strategic_partners": {
+    "title": "Nuestros Socios Estratégicos",
+    "learn_more": "Saber Más"
+  },
+  "proud_member": {
+    "text": "Orgulloso miembro de"
+  },
+  "media": {
+    "title": "FCHCC Media",
+    "view_all": "Ver Todo"
+  },
+  "hero_members": {
+    "badge": "Cámara de Comercio Hispana de First Coast",
+    "title_part1": "¡Nuestra Cámara es ",
+    "title_part2": "tu Cámara!",
+    "description": "Fortalezca su red de negocios uniéndose a FCHCC. Conéctese con la comunidad empresarial hispana en First Coast.",
+    "become_member": "Conviértase en Miembro",
+    "subscribe": "Suscríbase Ahora",
+    "jump_to": "Vaya a cualquiera de estas secciones para obtener más información."
+  },
+  "members_dashboard": {
+    "media": {
+      "title": "Medios y Contenido",
+      "radio": {
+        "title": "Programa de Radio",
+        "desc": "Sintonice semanalmente para obtener ideas de negocios e historias de éxito.",
+        "link": "Escuchar Ahora"
+      },
+      "podcast": {
+        "title": "Pódcast",
+        "desc": "Escuche entrevistas de expertos sobre la marcha.",
+        "link": "Suscríbase Hoy"
+      }
+    },
+    "growth": {
+      "title": "Crecimiento y Ahorros",
+      "discounts": {
+        "title": "Descuentos para Miembros",
+        "desc": "Ahorros exclusivos B2B de socios locales.",
+        "link": "Ver Ofertas"
+      },
+      "promote": {
+        "title": "Promover Negocio",
+        "desc": "Aparezca en nuestro boletín y redes sociales.",
+        "link": "Enviar Anuncio"
+      },
+      "data": {
+        "title": "Datos Clave",
+        "desc": "Informes de mercado e información comunitaria.",
+        "link": "Ver Datos"
+      },
+      "ribbon": {
+        "title": "Corte de Cinta",
+        "desc": "Celebre su gran inauguración con nosotros.",
+        "link": "Reservar Evento"
+      }
+    },
+    "membership": {
+      "title": "Membresía",
+      "social_media": {
+        "title": "Canales de Redes Sociales",
+        "desc": "Anuncie su evento en nuestras plataformas.",
+        "link": "Ver Ofertas"
+      },
+      "update_info": {
+        "title": "Actualice su Información",
+        "desc": "Actualice su información de contacto.",
+        "link": "Actualizar"
+      }
+    },
+    "advertise": {
+      "title": "Anunciar y Actualizar"
+    },
+    "events": {
+      "title": "Evento Solo para Miembros",
+      "workshop": {
+        "title": "Taller Social Cafecito",
+        "desc": "Amplíe su red y aprenda de los mejores.",
+        "link": "Ver Detalles"
+      }
+    }
+  },
+  "radio": {
+    "title_highlight": "FCHCC En",
+    "title": "Vivo Programa de Radio",
+    "intro1": "¡No pierda esta gran oportunidad de ser parte de algo extraordinario! ¡Prepárese para discusiones profundas, ideas exclusivas y la oportunidad de conectarse con miembros de ideas afines, así como la oportunidad de PROMOVER SU NEGOCIO ante la RED MÁS GRANDE de OYENTES HISPANOS EN EL NORESTE DE FLORIDA! ¡No se lo pierda!",
+    "intro2": "Nuestro programa de radio es una iniciativa de la cámara para ayudar a nuestros miembros corporativos a hacer crecer sus negocios ayudando a dar a conocer sus servicios y productos.",
+    "description": "El programa de radio “FCHCC On Air” de la Cámara de Comercio Hispana de First Coast es una excelente manera de promover su negocio y para que nuestra audiencia aprenda más sobre su empresa y cómo sirve a la comunidad hispana.",
+    "show_info": "¡El programa se transmite en Action 930 los miércoles a la 1 PM y los domingos a las 9:30 AM ET! Para ser considerado para un espacio como invitado, tenga en cuenta:",
+    "requirements_1": "Debe ser un miembro corporativo activo de la cámara FCHCC (Nivel de membresía desde Small Business #1 hasta Strategic Partner).",
+    "requirements_2": "¡Su empresa/negocio impacta positivamente a su comunidad!",
+    "button": "Solicitar un espacio como invitado"
+  },
+  "podcast": {
+    "title_highlight": "FCHCC",
+    "title": "Programa de Pódcast Mensual",
+    "hosts": "Con anfitriones: Monica Hernandez, Presidenta de FCHCC Sheifalika Bhatnagar, CMG Cox Media Group Maria Isabel Montoya MiAddvantage",
+    "desc1": "¡El Pódcast de Negocios y Cultura de FCHCC es un espacio para celebrar el multiculturalismo y la diversidad como el primer pódcast de su tipo de una Cámara de Comercio Hispana en Florida!",
+    "desc2": "Compartimos temas de interés que incluyen: negocios, eventos, temas de actualidad, arte y cultura. ¡Síganos en las Redes Sociales para escuchar el próximo episodio! El Pódcast se transmite el primer sábado de cada mes en 104.5 WOKV Jacksonville News and Talk.",
+    "desc3": "Nuestro pódcast es otra iniciativa de nuestra cámara para ayudar a nuestros miembros corporativos y mostrar el impacto de la cultura hispana en la comunidad del noreste de Florida.",
+    "guest_note": "Para ser considerado para un espacio como invitado, tenga en cuenta:",
+    "req1": "Debe ser una cámara Platinum de FCHCC (Nivel de membresía desde Large Corporation #2 hasta Strategic Partner) al día.",
+    "req2": "Su empresa/negocio impacta positivamente a su comunidad.",
+    "button": "Solicitar un espacio como invitado"
+  },
+  "discount": {
+    "hero": {
+      "title_highlight": "FCHCC",
+      "title": "Programa de Descuentos",
+      "desc": "El Programa de Descuentos para Miembros de FCHCC brinda una exposición positiva para su negocio y puede agregar valor a través del aumento de negocios con los miembros de la cámara.",
+      "questions": "¿Preguntas sobre este programa?"
+    },
+    "faq": {
+      "title": "Preguntas Frecuentes",
+      "q1": "¿Necesito ser miembro de FCHCC para ofrecer un descuento?",
+      "a1": "No tiene que ser miembro para ofrecer un descuento.",
+      "q2": "¿Cuánto tiempo toma la aprobación?",
+      "a2": "La aprobación generalmente toma de 3 a 5 días hábiles después de la revisión."
+    },
+    "how": {
+      "title": "Cómo Ofrecer un Descuento para Miembros",
+      "desc": "Para ofrecer un descuento para miembros y evitar retrasos, le pedimos que complete el formulario de descuento para miembros en su totalidad. Puede subir su logo y/o anuncio de banner. Después de recibir su solicitud, la Junta revisará su descuento. Si se aprueba, nuestro personal le notificará y publicará su oferta.",
+      "note_title": "NOTA:",
+      "note_text": "Las empresas pueden solicitar ofrecer un descuento para miembros. La cámara se reserva el derecho de rechazar cualquier solicitud. Los beneficios vencen después de un año."
+    },
+    "cta": {
+      "questions": "¿Alguna otra pregunta? siéntase libre de",
+      "contact": "¡contáctenos!",
+      "button": "Enviar un Descuento",
+      "portal_text": "Para ver los descuentos actuales, inicie sesión en el Portal Solo para Miembros →",
+      "click_here": "¡haga clic aquí!"
+    }
+  },
+  "cafecito": {
+    "badge": "Exclusivo para Miembros",
+    "hero": {
+      "title": "Social Cafecito: Donde los Líderes de Negocios se Conectan",
+      "desc": "Networking mensual exclusivo para Miembros de FCHCC y Socios Estratégicos. Eleve su círculo profesional en un ambiente sofisticado.",
+      "button": "Regístrese para el próximo Cafecito",
+      "not_member": "¿No es miembro de FCHCC?",
+      "join": "Únase aquí",
+      "attend": "para asistir."
+    },
+    "verified": {
+      "title": "Verificado",
+      "desc": "Acceso para Miembros de FCHCC"
+    },
+    "when": {
+      "title": "Cuándo y Dónde",
+      "desc": "Tercer viernes de cada mes | 8:30 AM – 10:00 AM en la Reunión FCHCC Social Cafecito."
+    },
+    "experience": {
+      "title": "La Experiencia",
+      "desc": "Un espacio ideal para que los miembros intercambien ideas y establezcan relaciones profesionales con los líderes empresariales más prominentes de nuestra comunidad."
+    },
+    "topics": {
+      "title": "TEMAS CUBIERTOS",
+      "desc": "Oradores expertos que cubren Marketing, Capital, Finanzas, Legal, Comunidades ¡y más!"
+    },
+    "newsletter": {
+      "title": "MANTÉNGASE INFORMADO",
+      "subtitle": "¡Asegúrese de estar atento a las invitaciones a las reuniones!",
+      "desc": "Suscríbase a nuestra lista de correo en fchcc.com para mantenerse actualizado sobre todos los próximos talleres y oportunidades de networking.",
+      "label": "Correo Electrónico",
+      "button": "Suscríbase Ahora"
+    }
+  },
+  "partners_details": {
+    "hero": {
+      "title": "Socios Estratégicos de FCHCC",
+      "desc": "¡Aprenda Más Sobre Nuestros Socios Estratégicos!"
+    },
+    "visit": "Visite Florida Blue",
+    "here": "aquí",
+    "job_portal": "Consulte el portal de empleo de Florida Blue",
+    "about_title": "Acerca de Florida Blue:",
+    "desc1": "Florida Blue ha sido miembro de FCHCC desde enero de 2005. Su organización es un socio leal y de larga data de las iniciativas y programas de la Cámara y ha patrocinado muchos eventos. Florida Blue ganó Empresa Corporativa del Año en los Premios a la Excelencia en los Negocios 2023.",
+    "bio_title": "Sandra \"Sandy\" Martin",
+    "bio_text": "ha estado con Florida Blue desde 2003. Es una Analista de Sistemas de TI Avanzada con sólidas habilidades analíticas y de resolución de problemas que le permiten resolver problemas de aplicaciones comerciales dentro del entorno de TI experimentado por los proveedores de Florida Blue.",
+    "bio_role": "Sandy actualmente se desempeña como Vicepresidenta de FCHCC.",
+    "bio_click": "Haga clic aquí",
+    "bio_read": "para leer su biografía.",
+    "about_desc1": "Avanzar en la salud siempre ha estado en el centro de nuestra historia. Desde la cobertura crítica que brinda tranquilidad hasta la amplia gama de soluciones de salud que cuidan cada aspecto de su bienestar, puede estar seguro de que Florida Blue siempre lo cuidará a usted, a su familia y a su comunidad, como lo hemos hecho durante más de 75 años.",
+    "about_desc2": "Somos mucho más que una aseguradora. Somos su socio de salud, trabajando para reducir sus costos, facilitar el acceso a sus beneficios y brindarle una amplia gama de servicios de salud que incluyen medicina tradicional, bienestar mental, atención preventiva y mucho más. Como una organización sin fines de lucro propiedad de los asegurados, invertimos recursos para mantener los costos de atención médica más bajos y trabajamos arduamente para garantizar que la mayor cantidad de personas posible tengan acceso a una atención equitativa, asequible y de alta calidad.",
+    "about_desc3": "Siempre estamos trabajando, siempre invirtiendo y siempre avanzando hacia un mejor estado de salud."
+  },
+  "new_members": {
+    "title": "Miembros Nuevos y Renovados",
+    "desc": "Agradecemos a nuestros miembros nuevos y renovados por su apoyo y asociación. ¡Y esperamos nuestro crecimiento continuo!"
+  },
+  "events": {
+    "hero": {
+      "title": "Hola Emprende Conferencia & Expo de Negocios 2025 19–20 de Septiembre, 2025",
+      "location": "Schultz Center 4019 Boulevard Center Drive Jacksonville, FL 32207",
+      "grow_btn": "Crecer Negocio",
+      "get_involved_btn": "Involucrarse"
+    },
+    "grow": {
+      "title": "Hacer Crecer el Negocio",
+      "subtitle": "¿Listo para hacer crecer su negocio? ¡Regístrese hoy y sea parte de dos días de aprendizaje, networking y oportunidad!",
+      "vendor_top": "Registrarse",
+      "vendor_bottom": "como proveedor",
+      "participant_top": "Registrarse",
+      "participant_bottom": "como participante",
+      "register_btn": "Registrarse",
+      "experts_title": "Aprender de Expertos",
+      "experts_desc": "Aplique lo que aprenda. Muestre su marca. La Hola Emprende Conferencia & Expo de Negocios es su destino de dos días para el crecimiento, la conexión y la oportunidad. Ya sea que esté lanzando su primer emprendimiento o buscando escalar su negocio, aquí es donde el aprendizaje real y la acción real se unen."
+    },
+    "attend": {
+      "title": "Asistir a la Expo de Negocios",
+      "expect_title": "Qué Esperar",
+      "day1_title": "Día 1",
+      "day1_desc": "Conferencia y Talleres Obtenga ideas prácticas de profesionales y dueños de negocios exitosos. Sumérjase en los temas que más importan a las pequeñas empresas en crecimiento, incluyendo marketing, protecciones legales, herramientas digitales y más.",
+      "day2_title": "Día 2",
+      "day2_desc": "Networking y Expo. Conéctese con líderes locales de la industria, explore puestos de proveedores y participe en sesiones de preguntas y respuestas en vivo diseñadas para escalar sus operaciones.",
+      "who_title": "Quiénes Deben Asistir:",
+      "who_list": [
+        "Emprendedores y dueños de pequeñas empresas",
+        "Startups que buscan lanzar o crecer",
+        "Profesionales y estudiantes interesados en los negocios",
+        "Cualquier persona que busque conectarse con la comunidad local"
+      ]
+    },
+    "agenda": {
+      "speakers_title": "Conozca a Nuestros Oradores",
+      "view_all": "Ver Todo"
+    }
+  },
+  "scholarship": {
+    "hero": {
+      "title": "Almuerzo de Becas Atd",
+      "subtitle": "Suéñalo Lógralo",
+      "ticket_btn": "Obtener Boleto",
+      "info_btn": "Obtener Información"
+    },
+    "prev": {
+      "title": "Eventos Anteriores",
+      "date": "16 DE MAYO, 2025",
+      "desc": "¡Únase a nosotros para un almuerzo especial que celebra la dedicación, el crecimiento y la búsqueda del conocimiento en el almuerzo Achieving the Dream 2025! Es un día para reconocer a personas destacadas y su camino hacia el éxito.",
+      "keynote": "Dr. Moez Limayem, Presidente de UNF",
+      "status": "¡EVENTO AGOTADO!\n Almuerzo de Becas Achieving the Dream",
+      "date_label": "Fecha",
+      "location_label": "Ubicación",
+      "time_label": "Hora",
+      "tickets_label": "Boletos",
+      "member": "Miembro",
+      "non_member": "No Miembro",
+      "sold_out": "Evento Agotado",
+      "register": "Registrarse Ahora",
+      "mc_title": "Maestro de Ceremonia",
+      "sponsor_avail": "¡Las oportunidades de patrocinio están disponibles!",
+      "download_packet": "Descargue nuestro paquete aquí:",
+      "press_release": "Comunicado de Prensa",
+      "announcing": "¡anunciando a los ganadores de la beca ATD 2025!"
+    },
+    "presenting": {
+      "title": "Patrocinador Presentador",
+      "congrats": "¡Felicitaciones a los ganadores de ATD 2025!"
+    },
+    "pricing": {
+      "view_2024": "Ver Almuerzo ATD 2024",
+      "dimensions": "Dimensiones",
+      "formats": "Formatos"
+    },
+    "about": {
+      "title": "Acerca del Almuerzo ATD",
+      "desc": "El 'Achieving the Dream' de FCHCC es un programa de becas que apoya a estudiantes hispanos de alto rendimiento en el noreste de Florida. Este almuerzo sirve como nuestro principal evento de recaudación de fondos para honrar sus logros y asegurar futuras oportunidades.",
+      "button": "Leer Más Historias"
+    },
+    "sponsors": {
+      "title": "Patrocinadores"
+    },
+    "partners": {
+      "title": "Socios de FCHCC"
+    }
+  },
+  "jobs": {
+    "hero": {
+      "title": "BOLSA DE TRABAJO DE FCHCC",
+      "desc": "Nuestra Bolsa de Trabajo es una excelente herramienta para conectarse con empresas que están contratando actualmente o para encontrar los candidatos adecuados para su negocio.",
+      "hiring_btn": "Comenzar a Contratar",
+      "available_btn": "Empleos Disponibles"
+    },
+    "card": {
+      "new": "Nuevo",
+      "view": "Ver"
+    },
+    "list": {
+      "title": "Listado de Empleos Disponibles",
+      "search_placeholder": "Título del puesto o empresa",
+      "search_btn": "Buscar",
+      "filter_all": "Todos los Empleos",
+      "filter_full": "Tiempo Completo",
+      "filter_part": "Medio Tiempo",
+      "view_all": "Ver Todo",
+      "no_jobs": "No se encontraron empleos 😢"
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "Acerca de FCHCC",
+      "desc": "Conozca nuestra historia, misión y el equipo dedicado que impulsa nuestra visión."
+    },
+    "story": {
+      "title": "Nuestra Historia",
+      "para1": "Fundada con la creencia de que una comunidad empresarial hispana unida es una fuerza poderosa para el crecimiento económico, la Cámara de Comercio Hispana de First Coast (FCHCC) ha sido la piedra angular de la empresa hispana en nuestra región.",
+      "para2": "En los últimos 15+ años, hemos crecido de un pequeño grupo de apasionados emprendedores a una sólida red de más de 500 miembros, socios corporativos y líderes comunitarios.",
+      "read_more": "Leer más"
+    },
+    "recognition": {
+      "title": "FCHCC Reconocida como Cámara del Año"
+    },
+    "team": {
+      "title": "Equipo de Liderazgo",
+      "desc": "Conozca a la junta directiva comprometida con su éxito.",
+      "full_bio": "Biografía completa",
+      "bio_desc": "{{name}} es el {{role}} en FCHCC, profundamente comprometido con el fomento del crecimiento y la construcción de asociaciones estratégicas. Con más de 15 años de experiencia en la industria, desempeñan un papel integral en el desarrollo comunitario y la estrategia corporativa."
+    }
+  },
+  "committee": {
+    "header": {
+      "title": "Nuestro Comité",
+      "desc": "Los comités están dirigidos por el Comité Ejecutivo y siempre estamos buscando voluntarios. ¡Aprenda más sobre cada comité a continuación! Si alguno de los siguientes comités despierta su interés, háganoslo saber y nos pondremos en contacto con usted después de recibir su información."
+    },
+    "list": {
+      "membership": {
+        "title": "Nueva Membresía",
+        "desc": "El comité de Retención de Membresía fomenta la membresía activa de todos los Miembros, no incluida en el pago de cuotas sino en la participación en las actividades y asuntos de la FCHCC. El comité supervisará el pago de las cuotas de los miembros y hará recomendaciones a la Junta con respecto a las medidas a tomar por falta de pago."
+      },
+      "non_profit": {
+        "title": "Sin Fines de Lucro",
+        "desc": "El comité de Organizaciones Sin Fines de Lucro fomenta la membresía activa de las corporaciones sin fines de lucro, no solo en el pago de cuotas sino en la participación en las actividades y asuntos de la FCHCC. El comité de organizaciones sin fines de lucro establecerá relaciones con organizaciones sin fines de lucro que promuevan la visión y misión de la FCHCC."
+      },
+      "events": {
+        "title": "Eventos Profesionales",
+        "desc": "Planifica y organiza eventos de networking, talleres y programas de desarrollo profesional."
+      },
+      "gala": {
+        "title": "Gala de la Herencia Hispana",
+        "desc": "Responsable de la planificación y ejecución de la celebración anual de la gala."
+      }
+    },
+    "volunteer": {
+      "title": "Conviértase en Voluntario",
+      "btn": "Registrarse"
+    }
+  },
+  "contact": {
+    "hero": {
+      "title": "Contáctenos",
+      "desc": "Estamos aquí para ayudar. Comuníquese con el equipo de FCHCC para consultas, soporte o oportunidades de asociación."
+    },
+    "form": {
+      "get_in_touch": "Ponerse en contacto",
+      "desc": "Ya sea que tenga una pregunta sobre membresía, eventos futuros u oportunidades de patrocinio, nuestro equipo está listo para responder a todas sus preguntas.",
+      "location": "Ubicación de la Oficina",
+      "phone": "Teléfono",
+      "email": "Correo electrónico",
+      "send_msg": "Enviar un mensaje",
+      "first_name": "Nombre",
+      "last_name": "Apellido",
+      "email_addr": "Dirección de correo electrónico",
+      "subject": "Asunto",
+      "message": "Mensaje",
+      "placeholder_first": "Ingrese el nombre",
+      "placeholder_last": "Ingrese el apellido",
+      "placeholder_email": "Ingrese el correo electrónico",
+      "placeholder_subject": "Ingrese el asunto",
+      "placeholder_msg": "Escriba su mensaje...",
+      "submit": "Enviar Mensaje"
+    }
+  }
+}

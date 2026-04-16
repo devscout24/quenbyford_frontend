@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "../../ui/button";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import LanguageToggle from "./LanguageToggle";
 
 type NavLink = {
   name: string;
@@ -115,7 +116,11 @@ const MobileMenu = ({ isOpen, setIsOpen, navLinks }: MobileMenuProps) => {
             </div>
 
             {/* Mobile Footer / CTA */}
-            <div className="p-6 border-t border-gray-100 shrink-0 bg-gray-50">
+            <div className="p-6 border-t border-gray-100 shrink-0 bg-gray-50 flex flex-col gap-4">
+              <div className="flex items-center justify-between">
+                <span className="text-sm font-medium text-gray-500">Language</span>
+                <LanguageToggle />
+              </div>
               <Button className="w-full flex items-center justify-center gap-2 bg-[#F97316] hover:bg-[#e66a12] text-white h-14 rounded-full text-base font-bold shadow-[0_4px_20px_rgba(249,115,22,0.3)] transition-transform hover:scale-[1.02] active:scale-95">
                 <User size={18} />
                 <span>Member Portal</span>

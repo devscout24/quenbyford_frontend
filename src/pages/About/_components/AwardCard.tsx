@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Play } from 'lucide-react';
 import { Card, CardContent } from "@/components/ui/card";
+import { useTranslation } from "react-i18next";
 
 // ✅ Dynamic Data
 interface Award {
@@ -52,25 +53,25 @@ const AwardCard = ({ award }: { award: Award }) => {
   const [isPlaying, setIsPlaying] = useState(false);
 
   return (
-    <Card className={`border-2 ${award.borderColor} ring-0 rounded-2xl overflow-hidden bg-white shadow-sm flex flex-col h-full` }>
+    <Card className={`border-2 ${award.borderColor} ring-0 rounded-2xl overflow-hidden bg-white shadow-sm flex flex-col h-full`}>
       <CardContent className="p-5 flex flex-col items-center grow">
 
         {/* Year */}
-        <h2 className="text-4xl md:text-[64px] font-normal text-black tracking-tight">
+        <h2 className="text-4xl md:text-6xl font-normal text-black tracking-tight">
           {award.year}
         </h2>
 
         {/* Badge */}
         <div className="w-24 h-24 sm:w-32 sm:h-32 flex items-center justify-center my-4">
-          <img 
-            src={award.badge} 
-            alt={`Award ${award.year}`} 
+          <img
+            src={award.badge}
+            alt={`Award ${award.year}`}
             className="w-full h-full object-contain"
           />
         </div>
 
         {/* Video Thumbnail / Player */}
-        <div 
+        <div
           className="relative w-full aspect-video rounded-xl overflow-hidden group cursor-pointer shadow-md mt-auto"
           onClick={() => setIsPlaying(true)}
         >
@@ -87,9 +88,9 @@ const AwardCard = ({ award }: { award: Award }) => {
             ></iframe>
           ) : (
             <>
-              <img 
-                src={award.thumbnail} 
-                alt="Event Thumbnail" 
+              <img
+                src={award.thumbnail}
+                alt="Event Thumbnail"
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
               {/* Play Button */}
@@ -109,12 +110,14 @@ const AwardCard = ({ award }: { award: Award }) => {
 
 // 🔹 Main Section
 const RecognitionSection = () => {
+  const { t } = useTranslation();
+
   return (
-    <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 mb-15">
+    <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 mb-15">
 
       {/* Title */}
       <h1 className="text-2xl sm:text-3xl md:text-[36px] font-bold text-center text-black mb-8 leading-tight">
-        FCHCC Recognized as Chamber of the Year
+        {t("about.recognition.title")}
       </h1>
 
       {/* Grid */}

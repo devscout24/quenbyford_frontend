@@ -9,7 +9,7 @@ const MapSection = ({ locationQuery = "123 Business Blvd, Suite 400 Jacksonville
 
 
   return (
-    <div className="w-full h-75 relative overflow-hidden group mt-15">
+    <div className="w-full h-60 sm:h-75 relative overflow-hidden group mt-10 sm:mt-15">
       {/* Dynamic Google Map Embed */}
       <iframe
         width="100%"

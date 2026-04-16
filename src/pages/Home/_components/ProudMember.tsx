@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const ProudMember = () => {
+  const { t } = useTranslation();
   return (
     <section className="py-16 sm:py-20 md:py-24">
       <div className="max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg mx-auto text-center px-4">
@@ -13,7 +15,7 @@ const ProudMember = () => {
           viewport={{ once: false, amount: 0.5 }} 
           className="text-xl sm:text-2xl md:text-3xl font-medium mb-6 sm:mb-8 tracking-wide text-gray-700"
         >
-          Proud member of
+          {t("proud_member.text")}
         </motion.h1>
 
         {/* Logo */}

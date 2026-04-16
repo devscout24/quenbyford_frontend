@@ -1,129 +1,155 @@
+import { useState } from "react";
+import { useTranslation } from "react-i18next";
+import BioModal from "./BioModal";
+import DetailsCard from "./DetailsCard";
+import type { Partner } from "./types";
+
 const StrategicPartners = () => {
-  const logos = [
-    { name: "Florida Blue", url: "/images/5.png" },
-    { name: "CMG", url: "/images/6.png" },
-    { name: "iHeartMedia", url: "/images/7.png" },
-    { name: "Norsan Media", url: "/images/8.png" },
+  const { t } = useTranslation();
+  const [isBioOpen, setIsBioOpen] = useState(false);
+
+  const partnersData: Partner[] = [
+    {
+      id: 1,
+      name: "Florida Blue",
+      logo: "/images/5.png",
+      website: "#",
+      jobsUrl: "#",
+      description: t("partners_details.desc1"),
+      bio: {
+        name: t("partners_details.bio_title"),
+        image: "/images/10.png",
+        role: t("partners_details.bio_role"),
+        text: t("partners_details.bio_text"),
+      },
+      aboutTitle: t("partners_details.about_title"),
+      aboutDescs: [
+        t("partners_details.about_desc1"),
+        t("partners_details.about_desc2"),
+        t("partners_details.about_desc3"),
+      ]
+    },
+    {
+      id: 2,
+      name: "CMG",
+      logo: "/images/6.png",
+      website: "#",
+      jobsUrl: "#",
+      description: "Cox Media Group (CMG) is an industry-leading media company with dominant platforms, programmed locally of high-quality, and deeply engaged with the Northeast Florida community.",
+      bio: {
+        name: "James Carter",
+        image: "https://randomuser.me/api/portraits/men/2.jpg",
+        role: "Strategic Accounts Manager at CMG",
+        text: "James has been with CMG for over 10 years, leading digital transformation initiatives for local businesses in the First Coast area.",
+      },
+      aboutTitle: "About CMG:",
+      aboutDescs: [
+        "CMG is a multiplatform media company engaged in local broadcasting, publishing, and digital services. We are committed to providing premium content and innovative solutions to our audiences and advertising partners.",
+        "With a focus on local news, weather, and entertainment, CMG serves millions of viewers and listeners across the country through our trusted brands.",
+      ]
+    },
+    {
+      id: 3,
+      name: "iHeartMedia",
+      logo: "/images/7.png",
+      website: "#",
+      jobsUrl: "#",
+      description: "iHeartMedia is the No. 1 audio company in the United States, reaching 9 out of 10 Americans every month, and providing unparalleled results for partners through its massive reach.",
+      bio: {
+        name: "Sophia Lee",
+        image: "https://randomuser.me/api/portraits/women/3.jpg",
+        role: "Director of Community Relations at iHeartMedia",
+        text: "Sophia coordinates iHeartMedia's local outreach programs, ensuring that the Hispanic community has a strong voice in local radio programming.",
+      },
+      aboutTitle: "About iHeartMedia:",
+      aboutDescs: [
+        "iHeartMedia is a leading global media and entertainment company specializing in radio, digital, outdoor, mobile, events, and information services.",
+        "Our platform provides consumers with a seamless experience across all devices, making us the top choice for listeners and advertisers alike.",
+      ]
+    },
+    {
+      id: 4,
+      name: "Norsan Media",
+      logo: "/images/8.png",
+      website: "#",
+      jobsUrl: "#",
+      description: "Norsan Media is one of the top Hispanic media companies in the Southeastern United States, providing high-quality Spanish-language radio, television, and print content.",
+      bio: {
+        name: "Michael Hernandez",
+        image: "https://randomuser.me/api/portraits/men/6.jpg",
+        role: "Regional Director at Norsan Media",
+        text: "Michael leads Norsan Media's expansion into the Northeast Florida market, focusing on cultural connectivity and business growth for Hispanic entrepreneurs.",
+      },
+      aboutTitle: "About Norsan Media:",
+      aboutDescs: [
+        "Norsan Media's mission is to empower the Hispanic community through information and entertainment while providing businesses with the tools to reach this vibrant market.",
+        "We pride ourselves on our deep cultural roots and our ability to bridge the gap between businesses and the Hispanic consumer base.",
+      ]
+    }
   ];
+
+  const [selectedPartner, setSelectedPartner] = useState<Partner>(partnersData[0]);
 
   return (
     <div className="bg-gray-50 min-h-screen font-sans">
       {/* Hero Section */}
       <div
-        className="relative h-125 flex flex-col items-center justify-center text-white text-center bg-cover bg-center"
+        className="relative h-[400px] md:h-125 flex flex-col items-center justify-center text-white text-center bg-cover bg-center"
         style={{
           backgroundImage:
             'linear-gradient(rgba(30, 58, 95, 0.7), rgba(30, 58, 95, 0.7)), url("/images/Details.png")',
         }}
       >
-        <h1 className="text-4xl md:text-[56px] font-bold mb-8 capitalize">
-          FCHCC Strategic Partners
-        </h1>
-        <p className="text-xl md:text-[36px] capitalize font-normal">
-          Learn More About Our Strategic Partners!
-        </p>
+        <div className="px-4">
+          <h1 className="text-3xl md:text-[56px] font-bold mb-4 md:mb-8 capitalize">
+            {t("partners_details.hero.title")}
+          </h1>
+          <p className="text-lg md:text-[36px] capitalize font-normal max-w-4xl mx-auto">
+            {t("partners_details.hero.desc")}
+          </p>
+        </div>
       </div>
 
-      <div className="max-w-335 mx-auto px-4 py-12">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-12">
         {/* Logo Tabs Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-          {logos.map((logo, index) => (
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+          {partnersData.map((partner) => (
             <div
-              key={index}
-              className={`border-2 p-4 flex items-center justify-center rounded-md bg-white hover:shadow-md cursor-pointer transition-all ${index === 0 ? 
-                "border-blue-400" : "border-gray-200"}`}
+              key={partner.id}
+              onClick={() => setSelectedPartner(partner)}
+              className={`border-2 p-6 flex items-center justify-center rounded-xl bg-white hover:shadow-lg cursor-pointer transition-all duration-300 ${
+                selectedPartner.id === partner.id
+                  ? "border-blue-500 shadow-md ring-1 ring-blue-500/20"
+                  : "border-gray-100 hover:border-blue-200"
+              }`}
             >
               <img
-                src={logo.url}
-                alt={logo.name}
-                className="max-h-24 object-contain"
+                src={partner.logo}
+                alt={partner.name}
+                className="max-h-16 md:max-h-24 object-contain transition-transform duration-300 hover:scale-105"
               />
             </div>
           ))}
         </div>
 
-        {/* Details Card */}
-        <div className="border border-blue-200 rounded-xl p-8 bg-white shadow-sm">
-          <div className="flex flex-col md:flex-row j items-start md:items-center mb-6 gap-6">
-            <img src={logos[0].url} alt="Selected Logo" className="h-25.25" />
-            <p className="text-xl text-gray-600 font-normal">
-              Visit Florida Blue{" "}
-              <a href="#" className="text-blue-500 italic">
-                here
-              </a>
-              . | Check out Florida Blue's job portal{" "}
-              <a href="#" className="text-blue-500 italic">
-                here
-              </a>
-              .
-            </p>
-          </div>
-
-          <div className="space-y-6 text-black font-normal text-xl leading-relaxed">
-            <p>
-              <span className="font-bold">Florida Blue</span> has been a member
-              of FCHCC since January of 2005. Their organization is a loyal,
-              long-standing partner of the Chamber’s initiatives, programs and
-              sponsored many events. Florida Blue won <span className="font-bold">Corporate Business of the
-              Year </span > at the 2023 Excellence in Business Awards.
-            </p>
-
-            {/* Profile Highlight */}
-            <div className="flex flex-col md:flex-row items-center gap-6 border border-blue-100 rounded-lg p-4 bg-blue-50/30">
-              <img
-                src="/images/10.png"
-                alt="Sandra Martin"
-                className="w-20 h-20 rounded-full object-cover border-2 border-red-500"
-              />
-              <div className="text-xl font-normal text-black">
-                <p>
-                  <span className="font-bold italic">Sandra "Sandy" Martin</span> has
-                  been with Florida Blue since 2003. She is an Advanced IT
-                  Systems Analyst with strong analytical and problem-solving
-                  skills that allows her to resolve business application issues
-                  within the IT environment experienced by Florida Blue’s
-                  providers.
-                </p>
-                <p className="mt-2 ml-0">
-                  Sandy currently serves as the Vice Chair for FCHCC.{" "}
-                  <a href="#" className="text-blue-600 italic">
-                    Click here
-                  </a>{" "}
-                  to read her bio.
-                </p>
-              </div>
-            </div>
-
-            <div className="mt-8">
-              <h2 className="text-[36px] font-normal text-[#1E73BE] mb-4">
-                About Florida Blue:
-              </h2>
-              <p className="mb-1.75 text-xl font-normal text-black">
-                Advancing health has always been at the center of our story.
-                From the critical coverage that delivers peace of mind to the
-                full breadth of health solutions that care for every aspect of
-                your well-being, you can rest assured that Florida Blue is
-                always looking out for you, your family and your community as we
-                have done for more than 75 years.
-              </p>
-            <p className="mb-1.75 text-xl font-normal text-black">
-                We are so much more than an insurer. We’re your health partner,
-                working to lower your costs, make your benefits easy to access
-                and providing you with a broad range of health services that
-                include traditional medical care, mental well-being, preventive
-                care and so much more. As a policyholder-owned not-for-profit,
-                we invest resources to keep health care costs lower and work
-                hard to ensure as many people as possible have access to
-                high-quality, affordable and equitable care.
-              </p>
-              <p className="mb-1.75 text-xl font-normal text-black">
-                We’re always working, always investing and always advancing
-                toward a better state of health. 
-              </p>
-            </div>
-          </div>
-        </div>
+        {/* Details Card Component */}
+        <DetailsCard 
+          selectedPartner={selectedPartner} 
+          setIsBioOpen={setIsBioOpen} 
+        />
       </div>
+
+      {/* Bio Modal Component */}
+      <BioModal
+        isOpen={isBioOpen}
+        onClose={() => setIsBioOpen(false)}
+        title={selectedPartner.bio.name}
+        role={selectedPartner.bio.role}
+        image={selectedPartner.bio.image}
+        bioText={selectedPartner.bio.text}
+        detailedBioTitle="Detailed Biography"
+        description={selectedPartner.description}
+      />
     </div>
   );
 };

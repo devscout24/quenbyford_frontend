@@ -1,8 +1,7 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-
 import { Link } from 'react-router-dom';
+import { useTranslation } from "react-i18next";
 
 // ✅ 18 Jobs Data
 export const jobs = [
@@ -37,9 +36,11 @@ export interface Job {
 }
 
 export const JobCard = ({ job }: { job: Job }) => {
+  const { t } = useTranslation();
+
   return (
     <Link to={`/availablejobs/${job.id}`} className="block w-full">
-      <Card className="relative w-75 h-auto overflow-hidden border border-[#1E88E5]/25 ring-0 hover:shadow-md transition-shadow duration-300">
+      <Card className="relative w-full h-full overflow-hidden border border-[#1E88E5]/25 ring-0 hover:shadow-md transition-shadow duration-300">
         <CardContent className="p-5 flex flex-col gap-8">
 
           {/* Header */}
@@ -52,7 +53,7 @@ export const JobCard = ({ job }: { job: Job }) => {
 
             {job.isNew && (
               <span className="bg-[#F97316]/10 text-orange-600 text-xs font-bold px-3 py-1 rounded-md">
-                New
+                {t("jobs.card.new")}
               </span>
             )}
           </div>
@@ -61,7 +62,7 @@ export const JobCard = ({ job }: { job: Job }) => {
           <div className="space-y-4">
             <p className="text-[#475569] text-sm font-medium">{job.type}</p>
 
-            <h3 className="text-lg font-medium text-black w-[250px] h-[80px] leading-tight">
+            <h3 className="text-lg font-medium text-black w-full leading-tight">
               {job.company} - {job.title}
             </h3>
 
@@ -73,7 +74,7 @@ export const JobCard = ({ job }: { job: Job }) => {
             variant="outline"
             className="w-full  border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white rounded-full transition-colors duration-300"
           >
-            View
+            {t("jobs.card.view")}
           </Button>
 
         </CardContent>
@@ -85,7 +86,7 @@ export const JobCard = ({ job }: { job: Job }) => {
 // 🔹 Job Grid Component
 const JobGrid = () => {
   return (
-    <div className="w-full max-w-7xl mx-auto p-4 my-16">
+    <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 my-10 sm:my-16">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
 
         {jobs.slice(0, 6).map((job) => (
