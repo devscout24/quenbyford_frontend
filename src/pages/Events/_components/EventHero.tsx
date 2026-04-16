@@ -1,10 +1,9 @@
-import { useState } from "react";
-import SubscribePopup from "../../../components/SubscribePopup";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 const EventHero = () => {
   const { t } = useTranslation();
-  const [isSubscribeOpen, setIsSubscribeOpen] = useState(false);
+
   return (
     <div>
       {/* ================= HERO SECTION ================= */}
@@ -25,7 +24,7 @@ const EventHero = () => {
         {/* Content */}
         <div className="relative z-10 ml-53 space-y-6">
           {/* Badge */}
-        
+
 
           {/* Title */}
           <h1 className="max-w-195 mx-auto text-4xl md:text-[56px] font-medium text-white leading-tight">
@@ -39,20 +38,17 @@ const EventHero = () => {
 
           {/* Buttons */}
           <div className="flex flex-wrap gap-4 pt-4">
-            <button className="bg-[#F57C00] text-white px-6 md:px-8 py-3 rounded-full font-bold hover:bg-orange-600 transition shadow-lg">
+            <Link to="#grow-business" className="bg-[#F57C00] text-white px-6 md:px-8 py-3 rounded-full font-bold hover:bg-orange-600 transition shadow-lg">
               {t("events.hero.grow_btn")}
-            </button>
+            </Link>
 
-            <button
-              onClick={() => setIsSubscribeOpen(true)}
+            <Link to="/login"
+
               className="border border-orange-500 text-orange-500 px-6 md:px-8 py-3 rounded-full font-bold hover:bg-orange-500 hover:text-white transition"
-            >{t("events.hero.get_involved_btn")}</button>
+            >{t("events.hero.get_involved_btn")}</Link>
           </div>
         </div>
-        <SubscribePopup
-          isOpen={isSubscribeOpen}
-          onClose={() => setIsSubscribeOpen(false)}
-        />
+
 
         {/* Bottom Wave */}
         <div className="absolute bottom-[-1px] left-0 w-full leading-0 z-20 overflow-hidden"></div>

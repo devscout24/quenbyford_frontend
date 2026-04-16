@@ -5,10 +5,10 @@ import HeroWithStats from "./_components/MemberHero"
 const Members = () => {
   return (
     <div>
-      <HeroWithStats/>
-      <ServicesSection/>
-      {/* <ContactInfoCards/> */}
-      
+      <HeroWithStats />
+      <ServicesSection />
+
+
     </div>
   )
 }

@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import SubscribePopup from "../../../components/SubscribePopup";
+import { useTranslation } from "react-i18next";
 
 const CommunityHero = () => {
+    const { t } = useTranslation();
     const [isSubscribeOpen, setIsSubscribeOpen] = useState(false);
 
     // Animation Variants
@@ -26,6 +28,20 @@ const CommunityHero = () => {
         }
     };
 
+    const scrollToSection = (id: string) => {
+        const element = document.getElementById(id);
+        if (element) {
+            const offset = 150; // Increased offset to prevent header overlap
+            const elementPosition = element.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.scrollY - offset;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: "smooth"
+            });
+        }
+    };
+
     return (
         <div>
             {/* ================= HERO SECTION ================= */}
@@ -43,7 +59,7 @@ const CommunityHero = () => {
                     >
 
                         <source src="/Video/0304(1).mp4" type="video/mp4" />
-                        Your browser does not support the video tag.
+                        {t('community_page.hero.video_unsupported')}
                     </video>
 
 
@@ -65,7 +81,7 @@ const CommunityHero = () => {
                         variants={itemVariants}
                         className="max-w-[780px] text-2xl sm:text-3xl md:text-4xl lg:text-[56px] font-medium text-white leading-tight"
                     >
-                        Empowering Our HispanicCommunity Through Action
+                        {t('community_page.hero.title')}
                     </motion.h1>
 
                     {/* Description */}
@@ -73,8 +89,7 @@ const CommunityHero = () => {
                         variants={itemVariants}
                         className="text-white text-sm sm:text-base md:text-xl leading-relaxed max-w-[612px]"
                     >
-                        Building bridges, creating opportunities, strengthening
-                        our community together
+                        {t('community_page.hero.desc')}
                     </motion.p>
 
                     {/* Buttons */}
@@ -82,15 +97,18 @@ const CommunityHero = () => {
                         variants={itemVariants}
                         className="flex flex-wrap gap-4 pt-4"
                     >
-                        <button className="bg-[#F57C00] text-white px-6 md:px-8 py-3 rounded-full font-bold hover:bg-orange-600 transition shadow-lg">
-                            See Your Impact
+                        <button 
+                            onClick={() => scrollToSection('community-impact')}
+                            className="bg-[#F57C00] text-white px-6 md:px-8 py-3 rounded-full font-bold hover:bg-orange-600 transition shadow-lg active:scale-95 cursor-pointer"
+                        >
+                            {t('community_page.hero.btn_impact')}
                         </button>
 
                         <button
-                            onClick={() => setIsSubscribeOpen(true)}
-                            className="border border-orange-500 text-orange-500 px-6 md:px-8 py-3 rounded-full font-bold hover:bg-orange-500 hover:text-white transition"
+                            onClick={() => scrollToSection('join-our-mission')}
+                            className="border border-orange-500 text-orange-500 px-6 md:px-8 py-3 rounded-full font-bold hover:bg-orange-500 hover:text-white transition active:scale-95 cursor-pointer"
                         >
-                            Get Involved
+                            {t('community_page.hero.btn_involved')}
                         </button>
                     </motion.div>
                 </motion.div>

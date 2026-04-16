@@ -33,7 +33,7 @@ const SubscribePopup: React.FC<SubscribePopupProps> = ({ isOpen, onClose }) => {
           >
             {/* Header / Brand Gradient */}
             <div className="" />
-            
+
             <div className="relative p-8 md:p-16">
               {/* Close Button */}
               <button
@@ -49,8 +49,8 @@ const SubscribePopup: React.FC<SubscribePopupProps> = ({ isOpen, onClose }) => {
                   Subscribe to Our Newsletter
                 </h2>
                 <p className="text-black text-lg font-normal text-center w-162 mx-auto mb-20">
-                 Get our Conexion newsletter with program updates, event invitations,
-and community success stories.
+                  Get our Conexion newsletter with program updates, event invitations,
+                  and community success stories.
                 </p>
               </div>
 
@@ -87,7 +87,7 @@ and community success stories.
                       <input
                         type="text"
                         placeholder="Last Name"
-                         className="w-full pl-11 pr-4 h-9.5 bg-[#F4F4F4]  rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F97316]/20 focus:border-[#F97316] transition-all"
+                        className="w-full pl-11 pr-4 h-9.5 bg-[#F4F4F4]  rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F97316]/20 focus:border-[#F97316] transition-all"
                         required
                       />
                     </div>
@@ -120,7 +120,7 @@ and community success stories.
                   Subscribe Now
                 </button>
 
-            
+
               </form>
             </div>
           </motion.div>

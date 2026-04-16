@@ -1,12 +1,13 @@
-
 import { Card, } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 
 const JoinMission = () => {
+    const { t } = useTranslation();
     return (
-        <section className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 my-8 sm:my-16 bg-white overflow-hidden">
+        <section id="join-our-mission" className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 my-8 sm:my-16 bg-white overflow-hidden">
             {/* Section Title */}
             <motion.h2
                 initial={{ opacity: 0, x: -80 }}
@@ -15,11 +16,11 @@ const JoinMission = () => {
                 transition={{ duration: 1.2, ease: "easeOut" }}
                 className="text-2xl sm:text-[32px] font-medium text-center text-black mb-8 sm:mb-15"
             >
-                Join Our Mission
+                {t('community_page.join_mission.title')}
             </motion.h2>
 
             {/* Grid Layout */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 place-items-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 place-items-center mb-15">
 
                 {/* Card 1: Support Our Programs */}
                 <motion.div
@@ -42,16 +43,16 @@ const JoinMission = () => {
                         <motion.h3
                             initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.5, delay: 0.3 }}
                             className="text-xl font-medium text-[#1E88E5] mb-2"
-                        >Support Our Programs</motion.h3>
+                        >{t('community_page.join_mission.cards.support.title')}</motion.h3>
                         <motion.p
                             initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.5, delay: 0.4 }}
                             className="text-[#64748B] text-[16px] max-w-135 leading-relaxed mb-4"
                         >
-                            Help us provide scholarships, training, and opportunities to our community members.
+                            {t('community_page.join_mission.cards.support.desc')}
                         </motion.p>
                         <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.5, delay: 0.5 }}>
                             <Button className="bg-[#2B82D9] hover:bg-[#1E88E5] text-white px-10 py-6  rounded-xl font-semibold transition-all">
-                                Donate Now
+                                {t('community_page.join_mission.cards.support.btn')}
                             </Button>
                         </motion.div>
                     </Card>
@@ -85,16 +86,16 @@ const JoinMission = () => {
                         <motion.h3
                             initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.5, delay: 0.4 }}
                             className="text-xl font-bold text-[#F97316] mb-2"
-                        >Share Your Skills</motion.h3>
+                        >{t('community_page.join_mission.cards.volunteer.title')}</motion.h3>
                         <motion.p
                             initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.5, delay: 0.5 }}
                             className="text-[#64748B] text-[16px] max-w-135 leading-relaxed mb-6"
                         >
-                            Volunteer your expertise to mentor entrepreneurs and support community programs.
+                            {t('community_page.join_mission.cards.volunteer.desc')}
                         </motion.p>
                         <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.5, delay: 0.6 }}>
                             <Button className="bg-[#F97316] hover:bg-[#F97316] text-white px-10 py-6 rounded-xl font-semibold transition-all">
-                                Volunteer Today
+                                {t('community_page.join_mission.cards.volunteer.btn')}
                             </Button>
                         </motion.div>
                     </Card>
@@ -129,16 +130,16 @@ const JoinMission = () => {
                         <motion.h3
                             initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.5, delay: 0.5 }}
                             className="text-xl font-bold text-[#2B82D9] mb-3"
-                        >Collaborate With Us</motion.h3>
+                        >{t('community_page.join_mission.cards.collaborate.title')}</motion.h3>
                         <motion.p
                             initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.5, delay: 0.6 }}
                             className="text-[#64748B] text-[16px] max-w-135 leading-relaxed mb-6"
                         >
-                            Partner with FCHCC to create new opportunities and expand our community impact.
+                            {t('community_page.join_mission.cards.collaborate.desc')}
                         </motion.p>
                         <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.5, delay: 0.7 }}>
                             <Button className="bg-[#2B82D9] hover:bg-[#1E88E5] text-white px-10 py-6 rounded-xl font-semibold transition-all">
-                                Become a Partner
+                                {t('community_page.join_mission.cards.collaborate.btn')}
                             </Button>
                         </motion.div>
                     </Card>
@@ -152,7 +153,7 @@ const JoinMission = () => {
                     transition={{ duration: 0.5, delay: 0.4 }}
                     whileHover={{ scale: 1.02, y: -10 }}
                 >
-                    <Card className="border border-gray-200 ring-0 shadow-xl rounded-2xl w-full p-5 sm:p-10 flex flex-col items-center text-center">
+                    <Card className="border border-gray-200 ring-0 shadow-xl rounded-2xl w-full p-5 sm:p-10 flex flex-col items-center text-center ">
                         <motion.div
                             initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.5, delay: 0.5 }}
                             className="text-[#8B5CF6] mb-3"
@@ -165,16 +166,16 @@ const JoinMission = () => {
                         <motion.h3
                             initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.5, delay: 0.6 }}
                             className="text-xl font-bold text-[#8B5CF6]  mb-2"
-                        >Stay Informed</motion.h3>
+                        >{t('community_page.join_mission.cards.newsletter.title')}</motion.h3>
                         <motion.p
                             initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.5, delay: 0.7 }}
                             className="text-[#64748B] text-[16px] max-w-135 leading-relaxed mb-6"
                         >
-                            Get updates on programs, events, and opportunities to get involved in our community.
+                            {t('community_page.join_mission.cards.newsletter.desc')}
                         </motion.p>
                         <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.5, delay: 0.8 }}>
                             <Button className="bg-[#8B5CF6] hover:bg-[#8B5CF6] text-white px-10 py-6 rounded-xl font-semibold transition-all">
-                                Join Newsletter
+                                {t('community_page.join_mission.cards.newsletter.btn')}
                             </Button>
                         </motion.div>
                     </Card>

@@ -1,40 +1,42 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 const ProgramsGrid = () => {
+    const { t } = useTranslation();
     // Dynamic data array for the programs
     const programs = [
         {
             id: 1,
-            title: "ATD Scholarship Program",
-            description: '"Thanks to the scholarship, I can pursue my degree and achieve my dreams!"',
+            title: t('community_page.programs.atd.title'),
+            description: t('community_page.programs.atd.desc'),
             image: "/images/Frame 2087328089 (1).png",
-            buttonText: "Apply Now",
+            buttonText: t('community_page.programs.buttons.apply'),
             themeColor: "bg-[#F97316]", // Brand Orange
         },
         {
             id: 2,
-            title: "JSEB Program",
-            description: '"The certification helped our business grow and reach new opportunities! Learn more"',
+            title: t('community_page.programs.jseb.title'),
+            description: t('community_page.programs.jseb.desc'),
             image: "/images/Frame 2087328089 (2).png",
-            buttonText: "Learn More",
+            buttonText: t('community_page.programs.buttons.learn'),
             themeColor: "bg-[#3B82F6]", // Brand Blue
         },
         {
             id: 3,
-            title: "Prospera Pro",
-            description: '"Thanks to the scholarship, I can pursue my degree and achieve my dreams!"',
+            title: t('community_page.programs.prospera.title'),
+            description: t('community_page.programs.prospera.desc'),
             image: "/images/Frame 2087328089.png",
-            buttonText: "Apply Now",
+            buttonText: t('community_page.programs.buttons.apply'),
             themeColor: "bg-[#F97316]",
         },
         {
             id: 4,
-            title: "JSEB Program",
-            description: '"The certification helped our business grow and reach new opportunities! Learn more"',
+            title: t('community_page.programs.jseb.title'),
+            description: t('community_page.programs.jseb.desc'),
             image: "/images/Frame 2087328090.png",
-            buttonText: "Apply Now",
+            buttonText: t('community_page.programs.buttons.apply'),
             themeColor: "bg-[#F97316]",
         }
     ];
@@ -67,7 +69,7 @@ const ProgramsGrid = () => {
                 transition={{ duration: 0.6 }}
                 className="text-2xl sm:text-3xl font-bold text-center text-slate-900 mb-4"
             >
-                Programs That Transform Lives
+                {t('community_page.programs.title')}
             </motion.h2>
 
             {/* Grid Layout: 1 column on mobile, 2 on desktop */}

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import SubscribePopup from "../../../components/SubscribePopup";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 const HeroWithStats = () => {
   const { t } = useTranslation();
@@ -9,7 +10,7 @@ const HeroWithStats = () => {
     <div className="w-full font-sans">
 
       {/* ================= HERO SECTION ================= */}
-      <section className="relative min-h-[400px] sm:min-h-[500px] md:min-h-[600px] lg:h-200 flex items-center px-4 sm:px-6 md:px-20 overflow-hidden">
+      <section className="relative min-h-100 sm:min-h-125 md:min-h-150 lg:h-200 flex items-center px-4 sm:px-6 md:px-20 overflow-hidden">
 
         {/* Background Image + Gradient Overlay */}
         <div className="absolute inset-0">
@@ -50,9 +51,9 @@ const HeroWithStats = () => {
 
           {/* Buttons */}
           <div className="flex flex-wrap gap-4 pt-4">
-            <button className="bg-[#F57C00] text-white px-6 md:px-8 py-3 rounded-full font-bold hover:bg-orange-600 transition shadow-lg">
+            <Link to="/partners/newmembers" className="bg-[#F57C00] text-white px-6 md:px-8 py-3 rounded-full font-bold hover:bg-orange-600 transition shadow-lg">
               {t("hero_members.become_member")}
-            </button>
+            </Link>
 
             <button
               onClick={() => setIsSubscribeOpen(true)}

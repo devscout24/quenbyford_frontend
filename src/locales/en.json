@@ -171,19 +171,29 @@
     },
     "membership": {
       "title": "Membership",
+      "renew": {
+        "title": "Renew your Membership",
+        "desc": "Tune in to weekly business insights and success stories from industry leaders across the region.",
+        "link": "Listen Now"
+      },
+      "portal": {
+        "title": "Members Portal",
+        "desc": "Listen to expert interviews on the go. Available on all major platforms for your daily commute.",
+        "link": "Subscribe Today"
+      }
+    },
+    "advertise": {
+      "title": "Advertise and Update",
       "social_media": {
         "title": "Social Media Channels",
-        "desc": "Advertise your event on our platforms.",
+        "desc": "Advertise your Event on our Social Media Channels",
         "link": "View Deals"
       },
       "update_info": {
         "title": "Update Your Info",
-        "desc": "Update your contact information.",
+        "desc": "Update your Contact Information with FCHCC",
         "link": "Update"
       }
-    },
-    "advertise": {
-      "title": "Advertise and Update"
     },
     "events": {
       "title": "Members Only Event",
@@ -216,6 +226,143 @@
     "req1": "You must be an FCHCC Platinum chamber (Membership level Large Corporation #2 up to Strategic Partner) in good standing.",
     "req2": "Your company/business positively impacts your community.",
     "button": "Request a guest spot"
+  },
+  "media_page": {
+    "hero": {
+      "title": "Media Gallery",
+      "desc": "Explore our collection of memorable moments, success stories, and community events."
+    },
+    "nav": {
+      "images": "Images",
+      "videos": "Videos"
+    },
+    "image_gallery": {
+      "title": "Photo Gallery",
+      "view_all": "View All",
+      "items": {
+        "community_event": "Community Event 2024",
+        "business_expo": "Business Expo",
+        "annual_gala": "Annual Gala",
+        "workshop": "Workshop Highlights",
+        "networking": "Networking Social",
+        "award": "Award Ceremony",
+        "leadership": "Team Leadership",
+        "scholarship": "Scholarship Luncheon"
+      }
+    },
+    "video_gallery": {
+      "title": "Video Highlights",
+      "featured_subtitle": "Featured Highlights",
+      "view_all": "View All",
+      "items": {
+        "impact": "Chamber Impact Overview",
+        "success": "Success Stories: Local Businesses",
+        "scholarship": "ATD Scholarship Highlights"
+      }
+    }
+  },
+  "community_page": {
+    "hero": {
+      "title": "Empowering Our Hispanic Community Through Action",
+      "desc": "Building bridges, creating opportunities, strengthening our community together",
+      "btn_impact": "See Your Impact",
+      "btn_involved": "Get Involved",
+      "video_unsupported": "Your browser does not support the video tag."
+    },
+    "impact": {
+      "title": "Our Community Impact",
+      "stats": {
+        "scholarships": "Scholarships Awarded",
+        "certified": "Businesses Certified",
+        "trained": "Entrepreneurs Trained",
+        "partnership": "Community Partnership"
+      }
+    },
+    "programs": {
+      "title": "Programs That Transform Lives",
+      "atd": {
+        "title": "ATD Scholarship Program",
+        "desc": "\"Thanks to the scholarship, I can pursue my degree and achieve my dreams!\""
+      },
+      "jseb": {
+        "title": "JSEB Program",
+        "desc": "\"The certification helped our business grow and reach new opportunities! Learn more\""
+      },
+      "prospera": {
+        "title": "Prospera Pro",
+        "desc": "\"Thanks to the scholarship, I can pursue my degree and achieve my dreams!\""
+      },
+      "buttons": {
+        "apply": "Apply Now",
+        "learn": "Learn More"
+      }
+    },
+    "learn_and_grow": {
+      "title": "Learn And Grow With Us",
+      "workshop": {
+        "title": "Upcoming Workshop",
+        "desc": "Join Our in Person and virtual Workshop",
+        "badge": "✦ Virtual Workshop",
+        "item_title": "AI for Small Businesses",
+        "date": "March 15 2026",
+        "coming_soon": "Coming Soon",
+        "view_all": "View All Workshop"
+      },
+      "courses": {
+        "title": "Upcoming Workshop",
+        "desc": "Join Our in Person and virtual Workshop",
+        "featured": "Featured Courses",
+        "features": {
+          "video": "On-demand video courses",
+          "resources": "Downloadable resources",
+          "certificates": "Completion certificates",
+          "discussions": "Community discussions"
+        },
+        "item_title": "AI for Fundamental Course",
+        "item_li1": "AI Fundamentals",
+        "item_li2": "Learn the basics of AI",
+        "coming_soon": "Coming Soon",
+        "access_panel": "Access Training Pannel"
+      }
+    },
+    "join_mission": {
+      "title": "Join Our Mission",
+      "cards": {
+        "support": {
+          "title": "Support Our Programs",
+          "desc": "Help us provide scholarships, training, and opportunities to our community members.",
+          "btn": "Donate Now"
+        },
+        "volunteer": {
+          "title": "Share Your Skills",
+          "desc": "Volunteer your expertise to mentor entrepreneurs and support community programs.",
+          "btn": "Volunteer Today"
+        },
+        "collaborate": {
+          "title": "Collaborate With Us",
+          "desc": "Partner with FCHCC to create new opportunities and expand our community impact.",
+          "btn": "Become a Partner"
+        },
+        "newsletter": {
+          "title": "Stay Informed",
+          "desc": "Get updates on programs, events, and opportunities to get involved in our community.",
+          "btn": "Join Newsletter"
+        }
+      }
+    },
+    "stay_connected": {
+      "title": "Stay Connected with our community",
+      "desc": "Get our Conexion newsletter with program updates, event invitations, and community success stories.",
+      "form": {
+        "first_name": "First Name",
+        "last_name": "Last Name",
+        "email": "Email",
+        "placeholder_first": "Enter Name",
+        "placeholder_last": "Last Name",
+        "placeholder_email": "Enter your email",
+        "btn": "Subscribe Now"
+      }
+    }
   },
   "discount": {
     "hero": {
@@ -337,7 +484,8 @@
     },
     "agenda": {
       "speakers_title": "Meet Our Speakers",
-      "view_all": "View All"
+      "view_all": "View All",
+      "close": "Close"
     }
   },
   "scholarship": {

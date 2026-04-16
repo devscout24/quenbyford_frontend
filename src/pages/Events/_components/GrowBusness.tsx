@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 const GrowBusiness = () => {
   const { t } = useTranslation();
@@ -10,6 +11,8 @@ const GrowBusiness = () => {
       icon: "/icons/Frame (5).svg",
       bg: "bg-[#1E88E5]/10",
       btn: "bg-[#1E88E5] hover:bg-blue-700 shadow-blue-200",
+      link1: "https://form.jotform.com/252083870437157",
+    
     },
     {
       titleTop: t("events.grow.participant_top"),
@@ -17,6 +20,8 @@ const GrowBusiness = () => {
       icon: "/icons/Group.svg",
       bg: "bg-[#F97316]/10",
       btn: "bg-[#F97316] hover:bg-orange-600 shadow-orange-200",
+      link1: "https://form.jotform.com/252083870437158",
+     
     },
   ];
 
@@ -27,7 +32,7 @@ const GrowBusiness = () => {
   };
 
   return (
-    <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-10">
+    <div id="grow-business" className="scroll-mt-20 max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-10">
 
       {/* Header */}
       <div className="text-center space-y-2.5">
@@ -48,19 +53,20 @@ const GrowBusiness = () => {
               <img src={card.icon} alt="icon" className="w-8 h-8" />
             </div>
 
-            <h2 className="text-xl font-normal text-black mb-2">
-              {card.titleTop}
-            </h2>
+            <h2 className="text-xl font-normal text-black mb-2">{card.titleTop}</h2>
 
-            <p className="text-xl font-normal text-black mb-12">
-              {card.titleBottom}
-            </p>
+            <p className="text-xl font-normal text-black mb-12">{card.titleBottom}</p>
 
-            <button
-              className={`w-full py-3 px-6 text-white font-medium rounded-xl transition-colors shadow-lg ${card.btn}`}
-            >
-              {t("events.grow.register_btn")}
-            </button>
+            <div className="flex flex-col gap-4 w-full">
+              <Link
+                to={card.link1}
+                className={`w-full py-3 px-6 text-white font-medium rounded-xl transition-colors shadow-lg ${card.btn}`}
+              >
+                {t("events.grow.register_btn")}
+              </Link>
+
+            
+            </div>
           </div>
         ))}
       </div>

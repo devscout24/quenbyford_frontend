@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { GrDownload } from "react-icons/gr";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import { Button } from "@/components/ui/button";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
@@ -112,28 +113,37 @@ export default function PreviousEvents() {
         {eventData.mc.bio}
       </p>
 
-      {/* Sponsorship */}
-      <div className="space-y-8 mb-16">
-        <h3 className="text-lg sm:text-[24px] font-medium text-black">
-          {t("scholarship.prev.sponsor_avail")}
-        </h3>
+      {/* Sponsorship Section */}
+      <div className="relative mt-16 mb-24 px-4">
+        <div className="max-w-4xl mx-auto bg-gradient-to-br from-[#F4F2F7] to-[#FFFFFF] rounded-[2.5rem] p-8 md:p-12 shadow-sm border border-slate-100 overflow-hidden group">
+          {/* Background Decorative Element */}
+          <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-64 h-64 bg-[#F97316]/5 rounded-full blur-3xl group-hover:bg-[#F97316]/10 transition-colors duration-700" />
 
-        <p className="uppercase text-black text-lg sm:text-[24px] font-medium">
-          {t("scholarship.prev.download_packet")}
-        </p>
-        <div className="flex justify-center">
-          <button
-            className="h-20 w-20 rounded-full border-2 flex items-center justify-center p-0"
-          >
-            <div className="bg-white rounded-full h-14 w-14 flex items-center justify-center shadow-2xl">
-              <GrDownload className="w-10 h-10 text-[#F97316]" />
+          <div className="relative z-10 space-y-8">
+            <h3 className="text-xl sm:text-2xl md:text-[28px] font-medium text-black tracking-tight">
+              {t("scholarship.prev.sponsor_avail")}
+            </h3>
+
+            <div className="flex flex-col items-center gap-6">
+              <p className="uppercase text-slate-500 text-sm sm:text-base font-semibold tracking-[0.2em]">
+                {t("scholarship.prev.download_packet")}
+              </p>
+
+              <a
+                href="/sponsorship-packet.pdf"
+                download="sponsorship-packet.pdf"
+                className="group relative flex items-center justify-center w-20 h-20 rounded-full bg-white shadow-[0_10px_30px_rgba(0,0,0,0.08)] hover:shadow-[0_20px_40px_rgba(249,115,22,0.15)] transition-all duration-500 hover:-translate-y-1 active:scale-95 border border-slate-50 cursor-pointer text-inherit"
+              >
+                <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-[#F97316]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                <GrDownload className="w-8 h-8 text-[#F97316] group-hover:scale-110 transition-transform duration-300" />
+              </a>
             </div>
-          </button>
+          </div>
         </div>
       </div>
 
       {/* Event Card */}
-      <Card className="max-w-[1440px] mx-auto border border-[#F97316] shadow-lg">
+      <Card className="max-w-360 mx-auto border ring-0 border-[#F97316] shadow-lg">
         <CardContent className="p-8">
 
           <div className="grid md:grid-cols-2 gap-8 text-left">
@@ -203,14 +213,14 @@ export default function PreviousEvents() {
 
           {/* Button */}
           <div className="mt-10">
-            <button
-              className={`w-full py-4 sm:py-6 font-medium text-lg sm:text-[24px] text-white uppercase rounded-md transition-colors ${data.isSoldOut
+            <Button
+              className={`w-[500px] py-4 h-16  mt-5 font-medium text-4xl sm:text-[24px] text-white uppercase rounded-md transition-colors ${data.isSoldOut
                 ? "bg-[#F97316] cursor-not-allowed"
                 : "bg-[#F97316] hover:bg-[#e66a1f]"
                 }`}
             >
               {data.isSoldOut ? t("scholarship.prev.sold_out") : t("scholarship.prev.register")}
-            </button>
+            </Button>
           </div>
 
         </CardContent>

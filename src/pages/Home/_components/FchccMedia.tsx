@@ -1,6 +1,7 @@
 import { ChevronRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
 const FCHCCMedia = () => {
   const { t } = useTranslation();
@@ -25,9 +26,9 @@ const FCHCCMedia = () => {
         className="flex justify-between items-center mb-8"
       >
         <h2 className="text-4xl font-bold text-gray-900">{t("media.title")}</h2>
-        <button className="border border-orange-400 text-orange-400 px-5 py-1.5 rounded-full text-sm font-medium flex items-center gap-1 hover:bg-orange-50 transition-all">
+        <Link to="/media" className="border border-orange-400 text-orange-400 px-5 py-1.5 rounded-full text-sm font-medium flex items-center gap-1 hover:bg-orange-50 transition-all">
           {t("media.view_all")} <ChevronRight size={14} />
-        </button>
+        </Link>
       </motion.div>
 
       {/* Media Grid Layout */}

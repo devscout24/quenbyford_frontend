@@ -24,6 +24,9 @@ import Login from "@/pages/Auth/Login";
 import Register from "@/pages/Auth/Register";
 import AboutPage from "@/pages/About";
 import OurCommettePage from "@/pages/OurCommette";
+import ComingSoon from "@/pages/ComingSoon";
+import Media from "@/pages/Media";
+import SponsorsDetails from "@/pages/SponsorsDetails";
 
 const router = createBrowserRouter([
   {
@@ -120,6 +123,10 @@ const router = createBrowserRouter([
         element: <ContractPage />,
       },
       {
+        path: "/media",
+        element: <Media />,
+      },
+      {
         path: "/about",
         element: <AboutPage />,
       },
@@ -134,6 +141,14 @@ const router = createBrowserRouter([
       {
         path: "/about/committee",
         element: <OurCommettePage />,
+      },
+      {
+        path: "/comingsoon",
+        element: <ComingSoon />,
+      },
+      {
+        path: "/sponsors-details",
+        element: <SponsorsDetails />,
       },
     ],
   },

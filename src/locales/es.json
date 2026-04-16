@@ -138,7 +138,7 @@
       "radio": {
         "title": "Programa de Radio",
         "desc": "Sintonice semanalmente para obtener ideas de negocios e historias de éxito.",
-        "link": "Escuchar Ahora"
+        "link": "Escuche ahora"
       },
       "podcast": {
         "title": "Pódcast",
@@ -171,19 +171,29 @@
     },
     "membership": {
       "title": "Membresía",
+      "renew": {
+        "title": "Renueve su Membresía",
+        "desc": "Sintonice semanalmente para obtener ideas de negocios e historias de éxito de líderes de la industria en la región.",
+        "link": "Escuche ahora"
+      },
+      "portal": {
+        "title": "Portal de Miembros",
+        "desc": "Escuche entrevistas de expertos sobre la marcha. Disponible en todas las plataformas principales para su viaje diario.",
+        "link": "Suscríbase hoy"
+      }
+    },
+    "advertise": {
+      "title": "Anunciar y Actualizar",
       "social_media": {
         "title": "Canales de Redes Sociales",
-        "desc": "Anuncie su evento en nuestras plataformas.",
+        "desc": "Anuncie su evento en nuestros canales de redes sociales",
         "link": "Ver Ofertas"
       },
       "update_info": {
         "title": "Actualice su Información",
-        "desc": "Actualice su información de contacto.",
+        "desc": "Actualice su información de contacto con la FCHCC",
         "link": "Actualizar"
       }
-    },
-    "advertise": {
-      "title": "Anunciar y Actualizar"
     },
     "events": {
       "title": "Evento Solo para Miembros",
@@ -289,7 +299,7 @@
     "job_portal": "Consulte el portal de empleo de Florida Blue",
     "about_title": "Acerca de Florida Blue:",
     "desc1": "Florida Blue ha sido miembro de FCHCC desde enero de 2005. Su organización es un socio leal y de larga data de las iniciativas y programas de la Cámara y ha patrocinado muchos eventos. Florida Blue ganó Empresa Corporativa del Año en los Premios a la Excelencia en los Negocios 2023.",
-    "bio_title": "Sandra \"Sandy\" Martin",
+    "bio_title": "Sandra \"Sandra\" Martin",
     "bio_text": "ha estado con Florida Blue desde 2003. Es una Analista de Sistemas de TI Avanzada con sólidas habilidades analíticas y de resolución de problemas que le permiten resolver problemas de aplicaciones comerciales dentro del entorno de TI experimentado por los proveedores de Florida Blue.",
     "bio_role": "Sandy actualmente se desempeña como Vicepresidenta de FCHCC.",
     "bio_click": "Haga clic aquí",
@@ -324,7 +334,7 @@
       "title": "Asistir a la Expo de Negocios",
       "expect_title": "Qué Esperar",
       "day1_title": "Día 1",
-      "day1_desc": "Conferencia y Talleres Obtenga ideas prácticas de profesionales y dueños de negocios exitosos. Sumérjase en los temas que más importan a las pequeñas empresas en crecimiento, incluyendo marketing, protecciones legales, herramientas digitales y más.",
+      "day1_desc": "Conferencia y Talleres Obtenga ideas prác-ticas de profesionales y dueños de negocios exitosos. Sumérjase en los temas que más importan a las pe-queñas empresas en crecimiento, incluyendo marketing, protecciones legales, herramientas digitales y más.",
       "day2_title": "Día 2",
       "day2_desc": "Networking y Expo. Conéctese con líderes locales de la industria, explore puestos de proveedores y participe en sesiones de preguntas y respuestas en vivo diseñadas para escalar sus operaciones.",
       "who_title": "Quiénes Deben Asistir:",
@@ -337,7 +347,8 @@
     },
     "agenda": {
       "speakers_title": "Conozca a Nuestros Oradores",
-      "view_all": "Ver Todo"
+      "view_all": "Ver Todo",
+      "close": "Cerrar"
     }
   },
   "scholarship": {
@@ -466,7 +477,7 @@
     },
     "form": {
       "get_in_touch": "Ponerse en contacto",
-      "desc": "Ya sea que tenga una pregunta sobre membresía, eventos futuros u oportunidades de patrocinio, nuestro equipo está listo para responder a todas sus preguntas.",
+      "desc": "Ya sea que tenga una question sobre membresía, eventos futuros u oportunidades de patrocinio, nuestro equipo está listo para responder a todas sus preguntas.",
       "location": "Ubicación de la Oficina",
       "phone": "Teléfono",
       "email": "Correo electrónico",
@@ -482,6 +493,143 @@
       "placeholder_subject": "Ingrese el asunto",
       "placeholder_msg": "Escriba su mensaje...",
       "submit": "Enviar Mensaje"
+    }
+  },
+  "media_page": {
+    "hero": {
+      "title": "Galería de Medios",
+      "desc": "Explore nuestra colección de momentos memorables, historias de éxito y eventos comunitarios."
+    },
+    "nav": {
+      "images": "Imágenes",
+      "videos": "Videos"
+    },
+    "image_gallery": {
+      "title": "Galería de Fotos",
+      "view_all": "Ver Todo",
+      "items": {
+        "community_event": "Evento Comunitario 2024",
+        "business_expo": "Expo de Negocios",
+        "annual_gala": "Gala Anual",
+        "workshop": "Pestañas de Taller",
+        "networking": "Social de Networking",
+        "award": "Ceremonia de Premiación",
+        "leadership": "Liderazgo de Equipo",
+        "scholarship": "Almuerzo de Becas"
+      }
+    },
+    "video_gallery": {
+      "title": "Videos Destacados",
+      "featured_subtitle": "Momentos Destacados",
+      "view_all": "Ver Todo",
+      "items": {
+        "impact": "Descripción General del Impacto de la Cámara",
+        "success": "Historias de Éxito: Negocios Locales",
+        "scholarship": "Puntos Destacados de Becas ATD"
+      }
+    }
+  },
+  "community_page": {
+    "hero": {
+      "title": "Empoderando a nuestra comunidad hispana a través de la acción",
+      "desc": "Construyendo puentes, creando oportunidades y fortaleciendo nuestra comunidad juntos",
+      "btn_impact": "Ver tu impacto",
+      "btn_involved": "Involucrarse",
+      "video_unsupported": "Su navegador no soporta la etiqueta de video."
+    },
+    "impact": {
+      "title": "Nuestro impacto en la comunidad",
+      "stats": {
+        "scholarships": "Becas otorgadas",
+        "certified": "Empresas certificadas",
+        "trained": "Emprendedores capacitados",
+        "partnership": "Alianza comunitaria"
+      }
+    },
+    "programs": {
+      "title": "Programas que transforman vidas",
+      "atd": {
+        "title": "Programa de Becas ATD",
+        "desc": "\"¡Gracias a la beca, puedo seguir mi carrera y alcanzar mis sueños!\""
+      },
+      "jseb": {
+        "title": "Programa JSEB",
+        "desc": "\"¡La certificación ayudó a que nuestro negocio creciera y alcanzara nuevas oportunidades! Leer más\""
+      },
+      "prospera": {
+        "title": "Prospera Pro",
+        "desc": "\"¡Gracias a la beca, puedo seguir mi carrera y alcanzar mis sueños!\""
+      },
+      "buttons": {
+        "apply": "Aplica ya",
+        "learn": "Leer más"
+      }
+    },
+    "learn_and_grow": {
+      "title": "Aprenda y crezca con nosotros",
+      "workshop": {
+        "title": "Próximo Taller",
+        "desc": "Únase a nuestro taller presencial y virtual",
+        "badge": "✦ Taller Virtual",
+        "item_title": "IA para Pequeñas Empresas",
+        "date": "15 de marzo de 2026",
+        "coming_soon": "Próximamente",
+        "view_all": "Ver Todos los Talleres"
+      },
+      "courses": {
+        "title": "Próximo Taller",
+        "desc": "Únase a nuestro taller presencial y virtual",
+        "featured": "Cursos Destacados",
+        "features": {
+          "video": "Cursos en video bajo demanda",
+          "resources": "Recursos descargables",
+          "certificates": "Certificados de finalización",
+          "discussions": "Discusiones comunitarias"
+        },
+        "item_title": "Curso Fundamental de IA",
+        "item_li1": "Fundamentos de IA",
+        "item_li2": "Aprenda los conceptos básicos de la IA",
+        "coming_soon": "Próximamente",
+        "access_panel": "Acceder al Panel de Capacitación"
+      }
+    },
+    "join_mission": {
+      "title": "Únase a nuestra misión",
+      "cards": {
+        "support": {
+          "title": "Apoye nuestros programas",
+          "desc": "Ayúdenos a brindar becas, capacitación y oportunidades a los miembros de nuestra comunidad.",
+          "btn": "Dona ahora"
+        },
+        "volunteer": {
+          "title": "Comparta sus habilidades",
+          "desc": "Ofrezca su experiencia como voluntario para asesorar a emprendedores y apoyar programas comunitarios.",
+          "btn": "Sea voluntario hoy"
+        },
+        "collaborate": {
+          "title": "Colabora con nosotros",
+          "desc": "Asóciese con FCHCC para crear nuevas oportunidades y ampliar nuestro impacto en la comunidad.",
+          "btn": "Conviértase en socio"
+        },
+        "newsletter": {
+          "title": "Manténgase informado",
+          "desc": "Reciba actualizaciones sobre programas, eventos y oportunidades para involucrarse en nuestra comunidad.",
+          "btn": "Unirse al boletín"
+        }
+      }
+    },
+    "stay_connected": {
+      "title": "Manténgase conectado con nuestra comunidad",
+      "desc": "Reciba nuestro boletín Conexión con actualizaciones de programas, invitaciones a eventos e historias de éxito de la comunidad.",
+      "form": {
+        "first_name": "Nombre",
+        "last_name": "Apellido",
+        "email": "Correo electrónico",
+        "placeholder_first": "Ingrese el nombre",
+        "placeholder_last": "Apellido",
+        "placeholder_email": "Ingrese su correo electrónico",
+        "btn": "Suscríbase ahora"
+      }
     }
   }
 }

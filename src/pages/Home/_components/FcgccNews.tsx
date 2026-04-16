@@ -114,7 +114,7 @@ const FchccNews = () => {
   };
 
   return (
-    <div className="w-full max-w-[1440px] mx-auto py-12 px-4 sm:px-6 lg:px-12 space-y-16 lg:space-y-24 bg-white overflow-hidden">
+    <div className="w-full max-w-360 mx-auto py-12 px-4 sm:px-0 space-y-16 lg:space-y-24 bg-white overflow-hidden">
       {/* News Section */}
       <motion.section
         initial={{ opacity: 0, y: 30 }}
@@ -140,7 +140,7 @@ const FchccNews = () => {
               <img
                 src={news.image}
                 alt={news.title}
-                className="rounded-2xl w-full h-[240px] sm:h-[280px] lg:h-[300px] object-cover shadow-sm group-hover:shadow-md transition-shadow"
+                className="rounded-2xl w-full h-60 sm:h-70 lg:h-75 object-cover shadow-sm group-hover:shadow-md transition-shadow"
               />
 
               <p className="text-sm sm:text-[16px] text-gray-500 mt-4 font-medium leading-7 uppercase tracking-wide">
@@ -168,7 +168,7 @@ const FchccNews = () => {
         <img
           src="/images/image 148.png"
           alt="scholarship"
-          className="rounded-3xl shadow-xl w-full h-[300px] sm:h-[400px] lg:h-[480px] object-cover"
+          className="rounded-3xl shadow-xl w-full h-75 sm:h-100 lg:h-120 object-cover"
         />
 
         <p className="mt-6 text-base sm:text-lg text-black font-normal leading-relaxed px-2">
@@ -217,7 +217,7 @@ const FchccNews = () => {
 
       {/* BUTTON CENTER */}
       <div className="col-span-1 md:col-span-2 flex justify-center mt-8">
-        <Button className="bg-[#F97316] w-full sm:w-[250px] h-12 sm:h-14 text-white rounded-full font-bold text-base sm:text-lg shadow-[0_6px_20px_rgba(249,115,22,0.3)] hover:scale-105 active:scale-95 transition-all cursor-pointer">
+        <Button className="bg-[#F97316] w-full sm:w-62.5 h-12 sm:h-14 text-white rounded-full font-bold text-base sm:text-lg shadow-[0_6px_20px_rgba(249,115,22,0.3)] hover:scale-105 active:scale-95 transition-all cursor-pointer">
           {t("news.scholarship.apply_now")}
         </Button>
       </div>
@@ -235,7 +235,7 @@ const FchccNews = () => {
               <img
                 src={news.image}
                 alt={news.title}
-                className="rounded-2xl w-full h-[300px] object-cover shadow-sm group-hover:shadow-md transition-shadow"
+                className="rounded-2xl w-full h-75 object-cover shadow-sm group-hover:shadow-md transition-shadow"
               />
 
               <p className="text-xs sm:text-sm text-gray-500 mt-3 font-medium uppercase tracking-wide">
@@ -275,17 +275,16 @@ const FchccNews = () => {
             "{testimonialData[index].text}"
           </p>
 
-          <div>
-            <h4 className="font-bold text-gray-900 text-xl sm:text-2xl">
+          <div className="flex items-center justify-between">
+           <div> <h4 className="font-bold text-gray-900 text-xl sm:text-2xl">
               {testimonialData[index].name}
             </h4>
 
             <p className="text-sm sm:text-base text-gray-500 mt-1">
               {testimonialData[index].designation}
             </p>
-          </div>
-
-          <div className="flex gap-4 pt-2">
+</div>
+            <div className="flex gap-4 pt-2">
             <button
               onClick={prevTestimonial}
               className="p-3 border-2 border-gray-200 text-gray-600 rounded-full hover:border-[#1E88E5] hover:text-[#1E88E5] hover:bg-blue-50 transition-all active:scale-90"
@@ -300,6 +299,9 @@ const FchccNews = () => {
               <ChevronRight size={24} />
             </button>
           </div>
+          </div>
+
+          
         </div>
       </motion.section>
 
@@ -309,7 +311,7 @@ const FchccNews = () => {
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true, amount: 0.1 }}
         transition={{ duration: 0.6, delay: 0.4 }}
-        className="relative min-h-[350px] sm:h-[400px] w-full rounded-2xl sm:rounded-3xl overflow-hidden flex items-center justify-center text-center text-white my-10 shadow-xl"
+        className="relative min-h-87.5 sm:h-100 w-full rounded-2xl sm:rounded-3xl overflow-hidden flex items-center justify-center text-center text-white my-10 shadow-xl"
       >
         <div className="absolute inset-0 bg-black/60 z-10" />
 
@@ -319,7 +321,7 @@ const FchccNews = () => {
           className="absolute inset-0 w-full h-full object-cover"
         />
 
-        <div className="relative z-20 space-y-6 px-6 sm:px-12 w-full max-w-[800px] mx-auto py-12">
+        <div className="relative z-20 space-y-6 px-6 sm:px-12 w-full max-w-200 mx-auto py-12">
           <h2 className="text-3xl sm:text-[40px] font-bold leading-tight drop-shadow-md">
             {t("news.newsletter.subscribe_title")}
           </h2>
@@ -328,16 +330,15 @@ const FchccNews = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
-            <button 
+            <button
               onClick={() => setIsSubscribeOpen(true)}
-              className="bg-[#F97316] text-white px-8 py-3.5 sm:py-4 w-full sm:w-auto min-w-[200px] rounded-full font-bold text-base shadow-lg hover:bg-[#e66a12] transition-colors cursor-pointer active:scale-95"
+              className="bg-white text-[#F97316] border-[1.5px] border-[#F97316]/30 px-8 py-3.5 sm:py-4 w-full sm:w-auto sm:min-w-[200px] rounded-full font-bold text-base sm:text-lg flex items-center  text-left justify-center hover:border-[#F97316] hover:bg-orange-50 transition-all active:scale-95 cursor-pointer "
             >
-              {t("news.newsletter.subscribe_button")}
+              {t("hero.subscribe")}
             </button>
-
-            <button className="bg-white text-black px-8 py-3.5 sm:py-4 w-full sm:w-auto min-w-[200px] rounded-full font-bold text-base hover:bg-gray-100 transition-colors cursor-pointer active:scale-95">
+            <Link to="/contact" className="bg-white text-black px-8 py-3.5 sm:py-4 w-full sm:w-auto min-w-[200px] rounded-full font-bold text-base hover:bg-gray-100 transition-colors cursor-pointer border border-gray-200 flex items-center justify-center active:scale-95">
               {t("news.newsletter.contact_us")}
-            </button>
+            </Link>
           </div>
         </div>
         <SubscribePopup isOpen={isSubscribeOpen} onClose={() => setIsSubscribeOpen(false)} />

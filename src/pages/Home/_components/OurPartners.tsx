@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 const PartnersSection = () => {
   const { t } = useTranslation();
@@ -11,7 +12,7 @@ const PartnersSection = () => {
   ];
 
   return (
-    <section className="max-w-[1440px]  mx-auto px-4 md:px-6 lg:px-8 py-12">
+    <section className="max-w-360  mx-auto px-4 md:px-6 lg:px-8 py-12">
 
       <div className="flex flex-col md:flex-row md:justify-between md:items-end gap-4 mb-10">
 
@@ -28,7 +29,7 @@ const PartnersSection = () => {
           whileHover={{ scale: 1.01 }}
           className="self-start md:self-auto px-4 py-2 border border-orange-300 text-orange-400 rounded-full text-sm font-medium flex items-center hover:bg-orange-50 transition-colors"
         >
-          {t("strategic_partners.learn_more")} <span className="ml-1 text-xs">↗</span>
+         <Link to="/partners"> {t("strategic_partners.learn_more")} <span className="ml-1 text-xs">↗</span></Link>
         </motion.button>
 
       </div>
@@ -50,7 +51,7 @@ const PartnersSection = () => {
               <img
                 src={partner.logo}
                 alt={partner.name}
-                className="h-[100px] w-full   transition-all duration-300 opacity-80 "
+                className="h-25 w-full   transition-all duration-300 opacity-80 "
               />
             </motion.div>
           ))}
