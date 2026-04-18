@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { motion, type Easing, type Variants } from "framer-motion";
+import { useState } from "react";
 import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
 
@@ -22,7 +21,7 @@ const MEMBERSHIPS: Membership[] = [
     border: "#FFB800",
     buttonText: "Download the Gold Member Benefits",
     image:
-      "https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&q=80",
+      "/images/Gold-Level-Membership-Brochure-FCHCC-cover 1.png",
   },
   {
     id: 2,
@@ -31,27 +30,14 @@ const MEMBERSHIPS: Membership[] = [
     border: "#00BFFF",
     buttonText: "Download the Platinum Member Benefits",
     image:
-      "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80",
+      "/images/Platinum-Level-Membership-Brochure-FCHCC-cover-450x600 1.png",
   },
 ];
 
-// --- Animation ---
-const EASE: Easing = "easeOut";
-
-const cardVariants = (index: number): Variants => ({
-  hidden: { opacity: 0, y: 60 },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: { delay: index * 0.2, duration: 0.6, ease: EASE },
-  },
-});
-
-// --- Main Component ---
+// --- Component ---
 const MemberBenefits = () => {
   const [loadingId, setLoadingId] = useState<number | null>(null);
 
-  // --- PDF Download ---
   const downloadPDF = async (id: number): Promise<void> => {
     const element = document.getElementById(`card-${id}`);
     if (!element) return;
@@ -77,11 +63,9 @@ const MemberBenefits = () => {
       let heightLeft = imgHeight;
       let position = 0;
 
-      // First page
       pdf.addImage(imgData, "PNG", 0, position, imgWidth, imgHeight);
       heightLeft -= pdfHeight;
 
-      // Extra pages if needed
       while (heightLeft > 0) {
         position = heightLeft - imgHeight;
         pdf.addPage();
@@ -99,39 +83,28 @@ const MemberBenefits = () => {
 
   return (
     <section className="py-20 bg-white">
-      <div className="max-w-[1100px] mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: EASE }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl font-bold text-[#1D91E7] mb-6">
+        <div className="text-center mb-16">
+          <h2 className="text-[50px] font-bold text-[#1D91E7] mb-6">
             Membership Benefits
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            Choose the membership that fits you best and download full benefits instantly.
+          <p className="text-black max-w-2xl text-xl mx-auto">
+            Below you’ll find our Gold and Platinum Memberships that break down the benefits for both tiers.
           </p>
-        </motion.div>
+        </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          {MEMBERSHIPS.map((item, index) => (
-            <motion.div
+        <div className="flex flex-col md:flex-row gap-8 justify-center">
+          {MEMBERSHIPS.map((item) => (
+            <div
               key={item.id}
-              variants={cardVariants(index)}
-              initial="hidden"
-              whileInView="show"
-              whileHover={{ scale: 1.05 }}
-              viewport={{ once: true }}
               className="flex flex-col items-center"
             >
-              {/* PDF Capture Area */}
+              {/* PDF Area */}
               <div
                 id={`card-${item.id}`}
-                className="relative overflow-hidden rounded-lg shadow-2xl mb-8 border-[12px] border-[#003366]"
+                className="relative overflow-hidden rounded-lg shadow-2xl mb-8 "
               >
                 <div
                   className="border-4 p-1"
@@ -145,37 +118,24 @@ const MemberBenefits = () => {
                   />
 
                   {/* Overlay */}
-                  <div className="absolute inset-0 bg-[#003366]/60 flex flex-col items-center justify-center text-white p-6 text-center">
-                    <h3
-                      style={{ color: item.color }}
-                      className="font-bold text-xl mb-2"
-                    >
-                      {item.title}
-                    </h3>
-                    <p className="text-xs uppercase tracking-widest mb-2">
-                      Why Should You Join FCHCC?
-                    </p>
-                    <p className="text-xs max-w-xs">
-                      Get exclusive access, premium support, and community benefits.
-                    </p>
-                  </div>
+                  
                 </div>
               </div>
 
               {/* Button */}
-              <motion.button
-                whileTap={{ scale: 0.9 }}
-                whileHover={{ scale: 1.08 }}
-                onClick={() => downloadPDF(item.id)}
-                disabled={loadingId === item.id}
-                style={{ backgroundColor: item.color }}
-                className="text-white px-8 py-3 rounded-full font-bold text-sm shadow-md transition disabled:opacity-60"
-              >
-                {loadingId === item.id
-                  ? "Downloading..."
-                  : item.buttonText}
-              </motion.button>
-            </motion.div>
+             <button
+  onClick={() => downloadPDF(item.id)}
+  disabled={loadingId === item.id}
+  style={{ backgroundColor: item.color }}
+  className="text-white w-full h-12 px-8 rounded-full font-normal text-xl 
+             shadow-md transition duration-300 hover:shadow-lg
+             flex items-center justify-center"
+>
+  {loadingId === item.id
+    ? "Downloading..."
+    : item.buttonText}
+</button>
+            </div>
           ))}
         </div>
       </div>

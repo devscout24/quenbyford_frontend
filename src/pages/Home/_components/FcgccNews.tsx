@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { ChevronRight, ChevronLeft } from "lucide-react";
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
 import SubscribePopup from "../../../components/SubscribePopup";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
@@ -189,9 +188,9 @@ const FchccNews = () => {
 
           <p className="text-lg sm:text-[20px] lg:text-[22px] font-medium leading-relaxed text-gray-800">
             {t("news.scholarship.winners_announcement")}
-            <span className="block mt-1 sm:inline sm:mt-0 italic text-[#1E88E5] hover:underline cursor-pointer">
+            <Link to="/news" className="block mt-1 sm:inline sm:mt-0 italic text-[#1E88E5] hover:underline cursor-pointer">
               {" "}{t("news.scholarship.press_release")}
-            </span>
+            </Link>
           </p>
         </div>
 
@@ -200,7 +199,7 @@ const FchccNews = () => {
           <img src="/icons/Frame (1).svg" alt="" className="w-8 h-8 sm:w-10 sm:h-10 shrink-0 mt-1 sm:mt-0 transition-transform group-hover:scale-110" />
 
           <p className="text-lg sm:text-xl lg:text-[22px] text-black font-semibold">
-            <span className="text-[#1E88E5] font-bold">{t("news.scholarship.donate")}</span>
+            <Link to="#" className="text-[#1E88E5] font-bold">{t("news.scholarship.donate")}</Link>
             {t("news.scholarship.donate_desc")}
           </p>
         </div>
@@ -209,18 +208,21 @@ const FchccNews = () => {
         <div className="flex items-center gap-4 group cursor-pointer">
           <img src="/icons/Frame (2).svg" alt="" className="w-8 h-8 sm:w-10 sm:h-10 shrink-0 transition-transform group-hover:scale-110" />
 
-          <p className="text-lg sm:text-xl lg:text-[22px] text-black font-semibold group-hover:text-[#1E88E5] transition-colors">
+          <Link to="/scholarshipwinners" className="text-lg sm:text-xl lg:text-[22px] text-[#1E88E5] font-semibold group-hover:text-[#1E88E5] transition-colors">
             {t("news.scholarship.view_past")}
-          </p>
+          </Link>
         </div>
       </div>
 
       {/* BUTTON CENTER */}
       <div className="col-span-1 md:col-span-2 flex justify-center mt-8">
-        <Button className="bg-[#F97316] w-full sm:w-62.5 h-12 sm:h-14 text-white rounded-full font-bold text-base sm:text-lg shadow-[0_6px_20px_rgba(249,115,22,0.3)] hover:scale-105 active:scale-95 transition-all cursor-pointer">
-          {t("news.scholarship.apply_now")}
-        </Button>
-      </div>
+  <Link
+    to="/joinus"
+    className="flex items-center justify-center bg-[#F97316] w-full sm:w-62.5 h-12 sm:h-14 text-white rounded-full font-bold text-base sm:text-lg shadow-[0_6px_20px_rgba(249,115,22,0.3)] hover:scale-105 active:scale-95 transition-all cursor-pointer"
+  >
+    {t("news.scholarship.apply_now")}
+  </Link>
+</div>
     </motion.section>
 
       {/* Testimonial */}
@@ -332,7 +334,7 @@ const FchccNews = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
             <button
               onClick={() => setIsSubscribeOpen(true)}
-              className="bg-white text-[#F97316] border-[1.5px] border-[#F97316]/30 px-8 py-3.5 sm:py-4 w-full sm:w-auto sm:min-w-50 rounded-full font-bold text-base sm:text-lg flex items-center  text-left justify-center hover:border-[#F97316] hover:bg-orange-50 transition-all active:scale-95 cursor-pointer "
+              className="bg-white text-[#F97316] border-[1.5px] border-[#F97316]/30 px-8 py-3.5 sm:py-4 w-full sm:w-auto sm:min-w-50 rounded-full font-bold text-base sm:text-lg flex  items-center  text-left justify-center hover:border-[#F97316] hover:bg-orange-50 transition-all active:scale-95 cursor-pointer "
             >
               {t("hero.subscribe")}
             </button>

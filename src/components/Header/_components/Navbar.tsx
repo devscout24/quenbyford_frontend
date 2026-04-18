@@ -124,7 +124,7 @@ const Header = () => {
             {/* Member Portal */}
             <Link
               to="/member-welcome"
-              className="hidden sm:flex items-center justify-center gap-1 bg-[#F97316] text-white w-[170px] px-2  h-10 md:h-12 rounded-full text-[16px] font-medium hover:opacity-95 active:scale-95 transition-all shadow-md relative overflow-hidden"
+              className="hidden sm:flex items-center justify-center gap-1 bg-[#F97316] text-white w-[200px] px-2  h-10 md:h-12 rounded-full text-[16px] font-medium hover:opacity-95 active:scale-95 transition-all shadow-md relative overflow-hidden"
             >
               <User size={16} className="relative z-10 hidden md:inline" />
 

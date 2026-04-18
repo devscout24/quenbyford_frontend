@@ -9,7 +9,7 @@ const BadgesSection = () => {
   ];
 
   return (
-    <section className="max-w-[1440px] h-82 mx-auto px-4 md:px-6 lg:px-8 py-12 mb-30">
+    <section className="max-w-360 h-82 mx-auto px-4 md:px-6 lg:px-8 py-12 mb-30">
 
       <motion.h2
         initial={{ opacity: 0, y: 30 }}

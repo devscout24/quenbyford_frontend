@@ -40,9 +40,14 @@ const JobHero = () => {
 
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 pt-4">
-            <button className="bg-[#F57C00] text-white px-6 md:px-8 w-full sm:w-55 py-3 rounded-full font-bold hover:bg-orange-600 transition shadow-lg shrink-0">
-              {t("jobs.hero.hiring_btn")}
-            </button>
+            <Link
+  to="/hiring"
+  className="bg-[#F57C00] text-white px-6 md:px-8 w-full sm:w-55 py-3 
+             rounded-full font-bold hover:bg-orange-600 transition shadow-lg
+             flex items-center justify-center"
+>
+  {t("jobs.hero.hiring_btn")}
+</Link>
 
             <Link to="/availablejobs"
 

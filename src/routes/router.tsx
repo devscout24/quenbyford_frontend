@@ -31,6 +31,7 @@ import WellcomePage from "@/pages/Wellcome";
 import PrivacyPolicy from "@/pages/PrivacyPolicy";
 import JoinUsPage from "@/pages/JoinUs";
 import BenifitsPage from "@/pages/Benifits";
+import JobHaringiPage from "@/pages/HiringCard";
 
 const router = createBrowserRouter([
   {
@@ -169,6 +170,10 @@ const router = createBrowserRouter([
       {
         path: "/benifits",
         element: <BenifitsPage />,
+      },
+      {
+        path: "/hiring",
+        element: <JobHaringiPage />,
       },
     ],
   },

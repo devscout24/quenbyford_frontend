@@ -86,7 +86,7 @@ export const JobCard = ({ job }: { job: Job }) => {
 // 🔹 Job Grid Component
 const JobGrid = () => {
   return (
-    <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 my-10 sm:my-16">
+    <div className="w-full max-w-360 mx-auto px-4 sm:px-6 lg:px-8 my-10 sm:my-16">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
 
         {jobs.slice(0, 6).map((job) => (

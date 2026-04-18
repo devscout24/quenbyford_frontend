@@ -51,7 +51,7 @@ const HeroWithStats = () => {
 
           {/* Buttons */}
           <div className="flex flex-wrap gap-4 pt-4">
-            <Link to="/partners/newmembers" className="bg-[#F57C00] text-white px-6 md:px-8 py-3 rounded-full font-bold hover:bg-orange-600 transition shadow-lg">
+            <Link to="/member-welcome" className="bg-[#F57C00] text-white px-6 md:px-8 py-3 rounded-full font-bold hover:bg-orange-600 transition shadow-lg">
               {t("hero_members.become_member")}
             </Link>
 

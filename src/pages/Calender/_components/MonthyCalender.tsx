@@ -79,7 +79,7 @@ const EventCalendar = () => {
   const currentWeekEnd = endOfWeek(weekAnchorDate);
 
   return (
-    <div className="w-full max-w-360 mx-auto min-h-screen p-4 sm:p-6 mb-10 md:mb-20">
+    <div className="w-full max-w-7xl mx-auto min-h-screen p-4 sm:p-0 mb-10 md:mb-20">
       <Tabs defaultValue="monthly" className="w-full space-y-8">
 
         {/* View Switcher (inside Tabs) */}
@@ -135,7 +135,7 @@ const EventCalendar = () => {
         {/* Shared Header with Date and Dropdown */}
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4 px-4 sm:px-12 md:px-48">
           <div className="flex items-center gap-4">
-            <h2 className="text-2xl sm:text-3xl font-bold text-black">{format(currentDate, 'MMMM yyyy')}</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold  text-black">{format(currentDate, 'MMMM yyyy')}</h2>
             <div className="flex gap-2">
             </div>
           </div>

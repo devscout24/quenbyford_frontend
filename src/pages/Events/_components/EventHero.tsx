@@ -42,7 +42,7 @@ const EventHero = () => {
               {t("events.hero.grow_btn")}
             </Link>
 
-            <Link to="/login"
+            <Link to="/member-welcome"
 
               className="border border-orange-500 text-orange-500 px-6 md:px-8 py-3 rounded-full font-bold hover:bg-orange-500 hover:text-white transition"
             >{t("events.hero.get_involved_btn")}</Link>

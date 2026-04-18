@@ -11,7 +11,7 @@ const GrowBusiness = () => {
       icon: "/icons/Frame (5).svg",
       bg: "bg-[#1E88E5]/10",
       btn: "bg-[#1E88E5] hover:bg-blue-700 shadow-blue-200",
-      link1: "https://form.jotform.com/252083870437157",
+      link1: "https://form.jotform.com/252093931968165",
     
     },
     {
@@ -20,7 +20,7 @@ const GrowBusiness = () => {
       icon: "/icons/Group.svg",
       bg: "bg-[#F97316]/10",
       btn: "bg-[#F97316] hover:bg-orange-600 shadow-orange-200",
-      link1: "https://form.jotform.com/252083870437158",
+      link1: "https://form.jotform.com/252083870437157",
      
     },
   ];
