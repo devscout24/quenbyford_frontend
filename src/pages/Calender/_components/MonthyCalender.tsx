@@ -183,7 +183,7 @@ const EventCalendar = () => {
                 return (
                   <div
                     key={idx}
-                    className={`min-h-[80px] sm:min-h-25 p-1 sm:p-2 relative transition-colors border border-gray-300 
+                    className={`min-h-20 sm:min-h-25 p-1 sm:p-2 relative transition-colors border border-gray-300 
                       ${!isCurrentMonth ? 'bg-slate-50 opacity-50' : hasEvents ? 'bg-[#F97316] text-white cursor-pointer hover:bg-[#e5680f]' : 'bg-white hover:bg-slate-50'}`}
                     onMouseEnter={() => hasEvents && setHoveredEvent(cellKey)}
                     onMouseLeave={() => setHoveredEvent(null)}

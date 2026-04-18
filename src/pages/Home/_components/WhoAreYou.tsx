@@ -7,7 +7,7 @@ const WhoWeAre = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="w-full py-12 lg:py-16 bg-white font-sans max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 overflow-hidden">
+    <section className="w-full py-12 lg:py-16 bg-white font-sans max-w-360 mx-auto px-4 sm:px-6 lg:px-12 overflow-hidden">
       {/* Title Section */}
       <motion.h1
         initial={{ opacity: 0, y: 20 }}
@@ -66,7 +66,7 @@ const WhoWeAre = () => {
           <p className="text-black leading-relaxed font-normal text-base sm:text-lg mb-2">
             {t("who_we_are.vision.desc")}
           </p>
-          <a href="#" className="text-[#1E88E5] text-base sm:text-sm underline font-bold mt-2 inline-block hover:text-blue-700 transition">
+          <a href="/joinus" className="text-[#1E88E5] text-base sm:text-sm underline font-bold mt-2 inline-block hover:text-blue-700 transition">
             {t("who_we_are.join_today")}
           </a>
         </motion.div>

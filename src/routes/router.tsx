@@ -29,6 +29,8 @@ import Media from "@/pages/Media";
 import SponsorsDetails from "@/pages/SponsorsDetails";
 import WellcomePage from "@/pages/Wellcome";
 import PrivacyPolicy from "@/pages/PrivacyPolicy";
+import JoinUsPage from "@/pages/JoinUs";
+import BenifitsPage from "@/pages/Benifits";
 
 const router = createBrowserRouter([
   {
@@ -159,6 +161,14 @@ const router = createBrowserRouter([
       {
         path: "/privacy-policy",
         element: <PrivacyPolicy />,
+      },
+      {
+        path: "/joinus",
+        element: <JoinUsPage />,
+      },
+      {
+        path: "/benifits",
+        element: <BenifitsPage />,
       },
     ],
   },
