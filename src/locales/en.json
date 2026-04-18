@@ -536,7 +536,6 @@
       "title": "FCHCC Partners"
     }
   },
-
   "jobs": {
     "hero": {
       "title": "FCHCC JOBS BOARD",
@@ -632,5 +631,74 @@
       "placeholder_msg": "Write your message...",
       "submit": "Send Message"
     }
+  },
+  "privacy_policy": {
+    "title": "Privacy Policy",
+    "whoWeAre": {
+      "title": "Who we are",
+      "p1": "We are the First Coast Hispanic Chamber of Commerce in Northeast Florida. Our mission is to positively impact the regional economy by creating value, promoting and facilitating the success of Hispanic-owned businesses and by engaging the community at large.",
+      "p2": "Our website address is: <1>https://fchcc.com</1>. If you want to learn more about our history, <2>click here</2>."
+    },
+    "whatWeCollect": {
+      "title": "What personal data we collect and why we collect it",
+      "commentsTitle": "Comments",
+      "commentsP1": "When visitors leave comments on our site, we collect the data shown in the comments form, and also the visitor’s IP address and browser user agent string to help spam detection.",
+      "commentsP2": "An anonymized string created from your email address (also called a hash) may be provided to the Gravatar service to see if you are using it. The Gravatar service privacy policy is available here: <1>http://automattic.com/privacy/</1>. After approval of your comment, your profile picture is visible to the public in the context of your comment."
+    },
+    "sensitiveInfo": {
+      "title": "Sensitive Information",
+      "p1": "FCHCC does not keep on file sensitive information such as credit card numbers or any other payment confidential information from its members, subscribers and customers."
+    },
+    "contactForms": {
+      "title": "Contact forms",
+      "p1": "When you use our <1>Contact Froms</1>, we collect (a) your name, (b) email address, (c) company name (if applicable, and (d) phone #. Information is kept in our database for one year and only used to reply back to you. We do not use your information for marketing purposes. Also, our contact form includes a captcha code and allows you to have a copy made of the email message you send to us."
+    },
+    "mailList": {
+      "title": "Mail List Sign-up",
+      "p1": "We have your name and email address when you subscribe to receive our enewsletter and networking events invitations."
+    },
+    "whatWeDo": {
+      "title": "What do we do with your data?",
+      "p1": "When you subscribe to our mail list, we use your name and email address to send you our e-newsletter, events and announcements to keep you updated with our chamber. Also, we use your email address to send you information on workshops from our partners that might be of interest to you. You are able to opt out at the bottom of every email we send. And your information is deleted immediately after opting out.",
+      "p2": "FCHCC does not sell or share its contact list with any third parties."
+    },
+    "cookies": {
+      "title": "Cookies",
+      "p1": "Our website uses cookies and by using the website, you consent to the use of cookies. Our Cookies Policy explains what cookies are, how we use cookies, how third parties we may partner with may use cookies on the Service, your choices regarding cookies and further information about cookies.",
+      "whatAreCookiesTitle": "What are cookies",
+      "whatAreCookiesP1": "Cookies are small pieces of text sent by your web browser by a website you visit. A cookie file is stored in your web browser and allows the Service or a third party to recognize you and make your next visit easier and the Service more useful to you. Cookies can be “persistent” or “session” cookies.",
+      "howWeUseTitle": "How we use cookies",
+      "howWeUseP1": "If you leave a comment on our site, you may opt-in to saving your name, email address and website in cookies. These are for your convenience so that you do not have to fill in your details again when you leave another comment. These cookies will last for one year."
+    },
+    "embeddedContent": {
+      "title": "Embedded content from other websites",
+      "p1": "Articles on this site may include embedded content (e.g. videos, images, articles, etc.). Embedded content from other websites behaves in the exact same way as if the visitor has visited the other website.",
+      "p2": "These websites may collect data about you, use cookies, embed additional third-party tracking, and monitor your interaction with that embedded content, including tracing your interaction with the embedded content if you have an account and are logged in to that website."
+    },
+    "howLongRetain": {
+      "title": "How long we retain your data",
+      "p1": "If you leave a comment, the comment and its metadata are retained indefinitely. This is so we can recognize and approve any follow-up comments automatically instead of holding them in a moderation queue.",
+      "p2": "For users that register on our members only site, we also store the personal information they provide in their user profile. All users can see, edit, or delete their personal information at any time (except they cannot change their username). Website administrators can also see and edit that information."
+    },
+    "whatRights": {
+      "title": "What rights you have over your data",
+      "p1": "If you have an account on our members only site, or have left comments, you can request to receive an exported file of the personal data we hold about you, including any data you have provided to us. You can also request that we erase any personal data we hold about you. This does not include any data we are obliged to keep for administrative, legal, or security purposes."
+    },
+    "whereWeSend": {
+      "title": "Where we send your data",
+      "p1": "Visitor comments may be checked through an automated spam detection service."
+    },
+    "contactInfo": {
+      "title": "Your contact information",
+      "p1": "If you have questions about how privacy concerns, please contact us at <1>fchcc@fchcc.com</1>."
+    },
+    "additionalInfo": {
+      "title": "Additional information",
+      "howWeProtectTitle": "How we protect your data",
+      "howWeProtectP1": "We have encryption software on the website to protect data about our members and visitors and we do not share our distro lists. That means we don’t sell or give away contact information about our visitors.",
+      "dataBreachTitle": "What data breach procedures we have in place",
+      "dataBreachP1": "We have internal reporting systems set up to protect visitors and members data. And our board and staff are alert and trained in data protection."
+    },
+    "footerText": "For any questions regarding our privacy policy, contact us at <1>fchcc@fchcc.com</1>."
   }
 }

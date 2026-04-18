@@ -1,4 +1,4 @@
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom";
 import { NewsSingleDetailPage } from "./_components/SingleDetials";
 import { newsData } from "@/pages/Home/_components/FcgccNews";
 import { useTranslation } from "react-i18next";
@@ -8,8 +8,24 @@ const NewsDetailsPage = () => {
   const { id } = useParams();
   const { t } = useTranslation();
 
+  const navigate = useNavigate();
 
-  const matchedNews = newsData.find(item => item.id.toString() === id) || newsData[0];
+  const currentIndex = newsData.findIndex(item => item.id.toString() === id);
+  const matchedNews = currentIndex !== -1 ? newsData[currentIndex] : newsData[0];
+
+  const handlePrev = () => {
+    if (currentIndex === -1) return;
+    const prevIndex = currentIndex > 0 ? currentIndex - 1 : newsData.length - 1;
+    navigate(`/news/${newsData[prevIndex].id}`);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleNext = () => {
+    if (currentIndex === -1) return;
+    const nextIndex = currentIndex < newsData.length - 1 ? currentIndex + 1 : 0;
+    navigate(`/news/${newsData[nextIndex].id}`);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   const eventDataMock = {
     title: matchedNews.title,
@@ -37,7 +53,8 @@ const NewsDetailsPage = () => {
       <Link to="/news" className="text-orange-500 font-bold hover:underline inline-block my-16">
         &larr; {t("news.details.back")}
       </Link>
-      <NewsSingleDetailPage data={eventDataMock} />
+      {/* @ts-ignore: TS editor cache might temporarily not recognize onPrev and onNext */}
+      <NewsSingleDetailPage data={eventDataMock} onPrev={handlePrev} onNext={handleNext} />
     </div>
   )
 }

@@ -27,6 +27,8 @@ import OurCommettePage from "@/pages/OurCommette";
 import ComingSoon from "@/pages/ComingSoon";
 import Media from "@/pages/Media";
 import SponsorsDetails from "@/pages/SponsorsDetails";
+import WellcomePage from "@/pages/Wellcome";
+import PrivacyPolicy from "@/pages/PrivacyPolicy";
 
 const router = createBrowserRouter([
   {
@@ -40,6 +42,10 @@ const router = createBrowserRouter([
       {
         path: "/members",
         element: <Members />,
+      },
+      {
+        path: "/member-welcome",
+        element: <WellcomePage />,
       },
       {
         path: "/partners",
@@ -149,6 +155,10 @@ const router = createBrowserRouter([
       {
         path: "/sponsors-details",
         element: <SponsorsDetails />,
+      },
+      {
+        path: "/privacy-policy",
+        element: <PrivacyPolicy />,
       },
     ],
   },

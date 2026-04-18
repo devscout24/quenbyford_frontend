@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const ActiveMembersButton = () => {
   return (
-    <div className="max-w-[1440px] mx-auto flex flex-col gap-6 p-4 sm:p-8 mt-8 sm:mt-15 mb-12 sm:mb-30">
+    <div className="max-w-360 mx-auto flex flex-col gap-6 p-4 sm:p-8 mt-8 sm:mt-15 mb-12 sm:mb-30">
 
       {/* Orange/Invite Card */}
       <motion.div

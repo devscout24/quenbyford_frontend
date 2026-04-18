@@ -113,7 +113,7 @@ const RecognitionSection = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 mb-15">
+    <div className="w-full max-w-360 mx-auto px-4 sm:px-6 lg:px-8 mb-15">
 
       {/* Title */}
       <h1 className="text-2xl sm:text-3xl md:text-[36px] font-bold text-center text-black mb-8 leading-tight">

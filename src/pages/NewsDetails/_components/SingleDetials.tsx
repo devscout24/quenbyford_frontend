@@ -12,13 +12,17 @@ export interface EventData {
   galleryLink: string;
   pdf: string;
 }
+export interface NewsSingleDetailPageProps {
+  data: EventData;
+  onPrev?: () => void;
+  onNext?: () => void;
+}
 
-
-export const NewsSingleDetailPage = ({ data }: { data: EventData }) => {
+export const NewsSingleDetailPage = ({ data, onPrev, onNext }: NewsSingleDetailPageProps) => {
   const { t } = useTranslation();
 
   return (
-    <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 bg-white font-sans">
+    <div className="max-w-360 mx-auto px-4 sm:px-6 lg:px-8 bg-white font-sans">
 
       {/* Banner */}
       <motion.div
@@ -47,7 +51,7 @@ export const NewsSingleDetailPage = ({ data }: { data: EventData }) => {
 
         <div className="flex flex-col items-center text-black/50 min-w-16 w-25">
           <Calendar className="w-8 h-8 mb-1" />
-          <span className="text-xl uppercase font-normal text-black/50 leading-5 text-center tracking-0.18px mt-2">
+          <span className="text-[16px]  font-normal text-black/50 leading-5 text-center tracking-0.18px mt-2">
             {data.date}
           </span>
         </div>
@@ -58,7 +62,7 @@ export const NewsSingleDetailPage = ({ data }: { data: EventData }) => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.4 }}
-        className="space-y-6 text-black text-xl text-left uppercase font-normal tracking-tight"
+        className="space-y-6 text-black text-[16px] text-left font-normal"
       >
         {data.content.map((para, i) => (
           <p key={i}>{para}</p>
@@ -121,28 +125,44 @@ export const NewsSingleDetailPage = ({ data }: { data: EventData }) => {
 
         <div className="flex justify-between items-center">
           <p className="text-xl font-normal text-black/80">
-            <span className="text-[#1E88E5]">{t("news.details.gallery_click")}</span>{" "}
-            <a href={data.galleryLink}>{t("news.details.gallery_view")}</a>
+            <a href="/media" className="text-[#1E88E5] hover:underline">{t("news.details.gallery_click")}</a>{" "}
+            <span className="text-black">{t("news.details.gallery_view")}</span>
           </p>
 
           <Button
             variant="outline"
             size="sm"
+            onClick={() => {
+              if (data.pdf && data.pdf !== "#") {
+                const link = document.createElement("a");
+                link.href = data.pdf;
+                link.download = `${data.title}.pdf`;
+                link.click();
+              } else {
+                alert(t("news.details.no_pdf", "PDF not available for this article."));
+              }
+            }}
             className="rounded-full text-[16px] font-normal text-[#1E88E5] border-[#1E88E5] gap-1 w-45 h-11 p-4 hover:bg-[#1E88E5]/10"
           >
             {t("news.details.get_pdf")} <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M13.586 2C14.0556 2.00011 14.5101 2.16543 14.87 2.467L15 2.586L19.414 7C19.746 7.33202 19.9506 7.77028 19.992 8.238L20 8.414V20C20.0002 20.5046 19.8096 20.9906 19.4665 21.3605C19.1234 21.7305 18.6532 21.9572 18.15 21.995L18 22H6C5.49542 22.0002 5.00943 21.8096 4.63945 21.4665C4.26947 21.1234 4.04284 20.6532 4.005 20.15L4 20V4C3.99984 3.49542 4.19041 3.00943 4.5335 2.63945C4.87659 2.26947 5.34684 2.04284 5.85 2.005L6 2H13.586ZM12 4H6V20H18V10H13.5C13.1271 9.99998 12.7676 9.86108 12.4916 9.61038C12.2156 9.35968 12.0428 9.01516 12.007 8.644L12 8.5V4ZM12.988 11.848C13.2274 13.3711 14.0239 14.7509 15.223 15.72C16.11 16.437 15.299 17.841 14.235 17.432C12.7965 16.8781 11.2035 16.8781 9.765 17.432C8.7 17.842 7.889 16.437 8.776 15.72C9.97513 14.7509 10.7716 13.3711 11.011 11.848C11.189 10.721 12.811 10.722 12.988 11.848ZM11.998 14.152L11.31 15.348H12.69L11.998 14.152ZM14 4.414V8H17.586L14 4.414Z" fill="#1E88E5" />
+              <path fillRule="evenodd" clipRule="evenodd" d="M13.586 2C14.0556 2.00011 14.5101 2.16543 14.87 2.467L15 2.586L19.414 7C19.746 7.33202 19.9506 7.77028 19.992 8.238L20 8.414V20C20.0002 20.5046 19.8096 20.9906 19.4665 21.3605C19.1234 21.7305 18.6532 21.9572 18.15 21.995L18 22H6C5.49542 22.0002 5.00943 21.8096 4.63945 21.4665C4.26947 21.1234 4.04284 20.6532 4.005 20.15L4 20V4C3.99984 3.49542 4.19041 3.00943 4.5335 2.63945C4.87659 2.26947 5.34684 2.04284 5.85 2.005L6 2H13.586ZM12 4H6V20H18V10H13.5C13.1271 9.99998 12.7676 9.86108 12.4916 9.61038C12.2156 9.35968 12.0428 9.01516 12.007 8.644L12 8.5V4ZM12.988 11.848C13.2274 13.3711 14.0239 14.7509 15.223 15.72C16.11 16.437 15.299 17.841 14.235 17.432C12.7965 16.8781 11.2035 16.8781 9.765 17.432C8.7 17.842 7.889 16.437 8.776 15.72C9.97513 14.7509 10.7716 13.3711 11.011 11.848C11.189 10.721 12.811 10.722 12.988 11.848ZM11.998 14.152L11.31 15.348H12.69L11.998 14.152ZM14 4.414V8H17.586L14 4.414Z" fill="#1E88E5" />
             </svg>
           </Button>
         </div>
 
         {/* Navigation */}
         <div className="flex justify-between gap-4 mb-16">
-          <Button className="text-slate-400 text-[16px] w-45 h-11 p-4 font-medium border-[#F97316] rounded-full   gap-2 hover:bg-slate-50">
+          <Button 
+            onClick={onPrev}
+            className="text-slate-400 text-[16px] w-45 h-11 p-4 font-medium border-[#F97316] rounded-full gap-2 hover:bg-slate-50 cursor-pointer"
+          >
             <ChevronLeft className="w-4 h-4" /> {t("news.all.prev")}
           </Button>
 
-          <Button className="text-slate-400 text-[16px] w-45 h-11 p-4 font-medium border-[#F97316] rounded-full  gap-2 hover:bg-slate-50">
+          <Button 
+            onClick={onNext}
+            className="text-slate-400 text-[16px] w-45 h-11 p-4 font-medium border-[#F97316] rounded-full gap-2 hover:bg-slate-50 cursor-pointer"
+          >
             {t("news.all.next")} <ChevronRight className="w-4 h-4" />
           </Button>
         </div>

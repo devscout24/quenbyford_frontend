@@ -1,4 +1,5 @@
 
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
 interface OurStoryProps {
@@ -14,6 +15,7 @@ const OurStory = ({
   images
 }: OurStoryProps) => {
   const { t } = useTranslation();
+  const [isExpanded, setIsExpanded] = useState(false);
 
   const defaultStory = {
     title: t("about.story.title"),
@@ -32,7 +34,7 @@ const OurStory = ({
   const displayImages = images || defaultStory.images;
 
   return (
-    <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-20">
+    <div className="w-full max-w-360 mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-20">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
 
         {/* Left Side: Content */}
@@ -41,15 +43,38 @@ const OurStory = ({
             {displayTitle}
           </h2>
 
-          <div className="space-y-4 text-black leading-relaxed text-base font-normal capitalize w-full md:max-w-[40rem]">
-            {displayParagraphs.map((text, index) => (
-              <p key={index}>
-                {text}
-                {index === displayParagraphs.length - 1 && (
-                  <> <span className="text-blue-500 font-medium cursor-pointer hover:underline">{t("about.story.read_more")}</span></>
-                )}
-              </p>
-            ))}
+          <div className="space-y-4 text-black leading-relaxed text-base font-normal capitalize w-full md:max-w-160">
+            {displayParagraphs.map((text, index) => {
+              if (!isExpanded && index !== 0) return null;
+
+              return (
+                <p key={index}>
+                  {text}
+                  {!isExpanded && index === 0 && displayParagraphs.length > 1 && (
+                    <>
+                      {" "}
+                      <span
+                        onClick={() => setIsExpanded(true)}
+                        className="text-blue-500 font-medium cursor-pointer hover:underline"
+                      >
+                        {t("about.story.read_more", "See More")}
+                      </span>
+                    </>
+                  )}
+                  {isExpanded && index === displayParagraphs.length - 1 && (
+                    <>
+                      {" "}
+                      <span
+                        onClick={() => setIsExpanded(false)}
+                        className="text-blue-500 font-medium cursor-pointer hover:underline block mt-2"
+                      >
+                        {t("about.story.read_less", "See Less")}
+                      </span>
+                    </>
+                  )}
+                </p>
+              );
+            })}
           </div>
         </div>
 

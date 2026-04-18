@@ -13,73 +13,73 @@ export const newsData = [
     id: 1,
     title: "Stories from Successful Projects",
     date: "February 20, 2024",
-    image: "/images/image.png",
+    image: "/images/5001.png",
   },
   {
     id: 2,
     title: "Navigating The World Of Business Strategy",
     date: "February 18, 2024",
-    image: "/images/image (1).png",
+    image: "/images/50002.png",
   },
   {
     id: 3,
     title: "Trends Shaping Marketing Strategies",
     date: "February 15, 2024",
-    image: "/images/image (2).png",
+    image: "/images/5003.png",
   },
   {
-    id: 3,
+    id: 4,
     title: "Trends Shaping Marketing Strategies",
     date: "February 15, 2024",
-    image: "/images/image (2).png",
+    image: "/images/5004.png",
   },
   {
-    id: 3,
+    id: 5,
     title: "Trends Shaping Marketing Strategies",
     date: "February 15, 2024",
-    image: "/images/image (2).png",
+    image: "/images/5005.png",
   },
   {
-    id: 3,
+    id: 6,
     title: "Trends Shaping Marketing Strategies",
     date: "February 15, 2024",
-    image: "/images/image (2).png",
+    image: "/images/5006.png",
   },
   {
-    id: 3,
+    id: 7,
     title: "Trends Shaping Marketing Strategies",
     date: "February 15, 2024",
-    image: "/images/image (2).png",
+    image: "/images/5007.png",
   },
   {
-    id: 3,
+    id: 8,
     title: "Trends Shaping Marketing Strategies",
     date: "February 15, 2024",
-    image: "/images/image (2).png",
+    image: "/images/5008.jpg",
   },
   {
-    id: 3,
+    id: 9,
     title: "Trends Shaping Marketing Strategies",
     date: "February 15, 2024",
-    image: "/images/image (2).png",
+    image: "/images/5009.jpg",
   },
   {
-    id: 3,
+    id: 10,
     title: "Trends Shaping Marketing Strategies",
     date: "February 15, 2024",
-    image: "/images/image (2).png",
+    image: "/images/5010.jpg",
   },
   {
-    id: 3,
+    id: 11,
     title: "Trends Shaping Marketing Strategies",
     date: "February 15, 2024",
-    image: "/images/image (2).png",
+    image: "/images/5011.jpg",
   },
   {
-    id: 3,
+    id: 12,
     title: "Trends Shaping Marketing Strategies",
     date: "February 15, 2024",
-    image: "/images/image (2).png",
+    image: "/images/5001.png",
   },
 ];
 
@@ -147,7 +147,7 @@ const FchccNews = () => {
                 {news.date}
               </p>
 
-              <h3 className="font-bold text-xl sm:text-[24px] capitalize text-black mt-2 leading-tight group-hover:text-[#1E88E5] transition-colors">
+              <h3 className="font-semibold text-[22px] capitalize text-black mt-2 leading-tight group-hover:text-[#1E88E5] transition-colors">
                 {news.title}
               </h3>
             </Link>
@@ -242,7 +242,7 @@ const FchccNews = () => {
                 {news.date}
               </p>
 
-              <h3 className="font-bold text-lg capitalize text-black mt-1 leading-snug group-hover:text-[#1E88E5] transition-colors">
+              <h3 className="font-semibold text-[22px] capitalize text-black mt-1 leading-snug group-hover:text-[#1E88E5] transition-colors">
                 {news.title}
               </h3>
             </Link>
@@ -276,7 +276,7 @@ const FchccNews = () => {
           </p>
 
           <div className="flex items-center justify-between">
-           <div> <h4 className="font-bold text-gray-900 text-xl sm:text-2xl">
+           <div> <h4 className="font-bold text-black text-xl">
               {testimonialData[index].name}
             </h4>
 
@@ -332,11 +332,11 @@ const FchccNews = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
             <button
               onClick={() => setIsSubscribeOpen(true)}
-              className="bg-white text-[#F97316] border-[1.5px] border-[#F97316]/30 px-8 py-3.5 sm:py-4 w-full sm:w-auto sm:min-w-[200px] rounded-full font-bold text-base sm:text-lg flex items-center  text-left justify-center hover:border-[#F97316] hover:bg-orange-50 transition-all active:scale-95 cursor-pointer "
+              className="bg-white text-[#F97316] border-[1.5px] border-[#F97316]/30 px-8 py-3.5 sm:py-4 w-full sm:w-auto sm:min-w-50 rounded-full font-bold text-base sm:text-lg flex items-center  text-left justify-center hover:border-[#F97316] hover:bg-orange-50 transition-all active:scale-95 cursor-pointer "
             >
               {t("hero.subscribe")}
             </button>
-            <Link to="/contact" className="bg-white text-black px-8 py-3.5 sm:py-4 w-full sm:w-auto min-w-[200px] rounded-full font-bold text-base hover:bg-gray-100 transition-colors cursor-pointer border border-gray-200 flex items-center justify-center active:scale-95">
+            <Link to="/contact" className="bg-white text-black px-8 py-3.5 sm:py-4 w-full sm:w-auto min-w-50 rounded-full font-bold text-base hover:bg-gray-100 transition-colors cursor-pointer border border-gray-200 flex items-center justify-center active:scale-95">
               {t("news.newsletter.contact_us")}
             </Link>
           </div>

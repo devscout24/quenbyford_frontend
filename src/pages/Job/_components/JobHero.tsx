@@ -1,6 +1,7 @@
 import { useState } from "react";
 import SubscribePopup from "../../../components/SubscribePopup";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 const JobHero = () => {
   const { t } = useTranslation();
@@ -25,7 +26,7 @@ const JobHero = () => {
         {/* Content */}
         <div className="relative z-10 px-4 sm:px-12 md:px-20 lg:ml-77 space-y-4 sm:space-y-6 py-12 sm:py-20">
           {/* Badge */}
-        
+
 
           {/* Title */}
           <h1 className="max-w-3xl text-3xl sm:text-4xl md:text-[56px] font-medium text-white leading-tight">
@@ -43,11 +44,11 @@ const JobHero = () => {
               {t("jobs.hero.hiring_btn")}
             </button>
 
-            <button
-              onClick={() => setIsSubscribeOpen(true)}
+            <Link to="/availablejobs"
+
               className="border-white border-2 text-white w-full sm:w-55 px-6 md:px-8 py-3 rounded-full font-bold hover:text-white transition shrink-0"
             >{t("jobs.hero.available_btn")}
-            </button>
+            </Link>
           </div>
         </div>
         <SubscribePopup

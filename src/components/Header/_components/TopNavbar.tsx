@@ -1,6 +1,5 @@
 import { Mail, Phone } from "lucide-react";
-import { FaFacebookF, FaInstagram } from "react-icons/fa";
-import { FaLinkedinIn, FaTwitter } from "react-icons/fa6";
+import SocialLinks from "../../Common/SocialLinks";
 
 const TopNavbar = () => {
   return (
@@ -23,20 +22,11 @@ const TopNavbar = () => {
         </div>
 
         {/* Right Side */}
-        <div className="flex items-center gap-4 mt-3 md:mt-0">
-          <a href="#" className="hover:opacity-80 transition">
-            <FaFacebookF size={16} />
-          </a>
-          <a href="#" className="hover:opacity-80 transition">
-            <FaTwitter size={16} />
-          </a>
-          <a href="#" className="hover:opacity-80 transition">
-            <FaInstagram size={16} />
-          </a>
-          <a href="#" className="hover:opacity-80 transition">
-            <FaLinkedinIn size={16} />
-          </a>
-        </div>
+        <SocialLinks 
+          containerClass="flex items-center gap-4 mt-3 md:mt-0" 
+          linkClass="hover:opacity-80 transition" 
+          iconSize={16}
+        />
 
       </div>
     </div>

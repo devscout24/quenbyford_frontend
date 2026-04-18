@@ -17,10 +17,13 @@ import {
 import ViewList from './ViewList';
 import WeeklyView from './WeeklyView';
 
+const eventDescription = "FCHCC Members: Mark your calendars to join us at the monthly Social Cafecito event! These meetings are an ideal space for our members to exchange ideas and establish professional relationships. With the participation of the most prominent business leaders in our community, it ensures an enriching experience.";
+const eventExtraInfo = "Its purpose is to bring in speakers every month who will cover topics in: marketing, capital, finance, legal, communities and more! Expand your business network and learn from the best. Social Cafecito meets each month on the 3rd Friday. Not an FCHCC member? Join here.";
+const eventCta = "Be sure to look out for the meeting invites to learn when registration opens. You can subscribe to our mailing list at fchcc.com.";
+
 const EventCalendar = () => {
   const [currentDate, setCurrentDate] = useState(new Date());
-
-
+  const [hoveredEvent, setHoveredEvent] = useState<string | null>(null);
 
   const handleMonthChange = (value: string) => {
     const parsedDate = parse(value, 'MMM-yyyy', new Date());
@@ -40,11 +43,8 @@ const EventCalendar = () => {
     start: startDate,
     end: endDate
   });
-
-  // Calculate grid days for Weekly View (derived from currentDate week)
-  const currentWeekStart = startOfWeek(currentDate);
-  const currentWeekEnd = endOfWeek(currentDate);
-
+  const year = currentDate.getFullYear();
+  const currentMonth = currentDate.getMonth();
 
   // Generate month options for the Select (Current month +/- 6 months)
   const monthOptions = Array.from({ length: 13 }, (_, i) => {
@@ -55,15 +55,31 @@ const EventCalendar = () => {
     };
   });
 
-  // Example Event mock data
+  // FCHCC Social Cafecito Meeting dates
   const events = [
-    { date: addMonths(new Date(), 0), title: "Monthly Meeting" },
-    { date: new Date(new Date().getFullYear(), new Date().getMonth(), 20), title: "FOHCC Event!" },
-    { date: new Date(currentDate.getFullYear(), currentDate.getMonth(), 5), title: "Community Catchup" }
+    { date: new Date(year, 0, 16), title: "FCHCC Social Cafecito Meeting", time: "8:30 AM – 10:00 AM", description: eventDescription, extraInfo: eventExtraInfo, cta: eventCta },
+    { date: new Date(year, 1, 16), title: "FCHCC Social Cafecito Meeting", time: "8:30 AM – 10:00 AM", description: eventDescription, extraInfo: eventExtraInfo, cta: eventCta },
+    { date: new Date(year, 2, 20), title: "FCHCC Social Cafecito Meeting", time: "8:30 AM – 10:00 AM", description: eventDescription, extraInfo: eventExtraInfo, cta: eventCta },
+    { date: new Date(year, 3, 16), title: "FCHCC Social Cafecito Meeting", time: "8:30 AM – 10:00 AM", description: eventDescription, extraInfo: eventExtraInfo, cta: eventCta },
+    { date: new Date(year, 3, 17), title: "FCHCC Social Cafecito Meeting", time: "8:30 AM – 10:00 AM", description: eventDescription, extraInfo: eventExtraInfo, cta: eventCta },
+    { date: new Date(year, 4, 15), title: "FCHCC Social Cafecito Meeting", time: "8:30 AM – 10:00 AM", description: eventDescription, extraInfo: eventExtraInfo, cta: eventCta },
+    { date: new Date(year, 5, 19), title: "FCHCC Social Cafecito Meeting", time: "8:30 AM – 10:00 AM", description: eventDescription, extraInfo: eventExtraInfo, cta: eventCta },
+    { date: new Date(year, 6, 17), title: "FCHCC Social Cafecito Meeting", time: "8:30 AM – 10:00 AM", description: eventDescription, extraInfo: eventExtraInfo, cta: eventCta },
+    { date: new Date(year, 7, 21), title: "FCHCC Social Cafecito Meeting", time: "8:30 AM – 10:00 AM", description: eventDescription, extraInfo: eventExtraInfo, cta: eventCta },
+    { date: new Date(year, 8, 18), title: "FCHCC Social Cafecito Meeting", time: "8:30 AM – 10:00 AM", description: eventDescription, extraInfo: eventExtraInfo, cta: eventCta },
+    { date: new Date(year, 9, 16), title: "FCHCC Social Cafecito Meeting", time: "8:30 AM – 10:00 AM", description: eventDescription, extraInfo: eventExtraInfo, cta: eventCta },
+    { date: new Date(year, 10, 20), title: "FCHCC Social Cafecito Meeting", time: "8:30 AM – 10:00 AM", description: eventDescription, extraInfo: eventExtraInfo, cta: eventCta },
+    { date: new Date(year, 11, 18), title: "FCHCC Social Cafecito Meeting", time: "8:30 AM – 10:00 AM", description: eventDescription, extraInfo: eventExtraInfo, cta: eventCta },
   ];
 
+  // Calculate grid days for Weekly View — show week of first meeting in selected month
+  const firstEventInMonth = events.find(e => e.date.getMonth() === currentMonth && e.date.getFullYear() === year);
+  const weekAnchorDate = firstEventInMonth ? firstEventInMonth.date : currentDate;
+  const currentWeekStart = startOfWeek(weekAnchorDate);
+  const currentWeekEnd = endOfWeek(weekAnchorDate);
+
   return (
-    <div className="w-full max-w-[1440px] mx-auto min-h-screen p-4 sm:p-6 mb-10 md:mb-20">
+    <div className="w-full max-w-360 mx-auto min-h-screen p-4 sm:p-6 mb-10 md:mb-20">
       <Tabs defaultValue="monthly" className="w-full space-y-8">
 
         {/* View Switcher (inside Tabs) */}
@@ -142,9 +158,9 @@ const EventCalendar = () => {
         {/* MONTHLY VIEW TAB */}
         {/* ======================================= */}
         <TabsContent value="monthly" className="mt-0 outline-none">
-          <div className="rounded-xl w-full max-w-4xl mx-auto overflow-hidden shadow-xl mt-8">
+          <div className="rounded-xl w-full max-w-4xl mx-auto shadow-xl mt-8">
             {/* Orange Header */}
-            <div className="bg-[#F97316] p-4 text-center">
+            <div className="bg-[#F97316] p-4 text-center rounded-t-xl">
               <h3 className="text-white text-xl sm:text-3xl tracking-tighter sm:tracking-tighter-[-0.58px] font-bold">{format(currentDate, 'MMMM yyyy')}</h3>
             </div>
 
@@ -162,22 +178,26 @@ const EventCalendar = () => {
                 const isCurrentMonth = isSameMonth(day, monthStart);
                 const isToday = isSameDay(day, new Date());
                 const dayEvents = events.filter(e => isSameDay(e.date, day));
+                const cellKey = `cell-${idx}`;
+                const hasEvents = dayEvents.length > 0 && isCurrentMonth;
 
                 return (
                   <div
                     key={idx}
                     className={`min-h-[80px] sm:min-h-25 p-1 sm:p-2 relative transition-colors border border-gray-300 
-                      ${!isCurrentMonth ? 'bg-slate-50 opacity-50' : isToday ? 'bg-[#F97316] text-white' : 'bg-white hover:bg-slate-50'}`}
+                      ${!isCurrentMonth ? 'bg-slate-50 opacity-50' : hasEvents ? 'bg-[#F97316] text-white cursor-pointer hover:bg-[#e5680f]' : 'bg-white hover:bg-slate-50'}`}
+                    onMouseEnter={() => hasEvents && setHoveredEvent(cellKey)}
+                    onMouseLeave={() => setHoveredEvent(null)}
                   >
                     <div className={`w-6 h-6 flex items-center justify-center rounded-full text-xs font-medium 
-                      ${isToday ? 'text-white' : isCurrentMonth ? 'text-slate-700' : 'text-slate-400'}`}>
+                      ${hasEvents ? 'text-white' : isCurrentMonth ? 'text-slate-700' : 'text-slate-400'}`}>
                       {format(day, 'd')}
                     </div>
 
-                    {/* Events */}
+                    {/* Event dot indicator */}
                     {dayEvents.map((evt, eIdx) => (
-                      <div key={eIdx} className={`mt-2 text-center rounded px-1 py-0.5 ${isToday ? '' : ''}`}>
-                        <span className={`text-[10px] font-bold leading-tight block truncate ${isToday ? 'text-white' : 'text-orange-600'}`}>
+                      <div key={eIdx} className="mt-2 text-center rounded px-1 py-0.5">
+                        <span className="text-[10px] font-bold leading-tight block truncate text-white">
                           {evt.title}
                         </span>
                       </div>
@@ -187,6 +207,34 @@ const EventCalendar = () => {
               })}
             </div>
           </div>
+
+          {/* Event Detail Card — shows below calendar on hover */}
+          {hoveredEvent && (() => {
+            const idx = parseInt(hoveredEvent.replace('cell-', ''));
+            const day = calendarDays[idx];
+            if (!day) return null;
+            const dayEvents = events.filter(e => isSameDay(e.date, day));
+            if (dayEvents.length === 0) return null;
+
+            return (
+              <div className="w-full max-w-4xl mx-auto mt-4 bg-white rounded-xl shadow-2xl border border-orange-200 p-6 sm:p-8 text-left animate-in fade-in duration-200">
+                {dayEvents.map((evt, eIdx) => (
+                  <div key={eIdx}>
+                    <div className="flex items-center gap-2 mb-3">
+                      <div className="w-3 h-3 rounded-full bg-[#F97316] shrink-0" />
+                      <span className="text-sm font-semibold text-[#F97316] uppercase tracking-wide">{format(day, 'EEEE, MMMM d, yyyy')}</span>
+                    </div>
+                    <p className="text-base font-bold text-[#1E88E5] mb-1">{evt.time}</p>
+
+                    <h4 className="text-lg font-bold text-black mb-4">{evt.title}</h4>
+                    <p className="text-sm text-gray-700 leading-relaxed mb-3">{evt.description}</p>
+                    <p className="text-sm text-gray-700 leading-relaxed mb-3">{evt.extraInfo}</p>
+                    <p className="text-sm text-gray-500 italic leading-relaxed">{evt.cta}</p>
+                  </div>
+                ))}
+              </div>
+            );
+          })()}
         </TabsContent>
 
         {/* ======================================= */}
@@ -205,7 +253,7 @@ const EventCalendar = () => {
         {/* LIST VIEW TAB */}
         {/* ======================================= */}
         <TabsContent value="list" className="mt-0 outline-none">
-          <ViewList />
+          <ViewList events={events} />
         </TabsContent>
 
       </Tabs>

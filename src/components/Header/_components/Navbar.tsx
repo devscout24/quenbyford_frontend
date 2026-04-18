@@ -67,14 +67,17 @@ const Header = () => {
 
           {/* Logo */}
           <div className="flex-1 flex items-center">
-           <Link to="/">
+            <Link to="/">
               <img src="/images/1.png" alt="Quenby Ford Logo" className="h-10 w-auto" />
             </Link>
           </div>
 
           {/* Nav Links */}
           <ul className="hidden lg:flex w-238  items-center justify-center bg-white py-3 rounded-full border border-gray-100/50 shadow-sm">
-            {navLinks.map((link) => (
+            {navLinks.map((link) => {
+              const isActive = location.pathname === link.href || link.dropdown?.some(item => location.pathname === item.href);
+              
+              return (
               <li
                 key={link.name}
                 className="relative"
@@ -83,16 +86,15 @@ const Header = () => {
               >
                 <Link
                   to={link.href}
-                  className={`px-3.5 py-3 text-sm font-medium rounded-md transition-all duration-200 hover:text-orange-500 whitespace-nowrap block ${
-                    location.pathname === link.href ? "border-b-2 border-orange-500 text-orange-500 pb-1" : ""
-                  }`}
+                  className={`px-3.5 py-3 text-sm font-medium rounded-md transition-all duration-200 hover:text-orange-500 whitespace-nowrap block ${isActive ? "border-b-2 border-orange-500 text-orange-500 pb-1" : ""
+                    }`}
                 >
                   {link.name}
                 </Link>
 
                 {/* 🔽 Dropdown */}
                 {link.dropdown && openMenu === link.name && (
-                  <div className="absolute top-full -mt-2 w-52 bg-white rounded-xl shadow-lg py-2 z-50">
+                  <div className="absolute top-full -mt-1 w-52 bg-white rounded-xl shadow-lg py-2 z-50">
                     {link.dropdown.map((item) => (
                       <Link
                         key={item.name}
@@ -105,7 +107,8 @@ const Header = () => {
                   </div>
                 )}
               </li>
-            ))}
+              );
+            })}
           </ul>
 
           {/* Right Side */}
@@ -120,16 +123,16 @@ const Header = () => {
 
             {/* Member Portal */}
             <Link
-  to="/login"
-  className="hidden sm:flex items-center justify-center gap-1 bg-[#F97316] text-white w-[170px] px-2  h-10 md:h-12 rounded-full text-[16px] font-medium hover:opacity-95 active:scale-95 transition-all shadow-md relative overflow-hidden"
->
-  <User size={16} className="relative z-10 hidden md:inline" />
-  
-  <span className="relative z-10 flex items-center gap-1">
-    {t("navbar.member_portal")}
-    <span className="absolute left-0 bottom-0.5 h-0.5 w-0 bg-white transition-all duration-300 group-hover:w-full"></span>
-  </span>
-</Link>
+              to="/member-welcome"
+              className="hidden sm:flex items-center justify-center gap-1 bg-[#F97316] text-white w-[170px] px-2  h-10 md:h-12 rounded-full text-[16px] font-medium hover:opacity-95 active:scale-95 transition-all shadow-md relative overflow-hidden"
+            >
+              <User size={16} className="relative z-10 hidden md:inline" />
+
+              <span className="relative z-10 flex items-center gap-1">
+                {t("navbar.member_portal")}
+                <span className="absolute left-0 bottom-0.5 h-0.5 w-0 bg-white transition-all duration-300 group-hover:w-full"></span>
+              </span>
+            </Link>
 
             {/* Mobile Menu Toggle */}
             <Button
