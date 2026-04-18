@@ -1,6 +1,6 @@
 import { ArrowRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-import { motion, type Variants } from 'framer-motion';
+import { motion,  } from 'framer-motion';
 
 const Welcome = () => {
     const navigate = useNavigate();
@@ -14,7 +14,7 @@ const Welcome = () => {
             transition: {
                 delay: 0.5 + i * 0.1,
                 duration: 0.6,
-                ease: "easeOut"
+                ease: "easeOut" as const
             }
         })
     };

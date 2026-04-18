@@ -35,7 +35,6 @@ const WeeklyView = ({ currentWeekStart, currentWeekEnd, days, events }: WeeklyVi
 
           {/* Date Cells */}
           {weeklyDays.map((day, idx) => {
-            const isToday = isSameDay(day, new Date());
             const dayEvents = events.filter(e => isSameDay(e.date, day));
             const cellKey = `week-cell-${idx}`;
             const hasEvents = dayEvents.length > 0;

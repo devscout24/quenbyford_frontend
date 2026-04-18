@@ -176,7 +176,6 @@ const EventCalendar = () => {
               {/* Date Cells */}
               {calendarDays.map((day, idx) => {
                 const isCurrentMonth = isSameMonth(day, monthStart);
-                const isToday = isSameDay(day, new Date());
                 const dayEvents = events.filter(e => isSameDay(e.date, day));
                 const cellKey = `cell-${idx}`;
                 const hasEvents = dayEvents.length > 0 && isCurrentMonth;
