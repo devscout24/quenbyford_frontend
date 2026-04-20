@@ -1,4 +1,4 @@
-import { Button } from '@/components/ui/button';
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from "react-i18next";
@@ -48,9 +48,12 @@ const WinnersSection = () => {
   return (
     <div>
       <div>
-        <Button className="bg-[#F97316] rounded-full text-white px-6 py-3 hover:bg-[#ea580c] transition-all flex mx-auto mb-12">
-          View Past ATD Winners
-        </Button>
+        <Link 
+  to="#" 
+  className="bg-[#F97316] rounded-full text-white w-[300px] px-6 py-3 hover:bg-[#ea580c] transition-all flex justify-center items-center mx-auto mb-12"
+>
+  View Past ATD Winners
+</Link>
         <div className="flex justify-center mb-12">
           <Link to="/scholarshipwinners"
             className="bg-[#1E88E5] px-6 sm:px-8 py-3 sm:py-5 text-xl sm:text-2xl md:text-[32px] font-normal leading-relaxed text-white flex justify-center items-center mx-auto rounded-xl text-center">
