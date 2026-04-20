@@ -53,6 +53,7 @@ const Header = () => {
       href: "/about",
       dropdown: [
         { name: t("navbar.our_committees"), href: "/about/committee" },
+        { name:"Donate ATD Scholarship", href: "/about/donatescholarship" },
         { name: t("navbar.member_parking"), href: "/comingsoon" },
       ],
     },
