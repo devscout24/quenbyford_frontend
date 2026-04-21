@@ -25,15 +25,15 @@ const ScholarshipCriteria = () => {
         </h2>
 
         {/* Introductory Text */}
-        <p className="text-[#333] text-xl w-full md:w-[155] mb-8 font-normal">
+        <p className="text-[#333] text-xl w-full md:w-155 mb-8 font-normal">
           The Achieving The Dream (ATD) Scholarship is for students of Hispanic/Latino descent 
           who are pursuing an Associate's or Bachelor's Degree and meet the following requirements:
         </p>
 
         {/* List of Requirements */}
-        <ul className="space-y-3">
+        <ul className="space-y-3 w-full md:w-300">
           {criteria.map((item, index) => (
-            <li key={index} className="flex items-start text-[#000000] text-xl font-normal">
+            <li key={index} className="flex items-start text-[#000000]  text-xl font-normal">
               <span className="mr-3 mt-2.5 h-1.5 w-1.5 rounded-full bg-black shrink-0" />
               <span>{item}</span>
             </li>
