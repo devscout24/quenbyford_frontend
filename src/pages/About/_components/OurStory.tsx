@@ -19,10 +19,7 @@ const OurStory = ({
 
   const defaultStory = {
     title: t("about.story.title"),
-    paragraphs: [
-      t("about.story.para1"),
-      t("about.story.para2")
-    ],
+    paragraphs: t("about.story.desc").split("\n").filter(p => p.trim() !== ""),
     images: [
       { src: "/images/Immmm.png", alt: t("about.story.title") },
       { src: "/images/Immmmmm.png", alt: t("about.story.title") }
@@ -43,7 +40,7 @@ const OurStory = ({
             {displayTitle}
           </h2>
 
-          <div className="space-y-4 text-black leading-relaxed text-base font-normal capitalize w-full md:max-w-160">
+          <div className="space-y-4 text-black leading-relaxed text-base font-normal w-full md:max-w-160">
             {displayParagraphs.map((text, index) => {
               if (!isExpanded && index !== 0) return null;
 

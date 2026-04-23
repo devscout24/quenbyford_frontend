@@ -1,92 +1,93 @@
-
-
 export const winnersData = [
   {
     id: 1,
     name: "Chantelle Merritt",
     university: "Florida State University",
-    degree: "Bachelors in Bio Engineering",
-    imageUrl: "https://i.pravatar.cc/150?img=1",
+    degree: "Bachelors in Biomedical Engineering",
+    imageUrl: "",
+    gender: "female",
   },
   {
     id: 2,
-    name: "James Carter",
-    university: "Harvard University",
-    degree: "Computer Science",
-    imageUrl: "https://i.pravatar.cc/150?img=2",
+    name: "Kayleigh Gutierrez",
+    university: "University of Central Florida",
+    degree: "Bachelors in Biomedical Science",
+    imageUrl: "",
+    gender: "female",
   },
   {
     id: 3,
-    name: "Sophia Williams",
-    university: "Stanford University",
-    degree: "Business Administration",
-    imageUrl: "https://i.pravatar.cc/150?img=3",
+    name: "Leyra Ojeda",
+    university: "University of North Florida",
+    degree: "Bachelors in Business",
+    imageUrl: "",
+    gender: "female",
   },
   {
     id: 4,
-    name: "Liam Johnson",
-    university: "MIT",
-    degree: "Software Engineering",
-    imageUrl: "https://i.pravatar.cc/150?img=4",
+    name: "Lucas Farfan",
+    university: "University of Florida",
+    degree: "Bachelors in Civil Engineering",
+    imageUrl: "",
+    gender: "male",
   },
   {
     id: 5,
-    name: "Olivia Brown",
-    university: "Yale University",
-    degree: "Law",
-    imageUrl: "https://i.pravatar.cc/150?img=5",
+    name: "Maya Vazquez",
+    university: "Coastal Carolina University",
+    degree: "Bachelors of Fine Arts in Theatre Design & Production",
+    imageUrl: "",
+    gender: "female",
   },
   {
     id: 6,
-    name: "Noah Davis",
-    university: "Columbia University",
-    degree: "Mechanical Engineering",
-    imageUrl: "https://i.pravatar.cc/150?img=6",
+    name: "Melania Carrigan",
+    university: "University of Central Florida",
+    degree: "Bachelors in Civil Engineering",
+    imageUrl: "",
+    gender: "female",
   },
   {
     id: 7,
-    name: "Emma Wilson",
-    university: "University of Chicago",
-    degree: "Economics",
-    imageUrl: "https://i.pravatar.cc/150?img=7",
+    name: "Melody Ann Angelica",
+    university: "University of North Florida",
+    degree: "Bachelors in International Business",
+    imageUrl: "",
+    gender: "female",
   },
   {
     id: 8,
-    name: "William Martinez",
-    university: "Princeton University",
-    degree: "Physics",
-    imageUrl: "https://i.pravatar.cc/150?img=8",
+    name: "Natalie Jaile",
+    university: "Florida State University",
+    degree: "Bachelors in Mechanical Engineering",
+    imageUrl: "",
+    gender: "female",
   },
   {
     id: 9,
-    name: "Ava Anderson",
-    university: "Duke University",
-    degree: "Biology",
-    imageUrl: "https://i.pravatar.cc/150?img=9",
+    name: "Sebastian Lopez",
+    university: "Rollins College",
+    degree: "Bachelors in Biology",
+    imageUrl: "",
+    gender: "male",
   },
   {
     id: 10,
-    name: "Benjamin Thomas",
-    university: "University of Michigan",
-    degree: "Data Science",
-    imageUrl: "https://i.pravatar.cc/150?img=10",
+    name: "Viviana Arce",
+    university: "University of South Florida",
+    degree: "Bachelors in Biomedical Science",
+    imageUrl: "",
+    gender: "female",
   },
   {
     id: 11,
-    name: "Mia Taylor",
-    university: "UCLA",
-    degree: "Psychology",
-    imageUrl: "https://i.pravatar.cc/150?img=11",
-  },
-  {
-    id: 12,
-    name: "Lucas Moore",
-    university: "NYU",
-    degree: "Marketing",
-    imageUrl: "https://i.pravatar.cc/150?img=12",
+    name: "Vivianna Rivera",
+    university: "University of Central Florida",
+    degree: "Bachelors in Finance",
+    imageUrl: "",
+    gender: "female",
   },
 ];
-
 import { motion } from "framer-motion";
 
 // ================= Winner Card =================
@@ -112,7 +113,7 @@ const WinnerCard = ({ name, university, degree, imageUrl, index }: WinnerCardPro
       {/* Image */}
       <div className="w-27 h-27 rounded-full border-2 border-[#1E88E5] mb-4">
         <img
-          src={imageUrl || "https://via.placeholder.com/150"}
+          src={imageUrl || "/images/ProfileImage.png"}
           alt={name}
           className="w-full h-full rounded-full object-cover"
         />
@@ -149,7 +150,7 @@ export default function ScholarshipSectionWinners() {
         className="text-center space-y-6 mb-15"
       >
         <h2 className="text-2xl md:text-[40px] font-normal text-black ">
-          FCHCC celebrated the achievements of the 2024 ATD winners at this year’s ATD Scholarship Luncheon!
+          FCHCC celebrated the achievements of the 2025 ATD winners at this year’s ATD Scholarship Luncheon!
         </h2>
 
         <p className="text-black text-[32px] font-normal text-left mb-15">
@@ -180,7 +181,7 @@ export default function ScholarshipSectionWinners() {
         className="text-center mb-10"
       >
         <h2 className="text-[40px] font-medium text-black">
-          Congratulations to the 2024 ATD Winners!
+          Congratulations to the 2025 ATD Winners!
         </h2>
       </motion.div>
 

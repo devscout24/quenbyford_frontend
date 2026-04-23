@@ -1,8 +1,7 @@
 import FooterPage from "@/components/Footer"
 import Navbar from "@/components/Header/_components/Navbar"
 import { Outlet, ScrollRestoration } from "react-router-dom"
-
-
+import JuanAIChat from "@/components/JuanAIChat"
 
 const HomeLayout = () => {
   return (
@@ -13,6 +12,7 @@ const HomeLayout = () => {
         <Outlet/>
       </main>
       <FooterPage/>
+      <JuanAIChat />
     </div>
   )
 }

@@ -33,9 +33,9 @@ const ProgramsGrid = () => {
         },
         {
             id: 4,
-            title: t('community_page.programs.jseb.title'),
-            description: t('community_page.programs.jseb.desc'),
-            image: "/images/Frame 2087328090.png",
+            title: t('community_page.programs.Hola.title'),
+            description: t('community_page.programs.Hola.desc'),
+            image: "/images/Hola.jpg",
             buttonText: t('community_page.programs.buttons.apply'),
             themeColor: "bg-[#F97316]",
         }

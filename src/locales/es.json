@@ -389,7 +389,7 @@
     },
     "about": {
       "title": "Acerca del Almuerzo ATD",
-      "desc": "El 'Achieving the Dream' de FCHCC es un programa de becas que apoya a estudiantes hispanos de alto rendimiento en el noreste de Florida. Este almuerzo sirve como nuestro principal evento de recaudación de fondos para honrar sus logros y asegurar futuras oportunidades.",
+      "desc": "Acerca del Programa de Becas ATD: La Cámara de Comercio Hispana de First Coast (FCHCC) ha apoyado la educación de los hispanos durante muchos años,   otorgando más de medio millón de dólares en becas. Además, la Cámara de Comercio Hispana de Jacksonville (FCHCC) se enorgullece de haber impactado la vida de más de doscientos cincuenta (250) becarios comprometidos y calificados durante sus más de 30 años de existencia.El programa de becas de FCHCC,  Alcanzando el Sueño , no solo permite a los estudiantes que se han esforzado y alcanzado la excelencia académica comenzar o continuar su educación, sino que también les brinda la oportunidad de convertirse en futuros emprendedores exitosos. Este año, FCHCC y su Fondo de Desarrollo Comunitario planean otorgar $20,000 en becas, con un valor de $2,000.00 cada una, a cada estudiante hispano meritorio y competente del noreste de Florida. Los invitamos y animamos a apoyar estas iniciativas. Juntos podemos marcar la diferencia, primero en nuestras comunidades y luego en nuestras familias. Únanse anosotros y celebremos juntos los logros por los que nuestra comunidad hispana ha trabajado tan arduamente. Si tiene alguna pregunta sobre nuestro almuerzo de ATD, envíe un correo electrónico a specialevents@fchcc.com.",
       "button": "Leer Más Historias"
     },
     "sponsors": {
@@ -428,8 +428,7 @@
     },
     "story": {
       "title": "Nuestra Historia",
-      "para1": "Fundada con la creencia de que una comunidad empresarial hispana unida es una fuerza poderosa para el crecimiento económico, la Cámara de Comercio Hispana de First Coast (FCHCC) ha sido la piedra angular de la empresa hispana en nuestra región.",
-      "para2": "En los últimos 15+ años, hemos crecido de un pequeño grupo de apasionados emprendedores a una sólida red de más de 500 miembros, socios corporativos y líderes comunitarios.",
+      "desc": "En 1992, José Pérez, Sergio Arnaiz, Clark Vargas y Jorge Hernández, todos propietarios de negocios, emprendieron la tarea de unificar a la comunidad empresarial hispana. Comenzaron a reunirse debido a la decisión de la ciudad de excluir a los hispanos del programa de reservas de compras.\n\nMás tarde, después de que la ciudad realizara audiencias sobre este asunto, otros propietarios de negocios se unieron a la causa y formaron la Asociación de Empresas Hispanoamericanas (HABA). Inmediatamente comenzaron a abogar por las empresas hispanas y a promover la rica cultura y el patrimonio hispano de la región. La organización pasó a llamarse Cámara de Comercio Hispana de First Coast (FCHCC) a principios de 2003.\n\nLa FCHCC ha crecido hasta incluir miembros individuales, corporativos y sin fines de lucro. En 2005, la FCHCC instituyó un Programa de Fideicomisarios para corporaciones y organizaciones más grandes interesadas en un apoyo significativo y sustancial a los hispanos en los negocios, quienes están dando forma a nuestras economías local, estatal y nacional.\n\nTodos los profesionales de negocios, tanto hispanos como no hispanos, son bienvenidos a involucrarse con nuestra Cámara mientras trabajamos para fomentar la comprensión de la herencia hispana a través de:\n\n• Eventos de networking\n• Talleres educativos\n• Oportunidades promocionales para empresas\n• Programa de Becas “Logrando el Sueño”\n\nLa FCHCC también tiene una organización sin fines de lucro 501c (3) llamada Community Development, Inc., para las contribuciones recibidas en apoyo de nuestras iniciativas educativas, incluido el programa de Becas “Logrando el Sueño”.",
       "read_more": "Leer más"
     },
     "recognition": {
@@ -560,6 +559,10 @@
         "title": "Prospera Pro",
         "desc": "\"¡Gracias a la beca, puedo seguir mi carrera y alcanzar mis sueños!\""
       },
+       "Hola": {
+  "title": "Conferencia Hola Emprende",
+  "desc": "¡El networking ha sido increíblemente valioso para construir conexiones empresariales!"
+},
       "buttons": {
         "apply": "Aplica ya",
         "learn": "Leer más"
@@ -586,9 +589,23 @@
           "certificates": "Certificados de finalización",
           "discussions": "Discusiones comunitarias"
         },
-        "item_title": "Curso Fundamental de IA",
-        "item_li1": "Fundamentos de IA",
-        "item_li2": "Aprenda los conceptos básicos de la IA",
+        "items": {
+          "item1": {
+            "title": "Curso Fundamental de IA",
+            "li1": "Fundamentos de IA",
+            "li2": "Aprenda los conceptos básicos de la IA"
+          },
+          "item2": {
+            "title": "Maestría en Marketing Digital",
+            "li1": "Estrategia de Redes Sociales",
+            "li2": "SEO y Marketing de Contenidos"
+          },
+          "item3": {
+            "title": "Educación Financiera",
+            "li1": "Contabilidad Empresarial",
+            "li2": "Conceptos Básicos de Inversión"
+          }
+        },
         "coming_soon": "Próximamente",
         "access_panel": "Acceder al Panel de Capacitación"
       }

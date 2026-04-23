@@ -93,13 +93,13 @@ const RegisterAccount = () => {
           </div>
 
           {/* Membership Level Box */}
-          <div className="bg-[#1E88E5]/20 rounded-lg p-4 flex items-center justify-between">
+          {/* <div className="bg-[#1E88E5]/20 rounded-lg p-4 flex items-center justify-between">
             <span className="text-black text-lg font-normal">Membership Level-</span>
             <div className="bg-[#1E88E5] text-white px-4 py-2 rounded-lg text-sm font-normal flex items-center gap-2">
               <span className="w-2 h-2 bg-green-400 rounded-full"></span>
               FCHCC Active Members
             </div>
-          </div>
+          </div> */}
 
           {/* Submit Button */}
           <button className="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 rounded-xl transition-colors mt-4">

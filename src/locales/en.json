@@ -292,6 +292,10 @@
         "title": "Prospera Pro",
         "desc": "\"Thanks to the scholarship, I can pursue my degree and achieve my dreams!\""
       },
+      "Hola": {
+        "title": "Hola Emprende Conference",
+        "desc": "\"Networking has been incredibly valuable for building business connections!\""
+      },
       "buttons": {
         "apply": "Apply Now",
         "learn": "Learn More"
@@ -300,7 +304,7 @@
     "learn_and_grow": {
       "title": "Learn And Grow With Us",
       "workshop": {
-        "title": "Upcoming Workshop",
+        "title": "AI for Small Business",
         "desc": "Join Our in Person and virtual Workshop",
         "badge": "✦ Virtual Workshop",
         "item_title": "AI for Small Businesses",
@@ -310,7 +314,7 @@
       },
       "courses": {
         "title": "Upcoming Workshop",
-        "desc": "Join Our in Person and virtual Workshop",
+        "desc": "Access your online courses and training materials",
         "featured": "Featured Courses",
         "features": {
           "video": "On-demand video courses",
@@ -318,9 +322,23 @@
           "certificates": "Completion certificates",
           "discussions": "Community discussions"
         },
-        "item_title": "AI for Fundamental Course",
-        "item_li1": "AI Fundamentals",
-        "item_li2": "Learn the basics of AI",
+        "items": {
+          "item1": {
+            "title": "AI for Fundamental Course",
+            "li1": "AI Fundamentals",
+            "li2": "Learn the basics of AI"
+          },
+          "item2": {
+            "title": "Digital Marketing Mastery",
+            "li1": "Social Media Strategy",
+            "li2": "SEO & Content Marketing"
+          },
+          "item3": {
+            "title": "Financial Literacy",
+            "li1": "Business Accounting",
+            "li2": "Investment Basics"
+          }
+        },
         "coming_soon": "Coming Soon",
         "access_panel": "Access Training Pannel"
       }
@@ -526,7 +544,7 @@
     },
     "about": {
       "title": "About the ATD Luncheon",
-      "desc": "The FCHCC 'Achieving the Dream' is a scholarship program that supports high-achieving Hispanic students in Northeast Florida. This luncheon serves as our premier fundraising event to honor their accomplishments and secure future opportunities.",
+      "desc": "About the ATD Scholarship Program: The First Coast Hispanic Chamber of Commerce (FCHCC) has supported the education of Hispanics for many years with over half a million dollars in scholarships that have been awarded. Furthermore, the Hispanic Chamber of Commerce in Jacksonville (FCHCC), is proud to have impacted the lives of more than two hundred fifty (250) earnest and qualified scholarship recipients during its 30+ years of existence. FCHCC scholarship program; Achieving the Dream, not only enables students who have worked hard and achieved academic excellence to start or continue their education, it gives them the opportunity to become future successful entrepreneurs. This year, FCHCC and its Community Development Fund plans to award $20,000 in scholarships valued at $2,000.00 to each deserving and competent Hispanic Students of Northeast Florida. We invite and encourage you to support these endeavors, together we can really make the difference, first in our communities and second in our own families. Come be part of this and together we can celebrate the achievements our Hispanic community has worked so hard for. If you have any questions about our ATD luncheon, send an email to specialevents@fchcc.com",
       "button": "Read More Stories"
     },
     "sponsors": {
@@ -565,8 +583,7 @@
     },
     "story": {
       "title": "Our Story",
-      "para1": "Founded With The Belief That A United Hispanic Business Community Is A Powerful Force For Economic Growth, The First Coast Hispanic Chamber Of Commerce (FCHCC) Has Been The Cornerstone Of Hispanic Enterprise In Our Region.",
-      "para2": "Over The Past 15+ Years, We Have Grown From A Small Group Of Passionate Entrepreneurs To A Robust Network Of Over 500 Members, Corporate Partners, And Community Leaders.",
+      "desc": "In 1992, Jose Perez, Sergio Arnaiz, Clark Vargas and Jorge Hernandez, all business owners, undertook the task of unifying the Hispanic business community. They began meeting because of the decision by the city to leave out Hispanics in the purchasing set aside program.\n\nLater, after the city held hearings regarding this matter, other business owners came to join the cause and they formed the Hispanic American Business Association (HABA). They immediately began to advocate for Hispanic business and to promote the region’s rich Hispanic culture and heritage. The organization was renamed the First Coast Hispanic Chamber of Commerce (FCHCC) in early 2003.\n\nThe FCHCC has grown to include individual, corporate, and nonprofit members. In 2005, the FCHCC instituted a Trustee Program for larger corporations and organizations interested in significant and substantial support of Hispanic in business, who are shaping our local, state, and national economies.\n\nAll business professionals, both Hispanic and non-Hispanic, are welcome to become involved with our Chamber as we work to foster an understanding of Hispanic heritage through:\n\n• Networking events\n• Educational workshops\n• Promotional opportunities for businesses\n• “Achieving the Dream” Scholarship Program\n\nThe FCHCC also has a 501c (3) non-profit named Community Development, Inc., for the contributions received in support of our education initiatives including the “Achieving the Dream Scholarship” Program.",
       "read_more": "Read More"
     },
     "recognition": {

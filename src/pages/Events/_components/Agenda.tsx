@@ -6,16 +6,32 @@ import { Button } from '@/components/ui/button';
 
 const SpeakersSponsors = () => {
   const { t } = useTranslation();
-  const speakers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]; // Placeholder for speaker data/images
-  const [showAll, setShowAll] = useState(false); // State to toggle view
+
+  // ✅ Dynamic speaker data
+  const speakers = [
+    { id: 1, name: "John Doe", image: "/images/S1.png" },
+    { id: 2, name: "Sarah Smith", image: "/images/S2.png" },
+    { id: 3, name: "Michael Lee", image: "/images/S3.png" },
+    { id: 4, name: "Emma Watson", image: "/images/S4.png" },
+    { id: 5, name: "David Kim", image: "/images/S5.png" },
+    { id: 6, name: "Sophia Brown", image: "/images/S6.png" },
+    { id: 7, name: "Chris Evans", image: "/images/S7.png" },
+    { id: 8, name: "Olivia Taylor", image: "/images/S8.png" },
+    { id: 9, name: "Daniel Wilson", image: "/images/S9.png" },
+    { id: 10, name: "Isabella Moore", image: "/images/S10.png" },
+    { id: 11, name: "James Anderson", image: "/images/S11.png" },
+    { id: 12, name: "Mia Thomas", image: "/images/S12.png" },
+    { id: 12, name: "Mia Thomas", image: "/images/S12.png" },
+  ];
+
+  const [showAll, setShowAll] = useState(false);
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const toggleView = () => {
     setShowAll((prev) => !prev);
   };
 
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
-
-  // Close modal on ESC key
+  // ✅ ESC key to close modal
   useEffect(() => {
     const handleEsc = (e: KeyboardEvent) => {
       if (e.key === 'Escape') setSelectedImage(null);
@@ -29,49 +45,54 @@ const SpeakersSponsors = () => {
 
       {/* Speakers Section */}
       <div className="bg-[#E9F4FD] rounded-xl p-8 md:p-12 shadow-sm relative">
+
+        {/* Desktop Button */}
         <div className="hidden md:flex justify-end">
           <Button
             onClick={toggleView}
             className="flex items-center gap-2 px-5 py-2 w-30 h-10 border border-[#1E88E5] rounded-full text-[#1E88E5] transition-all text-sm font-medium"
           >
-            {showAll ? t("events.agenda.close") : t("events.agenda.view_all")} <ArrowUpRight className="w-4 h-4" />
+            {showAll ? t("events.agenda.close") : t("events.agenda.view_all")}
+            <ArrowUpRight className="w-4 h-4" />
           </Button>
         </div>
+
+        {/* Title */}
         <div className="flex justify-between items-center mb-10">
           <h2 className="text-[48px] font-normal text-[#1D83E4] mx-auto md:ml-auto md:translate-x-12">
             {t("events.agenda.speakers_title")}
           </h2>
         </div>
 
-        {/* Scrollable/Grid Speaker List */}
+        {/* Speakers Grid */}
         <div className="grid grid-cols-2 md:grid-cols-5 gap-4 lg:gap-6">
-          {(showAll ? speakers : speakers.slice(0, 5)).map((_, index) => {
-            const imgSrc = "/images/Frame 2087328015.png";
-            return (
-              <div
-                key={index}
-                className="group cursor-pointer"
-                onClick={() => setSelectedImage(imgSrc)}
-              >
-                <div className="aspect-square rounded-2xl overflow-hidden border-2 border-transparent group-hover:border-blue-400 transition-all shadow-md">
-                  <img
-                    src={imgSrc}
-                    alt={`Speaker ${index + 1}`}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                </div>
+          {(showAll ? speakers : speakers.slice(0, 5)).map((speaker) => (
+            <div
+              key={speaker.id}
+              className="group cursor-pointer"
+              onClick={() => setSelectedImage(speaker.image)}
+            >
+              <div className="aspect-square rounded-2xl overflow-hidden border-2 border-transparent group-hover:border-blue-400 transition-all shadow-md">
+                <img
+                  src={speaker.image}
+                  alt={speaker.name}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
               </div>
-            );
-          })}
+
+            
+            </div>
+          ))}
         </div>
 
-        {/* Mobile View All Button */}
+        {/* Mobile Button */}
         <div className="mt-8 flex justify-center md:hidden">
           <button
             onClick={toggleView}
             className="flex items-center gap-2 px-6 py-2 bg-blue-600 text-white rounded-full text-sm"
           >
-            {showAll ? t("events.agenda.close") : t("events.agenda.view_all")} <ArrowUpRight className="w-4 h-4" />
+            {showAll ? t("events.agenda.close") : t("events.agenda.view_all")}
+            <ArrowUpRight className="w-4 h-4" />
           </button>
         </div>
       </div>
@@ -87,7 +108,7 @@ const SpeakersSponsors = () => {
         </div>
       </div>
 
-      {/* Image Lightbox Modal */}
+      {/* Modal */}
       <AnimatePresence>
         {selectedImage && (
           <>
@@ -97,23 +118,25 @@ const SpeakersSponsors = () => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setSelectedImage(null)}
-              className="fixed inset-0 bg-black/80 backdrop-blur-sm z-100 flex items-center justify-center p-4 cursor-zoom-out"
+              className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 cursor-zoom-out"
             />
-            {/* Image Container */}
+
+            {/* Image */}
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.8 }}
               transition={{ type: "spring", damping: 25, stiffness: 300 }}
-              className="fixed inset-0 z-101 flex items-center justify-center pointer-events-none p-4"
+              className="fixed inset-0 z-50 flex items-center justify-center pointer-events-none p-4"
             >
               <div className="relative max-w-4xl w-full pointer-events-auto">
                 <button
                   onClick={() => setSelectedImage(null)}
-                  className="absolute -top-12 right-0 p-2 text-white/70 hover:text-white transition-colors cursor-pointer"
+                  className="absolute -top-12 right-0 p-2 text-white/70 hover:text-white"
                 >
                   <X size={32} />
                 </button>
+
                 <img
                   src={selectedImage}
                   alt="Speaker Enlarged"

@@ -12,12 +12,12 @@ const TopNavbar = () => {
 
           <div className="flex items-center gap-2 md:border-l md:border-white/30 md:pl-6">
             <Phone size={14} />
-            <span>+123456789</span>
+            <span> 904.346.1118</span>
           </div>
 
           <div className="flex items-center gap-2">
             <Mail size={14} />
-            <span>example@gmail.com</span>
+            <span> fchcc@fchcc.com</span>
           </div>
         </div>
 

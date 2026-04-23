@@ -59,7 +59,7 @@ const ContractFrom = () => {
             </div>
             <div>
               <h4 className="font-bold text-[16px] text-black mb-2">{t("contact.form.location")}</h4>
-              <p className="text-gray-400 text-sm font-normal max-w-[220px]">123 Business Blvd, Suite 400 Jacksonville, FL 32202</p>
+              <p className="text-gray-400 text-sm font-normal max-w-[220px]">4651 Salisbury Road, Suite 400 Jacksonville, FL 32256</p>
             </div>
           </div>
 
@@ -72,7 +72,7 @@ const ContractFrom = () => {
             </div>
             <div>
               <h4 className="font-bold text-[16px] text-black mb-2">{t("contact.form.phone")}</h4>
-              <p className="text-gray-400 text-sm font-normal max-w-[220px]">(904) 555-0198, Mon-Fri, 9am - 5pm EST</p>
+              <p className="text-gray-400 text-sm font-normal max-w-[220px]">First Coast Hispanic Chamber of Commerce P. O. Box 57972 Jacksonville, FL 32241 p 904-346-1118</p>
             </div>
           </div>
 
@@ -85,7 +85,7 @@ const ContractFrom = () => {
             </div>
             <div>
               <h4 className="font-bold text-[16px] text-black mb-2">{t("contact.form.email")}</h4>
-              <p className="text-gray-400 text-sm font-normal max-w-[220px]">info@fchcc.com</p>
+              <p className="text-gray-400 text-sm font-normal max-w-[220px]">fchcc@fchcc.com</p>
             </div>
           </div>
         </div>

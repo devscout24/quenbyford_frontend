@@ -3,12 +3,12 @@ import { Card, CardContent } from "@/components/ui/card";
 
 interface PartnerData {
   name: string;
-  logo: string;
+  logo?: string;
   website: string;
   jobs: string;
-  intro: string;
+  intro?: string;
   aboutShort: string;
-  aboutFull: string[];
+  aboutFull?: string[];
 }
 
 const PartnerProfile = ({ data }: { data: PartnerData }) => {
@@ -19,28 +19,32 @@ const PartnerProfile = ({ data }: { data: PartnerData }) => {
 
           {/* Header */}
           <div className="flex flex-col md:flex-row items-center gap-6">
-            <div className="w-full max-w-[200px] md:max-w-75 shrink-0 flex justify-center">
-              <img
-                src={data.logo}
-                alt={`${data.name} Logo`}
-                className="w-full h-auto object-contain"
-              />
-            </div>
+            {data.logo && (
+              <div className="w-full max-w-[200px] md:max-w-75 shrink-0 flex justify-center">
+                <img
+                  src={data.logo}
+                  alt={`${data.name} Logo`}
+                  className="w-full h-auto object-contain"
+                />
+              </div>
+            )}
 
             <div className="text-lg md:text-xl font-medium text-black text-center md:text-left">
-              Visit Florida Blue  {data.name}{" "}
-              <a href={data.website} className="text-[#1E73BE] underline">here</a> Check out Florida Blue’s job portal {" "}
+              Visit {data.name}{" "}
+              <a href={data.website} className="text-[#1E73BE] underline">here</a> Check out {data.name}’s portal {" "}
               <a href={data.jobs} className="text-[#1E73BE] underline">here</a>
             </div>
           </div>
 
           {/* Intro */}
-          <p className="text-black font-normal text-lg sm:text-xl text-left ">
-            <span className="font-bold text-[#0F172A] ">
-              {data.name}
-            </span>{" "}
-            {data.intro}
-          </p>
+          {data.intro && (
+            <p className="text-black font-normal text-lg sm:text-xl text-left ">
+              <span className="font-bold text-[#0F172A] ">
+                {data.name}
+              </span>{" "}
+              {data.intro}
+            </p>
+          )}
 
           {/* About Short */}
           <div className="space-y-4">
@@ -52,28 +56,31 @@ const PartnerProfile = ({ data }: { data: PartnerData }) => {
             </p>
           </div>
 
-          <hr className="border-t border-slate-300" />
+          {data.aboutFull && data.aboutFull.length > 0 && (
+            <>
+              <hr className="border-t border-slate-300" />
+              {/* About Full */}
+              <div className="space-y-6">
+                <h2 className="text-2xl sm:text-4xl font-normal tracking-tight text-[#1E73BE]">
+                  {data.name}:
+                </h2>
 
-          {/* About Full */}
-          <div className="space-y-6">
-            <h2 className="text-2xl sm:text-4xl font-normal tracking-tight text-[#1E73BE]">
-              {data.name}:
-            </h2>
-
-            <div className="text-black text-lg sm:text-xl font-normal text-left space-y-4">
-              {data.aboutFull.map((text, index) => (
-                <p key={index}
-                  className={
-                    index === data.aboutFull.length - 1
-                      ? "italic font-normal text-black "
-                      : ""
-                  }
-                >
-                  {text}
-                </p>
-              ))}
-            </div>
-          </div>
+                <div className="text-black text-lg sm:text-xl font-normal text-left space-y-4">
+                  {data.aboutFull.map((text, index) => (
+                    <p key={index}
+                      className={
+                        index === data.aboutFull!.length - 1
+                          ? "italic font-normal text-black "
+                          : ""
+                      }
+                    >
+                      {text}
+                    </p>
+                  ))}
+                </div>
+              </div>
+            </>
+          )}
 
         </CardContent>
       </Card>

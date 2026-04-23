@@ -60,10 +60,10 @@ export default function StudentDonationSection() {
           </p>
         </div>
 
-        {/* Action Button */}
+        {/* Action Button  //https://www.emailmeform.com/builder/emf/fchcc/atd-donate*/}
     <div className="pt-4">
-       
-            <Link to="https://www.emailmeform.com/builder/emf/fchcc/atd-donate"
+        
+            <Link to="/donate" 
            
             className="bg-[#FF7A00] text-white px-10 py-3 rounded-xl font-bold text-lg shadow-md hover:bg-[#e66e00] transition-colors"
           >

@@ -43,6 +43,7 @@ const itemVariants: Variants = {
 // ----------------------
 const SponserSection = () => {
   const { t } = useTranslation();
+  const [showAllText, setShowAllText] = useState(false); // State for toggling text
   const [showAllPartners, setShowAllPartners] = useState(false);
 
   const aboutData = {
@@ -68,14 +69,17 @@ const SponserSection = () => {
             <h2 className="text-[#0077C8] text-2xl font-bold leading-8 mb-4">
               {aboutData.title}
             </h2>
-            <p className="text-[14px] leading-5.5  fonnt-normal text-black/60 my-6">
+            <p className={`text-[14px] leading-5.5 font-normal text-black/60 my-6 text-left ${showAllText ? "line-clamp-none" : "line-clamp-4"}`}>
               {aboutData.description}
             </p>
           </div>
 
-          <button className="flex w-fit items-center text-[#0077C8] font-bold text-[12px] leading-4 tracking-tighter-1.5px uppercase group">
-            {aboutData.buttonText}
-            <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
+          <button
+            onClick={() => setShowAllText(!showAllText)}
+            className="flex w-fit items-center text-[#0077C8] font-bold text-[12px] leading-4 tracking-tighter-1.5px uppercase group"
+          >
+            {showAllText ? t("scholarship.about.show_less") : t("scholarship.about.show_more")}
+            <ArrowRight className={`ml-2 w-4 h-4 transition-transform group-hover:translate-x-1 ${showAllText ? "rotate-180" : "rotate-0"}`} />
           </button>
         </motion.div>
 

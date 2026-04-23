@@ -33,6 +33,7 @@ import JoinUsPage from "@/pages/JoinUs";
 import BenifitsPage from "@/pages/Benifits";
 import JobHaringiPage from "@/pages/HiringCard";
 import DonateATDScholarshipPage from "@/pages/DonateATDScholarship";
+import DonationFormPage from "@/pages/Auth/DonationForm";
 
 const router = createBrowserRouter([
   {
@@ -180,7 +181,13 @@ const router = createBrowserRouter([
         path: "/about/donatescholarship",
         element: <DonateATDScholarshipPage />,
       },
+      {
+        path: "/donate",
+        element: <DonationFormPage />,
+      },
     ],
+      
+    
   },
 ]);
 

@@ -24,6 +24,51 @@ const LearnAndGrow = () => {
     },
   };
 
+  const workshopData = [
+    {
+      id: 1,
+      badge: "Virtual Workshop",
+      title: "AI for Small Businesses",
+      date: "May 29, 2026 7:00 PM EST",
+      buttonText: "Coming Soon",
+    },
+    {
+      id: 2,
+      badge: "In-Person",
+      title: "Financial Planning Basics",
+      date: "May 15, 2026 2:00 PM EST",
+      buttonText: "Coming Soon",
+    },
+    {
+      id: 3,
+      badge: "Virtual Workshp",
+      title: "English for Business",
+      date: "May 22, 2026 6:00 PM EST",
+      buttonText: "Coming Soon",
+    },
+  ];
+
+  const courseData = [
+    {
+      id: 1,
+      title: t('community_page.learn_and_grow.courses.items.item1.title'),
+      li1: t('community_page.learn_and_grow.courses.items.item1.li1'),
+      li2: t('community_page.learn_and_grow.courses.items.item1.li2'),
+    },
+    {
+      id: 2,
+      title: t('community_page.learn_and_grow.courses.items.item2.title'),
+      li1: t('community_page.learn_and_grow.courses.items.item2.li1'),
+      li2: t('community_page.learn_and_grow.courses.items.item2.li2'),
+    },
+    {
+      id: 3,
+      title: t('community_page.learn_and_grow.courses.items.item3.title'),
+      li1: t('community_page.learn_and_grow.courses.items.item3.li1'),
+      li2: t('community_page.learn_and_grow.courses.items.item3.li2'),
+    },
+  ];
+
   return (
     <section className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 my-8 sm:my-16 bg-white">
       <motion.h2
@@ -64,17 +109,23 @@ const LearnAndGrow = () => {
             <p className="text-black font-normal text-base sm:text-xl mb-4 sm:mb-8">{t('community_page.learn_and_grow.workshop.desc')}</p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full ">
-              {[1, 2, 3].map((i) => (
-                <div key={i} className={`border border-orange-100 rounded-2xl p-4 sm:p-6 h-[214px] flex flex-col justify-between text-center ${i === 3 ? 'col-span-1' : ''}`}>
+              {workshopData.map((workshop) => (
+                <div
+                  key={workshop.id}
+                  className={`border border-orange-100 rounded-2xl p-4 sm:p-6 h-auto flex flex-col justify-between text-center ${workshop.id === 3 ? 'col-span-1' : ''}`}
+                >
                   <span className="text-[10px] text-orange-500 font-bold border border-orange-200 px-2 py-1  rounded-full uppercase self-center w-fit">
-                    {t('community_page.learn_and_grow.workshop.badge')}
+                    {workshop.badge}
                   </span>
                   <div>
-                    <h4 className="text-[14px] font-bold text-black mb-1">{t('community_page.learn_and_grow.workshop.item_title')}</h4>
-                    <p className="text-[12px] font-normal text-black">{t('community_page.learn_and_grow.workshop.date')}</p>
+                    <h4 className="text-[14px] font-bold text-black mb-1 mt-6">{workshop.title}</h4>
+                    <p className="text-[12px] font-normal text-black w-25 mx-auto my-6">{workshop.date}</p>
                   </div>
-                  <Button size="sm" className="w-full bg-[#1E88E5] hover:bg-[#1E88E5] rounded-full h-8 text-[14px] font-medium text-white">
-                    {t('community_page.learn_and_grow.workshop.coming_soon')}
+                  <Button
+                    size="sm"
+                    className="w-full bg-[#1E88E5] hover:bg-[#1E88E5] rounded-full h-8 text-[14px] font-medium text-white"
+                  >
+                    {workshop.buttonText}
                   </Button>
                 </div>
               ))}
@@ -119,12 +170,12 @@ const LearnAndGrow = () => {
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
-              {[1, 2, 3].map((i) => (
-                <div key={i} className="border border-blue-100 rounded-2xl p-4 h-[214px] flex flex-col justify-between text-center">
-                  <h4 className="text-[14px] font-bold text-black mt-2 mb-3">{t('community_page.learn_and_grow.courses.item_title')}</h4>
+              {courseData.map((course) => (
+                <div key={course.id} className="border border-blue-100 rounded-2xl p-4 h-[214px] flex flex-col justify-between text-center">
+                  <h4 className="text-[14px] font-bold text-black mt-2 mb-3">{course.title}</h4>
                   <ul className="text-[12px] text-black space-y-2 mb-10 text-left">
-                    <li>• {t('community_page.learn_and_grow.courses.item_li1')}</li>
-                    <li>• {t('community_page.learn_and_grow.courses.item_li2')}</li>
+                    <li>• {course.li1}</li>
+                    <li>• {course.li2}</li>
                   </ul>
                   <Button variant="outline" size="sm" className="w-full rounded-full h-8 font-medium text-[14px] text-[#1E88E5] border-[#1E88E5]">
                     {t('community_page.learn_and_grow.courses.coming_soon')}
