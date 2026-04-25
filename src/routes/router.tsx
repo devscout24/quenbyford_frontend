@@ -34,6 +34,8 @@ import BenifitsPage from "@/pages/Benifits";
 import JobHaringiPage from "@/pages/HiringCard";
 import DonateATDScholarshipPage from "@/pages/DonateATDScholarship";
 import DonationFormPage from "@/pages/Auth/DonationForm";
+import CircleOfFriends from "@/pages/CircleOfFriends";
+
 
 const router = createBrowserRouter([
   {
@@ -185,6 +187,11 @@ const router = createBrowserRouter([
         path: "/donate",
         element: <DonationFormPage />,
       },
+      {
+        path: "/about/circle-of-friends",
+        element: <CircleOfFriends />,
+      },
+
     ],
       
     

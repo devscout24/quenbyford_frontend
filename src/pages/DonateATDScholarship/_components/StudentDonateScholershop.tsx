@@ -53,7 +53,7 @@ export default function StudentDonationSection() {
             Help us continue to provide support and programs for Hispanics and our community by making a donation to the FCHCC's 501(c)(3) Community Development Fund today.
           </p>
           <p>
-            Donations of $50 or more will include you in the FCHCC's <span className="text-[#FF7A00] italic font-medium">Circle of Friends</span>. We honor our Circle of Friends donors in our ongoing communications and at special events. Any gift makes a difference!
+            Donations of $50 or more will include you in the FCHCC's <a href='/about/circle-of-friends' className="text-[#FF7A00] italic font-medium">Circle of Friends</a>. We honor our Circle of Friends donors in our ongoing communications and at special events. Any gift makes a difference!
           </p>
           <p className="text-xs md:text-base text-black">
             Gifts to the FCHCC's 501(c)(3) Community Development Fund are tax-deductible to the extent allowed by law. IRS regulations require that you retain a written acknowledgement from the FCHCC to support claims of a tax deduction. A receipt of any gifts will be provided. If you want to donate more than $1,000, send an email to <a href="mailto:fchcc@fchcc.com" className="text-[#FF7A00] underline">fchcc@fchcc.com</a> or call (904) 346-1118.

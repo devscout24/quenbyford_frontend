@@ -55,6 +55,7 @@ const Header = () => {
         { name: t("navbar.our_committees"), href: "/about/committee" },
         { name:"Donate ATD Scholarship", href: "/about/donatescholarship" },
         { name: t("navbar.member_parking"), href: "/comingsoon" },
+        { name: t("navbar.circle_of_friends"), href: "/about/circle-of-friends" },
       ],
     },
   ];

@@ -18,7 +18,8 @@
     "atd_scholarship": "2025 ATD Scholarship Luncheon",
     "monthly_calendar": "Monthly Calendar",
     "resources": "Resources",
-    "our_committees": "Our Committees"
+    "our_committees": "Our Committees",
+    "circle_of_friends": "Circle of Friends"
   },
   "footer": {
     "about_text": "First Coast Hispanic Chamber of Commerce - Your Premier Hispanic Chamber. Strengthening the Hispanic business community since its founding.",
@@ -63,8 +64,8 @@
     },
     "join_today": "Join FCHCC today!",
     "effortless": {
-      "title": "Simple Effortless",
-      "desc": "We provide Simple systems that are easy to operate and require very little upkeep, giving businesses simple tools to track performance and stay focused on growth."
+      "title": "Empowering Through Education & Community",
+      "desc": "Providing education, network opportunities and community involvement for the Hispanic entrepreneurial community"
     },
     "events": {
       "title": "Upcoming Events",
@@ -538,7 +539,7 @@
       "congrats": "Congratulations to the 2025 ATD Winners!"
     },
     "pricing": {
-      "view_2024": "View 2024 ATD Luncheon",
+      "view_2024": "View 2025 ATD Luncheon",
       "dimensions": "Dimensions",
       "formats": "Formats"
     },
@@ -573,7 +574,7 @@
       "filter_full": "Full-time",
       "filter_part": "Part-time",
       "view_all": "View All",
-      "no_jobs": "No jobs found 😢"
+      "no_jobs": "No jobs found "
     }
   },
   "about": {
@@ -717,5 +718,130 @@
       "dataBreachP1": "We have internal reporting systems set up to protect visitors and members data. And our board and staff are alert and trained in data protection."
     },
     "footerText": "For any questions regarding our privacy policy, contact us at <1>fchcc@fchcc.com</1>."
+  },
+  "circle_of_friends": {
+    "title": "Circle of Friends",
+    "subtitle": "By supporting our Achieving the Dream scholarship program, you become one of our Circle of Friends plus you're helping deserved Hispanic students to continue their education",
+    "sections": {
+      "2024": {
+        "year": "2024:",
+        "donors": [
+          "Alive Credit Union",
+          "Jacksonville Transportation Authority (JTA)",
+          "Clark Vargas Scholarship",
+          "Jimenez-Bellisario Family Trust",
+          "VyStar Credit Union",
+          "Florida Blue",
+          "Deutsche Bank",
+          "Arlington Toyota",
+          "904 Happy Hour",
+          "Decons Energy",
+          "Fisher Tousey Attorneys at Law",
+          "University of North Florida"
+        ]
+      },
+      "2023": {
+        "year": "2023:",
+        "donors": [
+          "Jimenez-Bellisario Family Trust (in honor of Clark Vargas)",
+          "VyStar Credit Union",
+          "Jacksonville Jaguars Foundation",
+          "Deutsche Bank",
+          "Florida Blue",
+          "Alive Credit Union",
+          "Decons Energy",
+          "University of North Florida",
+          "Cindy Caldwell"
+        ]
+      },
+      "2022": {
+        "year": "2022:",
+        "donors": [
+          "Alive Credit Union",
+          "Jacksonville Transportation Authority (JTA)",
+          "Clark Vargas Scholarship",
+          "Jimenez-Bellisario Family Trust",
+          "VyStar Credit Union",
+          "Florida Blue",
+          "Deutsche Bank",
+          "Arlington Toyota",
+          "904 Happy Hour",
+          "Decons Energy",
+          "Fisher Tousey Attorneys at Law",
+          "University of North Florida"
+        ]
+      },
+      "2021": {
+        "year": "2021:",
+        "donors": [
+          "Jimenez-Bellisario Family Trust (in honor of Clark Vargas)",
+          "VyStar Credit Union",
+          "Jacksonville Jaguars Foundation",
+          "Deutsche Bank",
+          "Florida Blue",
+          "Alive Credit Union",
+          "Decons Energy",
+          "University of North Florida",
+          "Cindy Caldwell"
+        ]
+      },
+      "2020": {
+        "year": "2020:",
+        "donors": [
+          "AT&T Florida",
+          "Jonathan Brooks",
+          "Feeding Northeast Florida",
+          "Jacksonville Jaguars",
+          "PQH Group",
+          "Roca de Salvacion",
+          "Vystar Credit Union"
+        ]
+      },
+      "2019": {
+        "year": "2019:",
+        "donors": [
+          "Jimenez-Bellisario Family Trust (in honor of Clark Vargas)",
+          "VyStar Credit Union",
+          "Jacksonville Jaguars Foundation",
+          "Deutsche Bank",
+          "Florida Blue",
+          "Alive Credit Union",
+          "Decons Energy",
+          "University of North Florida",
+          "Cindy Caldwell"
+        ]
+      },
+      "2018": {
+        "year": "2018:",
+        "donors": [
+          "The Grainger Foundation",
+          "Florida Blue",
+          "EverBank",
+          "Marks Gray, P.A.",
+          "Allstate",
+          "Ramirez Restaurant"
+        ]
+      },
+      "past_donors": {
+        "year": "Past Donors:",
+        "donors": [
+          "Adpen Laboratories",
+          "Amelia's Fine Jewelry",
+          "AT&T",
+          "Rebecca Black Immigration",
+          "Leon Carrero",
+          "Victor Cora",
+          "Nelson Estepa",
+          "Jacksonville University",
+          "Mass Mutual Financial",
+          "New York Life Insurance",
+          "PGA Tour",
+          "Andrea Reyes",
+          "Roberto Sanchez",
+          "Visit Jacksonville",
+          "Wells Fargo"
+        ]
+      }
+    }
   }
 }

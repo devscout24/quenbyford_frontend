@@ -85,7 +85,7 @@ const ContractFrom = () => {
             </div>
             <div>
               <h4 className="font-bold text-[16px] text-black mb-2">{t("contact.form.email")}</h4>
-              <p className="text-gray-400 text-sm font-normal max-w-[220px]">fchcc@fchcc.com</p>
+              <p className="text-gray-400 text-sm font-normal max-w-[220px]">contact.fchcc@gmail.com</p>
             </div>
           </div>
         </div>
