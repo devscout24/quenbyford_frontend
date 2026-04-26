@@ -2,6 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
 const ProgramsGrid = () => {
     const { t } = useTranslation();
@@ -13,7 +14,8 @@ const ProgramsGrid = () => {
             description: t('community_page.programs.atd.desc'),
             image: "/images/Frame 2087328089 (1).png",
             buttonText: t('community_page.programs.buttons.apply'),
-            themeColor: "bg-[#F97316]", // Brand Orange
+            themeColor: "bg-[#F97316]",
+            link: "/events/scholarship"
         },
         {
             id: 2,
@@ -22,6 +24,7 @@ const ProgramsGrid = () => {
             image: "/images/Frame 2087328089 (2).png",
             buttonText: t('community_page.programs.buttons.learn'),
             themeColor: "bg-[#3B82F6]", // Brand Blue
+            link: "https://jseb.jacksonville.gov/"
         },
         {
             id: 3,
@@ -30,6 +33,7 @@ const ProgramsGrid = () => {
             image: "/images/Frame 2087328089.png",
             buttonText: t('community_page.programs.buttons.apply'),
             themeColor: "bg-[#F97316]",
+            link: "https://prosperausa.org/"
         },
         {
             id: 4,
@@ -38,6 +42,7 @@ const ProgramsGrid = () => {
             image: "/images/Hola.jpg",
             buttonText: t('community_page.programs.buttons.apply'),
             themeColor: "bg-[#F97316]",
+            link: "/events"
         }
     ];
 
@@ -108,9 +113,12 @@ const ProgramsGrid = () => {
 
                                 {/* Action Button */}
                                 <Button
+                                    asChild
                                     className={`w-full py-2.5 px-4 h-12 rounded-full text-white font-bold text-[16px] font-normal transition-all active:scale-95 ${program.themeColor} hover:opacity-90`}
                                 >
-                                    {program.buttonText}
+                                    <Link to={program.link}>
+                                        {program.buttonText}
+                                    </Link>
                                 </Button>
 
                             </CardContent>
