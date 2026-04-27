@@ -66,7 +66,7 @@
     "join_today": "¡Únete a FCHCC hoy!",
     "effortless": {
       "title": "Empoderando a través de la educación y la comunidad",
-"desc": "Brindando educación, oportunidades de networking y participación comunitaria para la comunidad emprendedora hispana."
+      "desc": "Brindando educación, oportunidades de networking y participación comunitaria para la comunidad emprendedora hispana."
     },
     "events": {
       "title": "Próximos Eventos",
@@ -521,7 +521,6 @@
   "sponsors": {
     "title": "Patrocinadores"
   },
-
   "jobs": {
     "hero": {
       "title": "BOLSA DE TRABAJO DE FCHCC",
@@ -682,10 +681,10 @@
         "title": "Prospera Pro",
         "desc": "\"¡Gracias a la beca, puedo seguir mi carrera y alcanzar mis sueños!\""
       },
-       "Hola": {
-  "title": "Conferencia Hola Emprende",
-  "desc": "¡El networking ha sido increíblemente valioso para construir conexiones empresariales!"
-},
+      "Hola": {
+        "title": "Conferencia Hola Emprende",
+        "desc": "¡El networking ha sido increíblemente valioso para construir conexiones empresariales!"
+      },
       "buttons": {
         "apply": "Aplica ya",
         "learn": "Leer más"
@@ -694,7 +693,7 @@
     "learn_and_grow": {
       "title": "Aprenda y crezca con nosotros",
       "workshop": {
-        "title": "Próximos Talleres",
+        "title": "IA para Pequeños Negocios",
         "desc": "Únase a nuestras sesiones interactivas para aprender de expertos de la industria y desarrollar sus habilidades profesionales.",
         "view_all": "Ver todos los talleres",
         "badges": {

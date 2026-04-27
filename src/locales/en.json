@@ -77,7 +77,6 @@
       "button": "Learn About Member"
     }
   },
-
   "badges": {
     "title": "Our Badges"
   },
@@ -345,7 +344,7 @@
     "learn_and_grow": {
       "title": "Learn And Grow With Us",
       "workshop": {
-        "title": "Upcoming Workshops",
+        "title": "AI for Small Business",
         "desc": "Join our interactive sessions to learn from industry experts and grow your professional skills.",
         "view_all": "View All Workshops",
         "badges": {
@@ -718,7 +717,6 @@
   "sponsors": {
     "title": "Sponsors"
   },
-
   "jobs": {
     "hero": {
       "title": "FCHCC JOBS BOARD",
