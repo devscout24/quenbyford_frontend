@@ -21,19 +21,19 @@ const RenewingMembers = () => {
 
   const months = [
     {
-      name: "April 2025",
+      name: `${t("months.april")} 2025`,
       sections: [
-        { title: "Large Corporation # 1", companies: ["PNC Bank", "SOHO Network Solutions, Inc."] },
-        { title: "Large Corporation # 2", companies: ["PNC Bank", "SOHO Network Solutions, Inc."] },
-        { title: "Small Business # 1", companies: ["PNC Bank", "SOHO Network Solutions, Inc."] },
+        { title: t("new_members.levels.corporate"), companies: ["PNC Bank", "SOHO Network Solutions, Inc."] },
+        { title: t("new_members.levels.business"), companies: ["PNC Bank", "SOHO Network Solutions, Inc."] },
+        { title: t("new_members.levels.entrepreneur"), companies: ["PNC Bank", "SOHO Network Solutions, Inc."] },
       ]
     },
     {
-      name: "March 2025",
+      name: `${t("months.march")} 2025`,
       sections: [
-        { title: "Large Corporation # 1", companies: ["PNC Bank", "SOHO Network Solutions, Inc."] },
-        { title: "Large Corporation # 2", companies: ["PNC Bank", "SOHO Network Solutions, Inc."] },
-        { title: "Small Business # 1", companies: ["PNC Bank", "SOHO Network Solutions, Inc."] },
+        { title: t("new_members.levels.corporate"), companies: ["PNC Bank", "SOHO Network Solutions, Inc."] },
+        { title: t("new_members.levels.business"), companies: ["PNC Bank", "SOHO Network Solutions, Inc."] },
+        { title: t("new_members.levels.entrepreneur"), companies: ["PNC Bank", "SOHO Network Solutions, Inc."] },
       ]
     }
   ];
@@ -41,9 +41,9 @@ const RenewingMembers = () => {
   return (
     <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 my-15 bg-white font-sans text-center">
       {/* Header */}
-      <h2 className="text-3xl sm:text-4xl md:text-[50px] font-bold text-[#1E88E5] mb-4 sm:mb-8">{t("new_members.title")}</h2>
+      <h2 className="text-3xl sm:text-4xl md:text-[50px] font-bold text-[#1E88E5] mb-4 sm:mb-8">{t("new_members.welcome")}</h2>
       <p className="max-w-2xl mx-auto text-[#000000] mb-8 sm:mb-16 text-base sm:text-xl font-normal">
-        {t("new_members.desc")}
+        {t("new_members.desc", { defaultValue: "FCHCC is proud to welcome our newest members. We look forward to working with you and helping your business grow." })}
       </p>
 
       {/* Month Wise Lists */}

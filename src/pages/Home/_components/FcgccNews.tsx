@@ -7,95 +7,79 @@ import SubscribePopup from "../../../components/SubscribePopup";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
+// Raw data with translation keys for news
 export const newsData = [
   {
     id: 1,
-    title: "Stories from Successful Projects",
+    title: "home.news_data.title1",
     date: "February 20, 2024",
     image: "/images/5001.png",
   },
   {
     id: 2,
-    title: "Navigating The World Of Business Strategy",
+    title: "home.news_data.title2",
     date: "February 18, 2024",
     image: "/images/50002.png",
   },
   {
     id: 3,
-    title: "Trends Shaping Marketing Strategies",
+    title: "home.news_data.title3",
     date: "February 15, 2024",
     image: "/images/5003.png",
   },
   {
     id: 4,
-    title: "Trends Shaping Marketing Strategies",
+    title: "home.news_data.title3",
     date: "February 15, 2024",
     image: "/images/5004.png",
   },
   {
     id: 5,
-    title: "Trends Shaping Marketing Strategies",
+    title: "home.news_data.title3",
     date: "February 15, 2024",
     image: "/images/5005.png",
   },
   {
     id: 6,
-    title: "Trends Shaping Marketing Strategies",
+    title: "home.news_data.title3",
     date: "February 15, 2024",
     image: "/images/5006.png",
   },
   {
     id: 7,
-    title: "Trends Shaping Marketing Strategies",
+    title: "home.news_data.title3",
     date: "February 15, 2024",
     image: "/images/5007.png",
   },
   {
     id: 8,
-    title: "Trends Shaping Marketing Strategies",
+    title: "home.news_data.title3",
     date: "February 15, 2024",
     image: "/images/5008.jpg",
   },
   {
     id: 9,
-    title: "Trends Shaping Marketing Strategies",
+    title: "home.news_data.title3",
     date: "February 15, 2024",
     image: "/images/5009.jpg",
   },
   {
     id: 10,
-    title: "Trends Shaping Marketing Strategies",
+    title: "home.news_data.title3",
     date: "February 15, 2024",
     image: "/images/5010.jpg",
   },
   {
     id: 11,
-    title: "Trends Shaping Marketing Strategies",
+    title: "home.news_data.title3",
     date: "February 15, 2024",
     image: "/images/5011.jpg",
   },
   {
     id: 12,
-    title: "Trends Shaping Marketing Strategies",
+    title: "home.news_data.title3",
     date: "February 15, 2024",
     image: "/images/5001.png",
-  },
-];
-
-const testimonialData = [
-  {
-    id: 1,
-    text: "As A Business Owner, I Needed A Reliable Solar Solution For My Warehouse. Their Advanced Panel Technology Has Exceeded Expectations.",
-    name: "Michael J.",
-    designation: "CEO, Ignite Digital",
-    image: "/images/person-near-alternative-energy-plant.png",
-  },
-  {
-    id: 2,
-    text: "Amazing service and great support team. Highly recommended for business owners.",
-    name: "David R.",
-    designation: "Founder, TechZone",
-    image: "/images/Frame 2087327917.png",
   },
 ];
 
@@ -103,6 +87,23 @@ const FchccNews = () => {
   const { t } = useTranslation();
   const [index, setIndex] = useState(0);
   const [isSubscribeOpen, setIsSubscribeOpen] = useState(false);
+
+  const testimonialData = [
+    {
+      id: 1,
+      text: t("home.testimonials_data.text1"),
+      name: "Michael J.",
+      designation: "CEO, Ignite Digital",
+      image: "/images/person-near-alternative-energy-plant.png",
+    },
+    {
+      id: 2,
+      text: t("home.testimonials_data.text2"),
+      name: "David R.",
+      designation: "Founder, TechZone",
+      image: "/images/Frame 2087327917.png",
+    },
+  ];
 
   const nextTestimonial = () => {
     setIndex((prev) => (prev + 1) % testimonialData.length);
@@ -138,7 +139,7 @@ const FchccNews = () => {
             <Link to={`/news/${news.id}`} key={news.id} className="w-full block hover:opacity-80 transition-opacity cursor-pointer group">
               <img
                 src={news.image}
-                alt={news.title}
+                alt={t(news.title)}
                 className="rounded-2xl w-full h-60 sm:h-70 lg:h-75 object-cover shadow-sm group-hover:shadow-md transition-shadow"
               />
 
@@ -147,7 +148,7 @@ const FchccNews = () => {
               </p>
 
               <h3 className="font-semibold text-[22px] capitalize text-black mt-2 leading-tight group-hover:text-[#1E88E5] transition-colors">
-                {news.title}
+                {t(news.title)}
               </h3>
             </Link>
           ))}
@@ -156,87 +157,89 @@ const FchccNews = () => {
 
       {/* Scholarship Section */}
       <motion.section
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.1 }}
-      transition={{ duration: 0.6, delay: 0.2 }}
-      className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-14 items-center w-full my-8 lg:my-16"
-    >
-      {/* LEFT SIDE */}
-      <div className="w-full">
-        <img
-          src="/images/image 148.png"
-          alt="scholarship"
-          className="rounded-3xl shadow-xl w-full h-75 sm:h-100 lg:h-120 object-cover"
-        />
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.1 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+        className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-14 items-center w-full my-8 lg:my-16"
+      >
+        {/* LEFT SIDE */}
+        <div className="w-full">
+          <img
+            src="/images/image 148.png"
+            alt="scholarship"
+            className="rounded-3xl shadow-xl w-full h-75 sm:h-100 lg:h-120 object-cover"
+          />
 
-        <p className="mt-6 text-base sm:text-lg text-black font-normal leading-relaxed px-2">
-          {t("news.scholarship.desc")}
-        </p>
-      </div>
+          <p className="mt-6 text-base sm:text-lg text-black font-normal leading-relaxed px-2">
+            {t("news.scholarship.desc")}
+          </p>
+        </div>
 
-      {/* RIGHT SIDE */}
-      <div className="space-y-6 lg:space-y-8 w-full">
-        <h2 className="text-3xl sm:text-[40px] lg:text-[50px] font-bold uppercase leading-tight sm:leading-none">
-          {t("news.scholarship.title").split(' ')[0]}{" "}
-          <span className="text-[#F97316]">{t("news.scholarship.title").split(' ')[1]}</span>
-        </h2>
+        {/* RIGHT SIDE */}
+        <div className="space-y-6 lg:space-y-8 w-full">
+          <h2 className="text-3xl sm:text-[40px] lg:text-[50px] font-bold uppercase leading-tight sm:leading-none">
+            {t("news.scholarship.title").split(' ')[0]}{" "}
+            <span className="text-[#F97316]">{t("news.scholarship.title").split(' ')[1]}</span>
+          </h2>
 
-        {/* CARD */}
-        <div className="border border-orange-200 rounded-2xl p-5 sm:p-6 flex flex-col sm:flex-row gap-4 sm:gap-6 bg-orange-50/40 hover:bg-orange-50 transition-colors shadow-sm">
-          <img src="/icons/Frame.svg" alt="" className="w-10 h-10 sm:w-12 sm:h-12 shrink-0" />
+          {/* CARD */}
+          <div className="border border-orange-200 rounded-2xl p-5 sm:p-6 flex flex-col sm:flex-row gap-4 sm:gap-6 bg-orange-50/40 hover:bg-orange-50 transition-colors shadow-sm">
+            <img src="/icons/Frame.svg" alt="" className="w-10 h-10 sm:w-12 sm:h-12 shrink-0" />
 
-          <p className="text-lg sm:text-[20px] lg:text-[22px] font-medium leading-relaxed text-gray-800">
-            {t("news.scholarship.winners_announcement")}
-            <Link to="/news" className="block mt-1 sm:inline sm:mt-0 italic text-[#1E88E5] hover:underline cursor-pointer">
-              {" "}{t("news.scholarship.press_release")}
+            <p className="text-lg sm:text-[20px] lg:text-[22px] font-medium leading-relaxed text-gray-800">
+              {t("news.scholarship.winners_announcement")}
+              <Link to="/news" className="block mt-1 sm:inline sm:mt-0 italic text-[#1E88E5] hover:underline cursor-pointer">
+                {" "}{t("news.scholarship.press_release")}
+              </Link>
+            </p>
+          </div>
+
+          {/* ITEM 1 */}
+          <div className="flex items-start sm:items-center gap-4 group cursor-pointer">
+            <img src="/icons/Frame (1).svg" alt="" className="w-8 h-8 sm:w-10 sm:h-10 shrink-0 mt-1 sm:mt-0 transition-transform group-hover:scale-110" />
+
+            <p className="text-lg sm:text-xl lg:text-[22px] text-black font-semibold">
+              <Link to="#" className="text-[#1E88E5] font-bold">{t("news.scholarship.donate")}</Link>
+              {t("news.scholarship.donate_desc")}
+            </p>
+          </div>
+
+          {/* ITEM 2 */}
+          <div className="flex items-center gap-4 group cursor-pointer">
+            <img src="/icons/Frame (2).svg" alt="" className="w-8 h-8 sm:w-10 sm:h-10 shrink-0 transition-transform group-hover:scale-110" />
+
+            <Link to="/scholarshipwinners" className="text-lg sm:text-xl lg:text-[22px] text-[#1E88E5] font-semibold group-hover:text-[#1E88E5] transition-colors">
+              {t("news.scholarship.view_past")}
             </Link>
-          </p>
+          </div>
         </div>
 
-        {/* ITEM 1 */}
-        <div className="flex items-start sm:items-center gap-4 group cursor-pointer">
-          <img src="/icons/Frame (1).svg" alt="" className="w-8 h-8 sm:w-10 sm:h-10 shrink-0 mt-1 sm:mt-0 transition-transform group-hover:scale-110" />
-
-          <p className="text-lg sm:text-xl lg:text-[22px] text-black font-semibold">
-            <Link to="#" className="text-[#1E88E5] font-bold">{t("news.scholarship.donate")}</Link>
-            {t("news.scholarship.donate_desc")}
-          </p>
-        </div>
-
-        {/* ITEM 2 */}
-        <div className="flex items-center gap-4 group cursor-pointer">
-          <img src="/icons/Frame (2).svg" alt="" className="w-8 h-8 sm:w-10 sm:h-10 shrink-0 transition-transform group-hover:scale-110" />
-
-          <Link to="/scholarshipwinners" className="text-lg sm:text-xl lg:text-[22px] text-[#1E88E5] font-semibold group-hover:text-[#1E88E5] transition-colors">
-            {t("news.scholarship.view_past")}
+        {/* BUTTON CENTER */}
+        <div className="col-span-1 md:col-span-2 flex justify-center mt-8">
+          <Link
+            to="/joinus"
+            className="flex items-center justify-center bg-[#F97316] w-full sm:w-62.5 h-12 sm:h-14 text-white rounded-full font-bold text-base sm:text-lg shadow-[0_6px_20px_rgba(249,115,22,0.3)] hover:scale-105 active:scale-95 transition-all cursor-pointer"
+          >
+            {t("news.scholarship.apply_now")}
           </Link>
         </div>
-      </div>
-
-      {/* BUTTON CENTER */}
-      <div className="col-span-1 md:col-span-2 flex justify-center mt-8">
-  <Link
-    to="/joinus"
-    className="flex items-center justify-center bg-[#F97316] w-full sm:w-62.5 h-12 sm:h-14 text-white rounded-full font-bold text-base sm:text-lg shadow-[0_6px_20px_rgba(249,115,22,0.3)] hover:scale-105 active:scale-95 transition-all cursor-pointer"
-  >
-    {t("news.scholarship.apply_now")}
-  </Link>
-</div>
-    </motion.section>
+      </motion.section>
 
       {/* Testimonial */}
 
-       <div>
-          <h2 className="text-3xl sm:text-[40px] lg:text-[50px] font-bold text-[#F97316] mb-10 leading-tight">Atd Scholarship News</h2>
+      <div>
+        <h2 className="text-3xl sm:text-[40px] lg:text-[50px] font-bold text-[#F97316] mb-10 leading-tight">
+          {t("news.atd_title")}
+        </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-2">
 
-       
+
           {newsData.slice(0, 3).map((news, idx) => (
             <Link to={`/news/${news.id}`} key={`${news.id}-${idx}`} className="w-full block hover:opacity-80 transition-opacity cursor-pointer group">
               <img
                 src={news.image}
-                alt={news.title}
+                alt={t(news.title)}
                 className="rounded-2xl w-full h-75 object-cover shadow-sm group-hover:shadow-md transition-shadow"
               />
 
@@ -245,13 +248,13 @@ const FchccNews = () => {
               </p>
 
               <h3 className="font-semibold text-[22px] capitalize text-black mt-1 leading-snug group-hover:text-[#1E88E5] transition-colors">
-                {news.title}
+                {t(news.title)}
               </h3>
             </Link>
           ))}
         </div>
-       </div>
-        
+      </div>
+
       <motion.section
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -278,32 +281,32 @@ const FchccNews = () => {
           </p>
 
           <div className="flex items-center justify-between">
-           <div> <h4 className="font-bold text-black text-xl">
+            <div> <h4 className="font-bold text-black text-xl">
               {testimonialData[index].name}
             </h4>
 
-            <p className="text-sm sm:text-base text-gray-500 mt-1">
-              {testimonialData[index].designation}
-            </p>
-</div>
+              <p className="text-sm sm:text-base text-gray-500 mt-1">
+                {testimonialData[index].designation}
+              </p>
+            </div>
             <div className="flex gap-4 pt-2">
-            <button
-              onClick={prevTestimonial}
-              className="p-3 border-2 border-gray-200 text-gray-600 rounded-full hover:border-[#1E88E5] hover:text-[#1E88E5] hover:bg-blue-50 transition-all active:scale-90"
-            >
-              <ChevronLeft size={24} />
-            </button>
+              <button
+                onClick={prevTestimonial}
+                className="p-3 border-2 border-gray-200 text-gray-600 rounded-full hover:border-[#1E88E5] hover:text-[#1E88E5] hover:bg-blue-50 transition-all active:scale-90"
+              >
+                <ChevronLeft size={24} />
+              </button>
 
-            <button
-              onClick={nextTestimonial}
-              className="p-3 border-2 border-gray-200 text-gray-600 rounded-full hover:border-[#1E88E5] hover:text-[#1E88E5] hover:bg-blue-50 transition-all active:scale-90"
-            >
-              <ChevronRight size={24} />
-            </button>
-          </div>
+              <button
+                onClick={nextTestimonial}
+                className="p-3 border-2 border-gray-200 text-gray-600 rounded-full hover:border-[#1E88E5] hover:text-[#1E88E5] hover:bg-blue-50 transition-all active:scale-90"
+              >
+                <ChevronRight size={24} />
+              </button>
+            </div>
           </div>
 
-          
+
         </div>
       </motion.section>
 

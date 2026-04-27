@@ -2,6 +2,7 @@ import { CheckCircle2, ArrowRight, Sparkles } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 // --- Types ---
 interface PricingFeatureProps {
@@ -16,66 +17,6 @@ interface MembershipTier {
   highlighted?: boolean;
   badge?: string;
 }
-
-// --- Data ---
-const MEMBERSHIP_TIERS: MembershipTier[] = [
-  {
-    id: '1',
-    name: 'Strategic Partner Trustee',
-    price: 10000,
-    features: ['Unlimited associates', 'All leadership benefits', 'Premier networking', 'Maximum visibility'],
-    highlighted: true,
-    badge: 'Premier',
-  },
-  {
-    id: '2',
-    name: 'Leadership Trustee',
-    price: 5000,
-    features: ['Unlimited associates', 'Enhanced benefits', 'Priority placement', 'Leadership events'],
-  },
-  {
-    id: '3',
-    name: 'Large Corporation 2',
-    price: 2500,
-    features: ['Unlimited associates', 'Corporate benefits', 'Networking access', 'Event sponsorship'],
-  },
-  {
-    id: '4',
-    name: 'Small Business 2',
-    price: 500,
-    features: ['4 associates', 'Business growth tools', 'Networking events', 'Marketing support'],
-  },
-  {
-    id: '5',
-    name: 'Small Business 2',
-    price: 500,
-    features: ['4 associates', 'Business growth tools', 'Networking events', 'Marketing support'],
-  },
-  {
-    id: '6',
-    name: 'Small Business 2',
-    price: 500,
-    features: ['4 associates', 'Business growth tools', 'Networking events', 'Marketing support'],
-  },
-  {
-    id: '7',
-    name: 'Small Business 2',
-    price: 500,
-    features: ['4 associates', 'Business growth tools', 'Networking events', 'Marketing support'],
-  },
-  {
-    id: '8',
-    name: 'Small Business 2',
-    price: 500,
-    features: ['4 associates', 'Business growth tools', 'Networking events', 'Marketing support'],
-  },
-  {
-    id: '7',
-    name: 'Small Business 2',
-    price: 500,
-    features: ['4 associates', 'Business growth tools', 'Networking events', 'Marketing support'],
-  },
-];
 
 // --- Animation Variants ---
 const container = {
@@ -113,6 +54,7 @@ const TierCard = ({
   active: boolean;
   onClick: () => void;
 }) => {
+  const { t } = useTranslation();
   const { name, price, features, highlighted, badge } = tier;
 
   return (
@@ -162,7 +104,7 @@ const TierCard = ({
               : 'bg-blue-500 hover:bg-blue-600'
           }`}
       >
-        Join Now <ArrowRight size={18} />
+        {t('join_us.membership_levels.join_now')} <ArrowRight size={18} />
       </Link>
     </motion.div>
   );
@@ -171,7 +113,101 @@ const TierCard = ({
 
 // --- Main Component ---
 const MembershipLevels = () => {
-  const [activeId, setActiveId] = useState('strategic-partner');
+  const { t } = useTranslation();
+  const [activeId, setActiveId] = useState('1');
+
+  const MEMBERSHIP_TIERS: MembershipTier[] = [
+    {
+      id: '1',
+      name: t('join_us.membership_levels.tiers.strategic_partner'),
+      price: 10000,
+      features: [
+        t('join_us.membership_levels.features.unlimited_associates'),
+        t('join_us.membership_levels.features.leadership_benefits'),
+        t('join_us.membership_levels.features.premier_networking'),
+        t('join_us.membership_levels.features.max_visibility')
+      ],
+      highlighted: true,
+      badge: 'Premier',
+    },
+    {
+      id: '2',
+      name: t('join_us.membership_levels.tiers.leadership'),
+      price: 5000,
+      features: [
+        t('join_us.membership_levels.features.unlimited_associates'),
+        t('join_us.membership_levels.features.enhanced_benefits'),
+        t('join_us.membership_levels.features.priority_placement'),
+        t('join_us.membership_levels.features.leadership_events')
+      ],
+    },
+    {
+      id: '3',
+      name: t('join_us.membership_levels.tiers.large_corp'),
+      price: 2500,
+      features: [
+        t('join_us.membership_levels.features.unlimited_associates'),
+        t('join_us.membership_levels.features.corporate_benefits'),
+        t('join_us.membership_levels.features.networking_access'),
+        t('join_us.membership_levels.features.event_sponsorship')
+      ],
+    },
+    {
+      id: '4',
+      name: t('join_us.membership_levels.tiers.small_biz'),
+      price: 500,
+      features: [
+        t('join_us.membership_levels.features.associates_4'),
+        t('join_us.membership_levels.features.growth_tools'),
+        t('join_us.membership_levels.features.networking_events'),
+        t('join_us.membership_levels.features.marketing_support')
+      ],
+    },
+    {
+      id: '5',
+      name: t('join_us.membership_levels.tiers.small_biz'),
+      price: 500,
+      features: [
+        t('join_us.membership_levels.features.associates_4'),
+        t('join_us.membership_levels.features.growth_tools'),
+        t('join_us.membership_levels.features.networking_events'),
+        t('join_us.membership_levels.features.marketing_support')
+      ],
+    },
+    {
+      id: '6',
+      name: t('join_us.membership_levels.tiers.small_biz'),
+      price: 500,
+      features: [
+        t('join_us.membership_levels.features.associates_4'),
+        t('join_us.membership_levels.features.growth_tools'),
+        t('join_us.membership_levels.features.networking_events'),
+        t('join_us.membership_levels.features.marketing_support')
+      ],
+    },
+    {
+      id: '7',
+      name: t('join_us.membership_levels.tiers.small_biz'),
+      price: 500,
+      features: [
+        t('join_us.membership_levels.features.associates_4'),
+        t('join_us.membership_levels.features.growth_tools'),
+        t('join_us.membership_levels.features.networking_events'),
+        t('join_us.membership_levels.features.marketing_support')
+      ],
+    },
+    {
+      id: '8',
+      name: t('join_us.membership_levels.tiers.small_biz'),
+      price: 500,
+      features: [
+        t('join_us.membership_levels.features.associates_4'),
+        t('join_us.membership_levels.features.growth_tools'),
+        t('join_us.membership_levels.features.networking_events'),
+        t('join_us.membership_levels.features.marketing_support')
+      ],
+    },
+  ];
 
   return (
     <section id="membership-levels" className="py-20 bg-[#F973161A]">
@@ -187,15 +223,15 @@ const MembershipLevels = () => {
         >
           <div className="inline-flex items-center gap-2 bg-[#FF781F] text-white w-60 h-9.5 px-4 py-1.5 rounded-full text-sm font-bold uppercase tracking-wider mb-7.5">
             <Sparkles size={14} />
-            Membership Packages
+            {t('join_us.membership_levels.badge')}
           </div>
 
           <h2 className="text-[40px] font-bold text-black mb-4">
-            Membership Levels + Fees
+            {t('join_us.membership_levels.title')}
           </h2>
 
           <p className="text-[#4A5565] max-w-4xl text-lg">
-            Choose the membership tier that best fits your organization and goals
+            {t('join_us.membership_levels.description')}
           </p>
         </motion.div>
 

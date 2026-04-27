@@ -1,4 +1,5 @@
 import { CheckCircle2 } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 // Type definition for PolicyItem props
 interface PolicyItemProps {
@@ -12,33 +13,32 @@ interface PolicyData {
   allowance: string;
 }
 
-const POLICY_DATA: PolicyData[] = [
-  { id: 'student', memberType: 'Student/Individual Members', allowance: '1' },
-  { id: 'small-biz-1', memberType: 'Small Business 1 / Non-Profit 1 501(c)3', allowance: '2' },
-  { id: 'small-biz-2', memberType: 'Small Business 2 / Non-Profit 2 501(c)3', allowance: '4' },
-  { id: 'non-profit-3', memberType: 'Non-Profit 3 501(c)3', allowance: '5' },
-  { id: 'large-corp', memberType: 'Large Corporations', allowance: 'Unlimited' },
-  { id: 'leadership', memberType: 'Leadership Trustees', allowance: 'Unlimited' },
-  { id: 'strategic', memberType: 'Strategic Partners', allowance: 'Unlimited' },
-];
-
 const AssociatePolicy = () => {
+  const { t } = useTranslation();
+
+  const POLICY_DATA: PolicyData[] = [
+    { id: 'student', memberType: t('join_us.associate_policy.member_types.student'), allowance: '1' },
+    { id: 'small-biz-1', memberType: t('join_us.associate_policy.member_types.small_biz_1'), allowance: '2' },
+    { id: 'small-biz-2', memberType: t('join_us.associate_policy.member_types.small_biz_2'), allowance: '4' },
+    { id: 'non-profit-3', memberType: t('join_us.associate_policy.member_types.non_profit_3'), allowance: '5' },
+    { id: 'large-corp', memberType: t('join_us.associate_policy.member_types.large_corp'), allowance: t('join_us.associate_policy.unlimited') },
+    { id: 'leadership', memberType: t('join_us.associate_policy.member_types.leadership'), allowance: t('join_us.associate_policy.unlimited') },
+    { id: 'strategic', memberType: t('join_us.associate_policy.member_types.strategic'), allowance: t('join_us.associate_policy.unlimited') },
+  ];
+
   return (
     <section className="bg-white py-16 px-4">
       <div className="max-w-4xl mx-auto">
 
         {/* Title */}
         <h2 className="text-2xl font-bold text-black  mb-8 text-left ">
-          Associate Member (AM) Policy
+          {t('join_us.associate_policy.title')}
         </h2>
 
         {/* Policy Content Card */}
         <div className="bg-white border border-gray-100 shadow-sm rounded-2xl p-8 md:p-12">
           <p className="text-[#4A5565] text-sm leading-relaxed mb-6">
-            An Associate Member is an employee of a FCHCC corporate or business member organization. Associate
-            Members are entitled to member benefits, discounts, and attendance privileges to the monthly professional
-            networking events. Below is the number of associates that FCHCC active members can bring to any networking
-            event:
+            {t('join_us.associate_policy.description')}
           </p>
 
           {/* Dynamic Policy List */}
@@ -54,7 +54,7 @@ const AssociatePolicy = () => {
 
         {/* Footer Note */}
         <p className="text-center text-[14px] text-[#6A7282] italic mt-6">
-          Benefits and fees are subject to change by the Board of Directors.
+          {t('join_us.associate_policy.footer_note')}
         </p>
 
       </div>

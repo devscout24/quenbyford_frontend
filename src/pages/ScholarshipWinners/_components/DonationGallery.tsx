@@ -1,5 +1,6 @@
 import SponserSection from '@/pages/ADTScholarship/_components/SponserCard';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 
 interface GalleryItem {
@@ -33,13 +34,14 @@ export const galleryData: GalleryItem[] = [
 ];
 
 const LaptopDonationSection: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-15 text-center font-sans">
       {/* Header Text */}
       <div className="mb-10">
         <h2 className="text-2xl md:text-[40px] font-medium text-black leading-snug max-w-6xl mx-auto">
-          Coca Cola Florida donated laptops to each of the Class of 2024 ATD Recipients! (click any images for a larger view) September 29, 2024
-
+          {t("scholarship.laptop_donation")}
         </h2>
       </div>
 

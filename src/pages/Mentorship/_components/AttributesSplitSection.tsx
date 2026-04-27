@@ -1,35 +1,22 @@
 
+import { useTranslation } from "react-i18next";
 
-const ATTRIBUTES_DATA = {
-  mentor: {
-    title: "Attributes of a Good Mentor:",
-    color: "#2196F3", 
-    items: [
-      "Relevant Expertise/Knowledge",
-      "Enthusiasm for Sharing that Expertise",
-      "A Respectful Attitude",
-      "Eagerness to Invest in Others",
-      "The Ability to Give Honest and Direct Feedback",
-      "Reflective Listening and Empathy",
-      "Willingness to be a Sponsor"
-    ]
-  },
-  mentee: {
-    title: "Attributes of a Good Mentee:",
-    color: "#FF9800", 
-    items: [
-      "A good mentee is motivated to succeed.",
-      "Time Management Skills",
-      "Positive Attitude",
-      "Respect",
-      "Willingness to Learn",
-      "Clear Communication",
-      "Confidence"
-    ]
-  }
-};
+const AttributesSplitSection = () => {
+  const { t } = useTranslation();
 
-const AttributesSplitSection = ({ data = ATTRIBUTES_DATA }) => {
+  const data = {
+    mentor: {
+      title: t("mentorship.attributes.mentor.title"),
+      color: "#2196F3", 
+      items: t("mentorship.attributes.mentor.items", { returnObjects: true }) as string[]
+    },
+    mentee: {
+      title: t("mentorship.attributes.mentee.title"),
+      color: "#FF9800", 
+      items: t("mentorship.attributes.mentee.items", { returnObjects: true }) as string[]
+    }
+  };
+
   return (
     <section className="w-full bg-white pb-16 px-4">
       

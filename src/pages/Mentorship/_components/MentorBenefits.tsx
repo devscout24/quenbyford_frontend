@@ -1,32 +1,14 @@
 
+import { useTranslation } from "react-i18next";
 
-const MENTOR_BENEFITS_DATA = {
-  title: "Benefits to Mentors",
-  items: [
-    {
-      label: "Build leadership skills",
-      description: "helps develop your ability to motivate and encourage others. This can help you become a better business owner, manager, employee, and team member."
-    },
-    {
-      label: "Improve communication skills",
-      description: "mentees may come from a different background or environment, the two of you may not \"speak the same language.\" This may force you to find a way to communicate more effectively as you navigate your way through the mentoring relationship."
-    },
-    {
-      label: "Learn new perspectives",
-      description: "working with someone less experienced and from a different background, you can gain a fresh perspective on things and learn a new way of thinking which can help in your work life as well as your personal life."
-    },
-    {
-      label: "Advance your career",
-      description: "Refining leadership skills can strengthen your on-the-job performance, perhaps helping you build a business, get a promotion to higher management or into management in the first place. Showing that you've helped others learn and grow is becoming more and more essential to advancement in today's business world."
-    },
-    {
-      label: "Gain personal satisfaction",
-      description: "It is personally fulfilling to know that you've directly contributed to someone's growth and development. Seeing your mentee succeed as result of your input is a reward in itself."
-    }
-  ]
-};
+const MentorBenefitsLeft = () => {
+  const { t } = useTranslation();
 
-const MentorBenefitsLeft = ({ data = MENTOR_BENEFITS_DATA }) => {
+  const data = {
+    title: t("mentorship.mentor_benefits.title"),
+    items: t("mentorship.mentor_benefits.items", { returnObjects: true }) as { label: string; description: string }[]
+  };
+
   return (
     <section className="w-full bg-white pb-16 px-4">
       {/* Container restricted to 1000px */}

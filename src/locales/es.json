@@ -18,7 +18,6 @@
     "atd_scholarship": "Almuerzo de Becas ATD 2025",
     "monthly_calendar": "Calendario Mensual",
     "resources": "Recursos",
-    "resources": "Recursos",
     "our_committees": "Nuestros Comités",
     "circle_of_friends": "Círculo de Amigos"
   },
@@ -51,7 +50,8 @@
     "subscribe": "Suscríbete Ahora"
   },
   "partners": {
-    "corporate_partners": "Socios Corporativos"
+    "corporate_partners": "Socios Corporativos",
+    "title": "Socios de FCHCC"
   },
   "who_we_are": {
     "title": "QUIÉNES SOMOS",
@@ -75,40 +75,6 @@
     "members": {
       "title": "Nuestros Miembros",
       "button": "Aprende Sobre el Miembro"
-    }
-  },
-  "news": {
-    "title": "Noticias de la FCHCC",
-    "view_all": "Ver Todo",
-    "scholarship": {
-      "desc": "Últimas actualizaciones y anuncios sobre los programas y destinatarios de becas ATD.",
-      "title": "BECA ATD",
-      "winners_announcement": "¡La FCHCC anuncia los ganadores de la beca ATD 2025! ¡Lee el comunicado de prensa completo!",
-      "press_release": "comunicado de prensa!",
-      "donate": "DONAR ",
-      "donate_desc": "a la Beca Logrando el Sueño",
-      "view_past": "Ver a nuestros ganadores anteriores",
-      "apply_now": "Aplica Ya"
-    },
-    "testimonials": {
-      "member_say": "Lo que dicen nuestros miembros"
-    },
-    "newsletter": {
-      "subscribe_title": "Suscríbete a nuestro boletín",
-      "subscribe_desc": "Reciba nuestro boletín Conexión con actualizaciones de programas, invitaciones a eventos e historias de éxito de la comunidad.",
-      "subscribe_button": "Suscríbete Ahora",
-      "contact_us": "Contáctenos"
-    },
-    "all": {
-      "title": "Noticias y Actualizaciones",
-      "prev": "Anterior",
-      "next": "Siguiente"
-    },
-    "details": {
-      "back": "Volver a Noticias",
-      "gallery_click": "Haga clic aquí",
-      "gallery_view": "para ver toda la galería de fotos!",
-      "get_pdf": "Obtener PDF"
     }
   },
   "badges": {
@@ -172,37 +138,75 @@
       }
     },
     "membership": {
-      "title": "Membresía",
+      "title": "Gestión de Membresía",
       "renew": {
         "title": "Renueve su Membresía",
-        "desc": "Sintonice semanalmente para obtener ideas de negocios e historias de éxito de líderes de la industria en la región.",
-        "link": "Escuche ahora"
+        "desc": "Mantenga su membresía activa y continúe disfrutando de todos los beneficios y oportunidades que ofrece FCHCC.",
+        "link": "Renovar Ahora"
       },
       "portal": {
         "title": "Portal de Miembros",
-        "desc": "Escuche entrevistas de expertos sobre la marcha. Disponible en todas las plataformas principales para su viaje diario.",
-        "link": "Suscríbase hoy"
+        "desc": "Acceda a recursos exclusivos, herramientas de red y gestione su cuenta a través de nuestro portal solo para miembros.",
+        "link": "Acceder al Portal"
       }
     },
     "advertise": {
       "title": "Anunciar y Actualizar",
       "social_media": {
-        "title": "Canales de Redes Sociales",
-        "desc": "Anuncie su evento en nuestros canales de redes sociales",
-        "link": "Ver Ofertas"
+        "title": "Solicitud de Redes Sociales",
+        "desc": "Promocione su negocio en nuestros canales sociales.",
+        "link": "Enviar Solicitud"
       },
       "update_info": {
-        "title": "Actualice su Información",
-        "desc": "Actualice su información de contacto con la FCHCC",
-        "link": "Actualizar"
+        "title": "Actualizar Información",
+        "desc": "Asegúrese de que sus datos de contacto estén siempre actualizados.",
+        "link": "Actualizar Ahora"
       }
     },
     "events": {
-      "title": "Evento Solo para Miembros",
+      "title": "Eventos solo para Miembros",
       "workshop": {
-        "title": "Taller Social Cafecito",
-        "desc": "Amplíe su red y aprenda de los mejores.",
-        "link": "Ver Detalles"
+        "title": "Próximos Talleres",
+        "desc": "Únase a nuestras sesiones interactivas para aprender de expertos de la industria y desarrollar sus habilidades profesionales.",
+        "view_all": "Ver todos los talleres",
+        "badges": {
+          "virtual": "Taller Virtual",
+          "in_person": "En Persona"
+        },
+        "items": {
+          "ai": {
+            "title": "IA para pequeñas empresas",
+            "date": "29 de mayo de 2026 7:00 PM EST"
+          },
+          "finance": {
+            "title": "Conceptos básicos de planificación financiera",
+            "date": "15 de mayo de 2026 2:00 PM EST"
+          },
+          "english": {
+            "title": "Inglés para negocios",
+            "date": "22 de mayo de 2026 6:00 PM EST"
+          }
+        },
+        "coming_soon": "Próximamente"
+      }
+    },
+    "contact_cards": {
+      "join": {
+        "title": "Únete a FCHCC",
+        "desc": "Aprenda cómo convertirse en miembro y desbloquee beneficios exclusivos para su negocio.",
+        "button": "Únete Ahora"
+      },
+      "find": {
+        "title": "Encuéntranos",
+        "address": "4651 Salisbury Road, Suite 400 Jacksonville, FL",
+        "hours": "Mar – Jue, 10 AM – 3 PM",
+        "phone": "904.346.1118",
+        "email": "fchcc@fchcc.com"
+      },
+      "touch": {
+        "title": "Ponte en Contacto",
+        "desc": "¿Tiene preguntas? Estamos aquí para ayudarle a hacer crecer su negocio.",
+        "button": "Contáctanos"
       }
     }
   },
@@ -312,7 +316,16 @@
   },
   "new_members": {
     "title": "Miembros Nuevos y Renovados",
-    "desc": "Agradecemos a nuestros miembros nuevos y renovados por su apoyo y asociación. ¡Y esperamos nuestro crecimiento continuo!"
+    "desc": "Agradecemos a nuestros miembros nuevos y renovados por su apoyo y asociación. ¡Y esperamos nuestro crecimiento continuo!",
+    "welcome": "Bienvenidos Nuevos Miembros",
+    "levels": {
+      "strategic": "Socio Estratégico",
+      "corporate": "Nivel Corporativo",
+      "business": "Nivel de Negocios",
+      "entrepreneur": "Nivel Emprendedor",
+      "individual": "Nivel Individual",
+      "non_profit": "Nivel Sin Fines de Lucro"
+    }
   },
   "events": {
     "hero": {
@@ -373,12 +386,15 @@
       "member": "Miembro",
       "non_member": "No Miembro",
       "sold_out": "Evento Agotado",
+      "announcing": "¡anunciando a nuestros ganadores de ATD 2025!",
+      "mc_title": "NUESTRA MAESTRA DE CEREMONIAS",
+      "mc_name": "Tenikka Hughes",
+      "mc_role": "Presentadora, CBS 47 y FOX 30 News Jax",
+      "mc_bio": "Tenikka Hughes es una presentadora nocturna ganadora de tres premios Emmy con CBS47 y FOX30 Action News Jax. Nació y creció en Carolina del Norte y ha trabajado en noticias de televisión durante casi 20 años con paradas en Charlotte, Memphis y Macon. Tenikka es una periodista muy respetada, conocida por su autenticidad, su convincente narración de historias y su compasión por los demás. También asesora a jóvenes periodistas en todo el país. \nTenikka tiene un gran corazón para los niños: pasa incontables horas leyendo a los niños y promoviendo la importancia de la alfabetización y la educación. También es la fuerza impulsora detrás de “Tenikka’s Books for Kids”, una campaña anual de recolección de libros que ha puesto casi 30,000 libros gratuitos en manos de niños locales, en asociación con la Biblioteca Pública de Jacksonville. Tenikka se graduó summa cum laude con una licenciatura en Comunicaciones de Masas de Benedict College, una HBCU en Columbia, Carolina del Sur. \nTambién obtuvo una Maestría en Periodismo de la Universidad de Maryland en College Park. Tenikka disfruta viajar y descubrir excelentes restaurantes con su esposo.",
       "register": "Registrarse Ahora",
-      "mc_title": "Maestro de Ceremonia",
       "sponsor_avail": "¡Las oportunidades de patrocinio están disponibles!",
       "download_packet": "Descargue nuestro paquete aquí:",
-      "press_release": "Comunicado de Prensa",
-      "announcing": "¡anunciando a los ganadores de la beca ATD 2025!"
+      "press_release": "Comunicado de Prensa"
     },
     "presenting": {
       "title": "Patrocinador Presentador",
@@ -391,16 +407,121 @@
     },
     "about": {
       "title": "Acerca del Almuerzo ATD",
-      "desc": "Acerca del Programa de Becas ATD: La Cámara de Comercio Hispana de First Coast (FCHCC) ha apoyado la educación de los hispanos durante muchos años,   otorgando más de medio millón de dólares en becas. Además, la Cámara de Comercio Hispana de Jacksonville (FCHCC) se enorgullece de haber impactado la vida de más de doscientos cincuenta (250) becarios comprometidos y calificados durante sus más de 30 años de existencia.El programa de becas de FCHCC,  Alcanzando el Sueño , no solo permite a los estudiantes que se han esforzado y alcanzado la excelencia académica comenzar o continuar su educación, sino que también les brinda la oportunidad de convertirse en futuros emprendedores exitosos. Este año, FCHCC y su Fondo de Desarrollo Comunitario planean otorgar $20,000 en becas, con un valor de $2,000.00 cada una, a cada estudiante hispano meritorio y competente del noreste de Florida. Los invitamos y animamos a apoyar estas iniciativas. Juntos podemos marcar la diferencia, primero en nuestras comunidades y luego en nuestras familias. Únanse anosotros y celebremos juntos los logros por los que nuestra comunidad hispana ha trabajado tan arduamente. Si tiene alguna pregunta sobre nuestro almuerzo de ATD, envíe un correo electrónico a specialevents@fchcc.com.",
-      "button": "Leer Más Historias"
-    },
-    "sponsors": {
-      "title": "Patrocinadores"
-    },
-    "partners": {
-      "title": "Socios de FCHCC"
+      "desc": "Acerca del Programa de Becas ATD: La Cámara de Comercio Hispana de First Coast (FCHCC) ha apoyado la educación de los hispanos durante muchos años,   otorgando más de medio millón de dólares en becas. Además, la Cámara de Comercio Hispana de Jacksonville (FCHCC) se enorgullece de haber impactado la vida de más de doscientos cincuenta (250) becarios comprometidos y calificados durante sus más de 30 años de existencia.El programa de becas de FCHCC,  Alcanzando el Sueño , no solo permite a los estudiantes que se han esforzado y alcanzado la excelencia académica comenzar o continuar su educación, sino que también les brinda la oportunidad de convertirse en futuros emprendedores exitosos. Este año, FCHCC y su Fondo de Desarrollo Comunitario planean otorgar $20,000 en becas, con un valor de $2,000.00 cada una, a cada estudiante hispano meritorio y competente del noreste de Florida. Los invitamos y animamos a apoyar estas iniciativas. Juntos podemos marcar la diferencia, primero en nuestras comunidades y luego en nuestras familias. Únasen anosotros y celebremos juntos los logros por los que nuestra comunidad hispana ha trabajado tan arduamente. Si tiene alguna pregunta sobre nuestro almuerzo de ATD, envíe un correo electrónico a specialevents@fchcc.com.",
+      "button": "Leer más historias"
     }
   },
+  "news": {
+    "title": "Noticias de FCGCC",
+    "view_all": "Ver todas las noticias",
+    "atd_title": "Noticias de la Beca ATD",
+    "scholarship": {
+      "title": "Beca ATD",
+      "winners_celebration": "¡FCHCC celebró los logros de los ganadores de ATD 2025 en el Almuerzo de Becas ATD de este año!",
+      "check_photos": "Vea las fotos del almuerzo",
+      "read_recap": "y lea el artículo de resumen",
+      "here": "aquí",
+      "congrats_2025": "¡Felicitaciones a los ganadores de ATD 2025!",
+      "luncheon_pricing": {
+        "micro": {
+          "title": "Ranura Micro",
+          "desc1": "Esto le dará espacio para un banner de 2'x3' (banner proporcionado por usted).",
+          "desc2": "También puede poner cualquier información que desee en el espacio de su mesa."
+        },
+        "standard": {
+          "title": "Ranura Estándar",
+          "desc1": "Esto le dará espacio para un banner de 5'x6' (banner proporcionado por usted).",
+          "desc2": "También puede poner cualquier información que desee en el espacio de su mesa."
+        }
+      },
+      "desc": "El programa de becas Achieving the Dream de la FCHCC fue diseñado para ayudar a los estudiantes hispanos a continuar sus esfuerzos educativos.",
+      "winners_announcement": "Anuncio de los ganadores de ATD 2024",
+      "press_release": "Comunicado de prensa",
+      "donate": "Donar",
+      "donate_desc": " al Fondo de Becas ATD!",
+      "view_past": "Ver ganadores pasados de la beca ATD",
+      "apply_now": "Solicitar ahora",
+      "laptop_donation": "¡Coca Cola Florida donó computadoras portátiles a cada uno de los beneficiarios de ATD de la clase 2024! (haga clic en cualquier imagen para ampliarla) 29 de septiembre de 2024",
+      "winners_data": [
+        {
+          "name": "Mariana Cardona",
+          "uni": "Universidad del Norte de Florida",
+          "degree": "Licenciatura en Ciencias en Administración de la Salud"
+        },
+        {
+          "name": "Zarilis (Zari) Arroyo-Figueroa",
+          "uni": "Universidad del Norte de Florida",
+          "degree": "Título de Enfermería"
+        },
+        {
+          "name": "Maria (Isabella) Isabella",
+          "uni": "Universidad del Norte de Florida",
+          "degree": "Licenciatura en Psicología"
+        },
+        {
+          "name": "Victoria Morillo-Zapata",
+          "uni": "Universidad del Norte de Florida",
+          "degree": "Ciencias Biológicas con especialización en Psicología"
+        },
+        {
+          "name": "Diego Smith",
+          "uni": "Universidad de Florida",
+          "degree": "Título en Gestión de la Construcción"
+        },
+        {
+          "name": "Angie S. Rojas",
+          "uni": "St. Johns River State College",
+          "degree": "Título en Educación Infantil"
+        },
+        {
+          "name": "Mariangel Mar Cano",
+          "uni": "Universidad del Norte de Florida",
+          "degree": "Título en Gestión Empresarial"
+        },
+        {
+          "name": "Carlos Gomez",
+          "uni": "Florida State College en Jacksonville",
+          "degree": "Título en Gestión de la Cadena de Suministro"
+        },
+        {
+          "name": "Giselle Rivera-Colon",
+          "uni": "Universidad de Jacksonville",
+          "degree": "Ciencias Marinas y Comunicaciones"
+        },
+        {
+          "name": "Sofia De La Rosa",
+          "uni": "Universidad de Jacksonville",
+          "degree": "Política Pública y Sociología"
+        }
+      ]
+    },
+    "all": {
+      "title": "Noticias y Actualizaciones",
+      "prev": "Anterior",
+      "next": "Siguiente"
+    },
+    "details": {
+      "back": "Volver a Noticias",
+      "gallery_click": "Haga clic aquí",
+      "gallery_view": "para ver toda la galería de fotos!",
+      "get_pdf": "Obtener PDF"
+    }
+  },
+  "home": {
+    "news_data": {
+      "title1": "Historias de proyectos exitosos",
+      "title2": "Navegando por el mundo de la estrategia empresarial",
+      "title3": "Tendencias que dan forma a las estrategias de marketing"
+    },
+    "testimonials_data": {
+      "text1": "Como dueño de un negocio, necesitaba una solución solar confiable para mi almacén. Su tecnología de paneles avanzada ha superado las expectativas.",
+      "text2": "Increíble servicio y gran equipo de soporte. Muy recomendable para dueños de negocios."
+    }
+  },
+  "sponsors": {
+    "title": "Patrocinadores"
+  },
+
   "jobs": {
     "hero": {
       "title": "BOLSA DE TRABAJO DE FCHCC",
@@ -573,13 +694,28 @@
     "learn_and_grow": {
       "title": "Aprenda y crezca con nosotros",
       "workshop": {
-        "title": "Próximo Taller",
-        "desc": "Únase a nuestro taller presencial y virtual",
-        "badge": "✦ Taller Virtual",
-        "item_title": "IA para Pequeñas Empresas",
-        "date": "15 de marzo de 2026",
-        "coming_soon": "Próximamente",
-        "view_all": "Ver Todos los Talleres"
+        "title": "Próximos Talleres",
+        "desc": "Únase a nuestras sesiones interactivas para aprender de expertos de la industria y desarrollar sus habilidades profesionales.",
+        "view_all": "Ver todos los talleres",
+        "badges": {
+          "virtual": "Taller Virtual",
+          "in_person": "En Persona"
+        },
+        "items": {
+          "ai": {
+            "title": "IA para pequeñas empresas",
+            "date": "29 de mayo de 2026 7:00 PM EST"
+          },
+          "finance": {
+            "title": "Conceptos básicos de planificación financiera",
+            "date": "15 de mayo de 2026 2:00 PM EST"
+          },
+          "english": {
+            "title": "Inglés para negocios",
+            "date": "22 de mayo de 2026 6:00 PM EST"
+          }
+        },
+        "coming_soon": "Próximamente"
       },
       "courses": {
         "title": "Próximo Taller",
@@ -844,5 +980,261 @@
         ]
       }
     }
+  },
+  "join_us": {
+    "hero": {
+      "title": "Únase a la FCHCC hoy",
+      "subtitle": "¡Gracias por su interés en convertirse en miembro de la FCHCC!",
+      "description": "Esta es su oportunidad de fortalecer las relaciones profesionales, promover su negocio y llegar a la creciente comunidad hispana del noreste de Florida. El período de membresía anual es de un año a partir de la fecha en que un nuevo miembro realiza el pago y se puede renovar cada año en esa fecha de aniversario.",
+      "ready_to_join": "Listo para unirse",
+      "renew_membership": "¡Renueve su membresía aquí!",
+      "grace_period": "Período de gracia:",
+      "grace_period_text": "Los miembros corporativos tienen 90 días, otros 30 días para permanecer activos.",
+      "good_standing": "Buen estado:",
+      "good_standing_text": "Mantenido al pagar las cuotas."
+    },
+    "mission": {
+      "title": "Nuestra Misión",
+      "description": "Nuestros miembros provienen de todos los sectores de la comunidad y confían en la FCHCC para:",
+      "item1": "Crear un foro interactivo para todos los interesados en una economía vibrante y multicultural",
+      "item2": "Promover oportunidades de negocios a través de la interacción social y la educación",
+      "item3": "Impactar positivamente y contribuir a la economía regional",
+      "item4": "Fomentar y promover prácticas comerciales exitosas dentro de la comunidad hispana",
+      "item5": "Fomentar la unidad entre todos los hispanos en la comunidad empresarial y más allá"
+    },
+    "membership_levels": {
+      "badge": "Paquetes de Membresía",
+      "title": "Niveles de Membresía + Tarifas",
+      "description": "Elija el nivel de membresía que mejor se adapte a su organización y objetivos",
+      "join_now": "Únete ahora",
+      "tiers": {
+        "strategic_partner": "Fideicomisario de Socio Estratégico",
+        "leadership": "Fideicomisario de Liderazgo",
+        "large_corp": "Gran Corporación 2",
+        "small_biz": "Pequeña Empresa 2"
+      },
+      "features": {
+        "unlimited_associates": "Asociados ilimitados",
+        "leadership_benefits": "Todos los beneficios de liderazgo",
+        "premier_networking": "Redes premier",
+        "max_visibility": "Máxima visibilidad",
+        "enhanced_benefits": "Beneficios mejorados",
+        "priority_placement": "Ubicación prioritaria",
+        "leadership_events": "Eventos de liderazgo",
+        "corporate_benefits": "Beneficios corporativos",
+        "networking_access": "Acceso a redes",
+        "event_sponsorship": "Patrocinio de eventos",
+        "associates_4": "4 asociados",
+        "growth_tools": "Herramientas de crecimiento empresarial",
+        "networking_events": "Eventos de networking",
+        "marketing_support": "Soporte de marketing"
+      }
+    },
+    "discounts": {
+      "title": "Descuentos por Acuerdos Plurianuales",
+      "off": "MENOS",
+      "agreement_2": "Acuerdo de 2 años",
+      "agreement_3": "Acuerdo de 3 años",
+      "processing_fee": "*Se aplica un cargo adicional por procesamiento de tarjeta de crédito del 3%"
+    },
+    "benefits": {
+      "title": "Beneficios para Miembros",
+      "description": "Consulte todos los beneficios que vienen con cada nivel de membresía. Es una excelente manera de determinar qué tipo de membresía funciona mejor para usted.",
+      "button": "Haga clic aquí para ver todos los beneficios para miembros"
+    },
+    "associate_policy": {
+      "title": "Política de Miembro Asociado (AM)",
+      "description": "Un Miembro Asociado es un empleado de una organización miembro corporativa o empresarial de la FCHCC. Los Miembros Asociados tienen derecho a beneficios para miembros, descuentos y privilegios de asistencia a los eventos mensuales de networking profesional. A continuación se muestra el número de asociados que los miembros activos de la FCHCC pueden traer a cualquier evento de networking:",
+      "footer_note": "Los beneficios y las tarifas están sujetos a cambios por parte de la Junta Directiva.",
+      "member_types": {
+        "student": "Estudiantes / Miembros Individuales",
+        "small_biz_1": "Pequeña Empresa 1 / Sin Fines de Lucro 1 501(c)3",
+        "small_biz_2": "Pequeña Empresa 2 / Sin Fines de Lucro 2 501(c)3",
+        "non_profit_3": "Sin Fines de Lucro 3 501(c)3",
+        "large_corp": "Grandes Corporaciones",
+        "leadership": "Fideicomisarios de Liderazgo",
+        "strategic": "Socios Estratégicos"
+      },
+      "unlimited": "Ilimitado"
+    }
+  },
+  "coming_soon": {
+    "subtitle": "Algo increíble se está preparando",
+    "title_part1": "Próximamente",
+    "title_part2": "Muy pronto",
+    "description": "Estamos trabajando en algo nuevo y emocionante que superará sus expectativas. ¡Manténgase conectado con nosotros!",
+    "days": "Días",
+    "hours": "Horas",
+    "minutes": "Minutos",
+    "seconds": "Segundos"
+  },
+  "membership_benefits": {
+    "title": "Beneficios de Membresía",
+    "description": "A continuación encontrará nuestras membresías Oro y Platino que detallan los beneficios para ambos niveles.",
+    "gold_title": "NIVEL DE MEMBRESÍA ORO",
+    "gold_button": "Descargar los beneficios del miembro Oro",
+    "platinum_title": "NIVEL DE MEMBRESÍA PLATINO",
+    "platinum_button": "Descargar los beneficios del miembro Platino",
+    "downloading": "Descargando..."
+  },
+  "calendar": {
+    "monthly_view": "Vista Mensual",
+    "weekly_view": "Vista Semanal",
+    "list_view": "Vista de Lista",
+    "select_month": "Seleccionar Mes",
+    "week_of": "Semana del",
+    "event_title": "Reunión de Cafecito Social de la FCHCC",
+    "event_time": "8:30 AM – 10:00 AM",
+    "event_description": "Miembros de la FCHCC: ¡Marquen sus calendarios para unirse a nosotros en el evento mensual Social Cafecito! Estas reuniones son un espacio ideal para que nuestros miembros intercambien ideas y establezcan relaciones profesionales. Con la participación de los líderes empresariales más destacados de nuestra comunidad, garantiza una experiencia enriquecedora.",
+    "event_extra_info": "Su propósito es traer oradores cada mes que cubrirán temas en: marketing, capital, finanzas, legal, comunidades y más. Amplíe su red de negocios y aprenda de los mejores. Social Cafecito se reúne cada mes el tercer viernes. ¿No es miembro de la FCHCC? Únase aquí.",
+    "event_cta": "Asegúrese de estar atento a las invitaciones a las reuniones para saber cuándo se abre el registro. Puede suscribirse a nuestra lista de correo en fchcc.com.",
+    "join_here": "Únase aquí.",
+    "fchcc_website": "fchcc.com.",
+    "active_member_invite": "¡Invitación para miembros activos, envíe eventos para FCHCC!",
+    "submit_active_members": "Enviar miembros activos,",
+    "click_here": "haga clic aquí",
+    "join_now": "únase ahora",
+    "subscribe_mailing_list": "Suscríbase a nuestra lista de correo",
+    "subscribe_mailing_list_below": "Suscríbase a nuestra lista de correo a continuación:",
+    "subscribe_here": "suscríbase aquí",
+    "subscribe": "Suscribirse",
+    "days": {
+      "sun": "Dom",
+      "mon": "Lun",
+      "tue": "Mar",
+      "wed": "Mié",
+      "thu": "Jue",
+      "fri": "Vie",
+      "sat": "Sáb"
+    }
+  },
+  "mentorship": {
+    "hero": {
+      "title": "¿Qué es el Programa de Mentoría?",
+      "paragraphs": [
+        "El programa de mentoría es una relación estructurada uno a uno dentro de un entorno profesional o académico con el objetivo de conectar a las personas, aumentar el conocimiento y desarrollar habilidades para metas e hitos futuros. El programa de mentoría está diseñado para crear una asociación que puede ser gratificante para ambas personas, personal y profesionalmente. Es una oportunidad para desarrollar habilidades de comunicación, expandir puntos de vista y considerar nuevas formas de abordar situaciones.",
+        "Nuestro Programa de Mentoría, fundado y liderado por Monica Hernandez, Presidenta de la FCHCC, fue creado para ayudar a los estudiantes a aprender y adquirir habilidades a través de su mentoría con uno de nuestros miembros corporativos comerciales que tiene una amplia experiencia como propietario de un negocio y/o gestionando y dirigiendo una organización."
+      ]
+    },
+    "criteria": {
+      "title": "Criterios para Participar",
+      "description": "El Programa de Mentoría es para estudiantes de ascendencia hispana/latina que están cursando un título de Asociado, Licenciatura o Maestría y cumplen con los siguientes requisitos:",
+      "requirements": [
+        "Ciudadano estadounidense o residente permanente de EE. UU.",
+        "Cursando un título de Asociado, Licenciatura o Maestría",
+        "Al menos uno de los padres o abuelos de origen hispano/latino de un país de habla hispana",
+        "Residente de uno de los cinco condados de First Coast: Duval, Baker, St. Johns, Clay o Nassau",
+        "Debe haber solicitado la Beca ATD y no haber ganado (debe proporcionar documentación de la solicitud)"
+      ]
+    },
+    "attributes": {
+      "mentor": {
+        "title": "Atributos de un Buen Mentor:",
+        "items": [
+          "Experiencia/Conocimiento relevante",
+          "Entusiasmo por compartir esa experiencia",
+          "Una actitud respetuosa",
+          "Afán de invertir en los demás",
+          "La capacidad de dar una retroalimentación honesta y directa",
+          "Escucha reflexiva y empatía",
+          "Disposición para ser un patrocinador"
+        ]
+      },
+      "mentee": {
+        "title": "Atributos de un Buen Mentee:",
+        "items": [
+          "Un buen mentee está motivado para tener éxito.",
+          "Habilidades de gestión del tiempo",
+          "Actitud positiva",
+          "Respeto",
+          "Disposición para aprender",
+          "Comunicación clara",
+          "Confianza"
+        ]
+      }
+    },
+    "goals": {
+      "title": "Metas del Programa de Mentoría",
+      "description": "En su forma más simple, mentorizar a las personas para ayudarlas a crecer y desarrollarse. El Programa aprovecha los cinco principios básicos de mentoría y cada pareja de mentoría acordará las metas S.M.A.R.T [Específicas, Medibles, Accionables, Realistas y Orientadas al tiempo] de la asociación."
+    },
+    "mentor_benefits": {
+      "title": "Beneficios para los Mentores",
+      "items": [
+        {
+          "label": "Desarrollar habilidades de liderazgo",
+          "description": "ayuda a desarrollar su capacidad para motivar y alentar a los demás. Esto puede ayudarlo a convertirse en un mejor dueño de negocio, gerente, empleado y miembro de equipo."
+        },
+        {
+          "label": "Mejorar las habilidades de comunicación",
+          "description": "los mentees pueden provenir de un entorno o ambiente diferente, es posible que los dos no \"hablen el mismo idioma\". Esto puede obligarlo a encontrar una manera de comunicarse de manera más efectiva mientras navega por su relación de mentoría."
+        },
+        {
+          "label": "Aprender nuevas perspectivas",
+          "description": "al trabajar con alguien con menos experiencia y de un entorno diferente, puede obtener una perspectiva fresca de las cosas y aprender una nueva forma de pensar que puede ayudar en su vida laboral así como en su vida personal."
+        },
+        {
+          "label": "Avanzar en su carrera",
+          "description": "Refinar las habilidades de liderazgo puede fortalecer su desempeño en el trabajo, tal vez ayudándolo a construir un negocio, obtener una promoción a la alta gerencia o a la gerencia en primer lugar. Demostrar que ha ayudado a otros a aprender y crecer se está volviendo cada vez más esencial para el avance en el mundo empresarial actual."
+        },
+        {
+          "label": "Obtener satisfacción personal",
+          "description": "Es personalmente satisfactorio saber que ha contribuido directamente al crecimiento y desarrollo de alguien. Ver a su mentee tener éxito como resultado de su aporte es una recompensa en sí misma."
+        }
+      ]
+    },
+    "program_benefits": {
+      "title": "El programa de mentoría beneficia tanto al mentee como al mentor de las siguientes maneras:",
+      "items": [
+        "Los mentees pueden expandir sus conocimientos y habilidades, obtener valiosos consejos de una persona con más experiencia y construir sus redes profesionales",
+        "Ayuda a identificar trayectorias profesionales para los estudiantes y apoya el crecimiento personal de los mismos.",
+        "Brinda la oportunidad a los estudiantes de aprender y practicar habilidades de networking profesional.",
+        "Equipa a los estudiantes con la comprensión y las herramientas para tomar decisiones éticas e informadas.",
+        "Forma a los estudiantes en graduados seguros con excelentes habilidades de liderazgo, comunicación, pensamiento crítico, profesionalismo y otras habilidades importantes para la transición al mundo laboral.",
+        "Ayuda a los estudiantes a identificar y perseguir oportunidades de empleo relacionadas con sus títulos."
+      ]
+    }
+  },
+  "welcome": {
+    "title": "¡Bienvenido de nuevo!",
+    "subtitle": "Nos alegra verte",
+    "portal_title": "Portal de Miembros",
+    "portal_desc": "Acceda a sus beneficios y recursos exclusivos para miembros",
+    "enter_btn": "Entrar al Portal de Miembros",
+    "celebrating": "Celebrando 32 años de excelencia y comunidad"
+  },
+  "hiring_card": {
+    "corporate": {
+      "title": "Miembros Corporativos de la FCHCC",
+      "subtitle": "Envíe sus ofertas de empleo GRATIS (se aplica a los niveles de membresía de organización sin fines de lucro #1 hasta socio estratégico)",
+      "card_title": "Miembro Corporativo",
+      "card_desc": "sitio web y redes sociales",
+      "btn": "Comenzar",
+      "footer_posted": "Espere hasta 48 horas para que se publique su anuncio.",
+      "footer_contact": "Si tiene alguna pregunta, comuníquese con Kim McDougal, Vicepresidenta de Comunicaciones Interactivas en"
+    },
+    "non_member": {
+      "title": "Enviar una oferta de empleo",
+      "card_title": "No Miembro",
+      "card_desc": "sitio web y redes sociales",
+      "btn": "Comenzar",
+      "durations": {
+        "month": "Mes",
+        "months": "Meses"
+      }
+    }
+  },
+  "months": {
+    "january": "Enero",
+    "february": "Febrero",
+    "march": "Marzo",
+    "april": "Abril",
+    "may": "Mayo",
+    "june": "Junio",
+    "july": "Julio",
+    "august": "Agosto",
+    "september": "Septiembre",
+    "october": "Octubre",
+    "november": "Noviembre",
+    "december": "Diciembre"
   }
 }

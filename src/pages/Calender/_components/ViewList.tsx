@@ -1,12 +1,14 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
 import { format } from "date-fns";
+import { useTranslation } from "react-i18next";
 
 interface ViewListProps {
   events?: { date: Date; title: string; time?: string; description?: string; extraInfo?: string; cta?: string }[];
 }
 
 const ViewList = ({ events }: ViewListProps) => {
+  const { t } = useTranslation();
   // Use passed events or fallback
   const listEvents = events && events.length > 0
     ? events.map(evt => ({
@@ -55,11 +57,11 @@ const ViewList = ({ events }: ViewListProps) => {
                   <p>{event.description}</p>
                   <p>
                     {event.extraInfo}{" "}
-                    <span className="underline cursor-pointer font-medium italic text-black hover:text-[#1E88E5]">Join here.</span>
+                    <span className="underline cursor-pointer font-medium italic text-black hover:text-[#1E88E5]">{t('calendar.join_here')}</span>
                   </p>
                   <p className="font-medium italic text-black">
                     {event.cta}{" "}
-                    <span className="underline cursor-pointer text-black hover:text-[#1E88E5]">fchcc.com.</span>
+                    <span className="underline cursor-pointer text-black hover:text-[#1E88E5]">{t('calendar.fchcc_website')}</span>
                   </p>
                 </div>
               </CardContent>

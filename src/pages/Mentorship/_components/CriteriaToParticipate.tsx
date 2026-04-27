@@ -1,18 +1,15 @@
 
+import { useTranslation } from "react-i18next";
 
-const CRITERIA_DATA = {
-  title: "Criteria to Participate",
-  description: "The Mentorship Program is for students of Hispanic/Latino descent who are pursuing an Associate's, Bachelor's or Master's Degree and meet the following requirements:",
-  requirements: [
-    "U.S. citizen or U.S. permanent resident",
-    "Pursuing an Associate's, Bachelor's or Master's degree",
-    "At least one parent or grandparent of Hispanic/Latino origin from a Spanish speaking country",
-    "A resident of one of the five First Coast counties: Duval, Baker, St. Johns, Clay or Nassau",
-    "Must have applied for the ATD Scholarship and did not win (need to provide documentation of applying)"
-  ]
-};
+const ParticipationCriteria = () => {
+  const { t } = useTranslation();
 
-const ParticipationCriteria = ({ data = CRITERIA_DATA }) => {
+  const data = {
+    title: t("mentorship.criteria.title"),
+    description: t("mentorship.criteria.description"),
+    requirements: t("mentorship.criteria.requirements", { returnObjects: true }) as string[]
+  };
+
   return (
     <section className="w-full bg-white py-12 px-4">
    

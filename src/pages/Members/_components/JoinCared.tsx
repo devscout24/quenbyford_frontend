@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { UserPlus, MapPin, Clock, Phone, Mail, ArrowRight, type LucideIcon } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 interface CardDetail {
   icon: LucideIcon;
@@ -18,56 +19,56 @@ interface Card {
   image?: string;
 }
 
-const cards: Card[] = [
-  {
-    id: 1,
-    title: "Join FCHCC",
-    description:
-      "Learn how to become a member and unlock exclusive benefits for your business.",
-    icon: UserPlus,
-    color: "#1E88E5",
-    button: "Join Now",
-    type: "normal",
-  },
-
-  {
-    id: 2,
-    title: "Find Us",
-    icon: MapPin,
-    color: "#4CAF50",
-    type: "contact",
-
-    details: [
-      {
-        icon: MapPin,
-        text: "4651 Salisbury Road, Suite 400 Jacksonville, FL",
-      },
-      {
-        icon: Clock,
-        text: "Tue – Thu, 10 AM – 3 PM",
-      },
-      {
-        icon: Phone,
-        text: "904.346.1118",
-      },
-      {
-        icon: Mail,
-        text: "fchcc@fchcc.com",
-      },
-    ],
-  },
-
-  {
-    id: 3,
-    title: "Get in Touch",
-    description: "Have questions? We're here to help you grow your business.",
-    image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e",
-    button: "Contact Us",
-    type: "image",
-  },
-];
-
 export default function ContactInfoCards() {
+  const { t } = useTranslation();
+
+  const cards: Card[] = [
+    {
+      id: 1,
+      title: t("members_dashboard.contact_cards.join.title"),
+      description: t("members_dashboard.contact_cards.join.desc"),
+      icon: UserPlus,
+      color: "#1E88E5",
+      button: t("members_dashboard.contact_cards.join.button"),
+      type: "normal",
+    },
+
+    {
+      id: 2,
+      title: t("members_dashboard.contact_cards.find.title"),
+      icon: MapPin,
+      color: "#4CAF50",
+      type: "contact",
+
+      details: [
+        {
+          icon: MapPin,
+          text: t("members_dashboard.contact_cards.find.address"),
+        },
+        {
+          icon: Clock,
+          text: t("members_dashboard.contact_cards.find.hours"),
+        },
+        {
+          icon: Phone,
+          text: t("members_dashboard.contact_cards.find.phone"),
+        },
+        {
+          icon: Mail,
+          text: t("members_dashboard.contact_cards.find.email"),
+        },
+      ],
+    },
+
+    {
+      id: 3,
+      title: t("members_dashboard.contact_cards.touch.title"),
+      description: t("members_dashboard.contact_cards.touch.desc"),
+      image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e",
+      button: t("members_dashboard.contact_cards.touch.button"),
+      type: "image",
+    },
+  ];
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {

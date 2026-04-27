@@ -1,105 +1,15 @@
-export const winnersData = [
-  {
-    id: 1,
-    name: "Chantelle Merritt",
-    university: "Florida State University",
-    degree: "Bachelors in Biomedical Engineering",
-    imageUrl: "",
-    gender: "female",
-  },
-  {
-    id: 2,
-    name: "Kayleigh Gutierrez",
-    university: "University of Central Florida",
-    degree: "Bachelors in Biomedical Science",
-    imageUrl: "",
-    gender: "female",
-  },
-  {
-    id: 3,
-    name: "Leyra Ojeda",
-    university: "University of North Florida",
-    degree: "Bachelors in Business",
-    imageUrl: "",
-    gender: "female",
-  },
-  {
-    id: 4,
-    name: "Lucas Farfan",
-    university: "University of Florida",
-    degree: "Bachelors in Civil Engineering",
-    imageUrl: "",
-    gender: "male",
-  },
-  {
-    id: 5,
-    name: "Maya Vazquez",
-    university: "Coastal Carolina University",
-    degree: "Bachelors of Fine Arts in Theatre Design & Production",
-    imageUrl: "",
-    gender: "female",
-  },
-  {
-    id: 6,
-    name: "Melania Carrigan",
-    university: "University of Central Florida",
-    degree: "Bachelors in Civil Engineering",
-    imageUrl: "",
-    gender: "female",
-  },
-  {
-    id: 7,
-    name: "Melody Ann Angelica",
-    university: "University of North Florida",
-    degree: "Bachelors in International Business",
-    imageUrl: "",
-    gender: "female",
-  },
-  {
-    id: 8,
-    name: "Natalie Jaile",
-    university: "Florida State University",
-    degree: "Bachelors in Mechanical Engineering",
-    imageUrl: "",
-    gender: "female",
-  },
-  {
-    id: 9,
-    name: "Sebastian Lopez",
-    university: "Rollins College",
-    degree: "Bachelors in Biology",
-    imageUrl: "",
-    gender: "male",
-  },
-  {
-    id: 10,
-    name: "Viviana Arce",
-    university: "University of South Florida",
-    degree: "Bachelors in Biomedical Science",
-    imageUrl: "",
-    gender: "female",
-  },
-  {
-    id: 11,
-    name: "Vivianna Rivera",
-    university: "University of Central Florida",
-    degree: "Bachelors in Finance",
-    imageUrl: "",
-    gender: "female",
-  },
-];
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 // ================= Winner Card =================
 interface WinnerCardProps {
   name: string;
-  university: string;
+  uni: string;
   degree: string;
-  imageUrl: string;
   index: number;
 }
 
-const WinnerCard = ({ name, university, degree, imageUrl, index }: WinnerCardProps) => {
+const WinnerCard = ({ name, uni, degree, index }: WinnerCardProps) => {
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.9, y: 30 }}
@@ -113,9 +23,12 @@ const WinnerCard = ({ name, university, degree, imageUrl, index }: WinnerCardPro
       {/* Image */}
       <div className="w-27 h-27 rounded-full border-2 border-[#1E88E5] mb-4">
         <img
-          src={imageUrl || "/images/ProfileImage.png"}
+          src={`/images/winner${index + 1}.png`}
           alt={name}
           className="w-full h-full rounded-full object-cover"
+          onError={(e) => {
+            (e.target as HTMLImageElement).src = "/images/ProfileImage.png";
+          }}
         />
       </div>
 
@@ -124,7 +37,7 @@ const WinnerCard = ({ name, university, degree, imageUrl, index }: WinnerCardPro
       </h3>
 
       <p className="text-black/80 text-[12px] font-normal  tracking-wide mb-1">
-        {university}
+        {uni}
       </p>
 
       <p className="text-black/80 text-[12px] font-normal">
@@ -136,7 +49,8 @@ const WinnerCard = ({ name, university, degree, imageUrl, index }: WinnerCardPro
 
 // ================= Main Section =================
 export default function ScholarshipSectionWinners() {
-  const winners = winnersData;
+  const { t } = useTranslation();
+  const winners = t("scholarship.winners_data", { returnObjects: true }) as Array<{ name: string; uni: string; degree: string }>;
 
   return (
     <section className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-15 bg-white font-sans">
@@ -150,23 +64,22 @@ export default function ScholarshipSectionWinners() {
         className="text-center space-y-6 mb-15"
       >
         <h2 className="text-2xl md:text-[40px] font-normal text-black ">
-          FCHCC celebrated the achievements of the 2025 ATD winners at this year’s ATD Scholarship Luncheon!
+          {t("scholarship.winners_celebration")}
         </h2>
 
         <p className="text-black text-[32px] font-normal text-left mb-15">
-          FCHCC's Achieving the Dream Scholarship program was designed to assist
-          Hispanic students continue their educational endeavors.
+          {t("scholarship.desc")}
         </p>
 
         <div className="bg-[#1E88E5]/10 p-6 inline-block rounded-md">
           <p className="text-black text-[32px] font-medium">
-            Check out photos from the luncheon{" "}
+            {t("scholarship.check_photos")}{" "}
             <span className="text-[#1D84E4] font-bold cursor-pointer hover:underline">
-              here
+              {t("scholarship.here")}
             </span>{" "}
-            and read the recap article{" "}
+            {t("scholarship.read_recap")}{" "}
             <span className="text-[#1D84E4] font-bold cursor-pointer hover:underline">
-              here
+              {t("scholarship.here")}
             </span>
           </p>
         </div>
@@ -181,14 +94,14 @@ export default function ScholarshipSectionWinners() {
         className="text-center mb-10"
       >
         <h2 className="text-[40px] font-medium text-black">
-          Congratulations to the 2025 ATD Winners!
+          {t("scholarship.congrats_2025")}
         </h2>
       </motion.div>
 
       {/* Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 justify-items-center">
         {winners.map((winner, index) => (
-          <WinnerCard key={winner.id} {...winner} index={index} />
+          <WinnerCard key={index} {...winner} index={index} />
         ))}
       </div>
 

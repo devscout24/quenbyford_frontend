@@ -1,36 +1,13 @@
 import { Users, TrendingUp, Target, CheckCircle, Heart, type LucideIcon } from 'lucide-react';
 import { motion, type Variants, } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 
 // --- Types ---
 interface MissionItem {
   icon: LucideIcon;
-  text: string;
+  translationKey: string;
 }
-
-// --- Data ---
-const MISSION_DATA: MissionItem[] = [
-  {
-    icon: Users,
-    text: "Create an interactive forum for everyone interested in a vibrant, multicultural economy",
-  },
-  {
-    icon: TrendingUp,
-    text: "Promote business opportunities through social interaction and education",
-  },
-  {
-    icon: Target,
-    text: "Positively impact and contribute to the regional economy",
-  },
-  {
-    icon: CheckCircle,
-    text: "Encourage and promote successful business practices within the Hispanic community",
-  },
-  {
-    icon: Heart,
-    text: "Foster unity among all Hispanics in the business community and beyond",
-  },
-];
 
 // --- Animation Variants ---
 const EASE: 'easeOut' = "easeOut"; // ✅ typed as Easing, not string
@@ -58,6 +35,7 @@ const cardVariants: Variants = {
 
 // --- Mission Card ---
 const MissionCard = ({ item }: { item: MissionItem }) => {
+  const { t } = useTranslation();
   const Icon = item.icon;
   return (
     <motion.div
@@ -66,13 +44,38 @@ const MissionCard = ({ item }: { item: MissionItem }) => {
       className="bg-white p-8 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow min-h-37 flex flex-col"
     >
       <Icon className="text-[#FF781F] mb-4" size={32} />
-      <p className="text-[#364153] leading-relaxed text-[14px]">{item.text}</p>
+      <p className="text-[#364153] leading-relaxed text-[14px]">{t(item.translationKey)}</p>
     </motion.div>
   );
 };
 
 // --- Main Component ---
 const MissionSection = () => {
+  const { t } = useTranslation();
+
+  const MISSION_DATA: MissionItem[] = [
+    {
+      icon: Users,
+      translationKey: "join_us.mission.item1",
+    },
+    {
+      icon: TrendingUp,
+      translationKey: "join_us.mission.item2",
+    },
+    {
+      icon: Target,
+      translationKey: "join_us.mission.item3",
+    },
+    {
+      icon: CheckCircle,
+      translationKey: "join_us.mission.item4",
+    },
+    {
+      icon: Heart,
+      translationKey: "join_us.mission.item5",
+    },
+  ];
+
   return (
     <section className="py-20 bg-white">
       <div className="max-w-360 mx-auto px-4">
@@ -85,9 +88,9 @@ const MissionSection = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-[40px] font-bold text-black mb-4">Our Mission</h2>
+          <h2 className="text-[40px] font-bold text-black mb-4">{t('join_us.mission.title')}</h2>
           <p className="text-[#4A5565] text-lg">
-            Our members come from all sectors of the community and rely on the FCHCC to:
+            {t('join_us.mission.description')}
           </p>
         </motion.div>
 
@@ -100,7 +103,7 @@ const MissionSection = () => {
           className="grid grid-cols-1 md:grid-cols-3 gap-6"
         >
           {MISSION_DATA.map((item) => (
-            <MissionCard key={item.text} item={item} />
+            <MissionCard key={item.translationKey} item={item} />
           ))}
         </motion.div>
 

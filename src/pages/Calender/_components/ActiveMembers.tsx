@@ -1,8 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const ActiveMembersButton = () => {
+  const { t } = useTranslation();
   return (
     <div className="max-w-360 mx-auto flex flex-col gap-6 p-4 sm:p-8 mt-8 sm:mt-15 mb-12 sm:mb-30">
 
@@ -20,18 +22,18 @@ const ActiveMembersButton = () => {
           <CardContent className="p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-6">
             <div className="space-y-2 text-center sm:text-left">
               <h3 className="text-xl sm:text-2xl font-bold text-black leading-tight sm:leading-8 tracking-tight max-w-2xl">
-                Invite for active members, went to submit events for FCHCC!
+                {t('calendar.active_member_invite')}
               </h3>
               <p className="text-[#4B5563] text-sm sm:text-[16px] font-semibold">
-                Submit active members,{" "}
+                {t('calendar.submit_active_members')}{" "}
                 <a href="#" className="text-[#F97316] underline underline-offset-4 hover:text-[#F97316]/80">
-                  click here
+                  {t('calendar.click_here')}
                 </a>.
               </p>
             </div>
 
-            <Button className="rounded-full w-full sm:w-auto px-8 py-6 bg-[#1E293B] hover:bg-slate-700 text-white font-semibold">
-              join now
+            <Button className="rounded-full w-full sm:w-auto px-8 py-6 bg-[#1E293B] hover:bg-slate-700 text-white font-semibold uppercase">
+              {t('calendar.join_now')}
             </Button>
           </CardContent>
         </Card>
@@ -51,18 +53,18 @@ const ActiveMembersButton = () => {
           <CardContent className="p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-6">
             <div className="space-y-2 text-center sm:text-left">
               <h3 className="text-xl sm:text-2xl font-bold text-black leading-tight sm:leading-8 tracking-tight">
-                Subscribe to our mailing list
+                {t('calendar.subscribe_mailing_list')}
               </h3>
               <p className="text-[#4B5563] text-sm sm:text-[16px] font-semibold">
-                Subscribe to our mailing list on below:{" "}
+                {t('calendar.subscribe_mailing_list_below')}{" "}
                 <a href="#" className="text-blue-500 underline underline-offset-4 hover:text-blue-600">
-                  subscribe here
+                  {t('calendar.subscribe_here')}
                 </a>.
               </p>
             </div>
 
             <Button className="rounded-full w-full sm:w-auto px-8 py-6 bg-[#1E293B] hover:bg-slate-700 text-white font-semibold">
-              Subscribe
+              {t('calendar.subscribe')}
             </Button>
           </CardContent>
         </Card>

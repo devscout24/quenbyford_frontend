@@ -1,8 +1,10 @@
-import  { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence, type Variants } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 
 const ComingSoon = () => {
+  const { t } = useTranslation();
 
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
@@ -62,7 +64,7 @@ const ComingSoon = () => {
 
   return (
     <div className="my-15  flex flex-col items-center justify-center p-4 relative overflow-hidden font-sans">
-     
+
 
       <motion.div
         variants={containerVariants}
@@ -82,14 +84,14 @@ const ComingSoon = () => {
         {/* Main Heading */}
         <motion.div variants={itemVariants} className="space-y-4">
           <h2 className="text-orange-600 font-bold tracking-widest text-sm sm:text-base uppercase">
-            Something Amazing is Brewing
+            {t('coming_soon.subtitle')}
           </h2>
           <h1 className=" text-4xl lg:text-[50px] font-black text-[#0F172A] leading-tight">
-            Coming <span className="text-[#0284C7]"> Soon</span>
+            {t('coming_soon.title_part1')} <span className="text-[#0284C7]"> {t('coming_soon.title_part2')}</span>
 
           </h1>
           <p className="text-[#64748B] text-lg sm:text-xl max-w-2xl mx-auto">
-            We are working on something new and exciting that will exceed your expectations. Stay connected with us!
+            {t('coming_soon.description')}
           </p>
         </motion.div>
 
@@ -99,10 +101,10 @@ const ComingSoon = () => {
           className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 max-w-3xl mx-auto"
         >
           {[
-            { label: "Days", value: timeLeft.days },
-            { label: "Hours", value: timeLeft.hours },
-            { label: "Minutes", value: timeLeft.minutes },
-            { label: "Seconds", value: timeLeft.seconds },
+            { label: t('coming_soon.days'), value: timeLeft.days },
+            { label: t('coming_soon.hours'), value: timeLeft.hours },
+            { label: t('coming_soon.minutes'), value: timeLeft.minutes },
+            { label: t('coming_soon.seconds'), value: timeLeft.seconds },
           ].map((item, index) => (
             <div
               key={index}

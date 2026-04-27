@@ -1,17 +1,20 @@
-
 import { Crown } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const CorporateMemberJob = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="my-15 bg-white">
       <div className="max-w-360 mx-auto px-4 text-center">
         
         {/* Header Section */}
         <h2 className="text-[50px] font-bold text-black mb-6">
-          FCHCC Corporate Members
+          {t("hiring_card.corporate.title")}
         </h2>
         <p className="text-black text-2xl mb-12 max-w-7xl mx-auto">
-          Submit your Job Listings FREE (applies to Membership levels of Non-profit #1 through Strategic Partner)
+          {t("hiring_card.corporate.subtitle")}
         </p>
 
         {/* Free Pricing Card */}
@@ -24,8 +27,8 @@ const CorporateMemberJob = () => {
             </div>
 
             {/* Text Content */}
-            <h3 className="text-3xl font-bold text-black my-5">Corporate Member</h3>
-            <p className="text-[#0A0A0A]/60 text-lg mb-8">website and social media</p>
+            <h3 className="text-3xl font-bold text-black my-5">{t("hiring_card.corporate.card_title")}</h3>
+            <p className="text-[#0A0A0A]/60 text-lg mb-8">{t("hiring_card.corporate.card_desc")}</p>
 
             {/* Price (Free) */}
             <div className="w-full text-left border-t border-gray-100 pt-6 mb-8">
@@ -33,19 +36,19 @@ const CorporateMemberJob = () => {
             </div>
 
             {/* Action Button */}
-            <button className="w-full bg-[#FF781F] hover:bg-[#e66a1a] text-white py-3.5 rounded-2xl font-bold text-sm transition-colors shadow-lg">
-              Get Started
-            </button>
+            <Link to="https://form.jotform.com/fchcc/new-membership-application" className="w-full bg-[#FF781F] hover:bg-[#e66a1a] text-white py-3.5 rounded-2xl font-bold text-sm transition-colors shadow-lg">
+              {t("hiring_card.corporate.btn")}
+            </Link>
           </div>
         </div>
 
         {/* Footer Info */}
         <div className="space-y-6">
           <p className= "text-xl text-black font-normal">
-            Please allow up to 48 hours for your listing to be posted.
+            {t("hiring_card.corporate.footer_posted")}
           </p>
           <p className="text-black text-sm max-w-3xl mx-auto leading-relaxed">
-            If you have any questions, please contact <span className="font-semibold text-gray-800">Kim McDougal</span>, Vice President of Interactive Communications <br className="hidden md:block" />
+            {t("hiring_card.corporate.footer_contact")} <span className="font-semibold text-gray-800">Kim McDougal</span>, Vice President of Interactive Communications <br className="hidden md:block" />
             at <a href="mailto:interactivecomm@fchcc.com" className="text-blue-600 hover:underline">interactivecomm@fchcc.com</a>.
           </p>
         </div>

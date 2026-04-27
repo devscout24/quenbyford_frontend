@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
+import { useTranslation } from 'react-i18next';
 
 import {
   format,
@@ -17,13 +18,14 @@ import {
 import ViewList from './ViewList';
 import WeeklyView from './WeeklyView';
 
-const eventDescription = "FCHCC Members: Mark your calendars to join us at the monthly Social Cafecito event! These meetings are an ideal space for our members to exchange ideas and establish professional relationships. With the participation of the most prominent business leaders in our community, it ensures an enriching experience.";
-const eventExtraInfo = "Its purpose is to bring in speakers every month who will cover topics in: marketing, capital, finance, legal, communities and more! Expand your business network and learn from the best. Social Cafecito meets each month on the 3rd Friday. Not an FCHCC member? Join here.";
-const eventCta = "Be sure to look out for the meeting invites to learn when registration opens. You can subscribe to our mailing list at fchcc.com.";
-
 const EventCalendar = () => {
+  const { t } = useTranslation();
   const [currentDate, setCurrentDate] = useState(new Date());
   const [hoveredEvent, setHoveredEvent] = useState<string | null>(null);
+
+  const eventDescription = t('calendar.event_description');
+  const eventExtraInfo = t('calendar.event_extra_info');
+  const eventCta = t('calendar.event_cta');
 
   const handleMonthChange = (value: string) => {
     const parsedDate = parse(value, 'MMM-yyyy', new Date());
@@ -31,7 +33,15 @@ const EventCalendar = () => {
   };
 
   // Generate day labels
-  const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  const days = [
+    t("calendar.days.sun"),
+    t("calendar.days.mon"),
+    t("calendar.days.tue"),
+    t("calendar.days.wed"),
+    t("calendar.days.thu"),
+    t("calendar.days.fri"),
+    t("calendar.days.sat")
+  ];
 
   // Calculate grid days for Monthly View
   const monthStart = startOfMonth(currentDate);
@@ -57,19 +67,19 @@ const EventCalendar = () => {
 
   // FCHCC Social Cafecito Meeting dates
   const events = [
-    { date: new Date(year, 0, 16), title: "FCHCC Social Cafecito Meeting", time: "8:30 AM – 10:00 AM", description: eventDescription, extraInfo: eventExtraInfo, cta: eventCta },
-    { date: new Date(year, 1, 16), title: "FCHCC Social Cafecito Meeting", time: "8:30 AM – 10:00 AM", description: eventDescription, extraInfo: eventExtraInfo, cta: eventCta },
-    { date: new Date(year, 2, 20), title: "FCHCC Social Cafecito Meeting", time: "8:30 AM – 10:00 AM", description: eventDescription, extraInfo: eventExtraInfo, cta: eventCta },
-    { date: new Date(year, 3, 16), title: "FCHCC Social Cafecito Meeting", time: "8:30 AM – 10:00 AM", description: eventDescription, extraInfo: eventExtraInfo, cta: eventCta },
-    { date: new Date(year, 3, 17), title: "FCHCC Social Cafecito Meeting", time: "8:30 AM – 10:00 AM", description: eventDescription, extraInfo: eventExtraInfo, cta: eventCta },
-    { date: new Date(year, 4, 15), title: "FCHCC Social Cafecito Meeting", time: "8:30 AM – 10:00 AM", description: eventDescription, extraInfo: eventExtraInfo, cta: eventCta },
-    { date: new Date(year, 5, 19), title: "FCHCC Social Cafecito Meeting", time: "8:30 AM – 10:00 AM", description: eventDescription, extraInfo: eventExtraInfo, cta: eventCta },
-    { date: new Date(year, 6, 17), title: "FCHCC Social Cafecito Meeting", time: "8:30 AM – 10:00 AM", description: eventDescription, extraInfo: eventExtraInfo, cta: eventCta },
-    { date: new Date(year, 7, 21), title: "FCHCC Social Cafecito Meeting", time: "8:30 AM – 10:00 AM", description: eventDescription, extraInfo: eventExtraInfo, cta: eventCta },
-    { date: new Date(year, 8, 18), title: "FCHCC Social Cafecito Meeting", time: "8:30 AM – 10:00 AM", description: eventDescription, extraInfo: eventExtraInfo, cta: eventCta },
-    { date: new Date(year, 9, 16), title: "FCHCC Social Cafecito Meeting", time: "8:30 AM – 10:00 AM", description: eventDescription, extraInfo: eventExtraInfo, cta: eventCta },
-    { date: new Date(year, 10, 20), title: "FCHCC Social Cafecito Meeting", time: "8:30 AM – 10:00 AM", description: eventDescription, extraInfo: eventExtraInfo, cta: eventCta },
-    { date: new Date(year, 11, 18), title: "FCHCC Social Cafecito Meeting", time: "8:30 AM – 10:00 AM", description: eventDescription, extraInfo: eventExtraInfo, cta: eventCta },
+    { date: new Date(year, 0, 16), title: t('calendar.event_title'), time: t('calendar.event_time'), description: eventDescription, extraInfo: eventExtraInfo, cta: eventCta },
+    { date: new Date(year, 1, 16), title: t('calendar.event_title'), time: t('calendar.event_time'), description: eventDescription, extraInfo: eventExtraInfo, cta: eventCta },
+    { date: new Date(year, 2, 20), title: t('calendar.event_title'), time: t('calendar.event_time'), description: eventDescription, extraInfo: eventExtraInfo, cta: eventCta },
+    { date: new Date(year, 3, 16), title: t('calendar.event_title'), time: t('calendar.event_time'), description: eventDescription, extraInfo: eventExtraInfo, cta: eventCta },
+    { date: new Date(year, 3, 17), title: t('calendar.event_title'), time: t('calendar.event_time'), description: eventDescription, extraInfo: eventExtraInfo, cta: eventCta },
+    { date: new Date(year, 4, 15), title: t('calendar.event_title'), time: t('calendar.event_time'), description: eventDescription, extraInfo: eventExtraInfo, cta: eventCta },
+    { date: new Date(year, 5, 19), title: t('calendar.event_title'), time: t('calendar.event_time'), description: eventDescription, extraInfo: eventExtraInfo, cta: eventCta },
+    { date: new Date(year, 6, 17), title: t('calendar.event_title'), time: t('calendar.event_time'), description: eventDescription, extraInfo: eventExtraInfo, cta: eventCta },
+    { date: new Date(year, 7, 21), title: t('calendar.event_title'), time: t('calendar.event_time'), description: eventDescription, extraInfo: eventExtraInfo, cta: eventCta },
+    { date: new Date(year, 8, 18), title: t('calendar.event_title'), time: t('calendar.event_time'), description: eventDescription, extraInfo: eventExtraInfo, cta: eventCta },
+    { date: new Date(year, 9, 16), title: t('calendar.event_title'), time: t('calendar.event_time'), description: eventDescription, extraInfo: eventExtraInfo, cta: eventCta },
+    { date: new Date(year, 10, 20), title: t('calendar.event_title'), time: t('calendar.event_time'), description: eventDescription, extraInfo: eventExtraInfo, cta: eventCta },
+    { date: new Date(year, 11, 18), title: t('calendar.event_title'), time: t('calendar.event_time'), description: eventDescription, extraInfo: eventExtraInfo, cta: eventCta },
   ];
 
   // Calculate grid days for Weekly View — show week of first meeting in selected month
@@ -97,14 +107,14 @@ const EventCalendar = () => {
                 <path d="M14.9806 11.9765C15.829 11.9765 16.5168 11.3162 16.5168 10.5017C16.5168 9.68715 15.829 9.02686 14.9806 9.02686C14.1321 9.02686 13.4443 9.68715 13.4443 10.5017C13.4443 11.3162 14.1321 11.9765 14.9806 11.9765Z" fill="#1E88E5" />
                 <path d="M6.15148 16.0834C6.99993 16.0834 7.68773 15.4231 7.68773 14.6086C7.68773 13.7941 6.99993 13.1338 6.15148 13.1338C5.30304 13.1338 4.61523 13.7941 4.61523 14.6086C4.61523 15.4231 5.30304 16.0834 6.15148 16.0834Z" fill="#1E88E5" />
                 <path d="M10.5665 16.0834C11.415 16.0834 12.1028 15.4231 12.1028 14.6086C12.1028 13.7941 11.415 13.1338 10.5665 13.1338C9.71808 13.1338 9.03027 13.7941 9.03027 14.6086C9.03027 15.4231 9.71808 16.0834 10.5665 16.0834Z" fill="#1E88E5" />
-                <path d="M14.9806 16.0834C15.829 16.0834 16.5168 15.4231 16.5168 14.6086C16.5168 13.7941 15.829 13.1338 14.9806 13.1338C14.1321 13.1338 13.4443 13.7941 13.4443 14.6086C13.4443 15.4231 14.1321 16.0834 14.9806 16.0834Z" fill="#1E88E5" />
+                <path d="M14.9806 16.0834C15.829 16.0834 16.5168 15.4231 16.5168 14.6086C16.5168 13.7941 15.829 9.02686 14.9806 9.02686C14.1321 9.02686 13.4443 9.68715 13.4443 10.5017C13.4443 11.3162 14.1321 11.9765 14.9806 11.9765Z" fill="#1E88E5" />
                 <path d="M6.15148 20.1908C6.99993 20.1908 7.68773 19.5305 7.68773 18.716C7.68773 17.9015 6.99993 17.2412 6.15148 17.2412C5.30304 17.2412 4.61523 17.9015 4.61523 18.716C4.61523 19.5305 5.30304 20.1908 6.15148 20.1908Z" fill="#1E88E5" />
                 <path d="M10.5665 20.1908C11.415 20.1908 12.1028 19.5305 12.1028 18.716C12.1028 17.9015 11.415 17.2412 10.5665 17.2412C9.71808 17.2412 9.03027 17.9015 9.03027 18.716C9.03027 19.5305 9.71808 20.1908 10.5665 20.1908Z" fill="#1E88E5" />
                 <path d="M14.9806 20.1908C15.829 20.1908 16.5168 19.5305 16.5168 18.716C16.5168 17.9015 15.829 17.2412 14.9806 17.2412C14.1321 17.2412 13.4443 17.9015 13.4443 18.716C13.4443 19.5305 14.1321 20.1908 14.9806 20.1908Z" fill="#1E88E5" />
                 <path d="M19.2921 11.9765C20.1406 11.9765 20.8284 11.3162 20.8284 10.5017C20.8284 9.68715 20.1406 9.02686 19.2921 9.02686C18.4437 9.02686 17.7559 9.68715 17.7559 10.5017C17.7559 11.3162 18.4437 11.9765 19.2921 11.9765Z" fill="#1E88E5" />
                 <path d="M19.2921 16.0834C20.1406 16.0834 20.8284 15.4231 20.8284 14.6086C20.8284 13.7941 20.1406 13.1338 19.2921 13.1338C18.4437 13.1338 17.7559 13.7941 17.7559 14.6086C17.7559 15.4231 18.4437 16.0834 19.2921 16.0834Z" fill="#1E88E5" />
-                <path d="M19.2921 17.2412C19.0904 17.2412 18.8906 17.2794 18.7042 17.3535C18.5178 17.4276 18.3485 17.5362 18.2058 17.6732C18.0632 17.8101 17.95 17.9727 17.8728 18.1516C17.7956 18.3306 17.7559 18.5223 17.7559 18.716C17.7559 18.9097 17.7956 19.1015 17.8728 19.2804C17.95 19.4593 18.0632 19.6219 18.2058 19.7589C18.3485 19.8958 18.5178 20.0044 18.7042 20.0785C18.8906 20.1527 19.0904 20.1908 19.2921 20.1908C19.6995 20.1908 20.0903 20.0354 20.3784 19.7589C20.6665 19.4823 20.8284 19.1072 20.8284 18.716C20.8284 18.3249 20.6665 17.9497 20.3784 17.6732C20.0903 17.3966 19.6995 17.2412 19.2921 17.2412ZM19.2921 19.5704C19.0562 19.5701 18.83 19.48 18.6631 19.3198C18.4963 19.1597 18.4024 18.9425 18.4021 18.716C18.4021 18.245 18.8015 17.8616 19.2921 17.8616C19.5224 17.8699 19.7403 17.9635 19.9002 18.1229C20.0601 18.2822 20.1494 18.4948 20.1494 18.716C20.1494 18.9372 20.0601 19.1498 19.9002 19.3092C19.7403 19.4685 19.5224 19.5621 19.2921 19.5704Z" fill="#1E88E5" />
-              </svg> Monthly View
+                <path d="M19.2921 17.2412C19.0904 17.2412 18.8906 17.2794 18.7042 17.3535C18.5178 17.4276 18.3485 17.5362 18.2058 17.6732C18.0632 17.8101 17.95 17.9727 17.8728 18.1516C17.7956 18.3306 17.7559 18.5223 17.7559 18.716C17.7559 18.9097 17.7956 18.3306 17.8728 18.1516C17.7956 18.3306 17.7559 18.5223 17.7559 18.716C17.7559 18.9097 17.7956 19.1015 17.8728 19.2804C17.95 19.4593 18.0632 19.6219 18.2058 19.7589C18.3485 19.8958 18.5178 20.0044 18.7042 20.0785C18.8906 20.1527 19.0904 20.1908 19.2921 20.1908C19.6995 20.1908 20.0903 20.0354 20.3784 19.7589C20.6665 19.4823 20.8284 19.1072 20.8284 18.716C20.8284 18.3249 20.6665 17.9497 20.3784 17.6732C20.0903 17.3966 19.6995 17.2412 19.2921 17.2412ZM19.2921 19.5704C19.0562 19.5701 18.83 19.48 18.6631 19.3198C18.4963 19.1597 18.4024 18.9425 18.4021 18.716C18.4021 18.245 18.8015 17.8616 19.2921 17.8616C19.5224 17.8699 19.7403 17.9635 19.9002 18.1229C20.0601 18.2822 20.1494 18.4948 20.1494 18.716C20.1494 18.9372 20.0601 19.1498 19.9002 19.3092C19.7403 19.4685 19.5224 19.5621 19.2921 19.5704Z" fill="#1E88E5" />
+              </svg> {t('calendar.monthly_view')}
             </TabsTrigger>
             <TabsTrigger
               value="weekly"
@@ -119,7 +129,7 @@ const EventCalendar = () => {
                 <path d="M5.90449 13.1338C5.51335 13.1338 5.13823 13.2892 4.86165 13.5657C4.58507 13.8423 4.42969 14.2174 4.42969 14.6086C4.42969 14.9997 4.58507 15.3749 4.86165 15.6514C5.13823 15.928 5.51335 16.0834 5.90449 16.0834C6.29563 16.0834 6.67075 15.928 6.94733 15.6514C7.22391 15.3749 7.37929 14.9997 7.37929 14.6086C7.37929 14.2174 7.22391 13.8423 6.94733 13.5657C6.67075 13.2892 6.29563 13.1338 5.90449 13.1338ZM5.90449 15.4624C5.67798 15.4621 5.46085 15.372 5.30069 15.2118C5.14052 15.0516 5.05041 14.8345 5.05009 14.608C5.05009 14.137 5.43349 13.7536 5.90449 13.7536C6.12555 13.7619 6.33479 13.8555 6.48826 14.0148C6.64172 14.1742 6.72746 14.3868 6.72746 14.608C6.72746 14.8292 6.64172 15.0418 6.48826 15.2011C6.33479 15.3605 6.12555 15.4541 5.90449 15.4624ZM10.1429 13.1338C9.75175 13.1338 9.37663 13.2892 9.10005 13.5657C8.82347 13.8423 8.66809 14.2174 8.66809 14.6086C8.66809 14.9997 8.82347 15.3749 9.10005 15.6514C9.37663 15.928 9.75175 16.0834 10.1429 16.0834C10.534 16.0834 10.9091 15.928 11.1857 15.6514C11.4623 15.3749 11.6177 14.9997 11.6177 14.6086C11.6177 14.2174 11.4623 13.8423 11.1857 13.5657C10.9091 13.2892 10.534 13.1338 10.1429 13.1338ZM10.1429 15.4624C9.91638 15.4621 9.69925 15.372 9.53909 15.2118C9.37892 15.0516 9.28881 14.8345 9.28849 14.608C9.28849 14.137 9.67189 13.7536 10.1429 13.7536C10.6139 13.7536 10.9973 14.137 10.9973 14.608C10.997 14.8345 10.9069 15.0516 10.7467 15.2118C10.5865 15.372 10.3694 15.4621 10.1429 15.4624ZM14.3807 13.1338C13.9895 13.1338 13.6144 13.2892 13.3378 13.5657C13.0613 13.8423 12.9059 14.2174 12.9059 14.6086C12.9059 14.9997 13.0613 15.3749 13.3378 15.6514C13.6144 15.928 13.9895 16.0834 14.3807 16.0834C14.7718 16.0834 15.147 15.928 15.4235 15.6514C15.7001 15.3749 15.8555 14.9997 15.8555 14.6086C15.8555 14.2174 15.7001 13.8423 15.4235 13.5657C15.147 13.2892 14.7718 13.1338 14.3807 13.1338ZM14.3807 15.4624C14.1542 15.4621 13.937 15.372 13.7769 15.2118C13.6167 15.0516 13.5266 14.8345 13.5263 14.608C13.5263 14.137 13.9097 13.7536 14.3807 13.7536C14.6017 13.7619 14.811 13.8555 14.9645 14.0148C15.1179 14.1742 15.2037 14.3868 15.2037 14.608C15.2037 14.8292 15.1179 15.0418 14.9645 15.2011C14.811 15.3605 14.6017 15.4541 14.3807 15.4624ZM5.90449 17.2408C5.71081 17.2408 5.51904 17.2789 5.34011 17.3531C5.16118 17.4272 4.99859 17.5358 4.86165 17.6727C4.7247 17.8097 4.61607 17.9723 4.54195 18.1512C4.46783 18.3301 4.42969 18.5219 4.42969 18.7156C4.42969 18.9093 4.46783 19.101 4.54195 19.28C4.61607 19.4589 4.7247 19.6215 4.86165 19.7584C4.99859 19.8954 5.16118 20.004 5.34011 20.0781C5.51904 20.1522 5.71081 20.1904 5.90449 20.1904C6.29563 20.1904 6.67075 20.035 6.94733 19.7584C7.22391 19.4819 7.37929 19.1067 7.37929 18.7156C7.37929 18.3244 7.22391 17.9493 6.94733 17.6727C6.67075 17.3962 6.29563 17.2408 5.90449 17.2408ZM5.90449 19.57C5.67798 19.5697 5.46085 19.4796 5.30069 19.3194C5.14052 19.1592 5.05041 18.9421 5.05009 18.7156C5.05009 18.2446 5.43349 17.8612 5.90449 17.8612C6.37549 17.8612 6.75889 18.2446 6.75889 18.7156C6.75889 19.1866 6.37549 19.57 5.90449 19.57ZM10.1429 17.2408C9.75175 17.2408 9.37663 17.3962 9.10005 17.6727C8.82347 17.9493 8.66809 18.3244 8.66809 18.7156C8.66809 19.1067 8.82347 19.4819 9.10005 19.7584C9.37663 20.035 9.75175 20.1904 10.1429 20.1904C10.534 20.1904 10.9091 20.035 11.1857 19.7584C11.4623 19.4819 11.6177 19.1067 11.6177 18.7156C11.6177 18.3244 11.4623 17.9493 11.1857 17.6727C10.9091 17.3962 10.534 17.2408 10.1429 17.2408ZM10.1429 19.57C9.91638 19.5697 9.69925 19.4796 9.53909 19.3194C9.37892 19.1592 9.28881 18.9421 9.28849 18.7156C9.28849 18.2446 9.67189 17.8612 10.1429 17.8612C10.6139 17.8612 10.9973 18.2446 10.9973 18.7156C10.9968 18.942 10.9066 19.1591 10.7465 19.3192C10.5864 19.4793 10.3693 19.5695 10.1429 19.57ZM14.3807 17.2408C13.9895 17.2408 13.6144 17.3962 13.3378 17.6727C13.0613 17.9493 12.9059 18.3244 12.9059 18.7156C12.9059 19.1067 13.0613 19.4819 13.3378 19.7584C13.6144 20.035 13.9895 20.1904 14.3807 20.1904C14.7718 20.1904 15.147 20.035 15.4235 19.7584C15.7001 19.4819 15.8555 19.1067 15.8555 18.7156C15.8555 18.3244 15.7001 17.9493 15.4235 17.6727C15.147 17.3962 14.7718 17.2408 14.3807 17.2408ZM14.3807 19.57C14.1542 19.5697 13.937 19.4796 13.7769 19.3194C13.6167 19.1592 13.5266 18.9421 13.5263 18.7156C13.5263 18.2446 13.9097 17.8612 14.3807 17.8612C14.8517 17.8612 15.2351 18.2446 15.2351 18.7156C15.2351 19.1866 14.8517 19.57 14.3807 19.57Z" fill="#6B7280" />
                 <path d="M18.5197 11.9765C19.3342 11.9765 19.9945 11.3162 19.9945 10.5017C19.9945 9.68715 19.3342 9.02686 18.5197 9.02686C17.7052 9.02686 17.0449 9.68715 17.0449 10.5017C17.0449 11.3162 17.7052 11.9765 18.5197 11.9765Z" fill="#6B7280" />
                 <path d="M18.5197 13.1338C18.1286 13.1338 17.7535 13.2892 17.4769 13.5657C17.2003 13.8423 17.0449 14.2174 17.0449 14.6086C17.0449 14.9997 17.2003 15.3749 17.4769 15.6514C17.7535 15.928 18.1286 16.0834 18.5197 16.0834C18.9109 16.0834 19.286 15.928 19.5626 15.6514C19.8391 15.3749 19.9945 14.9997 19.9945 14.6086C19.9945 14.2174 19.8391 13.8423 19.5626 13.5657C19.286 13.2892 18.9109 13.1338 18.5197 13.1338ZM18.5197 15.4624C18.2932 15.4621 18.0761 15.372 17.9159 15.2118C17.7558 15.0516 17.6656 14.8345 17.6653 14.608C17.6653 14.137 18.0487 13.7536 18.5197 13.7536C18.7408 13.7619 18.95 13.8555 19.1035 14.0148C19.257 14.1742 19.3427 14.3868 19.3427 14.608C19.3427 14.8292 19.257 15.0418 19.1035 15.2011C18.95 15.3605 18.7408 15.4541 18.5197 15.4624ZM18.5197 17.2408C18.326 17.2408 18.1343 17.2789 17.9553 17.3531C17.7764 17.4272 17.6138 17.5358 17.4769 17.6727C17.3399 17.8097 17.2313 17.9723 17.1572 18.1512C17.0831 18.3301 17.0449 18.5219 17.0449 18.7156C17.0449 18.9093 17.0831 19.101 17.1572 19.28C17.2313 19.4589 17.3399 19.6215 17.4769 19.7584C17.6138 19.8954 17.7764 20.004 17.9553 20.0781C18.1343 20.1522 18.326 20.1904 18.5197 20.1904C18.9109 20.1904 19.286 20.035 19.5626 19.7584C19.8391 19.4819 19.9945 19.1067 19.9945 18.7156C19.9945 18.3244 19.8391 17.9493 19.5626 17.6727C19.286 17.3962 18.9109 17.2408 18.5197 17.2408ZM18.5197 19.57C18.2932 19.5697 18.0761 19.4796 17.9159 19.3194C17.7558 19.1592 17.6656 18.9421 17.6653 18.7156C17.6653 18.2446 18.0487 17.8612 18.5197 17.8612C18.7408 17.8695 18.95 17.9631 19.1035 18.1224C19.257 18.2818 19.3427 18.4944 19.3427 18.7156C19.3427 18.9368 19.257 19.1494 19.1035 19.3087C18.95 19.4681 18.7408 19.5617 18.5197 19.57Z" fill="#6B7280" />
-              </svg> Weekly View
+              </svg> {t('calendar.weekly_view')}
             </TabsTrigger>
             <TabsTrigger
               value="list"
@@ -127,7 +137,7 @@ const EventCalendar = () => {
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                 <path d="M7 9V7H21V9H7ZM7 13V11H21V13H7ZM7 17V15H21V17H7ZM4 9C3.71667 9 3.47934 8.904 3.288 8.712C3.09667 8.52 3.00067 8.28267 3 8C2.99934 7.71733 3.09534 7.48 3.288 7.288C3.48067 7.096 3.718 7 4 7C4.282 7 4.51967 7.096 4.713 7.288C4.90634 7.48 5.002 7.71733 5 8C4.998 8.28267 4.902 8.52033 4.712 8.713C4.522 8.90567 4.28467 9.00133 4 9ZM4 13C3.71667 13 3.47934 12.904 3.288 12.712C3.09667 12.52 3.00067 12.2827 3 12C2.99934 11.7173 3.09534 11.48 3.288 11.288C3.48067 11.096 3.718 11 4 11C4.282 11 4.51967 11.096 4.713 11.288C4.90634 11.48 5.002 11.7173 5 12C4.998 12.2827 4.902 12.5203 4.712 12.713C4.522 12.9057 4.28467 13.0013 4 13ZM4 17C3.71667 17 3.47934 16.904 3.288 16.712C3.09667 16.52 3.00067 16.2827 3 16C2.99934 15.7173 3.09534 15.48 3.288 15.288C3.48067 15.096 3.718 15 4 15C4.282 15 4.51967 15.096 4.713 15.288C4.90634 15.48 5.002 15.7173 5 16C4.998 16.2827 4.902 16.5203 4.712 16.713C4.522 16.9057 4.28467 17.0013 4 17" fill="#6B7280" />
-              </svg> List View
+              </svg> {t('calendar.list_view')}
             </TabsTrigger>
           </TabsList>
         </div>
@@ -142,7 +152,7 @@ const EventCalendar = () => {
 
           <Select value={format(currentDate, 'MMM-yyyy')} onValueChange={handleMonthChange}>
             <SelectTrigger className="w-40 bg-slate-50 border-slate-200">
-              <SelectValue placeholder="Select Month" />
+              <SelectValue placeholder={t('calendar.select_month')} />
             </SelectTrigger>
             <SelectContent>
               {monthOptions.map((option) => (

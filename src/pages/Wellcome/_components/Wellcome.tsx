@@ -1,8 +1,10 @@
 import { ArrowRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { motion,  } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 const Welcome = () => {
+    const { t } = useTranslation();
     const navigate = useNavigate();
 
     // Animation variants for text staggered effect
@@ -77,7 +79,7 @@ const Welcome = () => {
                         animate="visible"
                         className="text-4xl font-bold text-black mb-2"
                     >
-                        Welcome Back!
+                        {t("welcome.title")}
                     </motion.h1>
                     <motion.p
                         custom={1}
@@ -86,7 +88,7 @@ const Welcome = () => {
                         animate="visible"
                         className="text-black mb-8"
                     >
-                        We're glad to see you
+                        {t("welcome.subtitle")}
                     </motion.p>
 
                     {/* Divider */}
@@ -106,7 +108,7 @@ const Welcome = () => {
                             animate="visible"
                             className="text-2xl font-bold text-black mb-2"
                         >
-                            Members Portal
+                            {t("welcome.portal_title")}
                         </motion.h2>
                         <motion.p
                             custom={3}
@@ -115,7 +117,7 @@ const Welcome = () => {
                             animate="visible"
                             className="text-black text-[16px] px-10"
                         >
-                            Access your exclusive member benefits and resources
+                            {t("welcome.portal_desc")}
                         </motion.p>
                     </div>
 
@@ -131,7 +133,7 @@ const Welcome = () => {
                         <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/30 to-transparent opacity-0 group-hover:opacity-100 group-hover:animate-shine" />
 
                         <span className="relative z-10 flex items-center text-xl">
-                            Enter Member Portal
+                            {t("welcome.enter_btn")}
                             <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                         </span>
                     </motion.button>
@@ -143,7 +145,7 @@ const Welcome = () => {
                         transition={{ delay: 1.5 }}
                         className="mt-8 text-xs text-gray-400 uppercase tracking-widest font-medium"
                     >
-                        Celebrating 32 years of excellence and community
+                        {t("welcome.celebrating")}
                     </motion.p>
                 </div>
             </motion.div>
@@ -155,7 +157,7 @@ const Welcome = () => {
                 transition={{ delay: 1.8 }}
                 className="absolute bottom-6 z-10 text-white/80 text-xs tracking-wide"
             >
-                First Coast Hispanic Chamber of Commerce
+                {t("footer.chamber_name", "First Coast Hispanic Chamber of Commerce")}
             </motion.div>
         </div>
     );

@@ -50,7 +50,8 @@
     "subscribe": "Subscribe Now"
   },
   "partners": {
-    "corporate_partners": "Corporate Partners"
+    "corporate_partners": "Corporate Partners",
+    "title": "FCHCC Partners"
   },
   "who_we_are": {
     "title": "WHO WE ARE",
@@ -76,40 +77,7 @@
       "button": "Learn About Member"
     }
   },
-  "news": {
-    "title": "FCHCC News",
-    "view_all": "View All",
-    "scholarship": {
-      "desc": "Latest updates and announcements about ATD scholarship programs and recipients.",
-      "title": "ADT SCHOLARSHIP",
-      "winners_announcement": "FCHCC announces the Winners of the 2025 ATD Scholarship! Read the full ",
-      "press_release": "press release!",
-      "donate": "DONATE ",
-      "donate_desc": "to the Achieving the Dream Scholarship",
-      "view_past": "View our Past Winners",
-      "apply_now": "Apply Now"
-    },
-    "testimonials": {
-      "member_say": "What Our Members Say"
-    },
-    "newsletter": {
-      "subscribe_title": "Subscribe to Our Newsletter",
-      "subscribe_desc": "Get our Conexion newsletter with program updates, event invitations, and community success stories.",
-      "subscribe_button": "Subscribe Now",
-      "contact_us": "Contact Us"
-    },
-    "all": {
-      "title": "News & Updates",
-      "prev": "Previous",
-      "next": "Next"
-    },
-    "details": {
-      "back": "Back to News",
-      "gallery_click": "Click here",
-      "gallery_view": "to view the entire photo gallery!",
-      "get_pdf": "Get PDF"
-    }
-  },
+
   "badges": {
     "title": "Our Badges"
   },
@@ -145,7 +113,41 @@
         "title": "Podcast",
         "desc": "Listen to expert interviews on the go.",
         "link": "Subscribe Today"
+      },
+      "associate_policy": {
+        "title": "Associate Member (AM) Policy",
+        "description": "An Associate Member is an employee of a FCHCC corporate or business member organization. Associate Members are entitled to member benefits, discounts, and attendance privileges to the monthly professional networking events. Below is the number of associates that FCHCC active members can bring to any networking event:",
+        "footer_note": "Benefits and fees are subject to change by the Board of Directors.",
+        "member_types": {
+          "student": "Student/Individual Members",
+          "small_biz_1": "Small Business 1 / Non-Profit 1 501(c)3",
+          "small_biz_2": "Small Business 2 / Non-Profit 2 501(c)3",
+          "non_profit_3": "Non-Profit 3 501(c)3",
+          "large_corp": "Large Corporations",
+          "leadership": "Leadership Trustees",
+          "strategic": "Strategic Partners"
+        },
+        "unlimited": "Unlimited"
       }
+    },
+    "coming_soon": {
+      "subtitle": "Something Amazing is Brewing",
+      "title_part1": "Coming",
+      "title_part2": "Soon",
+      "description": "We are working on something new and exciting that will exceed your expectations. Stay connected with us!",
+      "days": "Days",
+      "hours": "Hours",
+      "minutes": "Minutes",
+      "seconds": "Seconds"
+    },
+    "membership_benefits": {
+      "title": "Membership Benefits",
+      "description": "Below you’ll find our Gold and Platinum Memberships that break down the benefits for both tiers.",
+      "gold_title": "GOLD MEMBERSHIP LEVEL",
+      "gold_button": "Download the Gold Member Benefits",
+      "platinum_title": "PLATINUM MEMBERSHIP LEVEL",
+      "platinum_button": "Download the Platinum Member Benefits",
+      "downloading": "Downloading..."
     },
     "growth": {
       "title": "Growth & Savings",
@@ -171,37 +173,75 @@
       }
     },
     "membership": {
-      "title": "Membership",
+      "title": "Membership Management",
       "renew": {
         "title": "Renew your Membership",
-        "desc": "Tune in to weekly business insights and success stories from industry leaders across the region.",
-        "link": "Listen Now"
+        "desc": "Keep your membership active and continue enjoying all the benefits and opportunities FCHCC has to offer.",
+        "link": "Renew Now"
       },
       "portal": {
         "title": "Members Portal",
-        "desc": "Listen to expert interviews on the go. Available on all major platforms for your daily commute.",
-        "link": "Subscribe Today"
+        "desc": "Access exclusive resources, networking tools, and manage your account through our member-only portal.",
+        "link": "Access Portal"
       }
     },
     "advertise": {
       "title": "Advertise and Update",
       "social_media": {
-        "title": "Social Media Channels",
-        "desc": "Advertise your Event on our Social Media Channels",
-        "link": "View Deals"
+        "title": "Social Media Request",
+        "desc": "Promote your business on our social channels.",
+        "link": "Submit Request"
       },
       "update_info": {
-        "title": "Update Your Info",
-        "desc": "Update your Contact Information with FCHCC",
-        "link": "Update"
+        "title": "Update Information",
+        "desc": "Ensure your contact details are always current.",
+        "link": "Update Now"
       }
     },
     "events": {
-      "title": "Members Only Event",
+      "title": "Member Only Events",
       "workshop": {
-        "title": "Social Cafecito Workshop",
-        "desc": "Expand your network and learn from the best.",
-        "link": "View Details"
+        "title": "Upcoming Workshops",
+        "desc": "Join our interactive sessions to learn from industry experts and grow your professional skills.",
+        "view_all": "View All Workshops",
+        "badges": {
+          "virtual": "Virtual Workshop",
+          "in_person": "In-Person"
+        },
+        "items": {
+          "ai": {
+            "title": "AI for Small Businesses",
+            "date": "May 29, 2026 7:00 PM EST"
+          },
+          "finance": {
+            "title": "Financial Planning Basics",
+            "date": "May 15, 2026 2:00 PM EST"
+          },
+          "english": {
+            "title": "English for Business",
+            "date": "May 22, 2026 6:00 PM EST"
+          }
+        },
+        "coming_soon": "Coming Soon"
+      }
+    },
+    "contact_cards": {
+      "join": {
+        "title": "Join FCHCC",
+        "desc": "Learn how to become a member and unlock exclusive benefits for your business.",
+        "button": "Join Now"
+      },
+      "find": {
+        "title": "Find Us",
+        "address": "4651 Salisbury Road, Suite 400 Jacksonville, FL",
+        "hours": "Tue – Thu, 10 AM – 3 PM",
+        "phone": "904.346.1118",
+        "email": "fchcc@fchcc.com"
+      },
+      "touch": {
+        "title": "Get in Touch",
+        "desc": "Have questions? We're here to help you grow your business.",
+        "button": "Contact Us"
       }
     }
   },
@@ -305,13 +345,28 @@
     "learn_and_grow": {
       "title": "Learn And Grow With Us",
       "workshop": {
-        "title": "AI for Small Business",
-        "desc": "Join Our in Person and virtual Workshop",
-        "badge": "✦ Virtual Workshop",
-        "item_title": "AI for Small Businesses",
-        "date": "March 15 2026",
-        "coming_soon": "Coming Soon",
-        "view_all": "View All Workshop"
+        "title": "Upcoming Workshops",
+        "desc": "Join our interactive sessions to learn from industry experts and grow your professional skills.",
+        "view_all": "View All Workshops",
+        "badges": {
+          "virtual": "Virtual Workshop",
+          "in_person": "In-Person"
+        },
+        "items": {
+          "ai": {
+            "title": "AI for Small Businesses",
+            "date": "May 29, 2026 7:00 PM EST"
+          },
+          "finance": {
+            "title": "Financial Planning Basics",
+            "date": "May 15, 2026 2:00 PM EST"
+          },
+          "english": {
+            "title": "English for Business",
+            "date": "May 22, 2026 6:00 PM EST"
+          }
+        },
+        "coming_soon": "Coming Soon"
       },
       "courses": {
         "title": "Upcoming Workshop",
@@ -466,7 +521,16 @@
   },
   "new_members": {
     "title": "New and Renewing Members",
-    "desc": "We thank our new and renewing members for their support and partnership. And, we look forward to our continued growth!"
+    "desc": "We thank our new and renewing members for their support and partnership. And, we look forward to our continued growth!",
+    "welcome": "Welcome New Members",
+    "levels": {
+      "strategic": "Strategic Partner",
+      "corporate": "Corporate Level",
+      "business": "Business Level",
+      "entrepreneur": "Entrepreneur Level",
+      "individual": "Individual Level",
+      "non_profit": "Non-Profit Level"
+    }
   },
   "events": {
     "hero": {
@@ -527,9 +591,11 @@
       "member": "Member",
       "non_member": "Non Member",
       "sold_out": "Event Sold Out",
-      "register": "Register Now",
-      "mc_title": "Master of Ceremony",
-      "sponsor_avail": "Sponsorship opportunities are available!",
+      "mc_title": "OUR MASTER OF CEREMONIES",
+      "mc_name": "Tenikka Hughes",
+      "mc_role": "Anchor, CBS 47 & FOX 30 News Jax",
+      "mc_bio": "Tenikka Hughes is a three-time Emmy Award-winning evening anchor with CBS47 & FOX30 Action News Jax. She was born and raised in North Carolina and has worked in television news for nearly 20 years with stops in Charlotte, Memphis and Macon. Tenikka is a well-respected journalist, known for her authenticity, compelling storytelling and compassion for others. She also mentors young journalists across the country. \nTenikka has a heart for children – spending countless hours reading to kids and promoting the importance of literacy and education. She is also the driving force behind “Tenikka’s Books for Kids,” an annual book collection drive that has put nearly 30,000 free books in the hands of local children, in partnership with the Jacksonville Public Library. Tenikka graduated summa cum laude with an undergraduate degree in Mass Communications from Benedict College, an HBCU in Columbia, South Carolina. \nShe also earned a Master of Journalism from the University of Maryland at College Park. Tenikka enjoys traveling and discovering great restaurants with her husband.",
+      "sponsor_avail": "Sponsorship Opportunities Available!",
       "download_packet": "Download our packet here:",
       "press_release": "Press Release",
       "announcing": "announcing the Winners of the 2025 ATD Scholarship!"
@@ -543,18 +609,116 @@
       "dimensions": "Dimensions",
       "formats": "Formats"
     },
-    "about": {
-      "title": "About the ATD Luncheon",
-      "desc": "About the ATD Scholarship Program: The First Coast Hispanic Chamber of Commerce (FCHCC) has supported the education of Hispanics for many years with over half a million dollars in scholarships that have been awarded. Furthermore, the Hispanic Chamber of Commerce in Jacksonville (FCHCC), is proud to have impacted the lives of more than two hundred fifty (250) earnest and qualified scholarship recipients during its 30+ years of existence. FCHCC scholarship program; Achieving the Dream, not only enables students who have worked hard and achieved academic excellence to start or continue their education, it gives them the opportunity to become future successful entrepreneurs. This year, FCHCC and its Community Development Fund plans to award $20,000 in scholarships valued at $2,000.00 to each deserving and competent Hispanic Students of Northeast Florida. We invite and encourage you to support these endeavors, together we can really make the difference, first in our communities and second in our own families. Come be part of this and together we can celebrate the achievements our Hispanic community has worked so hard for. If you have any questions about our ATD luncheon, send an email to specialevents@fchcc.com",
-      "button": "Read More Stories"
+    "button": "Read More Stories"
+  },
+  "news": {
+    "title": "FCGCC News",
+    "view_all": "View All News",
+    "atd_title": "Atd Scholarship News",
+    "scholarship": {
+      "title": "ATD Scholarship",
+      "winners_celebration": "FCHCC celebrated the achievements of the 2025 ATD winners at this year’s ATD Scholarship Luncheon!",
+      "check_photos": "Check out photos from the luncheon",
+      "read_recap": "and read the recap article",
+      "here": "here",
+      "congrats_2025": "Congratulations to the 2025 ATD Winners!",
+      "luncheon_pricing": {
+        "micro": {
+          "title": "Micro Slot",
+          "desc1": "This will give you space for a 2'x3' banner (banner provided by you).",
+          "desc2": "You can also put any information you want on your table space."
+        },
+        "standard": {
+          "title": "Standard Slot",
+          "desc1": "This will give you space for a 5'x6' banner (banner provided by you).",
+          "desc2": "You can also put any information you want on your table space."
+        }
+      },
+      "desc": "FCHCC Achieving the Dream Scholarship program was designed to assist Hispanic students continue their educational endeavors.",
+      "winners_announcement": "2024 ATD Winners Announcement",
+      "press_release": "Press Release",
+      "donate": "Donate",
+      "donate_desc": " to the ATD Scholarship Fund!",
+      "view_past": "View Past ATD Scholarship Winners",
+      "apply_now": "Apply Now",
+      "laptop_donation": "Coca Cola Florida donated laptops to each of the Class of 2024 ATD Recipients! (click any images for a larger view) September 29, 2024",
+      "winners_data": [
+        {
+          "name": "Mariana Cardona",
+          "uni": "University of North Florida",
+          "degree": "Bachelors of Science in Health Administration"
+        },
+        {
+          "name": "Zarilis (Zari) Arroyo-Figueroa",
+          "uni": "University of North Florida",
+          "degree": "Nursing Degree"
+        },
+        {
+          "name": "Maria (Isabella) Isabella",
+          "uni": "University of North Florida",
+          "degree": "Degree in Psychology"
+        },
+        {
+          "name": "Victoria Morillo-Zapata",
+          "uni": "University of North Florida",
+          "degree": "Biological Science with a Minor in Psychology"
+        },
+        {
+          "name": "Diego Smith",
+          "uni": "University of Florida",
+          "degree": "Construction Management Degree"
+        },
+        {
+          "name": "Angie S. Rojas",
+          "uni": "St. Johns River State College",
+          "degree": "Degree in Early Childhood Education"
+        },
+        {
+          "name": "Mariangel Mar Cano",
+          "uni": "University of North Florida",
+          "degree": "Business Management Degree"
+        },
+        {
+          "name": "Carlos Gomez",
+          "uni": "Florida State College at Jacksonville",
+          "degree": "Degree in Supply Chain Management"
+        },
+        {
+          "name": "Giselle Rivera-Colon",
+          "uni": "Jacksonville University",
+          "degree": "Marine Science & Communications"
+        },
+        {
+          "name": "Sofia De La Rosa",
+          "uni": "Jacksonville University",
+          "degree": "Public Policy & Sociology"
+        }
+      ]
     },
-    "sponsors": {
-      "title": "Sponsors"
+    "testimonials": {
+      "member_say": "What our member say"
     },
-    "partners": {
-      "title": "FCHCC Partners"
+    "newsletter": {
+      "subscribe_title": "FCHCC Newsletter",
+      "subscribe_desc": "Signup for our monthly newsletter and stay updated with First Coast Hispanic Chamber of Commerce events and news.",
+      "contact_us": "Contact Us"
     }
   },
+  "home": {
+    "news_data": {
+      "title1": "Stories from Successful Projects",
+      "title2": "Navigating The World Of Business Strategy",
+      "title3": "Trends Shaping Marketing Strategies"
+    },
+    "testimonials_data": {
+      "text1": "As A Business Owner, I Needed A Reliable Solar Solution For My Warehouse. Their Advanced Panel Technology Has Exceeded Expectations.",
+      "text2": "Amazing service and great support team. Highly recommended for business owners."
+    }
+  },
+  "sponsors": {
+    "title": "Sponsors"
+  },
+
   "jobs": {
     "hero": {
       "title": "FCHCC JOBS BOARD",
@@ -595,6 +759,58 @@
       "desc": "Meet the board of directors committed to your success.",
       "full_bio": "Full Bio",
       "bio_desc": "{{name}} is the {{role}} at FCHCC, deeply committed to fostering growth and building strategic partnerships. With over 15 years of industry experience, they play an integral part in community development and corporate strategy."
+    },
+    "team_members": {
+      "monica": {
+        "name": "Monica HERNÁNDEZ",
+        "role": "President & CEO",
+        "bio": "Monica Hernandez is a dynamic executive and community leader, currently serving as Vice President of Asset Services Control within Global Markets Operations at Bank of America."
+      },
+      "willie": {
+        "name": "Wilfredo (Willie) Gonzalez",
+        "role": "Chair of the Board",
+        "bio": "Wilfredo J. Gonzalez is a retired District Director for the U. S. Small Business Administration (SBA)."
+      },
+      "sandy": {
+        "name": "Sandra (Sandy) MARTIN",
+        "role": "Vice Chair",
+        "bio": "Sandra (Sandy) Martin is an Advanced IT Systems Analyst at Florida Blue."
+      },
+      "sabrina": {
+        "name": "Sabrina MARCOS SMITH",
+        "role": "Director-at-Large",
+        "bio": "Sabrina Marcos Smith is a Cuban American attorney at Fisher Tousey Leas & Ball."
+      },
+      "michelle": {
+        "name": "Michelle KAPLAFKA",
+        "role": "Secretary",
+        "bio": "Michelle Kaplafka is a seasoned leader with 16 years of experience at Florida Blue."
+      },
+      "beatrice": {
+        "name": "Beatrice CHANDLER",
+        "role": "Director-at-Large",
+        "bio": "Beatrice Chandler is Owner/General Operations Manager for Latin Creations."
+      },
+      "leon": {
+        "name": "Leon Carrero",
+        "role": "Director-at-Large",
+        "bio": "Mr. Leon Carrero currently serves as a Project Manager of the Military and Interagency and International Services Branch for the U.S. Army Corps of Engineers (USACE)."
+      },
+      "helga": {
+        "name": "Helga Langthon",
+        "role": "Director-at-Large",
+        "bio": "Helga P. Langthon is the Vice President and Owner of SOHO Network Solutions, Inc."
+      },
+      "joel": {
+        "name": "Joel Gonzalez",
+        "role": "Director-at-Large",
+        "bio": "Joel Gonzalez is CEO, Team Leader and Realtor at Real 4 Jax Team – Rise Realty Advisors."
+      },
+      "cindy": {
+        "name": "Cindy Caldwell",
+        "role": "Director-at-Large",
+        "bio": "Cindy Caldwell is the Co-Founder of Ramplify, a Minority- and Women-Owned Small Business (MWOSB)."
+      }
     }
   },
   "committee": {
@@ -843,5 +1059,327 @@
         ]
       }
     }
+  },
+  "join_us": {
+    "hero": {
+      "title": "Join FCHCC Today",
+      "subtitle": "Thank you for your interest in becoming an FCHCC member!",
+      "description": "This is your opportunity to strengthen professional relationships, promote your business, and reach out to northeast Florida's burgeoning Hispanic community. The annual membership period runs for one year from the date a new member makes payment and renewable each year on that anniversary date.",
+      "ready_to_join": "Ready to Join",
+      "renew_membership": "Renew your membership here!",
+      "grace_period": "Grace Period:",
+      "grace_period_text": "Corporate Members get 90 days, others 30 days to remain active.",
+      "good_standing": "Good Standing:",
+      "good_standing_text": "Maintained upon payment of dues."
+    },
+    "mission": {
+      "title": "Our Mission",
+      "description": "Our members come from all sectors of the community and rely on the FCHCC to:",
+      "item1": "Create an interactive forum for everyone interested in a vibrant, multicultural economy",
+      "item2": "Promote business opportunities through social interaction and education",
+      "item3": "Positively impact and contribute to the regional economy",
+      "item4": "Encourage and promote successful business practices within the Hispanic community",
+      "item5": "Foster unity among all Hispanics in the business community and beyond"
+    },
+    "membership_levels": {
+      "badge": "Membership Packages",
+      "title": "Membership Levels + Fees",
+      "description": "Choose the membership tier that best fits your organization and goals",
+      "join_now": "Join Now",
+      "tiers": {
+        "strategic_partner": "Strategic Partner Trustee",
+        "leadership": "Leadership Trustee",
+        "large_corp": "Large Corporation 2",
+        "small_biz": "Small Business 2"
+      },
+      "features": {
+        "unlimited_associates": "Unlimited associates",
+        "leadership_benefits": "All leadership benefits",
+        "premier_networking": "Premier networking",
+        "max_visibility": "Maximum visibility",
+        "enhanced_benefits": "Enhanced benefits",
+        "priority_placement": "Priority placement",
+        "leadership_events": "Leadership events",
+        "corporate_benefits": "Corporate benefits",
+        "networking_access": "Networking access",
+        "event_sponsorship": "Event sponsorship",
+        "associates_4": "4 associates",
+        "growth_tools": "Business growth tools",
+        "networking_events": "Networking events",
+        "marketing_support": "Marketing support"
+      }
+    },
+    "discounts": {
+      "title": "Multi-Year Agreement Discounts",
+      "off": "OFF",
+      "agreement_2": "2 Year Agreement",
+      "agreement_3": "3 Year Agreement",
+      "processing_fee": "*Additional credit card processing fee of 3% applies"
+    },
+    "benefits": {
+      "title": "Member Benefits",
+      "description": "Check out all the benefits that come with each Membership level. It's a great way to determine what membership type works best for you.",
+      "button": "Click here to view all the Member Benefits"
+    },
+    "associate_policy": {
+      "title": "Associate Member (AM) Policy",
+      "description": "An Associate Member is an employee of a FCHCC corporate or business member organization. Associate Members are entitled to member benefits, discounts, and attendance privileges to the monthly professional networking events. Below is the number of associates that FCHCC active members can bring to any networking event:",
+      "footer_note": "Benefits and fees are subject to change by the Board of Directors.",
+      "member_types": {
+        "student": "Student/Individual Members",
+        "small_biz_1": "Small Business 1 / Non-Profit 1 501(c)3",
+        "small_biz_2": "Small Business 2 / Non-Profit 2 501(c)3",
+        "non_profit_3": "Non-Profit 3 501(c)3",
+        "large_corp": "Large Corporations",
+        "leadership": "Leadership Trustees",
+        "strategic": "Strategic Partners"
+      },
+      "unlimited": "Unlimited"
+    }
+  },
+  "coming_soon": {
+    "subtitle": "Something Amazing is Brewing",
+    "title_part1": "Coming",
+    "title_part2": "Soon",
+    "description": "We are working on something new and exciting that will exceed your expectations. Stay connected with us!",
+    "days": "Days",
+    "hours": "Hours",
+    "minutes": "Minutes",
+    "seconds": "Seconds"
+  },
+  "membership_benefits": {
+    "title": "Membership Benefits",
+    "description": "Below you’ll find our Gold and Platinum Memberships that break down the benefits for both tiers.",
+    "gold_title": "GOLD MEMBERSHIP LEVEL",
+    "gold_button": "Download the Gold Member Benefits",
+    "platinum_title": "PLATINUM MEMBERSHIP LEVEL",
+    "platinum_button": "Download the Platinum Member Benefits",
+    "downloading": "Downloading..."
+  },
+  "calendar": {
+    "monthly_view": "Monthly View",
+    "weekly_view": "Weekly View",
+    "list_view": "List View",
+    "select_month": "Select Month",
+    "week_of": "Week of",
+    "event_title": "FCHCC Social Cafecito Meeting",
+    "event_time": "8:30 AM – 10:00 AM",
+    "event_description": "FCHCC Members: Mark your calendars to join us at the monthly Social Cafecito event! These meetings are an ideal space for our members to exchange ideas and establish professional relationships. With the participation of the most prominent business leaders in our community, it ensures an enriching experience.",
+    "event_extra_info": "Its purpose is to bring in speakers every month who will cover topics in: marketing, capital, finance, legal, communities and more! Expand your business network and learn from the best. Social Cafecito meets each month on the 3rd Friday. Not an FCHCC member? Join here.",
+    "event_cta": "Be sure to look out for the meeting invites to learn when registration opens. You can subscribe to our mailing list at fchcc.com.",
+    "join_here": "Join here.",
+    "fchcc_website": "fchcc.com.",
+    "active_member_invite": "Invite for active members, went to submit events for FCHCC!",
+    "submit_active_members": "Submit active members,",
+    "click_here": "click here",
+    "join_now": "join now",
+    "subscribe_mailing_list": "Subscribe to our mailing list",
+    "subscribe_mailing_list_below": "Subscribe to our mailing list on below:",
+    "subscribe_here": "subscribe here",
+    "subscribe": "Subscribe",
+    "days": {
+      "sun": "Sun",
+      "mon": "Mon",
+      "tue": "Tue",
+      "wed": "Wed",
+      "thu": "Thu",
+      "fri": "Fri",
+      "sat": "Sat"
+    }
+  },
+  "mentorship": {
+    "hero": {
+      "title": "What is the Mentorship Program?",
+      "paragraphs": [
+        "The mentorship program is a structured one-to-one relationship within a professional or academic setting with the goal to connect people, increase knowledge and build skills for future goals and milestones. The mentorship program is designed to create a partnership which can be rewarding to both people, personally and professionally. It’s an opportunity to develop communication skills, expand viewpoints, and consider new ways of approaching situations.",
+        "Our Mentorship Program founded and led by Monica Hernandez, FCHCC President was created to help students learn and gain skills through their mentoring with one of our Business Corporate members who has extensive experience as a business owner and/or managing and running an organization."
+      ]
+    },
+    "criteria": {
+      "title": "Criteria to Participate",
+      "description": "The Mentorship Program is for students of Hispanic/Latino descent who are pursuing an Associate's, Bachelor's or Master's Degree and meet the following requirements:",
+      "requirements": [
+        "U.S. citizen or U.S. permanent resident",
+        "Pursuing an Associate's, Bachelor's or Master's degree",
+        "At least one parent or grandparent of Hispanic/Latino origin from a Spanish speaking country",
+        "A resident of one of the five First Coast counties: Duval, Baker, St. Johns, Clay or Nassau",
+        "Must have applied for the ATD Scholarship and did not win (need to provide documentation of applying)"
+      ]
+    },
+    "attributes": {
+      "mentor": {
+        "title": "Attributes of a Good Mentor:",
+        "items": [
+          "Relevant Expertise/Knowledge",
+          "Enthusiasm for Sharing that Expertise",
+          "A Respectful Attitude",
+          "Eagerness to Invest in Others",
+          "The Ability to Give Honest and Direct Feedback",
+          "Reflective Listening and Empathy",
+          "Willingness to be a Sponsor"
+        ]
+      },
+      "mentee": {
+        "title": "Attributes of a Good Mentee:",
+        "items": [
+          "A good mentee is motivated to succeed.",
+          "Time Management Skills",
+          "Positive Attitude",
+          "Respect",
+          "Willingness to Learn",
+          "Clear Communication",
+          "Confidence"
+        ]
+      }
+    },
+    "goals": {
+      "title": "Goals of the Mentorship Program",
+      "description": "In its simplest form, mentoring people to help them grow and develop. The Program leverages the five basic mentoring principles and each mentoring pair will agree on the S.M.A.R.T [Specific, Measurable, Actionable, Realistic and Time oriented] goals of the partnership."
+    },
+    "mentor_benefits": {
+      "title": "Benefits to Mentors",
+      "items": [
+        {
+          "label": "Build leadership skills",
+          "description": "helps develop your ability to motivate and encourage others. This can help you become a better business owner, manager, employee, and team member."
+        },
+        {
+          "label": "Improve communication skills",
+          "description": "mentees may come from a different background or environment, the two of you may not \"speak the same language.\" This may force you to find a way to communicate more effectively as you navigate your way through the mentoring relationship."
+        },
+        {
+          "label": "Learn new perspectives",
+          "description": "working with someone less experienced and from a different background, you can gain a fresh perspective on things and learn a new way of thinking which can help in your work life as well as your personal life."
+        },
+        {
+          "label": "Advance your career",
+          "description": "Refining leadership skills can strengthen your on-the-job performance, perhaps helping you build a business, get a promotion to higher management or into management in the first place. Showing that you've helped others learn and grow is becoming more and more essential to advancement in today's business world."
+        },
+        {
+          "label": "Gain personal satisfaction",
+          "description": "It is personally fulfilling to know that you've directly contributed to someone's growth and development. Seeing your mentee succeed as result of your input is a reward in itself."
+        }
+      ]
+    },
+    "program_benefits": {
+      "title": "The mentorship program benefits both the mentee and mentor in the following ways:",
+      "items": [
+        "Mentees can expand their knowledge and skills, gain valuable advice from a more experienced person, and build their professional networks",
+        "Helps identify career paths for students and support students’ personal growth.",
+        "Provides an opportunity for students to learn and practice professional networking skills.",
+        "Equips students with the understanding and tools to make ethical and informed decisions.",
+        "Shapes students into confident graduates with excellent leadership, communication, critical thinking, professionalism and other skills important to the transition to the world of work.",
+        "Helps students identify and pursue opportunities for employment related to their degrees."
+      ]
+    }
+  },
+  "welcome": {
+    "title": "Welcome Back!",
+    "subtitle": "We're glad to see you",
+    "portal_title": "Members Portal",
+    "portal_desc": "Access your exclusive member benefits and resources",
+    "enter_btn": "Enter Member Portal",
+    "celebrating": "Celebrating 32 years of excellence and community"
+  },
+  "hiring_card": {
+    "corporate": {
+      "title": "FCHCC Corporate Members",
+      "subtitle": "Submit your Job Listings FREE (applies to Membership levels of Non-profit #1 through Strategic Partner)",
+      "card_title": "Corporate Member",
+      "card_desc": "website and social media",
+      "btn": "Get Started",
+      "footer_posted": "Please allow up to 48 hours for your listing to be posted.",
+      "footer_contact": "If you have any questions, please contact Kim McDougal, Vice President of Interactive Communications at"
+    },
+    "non_member": {
+      "title": "Submit a Job Listing",
+      "card_title": "Non Member",
+      "card_desc": "website and social media",
+      "btn": "Get Started",
+      "durations": {
+        "month": "Month",
+        "months": "Months"
+      }
+    }
+  },
+  "about_full_bios": {
+    "hero": {
+      "title": "Empowering Hispanic Businesses for Over 30 Years",
+      "desc": "Join a community dedicated to your growth, success, and connection."
+    },
+    "team": {
+      "title": "Our Leadership Team",
+      "desc": "Dedicated professionals working to empower the Hispanic business community.",
+      "full_bio": "View Full Bio"
+    },
+    "recognition": {
+      "title": "Recognition & Awards"
+    },
+    "team_members": {
+      "monica": {
+        "name": "Monica HERNÁNDEZ",
+        "role": "President & CEO",
+        "bio": "Monica Hernandez is a dynamic executive and community leader, currently serving as Vice President of Asset Services Control within Global Markets Operations at Bank of America. With over 15 years of experience in finance and operations, she has led high-performing teams across Deutsche Bank and Bank of America, while also serving on the Global Diversity & Inclusion Board and co-chairing the Hispanic Organization for Leadership & Advancement (HOLA).Monica holds a Master’s in Finance and Marketing and a Strategic Management certificate from Harvard. As President of the First Coast Hispanic Chamber of Commerce, she has twice led the organization to national recognition as Chamber of the Year. Recognized as an Ultimate CEO, Woman of Influence, and Top 40 Under 40, Monica bridges boardrooms and communities—championing inclusive growth, cultural pride, and strategic leadership at every level."
+      },
+      "willie": {
+        "name": "Wilfredo (Willie) Gonzalez",
+        "role": "Chair of the Board",
+        "bio": "Wilfredo J. Gonzalez is a retired District Director for the U. S. Small Business Administration (SBA). He served the small businesses of North Florida since December 1996. Gonzalez served as the District Director for the Washington D.C. District Office from May 1994. Gonzalez was responsible for delivering SBA programs and services to 43 Counties in North Florida. He oversaw the daily operations of federal staff located in Jacksonville and Orlando, Florida. Under his leadership, the district saw a steady increase in government backed lending activity since the economic downturn of 2009. Prior to this appointment, Gonzalez held several leadership roles including Associate Administrator for Minority Small Business and Capital Ownership Development at the SBA; Regional Director for the Department of Commerce, Minority Business Development Agency in Atlanta, Georgia; Staff Director with the U. S. Commission on Civil Rights; Associate Director of EEO and Civil Rights with the U. S. Department of State; Country Director of the Peace Corps in Ghana, West Africa; Chief of Operations for Peace Corps Latin America Region; and Deputy Director of the Peace Corps in Bogota, Colombia. Gonzalez started his federal career as a HEW Fellow in 1976; he subsequently served as Special Assistant to the Deputy Assistant Secretary at the Department of Labor. Gonzalez earned his Bachelors of Arts from the University of Puerto Rico (Magna Cum Laude). He also attended the John F. Kennedy School of Government at Harvard University, Cambridge, Massachusetts, and the Federal Executive Institute in Charlottesville, Virginia. Gonzalez serves the community through his membership in various boards and organizations including the Regional Community Institute (RCI) of Northeast Florida, Inc.; the Sheriff’s Advisory Board of the Police Athletic League (PAL); the Board of the Jacksonville Zoo & Gardens; the SBDC Advisory Council; the UNF Student Affairs Community Council; the Community Advisory Board for WJCT (PBS); the Board for Visit Jacksonville; and the Northeast Florida Global Cities Initiative. He previously served on the Board of Trustees of the University of North Florida, the Citizens Forum of the Florida Bar, the Judicial Nominating Commission for the 4th Judicial District, the Board of Directors of Habitat for Humanity (HABIJAX), the North Florida Hispanic Leadership Alliance, the Board of Directors of the National Council on Community and Justice, the Jacksonville Mayor’s Hispanic American Advisory Board, the Florida State Advisory Committee for the U.S. Commission on Civil Rights, the oversight committee for the Better Jacksonville Plan, and the Sports & Entertainment Commission for the City of Jacksonville.In 2014 Gonzalez received the NFL Hispanic Heritage Leadership Award from the Jacksonville Jaguars® and the Founder’s Award from Latina Style Magazine. Gonzalez is a Veteran of the United States Navy. He and his wife, Rocelia, are the parents of three children and reside in Jacksonville."
+      },
+      "sandy": {
+        "name": "Sandra (Sandy) MARTIN",
+        "role": "Vice Chair",
+        "bio": "Sandra (Sandy) Martin is an Advanced IT Systems Analyst at Florida Blue. Strong analytical and problem-solving skills allow her to resolve business application issues within the IT environment experienced by our providers. Sandy has been with Florida Blue since 2003. Prior to her current position within Florida Blue, her career path included Customer Service Supervisor, and Assistant Manager in a Retail environment.During her tenure at Florida Blue, Sandy has been instrumental in championing diversity and inclusion initiatives within the employee base. Serving on the diversity-based GuideWell Community HOLA, (Hispanic Organization for Learning and Advancement), since 2011, she has often been a voice for many regarding diversity and cultural competency. Sandy has been serving as the HOLA Community’s Chair since 2014. Sandy’s passion for being of service to the community, celebrating the beauty and value of the Hispanic culture, and striving towards facilitating the success of Hispanic professionals and Hispanic entrepreneurs, both within Florida Blue and in the Jacksonville Community at large, is the driving force of this consummate professional."
+      },
+      "sabrina": {
+        "name": "Sabrina MARCOS SMITH",
+        "role": "Director-at-Large",
+        "bio": "Sabrina Marcos Smith is a Cuban American attorney at Fisher Tousey Leas & Ball. Her practice involves business, real estate, commercial and trust and fiduciary litigation. She graduated from the University of North Carolina at Chapel Hill where she was a recipient of the Joseph E. Grace and Needham Pogue Scholarship. Following her time at UNC, Sabrina received her Juris Doctorate from Saint Louis University School of Law and was admitted to the Florida Bar. Prior to joining Fisher Tousey, Sabrina served as an Assistant State Attorney for the Fourth Judicial Circuit in Jacksonville, Florida, where she tried over a dozen cases from jury selection to verdict. Sabrina then practiced as a general civil litigator in the Jacksonville, Florida office of a national law firm. Sabrina tailors her practice to catering to the needs of business owners in Northeast Florida, volunteers as Co-Chair of the Hispanic and Latino Interest Committee of the Jacksonville Bar Association, the Rotary Club of Downtown Jacksonville and is alumna of the 2019 class of Leadership Jacksonville: Next Generation. Sabrina was recently recognized in the 2024 edition of Best Lawyers: Ones to Watch® for her outstanding professional excellence in private practice."
+      },
+      "michelle": {
+        "name": "Michelle KAPLAFKA",
+        "role": "Secretary",
+        "bio": "Michelle Kaplafka is a seasoned leader with 16 years of experience at Florida Blue. She currently leads a team of 25+ employees within the Member Contact Center. She has a passion for developing talent and engaging in self-development. She joined one of Florida Blue’s Employee Resource Groups, HOLA (Hispanic Organization for Learning and Advancement) as the Marketplace Director in 2019. Michelle was born in Jacksonville, FL and raised in a small town called Callahan. She is an active member of Live Oak Baptist Church and is involved in mission outreaches, such as food and education for children of Ecuador. She received her Associate’s Degree from Florida State College of Jacksonville and is currently pursuing her Bachelor’s in Business Management. "
+      },
+      "beatrice": {
+        "name": "Beatrice CHANDLER",
+        "role": "Director-at-Large",
+        "bio": "Beatrice Chandler is Owner/General Operations Manager for Latin Creations. She is a HR Specialist with over nine years of experience recruitment and employment processes. Highly driven Recruiter who maintains a positive attitude under pressure and welcomes the challenge and responsibility of producing results quickly. She focuses on building and maintaining candidate relationships to keep a consistent talent pipeline. Some of her achievements are: Founded and managing a restaurant for ten years, successful and thriving.Devised a successful recruiting plan for hard to fill positions, which resulted in filling multiple positions when they became available.Implemented new strategies to streamline recruitment and onboarding processes. Filled over a hundred hires in a two to three week period. Revamped the orientation process for all new hires, which was implemented company wide."
+      },
+      "leon": {
+        "name": "Leon Carrero",
+        "role": "Director-at-Large",
+        "bio": "Mr. Leon Carrero currently serves as a Project Manager of the Military and Interagency and International Services Branch, Programs and Project Management Division for the U.S. Army Corps of Engineers (USACE) in the Jacksonville District. Prior to joining the USACE, Mr. Carrero worked at Aerostar Environmental Services where he was a Program Manager for State, Local and Federal clients for almost 30 years. Mr. Carrero was born in Venezuela arrived in the United States in 1982 to attend college. He has been residing permanently in Jacksonville, Florida for the past 32 years. His entire professional career has been developed in Jacksonville and has participated in many community initiatives where he hasreceived several recognitions.Community Development: Past-President, First Coast Hispanic Chamber of Commerce. Received Certificate of Appreciation in 2006 from the US Department of Homeland Security for participating in the Federal Law Enforcement Training Center’s National Hispanic Heritage Month Celebration. Chaired committees with the First Coast Hispanic Chamber of Commerce and the Hispanic Mayor’s Advisory Board that awarded scholarships to Hispanic college students. Past Chair, City of Jacksonville Mayor’s Hispanic American Advisory Board. As chair of the MHAAB, received certificate of Appreciationfrom the US Army Corps of Engineers – Jacksonville District in 2010 for participating in the District’s Hispanic Heritage Month Celebrations. Past-President of the Rotary Club of Southpoint, Jacksonville. Graduate Leadership Jacksonville Class of 2003. Graduate FBI Citizen’s Academy Class of 2012. Past Member of City of Jacksonville Task Force on Consolidated Government, 2013-2014. Make a Wish Volunteer, 2016. Past member University of North Florida Student Affairs Community Council from 2016-2019 Past member of the Duval County Supervisor of Elections Advisory Panel – 2017. In 2015, coordinated with Hispanic community leaders and the Duval County Supervisor of Elections office to increase Hispanic Voter registration and participation in future presidential elections."
+      },
+      "helga": {
+        "name": "Helga Langthon",
+        "role": "Director-at-Large",
+        "bio": "Helga P. Langthon is the Vice President and Owner of SOHO Network Solutions, Inc., a Florida-based import/export company specializing in the forensics and identification industry. The company was the recipient of the 2010 SBA Southeast Region Exporter of the Year award. In her role, Langthon focuses on developing new markets through a wide distribution network while establishing strong relationships with SOHO’s suppliers. Her responsibilities include overseeing day-to-day operations, as well as hiring and training new personnel. She has more than 20 years of experience in forensics, law enforcement, and international trade. Langthon previously worked for Armor Holdings from May 2000 to July 2006 as a Sales Manager. In 2006, she was transferred to Switzerland to direct Armor Forensics International AG, the European subsidiary of Armor Holdings. She returned to the U.S. in October 2007 and was promoted to Global Sales Manager for BAE Systems. During her tenure at Armor/BAE, she was responsible for analyzing, directing, and implementing sales strategies for products such as narcotics identification kits, evidence collection tools, fingerprinting technology, and DNA sampling. She managed gross sales exceeding $15 million and oversaw operations for more than 250 accounts worldwide. In 1998, Langthon graduated from the University of Texas at Arlington with a B.A. in Liberal Arts, concentrating in International Business and Spanish. She is an active participant in international trade initiatives with the Jacksonville Chamber of Commerce and U.S. Commercial Services. She has also served as a Division Representative for the International Association for Identification (IAI), on the NEFL SBDC Advisory Council, and as Board President of The HILL of Northeast Florida, the Douglas Anderson School of the Arts Orchestra Boosters, and the LaVilla School of the Arts Dance Boosters. Additionally, she served as Vice President of Ways and Means for the Pine Forest School of the Arts PTA and was honored as one of the 2019 Volunteers in Medicine Women with Heart. She is married to Mauricio, and they have three children: Daniela (20), Julieta (15), and Alejandro (12)."
+      },
+      "joel": {
+        "name": "Joel Gonzalez",
+        "role": "Director-at-Large",
+        "bio": "Joel Gonzalez is CEO, Team Leader and Realtor at Real 4 Jax Team – Rise Realty Advisors. Their mission as realtors® is to make sure that their clients do not feel pressured in their decision-making as they guide them through the exciting process of home ownership. Their organization assists people with taking advantage of opportunities that will allow them to get their first or next home starting with a free no-commitment consultation. Joel is an analytical and achievement driven MBA with broad international experience in quality, procurement, logistics, inventory and supply chain management. Great managerial and organizational skills. Improvement and detail-oriented individual with ability to work across all levels of the organization. Some of his accomplishments include: Successful leadership role results in SC&L (Supply Chain and Logistics) processes in two different industries: electronics & auto; Extensive experience in inventory management, warehousing, sourcing, global procurement, and ocean&air traffic management; Proven track record as a multi-task team player in the execution of ISO audits, corporate program procedures, project management, governmental affairs, control of global operations, top management decision making contribution; Multilingual ability with good proficiency in English, Spanish and Portuguese. Basic knowledge of French, German and Italian."
+      },
+      "cindy": {
+        "name": "Cindy Caldwell",
+        "role": "Director-at-Large",
+        "bio": "Cindy Caldwell is the Co-Founder of Ramplify, a Minority- and Women-Owned Small Business (MWOSB) dedicated to helping organizations amplify their impact. Ramplify partners with clients to co-create custom infrastructures that strengthen branding and effectively communicate their mission to key audiences, including practitioners and community stakeholders. Alongside her team, Cindy provides specialized support in strategic planning, professional learning, grant writing, and project management for nonprofits, foundations, and state/federal agencies. With over 20 years in education, Cindy is a seasoned expert in designing and leading professional development on topics such as de-escalation, trauma-informed practices, and creating safe, culturally affirming learning environments. The daughter of an immigrant who built and successfully ran her own insurance company for over 35 years, Cindy inherited a deep-rooted entrepreneurial spirit and work ethic from both of her parents. She spent most of her life and career in Miami, FL, before relocating to Jacksonville in 2021. Cindy has been married to her husband, Charles, for 20 years and is a proud mom to Emily, a seventh grader. In her free time, she enjoys performing improv on stage and perfecting her archery skills with her compound bow."
+      }
+    }
+  },
+  "months": {
+    "january": "January",
+    "february": "February",
+    "march": "March",
+    "april": "April",
+    "may": "May",
+    "june": "June",
+    "july": "July",
+    "august": "August",
+    "september": "September",
+    "october": "October",
+    "november": "November",
+    "december": "December"
   }
 }

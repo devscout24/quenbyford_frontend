@@ -1,6 +1,7 @@
 import { useState } from "react";
 import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
+import { useTranslation } from "react-i18next";
 
 // --- Types ---
 interface Membership {
@@ -12,31 +13,32 @@ interface Membership {
   image: string;
 }
 
-// --- Data ---
-const MEMBERSHIPS: Membership[] = [
-  {
-    id: 1,
-    title: "GOLD MEMBERSHIP LEVEL",
-    color: "#FFB800",
-    border: "#FFB800",
-    buttonText: "Download the Gold Member Benefits",
-    image:
-      "/images/Gold-Level-Membership-Brochure-FCHCC-cover 1.png",
-  },
-  {
-    id: 2,
-    title: "PLATINUM MEMBERSHIP LEVEL",
-    color: "#00BFFF",
-    border: "#00BFFF",
-    buttonText: "Download the Platinum Member Benefits",
-    image:
-      "/images/Platinum-Level-Membership-Brochure-FCHCC-cover-450x600 1.png",
-  },
-];
-
 // --- Component ---
 const MemberBenefits = () => {
+  const { t } = useTranslation();
   const [loadingId, setLoadingId] = useState<number | null>(null);
+
+  // --- Data ---
+  const MEMBERSHIPS: Membership[] = [
+    {
+      id: 1,
+      title: t('membership_benefits.gold_title'),
+      color: "#FFB800",
+      border: "#FFB800",
+      buttonText: t('membership_benefits.gold_button'),
+      image:
+        "/images/Gold-Level-Membership-Brochure-FCHCC-cover 1.png",
+    },
+    {
+      id: 2,
+      title: t('membership_benefits.platinum_title'),
+      color: "#00BFFF",
+      border: "#00BFFF",
+      buttonText: t('membership_benefits.platinum_button'),
+      image:
+        "/images/Platinum-Level-Membership-Brochure-FCHCC-cover-450x600 1.png",
+    },
+  ];
 
   const downloadPDF = async (id: number): Promise<void> => {
     const element = document.getElementById(`card-${id}`);
@@ -87,10 +89,10 @@ const MemberBenefits = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-[50px] font-bold text-[#1D91E7] mb-6">
-            Membership Benefits
+            {t('membership_benefits.title')}
           </h2>
           <p className="text-black max-w-2xl text-xl mx-auto">
-            Below you’ll find our Gold and Platinum Memberships that break down the benefits for both tiers.
+            {t('membership_benefits.description')}
           </p>
         </div>
 
@@ -132,7 +134,7 @@ const MemberBenefits = () => {
              flex items-center justify-center"
 >
   {loadingId === item.id
-    ? "Downloading..."
+    ? t('membership_benefits.downloading')
     : item.buttonText}
 </button>
             </div>

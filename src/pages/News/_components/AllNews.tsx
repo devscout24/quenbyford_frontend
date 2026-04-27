@@ -26,7 +26,7 @@ const AllNews = () => {
           <Link to={`/news/${news.id}`} key={news.id} className="w-full block hover:opacity-80 transition-opacity cursor-pointer">
             <img
               src={news.image}
-              alt={news.title}
+              alt={t(news.title)}
               className="rounded-lg w-full h-75 object-cover"
             />
 
@@ -35,7 +35,7 @@ const AllNews = () => {
             </p>
 
             <h3 className="font-medium text-[22px] capitalize text-black">
-              {news.title}
+              {t(news.title)}
             </h3>
           </Link>
         ))}

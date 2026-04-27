@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useTranslation } from "react-i18next";
+
 
 const partners = [
   { name: "Latina", logo: "/images/image1.png" },
@@ -12,7 +12,7 @@ const partners = [
 ];
 
 const CorporateMarquee = () => {
-  const { t } = useTranslation();
+
 
   return (
     <motion.div
@@ -30,7 +30,7 @@ const CorporateMarquee = () => {
 
 
         <h2 className="text-xl font-bold text-[#000000] whitespace-nowrap">
-          {t("partners.corporate_partners")}
+          Corporate Partners
         </h2>
 
 

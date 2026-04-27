@@ -21,9 +21,9 @@ export default function PreviousEvents() {
     status: t("scholarship.prev.status"),
 
     mc: {
-      name: "Tenikka Hughes ",
-      role: "Anchor, CBS 47 & FOX 30 News Jax",
-      bio: t("scholarship.prev.mc_bio", { defaultValue: "Tenikka Hughes is a three-time Emmy Award-winning evening anchor with CBS47 & FOX30 Action News Jax. She was born and raised in North Carolina and has worked in television news for nearly 20 years with stops in Charlotte, Memphis and Macon.Tenikka is a well-respected journalist, known for her authenticity, compelling storytelling and compassion for others. She also mentors young journalists across the country. \nTenikka has a heart for children – spending countless hours reading to kids and promoting the importance of literacy and education. She is also the driving force behind “Tenikka’s Books for Kids,”\n an annual book collection drive that has put nearly 30,000 free books in the hands of local children, in partnership with the Jacksonville Public Library. Tenikka graduated summa cum laude with an undergraduate degree in Mass Communications from Benedict College, an HBCU in Columbia, South Carolina.\n She also earned a Master of Journalism from the University of Maryland at College Park. Tenikka enjoys traveling and discovering great restaurants with her husband. " }),
+      name: t("scholarship.prev.mc_name"),
+      role: t("scholarship.prev.mc_role"),
+      bio: t("scholarship.prev.mc_bio"),
       image: "/images/Tenikka-Hughes-488x600 1.png",
     },
   };
@@ -80,7 +80,7 @@ export default function PreviousEvents() {
           {eventData.status}
         </h4>
         <p className="text-black text-lg sm:text-[24px] font-normal mt-4">
-          Read our  {" "}
+          {t("scholarship.prev.read_our", { defaultValue: "Read our " })}
           <a href="#" className="text-[#1E88E5] hover:underline">
             {t("scholarship.prev.press_release")}
           </a>

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { eachDayOfInterval, format, isSameDay } from "date-fns";
+import { useTranslation } from "react-i18next";
 
 interface WeeklyViewProps {
   currentWeekStart: Date;
@@ -9,6 +10,7 @@ interface WeeklyViewProps {
 }
 
 const WeeklyView = ({ currentWeekStart, currentWeekEnd, days, events }: WeeklyViewProps) => {
+  const { t } = useTranslation();
   const [hoveredEvent, setHoveredEvent] = useState<string | null>(null);
 
   const weeklyDays = eachDayOfInterval({
@@ -21,7 +23,7 @@ const WeeklyView = ({ currentWeekStart, currentWeekEnd, days, events }: WeeklyVi
       <div className="w-full max-w-[850px] mx-auto rounded-xl border border-slate-200 shadow-xl mt-8">
         {/* Orange Header */}
         <div className="bg-[#F97316] p-4 text-center rounded-t-xl">
-          <h3 className="text-white text-xl font-bold">Week of {format(currentWeekStart, 'MMMM d, yyyy')}</h3>
+          <h3 className="text-white text-xl font-bold">{t('calendar.week_of')} {format(currentWeekStart, 'MMMM d, yyyy')}</h3>
         </div>
 
         {/* Weekly Grid */}

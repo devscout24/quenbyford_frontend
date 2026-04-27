@@ -49,11 +49,12 @@ const JobHero = () => {
   {t("jobs.hero.hiring_btn")}
 </Link>
 
-            <Link to="/availablejobs"
-
-              className="border-white border-2 text-white w-full sm:w-55 px-6 md:px-8 py-3 rounded-full font-bold hover:text-white transition shrink-0"
-            >{t("jobs.hero.available_btn")}
-            </Link>
+           <Link 
+  to="/availablejobs"
+  className="border-white border-2 text-white w-full sm:w-55 px-6 md:px-8 py-3 rounded-full font-bold text-center hover:text-white transition shrink-0"
+>
+  {t("jobs.hero.available_btn")}
+</Link>
           </div>
         </div>
         <SubscribePopup

@@ -1,18 +1,14 @@
 
+import { useTranslation } from "react-i18next";
 
-const BENEFITS_DATA = {
-  title: "The mentorship program benefits both the mentee and mentor in the following ways:",
-  items: [
-    "Mentees can expand their knowledge and skills, gain valuable advice from a more experienced person, and build their professional networks",
-    "Helps identify career paths for students and support students’ personal growth.",
-    "Provides an opportunity for students to learn and practice professional networking skills.",
-    "Equips students with the understanding and tools to make ethical and informed decisions.",
-    "Shapes students into confident graduates with excellent leadership, communication, critical thinking, professionalism and other skills important to the transition to the world of work.",
-    "Helps students identify and pursue opportunities for employment related to their degrees."
-  ]
-};
+const ProgramBenefits = () => {
+  const { t } = useTranslation();
 
-const ProgramBenefits = ({ data = BENEFITS_DATA }) => {
+  const data = {
+    title: t("mentorship.program_benefits.title"),
+    items: t("mentorship.program_benefits.items", { returnObjects: true }) as string[]
+  };
+
   return (
     <section className="w-full bg-white pb-16 px-4">
       {/* Container restricted to 1000px */}

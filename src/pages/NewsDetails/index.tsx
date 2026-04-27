@@ -1,5 +1,5 @@
 import { useParams, Link, useNavigate } from "react-router-dom";
-import { NewsSingleDetailPage } from "./_components/SingleDetials";
+import { NewsSingleDetailPage } from "./_components/SingleDetails";
 import { newsData } from "@/pages/Home/_components/FcgccNews";
 import { useTranslation } from "react-i18next";
 
@@ -28,7 +28,7 @@ const NewsDetailsPage = () => {
   };
 
   const eventDataMock = {
-    title: matchedNews.title,
+    title: t(matchedNews.title),
     date: matchedNews.date,
     banner: matchedNews.image,
     content: [

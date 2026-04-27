@@ -27,24 +27,24 @@ const LearnAndGrow = () => {
   const workshopData = [
     {
       id: 1,
-      badge: "Virtual Workshop",
-      title: "AI for Small Businesses",
-      date: "May 29, 2026 7:00 PM EST",
-      buttonText: "Coming Soon",
+      badge: t('community_page.learn_and_grow.workshop.badges.virtual'),
+      title: t('community_page.learn_and_grow.workshop.items.ai.title'),
+      date: t('community_page.learn_and_grow.workshop.items.ai.date'),
+      buttonText: t('community_page.learn_and_grow.workshop.coming_soon'),
     },
     {
       id: 2,
-      badge: "In-Person",
-      title: "Financial Planning Basics",
-      date: "May 15, 2026 2:00 PM EST",
-      buttonText: "Coming Soon",
+      badge: t('community_page.learn_and_grow.workshop.badges.in_person'),
+      title: t('community_page.learn_and_grow.workshop.items.finance.title'),
+      date: t('community_page.learn_and_grow.workshop.items.finance.date'),
+      buttonText: t('community_page.learn_and_grow.workshop.coming_soon'),
     },
     {
       id: 3,
-      badge: "Virtual Workshp",
-      title: "English for Business",
-      date: "May 22, 2026 6:00 PM EST",
-      buttonText: "Coming Soon",
+      badge: t('community_page.learn_and_grow.workshop.badges.virtual'),
+      title: t('community_page.learn_and_grow.workshop.items.english.title'),
+      date: t('community_page.learn_and_grow.workshop.items.english.date'),
+      buttonText: t('community_page.learn_and_grow.workshop.coming_soon'),
     },
   ];
 

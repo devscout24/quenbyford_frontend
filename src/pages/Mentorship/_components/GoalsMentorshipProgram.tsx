@@ -1,12 +1,15 @@
 
+import { useTranslation } from "react-i18next";
 
-const GOALS_DATA = {
-    title: "Goals of the Mentorship Program",
-    description: "In its simplest form, mentoring people to help them grow and develop. The Program leverages the five basic mentoring principles and each mentoring pair will agree on the S.M.A.R.T [Specific, Measurable, Actionable, Realistic and Time oriented] goals of the partnership.",
-    imagePath: "/images/MentorShip1.png"
-};
+const ProgramGoals = () => {
+    const { t } = useTranslation();
 
-const ProgramGoals = ({ data = GOALS_DATA }) => {
+    const data = {
+        title: t("mentorship.goals.title"),
+        description: t("mentorship.goals.description"),
+        imagePath: "/images/MentorShip1.png"
+    };
+
     return (
         <section className="w-full bg-white pb-16 px-4">
 

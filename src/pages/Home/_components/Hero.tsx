@@ -93,7 +93,7 @@ const Hero = () => {
 
             {/* Logo Overlay on Image */}
             <div className="absolute top-4 left-4 sm:top-5 sm:left-5 p-2 bg-white/60 backdrop-blur-md rounded-2xl flex items-center justify-center overflow-hidden sm:shadow-lg border border-white/50">
-              <img src="/images/logo.png" alt="Logo" className="w-[100px] sm:w-[140px] h-auto object-contain mix-blend-multiply" />
+              <img src="/images/Iconsss10.png" alt="Logo" className="w-[100px] sm:w-[140px] h-auto object-contain mix-blend-multiply" />
             </div>
           </div>
 
