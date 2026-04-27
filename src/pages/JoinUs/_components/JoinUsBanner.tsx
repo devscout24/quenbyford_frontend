@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 
 const HeroSection = () => {
@@ -31,10 +32,13 @@ const HeroSection = () => {
 
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button className="bg-[#FF781F] hover:bg-[#e66a1a] text-white w-75 h-12 px-10 py-3 rounded-full font-bold text-[16px] transition-colors">
+            <Link to="https://form.jotform.com/fchcc/new-membership-application" className="bg-[#FF781F] hover:bg-[#e66a1a] text-white w-75 h-12 px-10 py-3 rounded-full font-bold text-[16px] transition-colors">
               Ready to Join
-            </Button>
-            <Button  className="border-2 border-white/60 hover:bg-white/10  w-75 h-12 text-white px-8 py-2 rounded-full font-bold text-[16px] transition-all">
+            </Link>
+            <Button 
+              onClick={() => document.getElementById('membership-levels')?.scrollIntoView({ behavior: 'smooth' })}
+              className="border-2 border-white/60 hover:bg-white/10  w-75 h-12 text-white px-8 py-2 rounded-full font-bold text-[16px] transition-all"
+            >
               Renew your membership here!
             </Button>
           </div>

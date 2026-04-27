@@ -1,6 +1,7 @@
 import { CheckCircle2, ArrowRight, Sparkles } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 // --- Types ---
 interface PricingFeatureProps {
@@ -153,7 +154,7 @@ const TierCard = ({
       </div>
 
       {/* Button */}
-      <button
+      <Link to="https://form.jotform.com/fchcc/membership-renewal-application"
         className={`w-full h-11 rounded-lg font-bold flex items-center justify-center gap-2 text-white mt-auto transition
           ${
             active || highlighted
@@ -162,7 +163,7 @@ const TierCard = ({
           }`}
       >
         Join Now <ArrowRight size={18} />
-      </button>
+      </Link>
     </motion.div>
   );
   
@@ -173,7 +174,7 @@ const MembershipLevels = () => {
   const [activeId, setActiveId] = useState('strategic-partner');
 
   return (
-    <section className="py-20 bg-[#F973161A]">
+    <section id="membership-levels" className="py-20 bg-[#F973161A]">
       <div className="max-w-6xl mx-auto px-4">
 
         {/* Header */}
