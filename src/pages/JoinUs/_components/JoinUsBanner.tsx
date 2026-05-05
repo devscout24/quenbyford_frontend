@@ -37,7 +37,7 @@ const HeroSection = () => {
             </Link>
             <Link 
               to="#membership-levels"
-              className="border-2 border-white/60 hover:bg-white/10  w-75 h-12 text-white px-8 py-2 rounded-full font-bold text-[16px] transition-all flex items-center justify-center"
+              className="border-2 border-white/60 hover:bg-white/10  w-90 h-12 text-white px-8 py-2 rounded-full font-bold text-[16px] transition-all flex items-center justify-center"
             >
               {t('join_us.hero.renew_membership')}
             </Link>
