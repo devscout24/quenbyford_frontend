@@ -75,7 +75,7 @@ const ComingSoon = () => {
         {/* Logo */}
         <motion.div variants={itemVariants} className="flex justify-center">
           <img
-            src="/images/logo.png"
+            src="/images/BnLogo.png"
             alt="Quenbyford Logo"
             className="h-20 sm:h-24 w-auto object-contain"
           />
